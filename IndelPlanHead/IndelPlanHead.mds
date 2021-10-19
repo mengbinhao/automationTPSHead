@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}" version="12.0">
+	<children>
+		<child name="Events" key="{A51D8846-35D8-43A0-88AC-B86D1A7D2CD4}" type="Events" typeId="{E7ABA87F-E873-4452-9921-6F4BAAEB2BCC}" pluginName="">
+			<data path="Events\Events.tcAX" />
+		</child>
+		<child name="Script" key="{BCC26E12-B805-40B4-8160-E9EFDA1542E2}" type="Script" typeId="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" pluginName="Script">
+			<data path="Script\Script.tcScript" />
+		</child>
+		<child name="KeywordTests" key="{59F6FF24-E58D-44D3-A778-4242C6E4A4CA}" type="Keyword Testing" typeId="{9576DAFD-0ADD-41A8-9897-C72F150AF6BB}" pluginName="Keyword Testing">
+			<data path="KeywordTests\KeywordTests.tcKDT" />
+		</child>
+		<child name="TestedApps" key="{4C62788A-B9F8-4DD2-96F9-4FE91E987F7B}" type="Tested Applications" typeId="{90D101C8-80C7-48D4-9055-2E451B9BCD75}" pluginName="">
+			<data path="TestedApps\TestedApps.tcTAs" />
+		</child>
+		<child name="NameMapping" key="{3C31EE20-B712-4F39-BA83-C1ECFCA86A75}" type="Name Mapping" typeId="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" pluginName="NameMapping">
+			<data path="NameMapping\NameMapping.tcNM" />
+		</child>
+		<child name="ImageRepository" key="{C0583510-878F-4FB8-93BA-5A67EEC94BA6}" type="Image Repository" typeId="{E7C36009-4A66-4899-99AE-DEFC5C22C057}" pluginName="">
+			<data path="ImageRepository\ImageRepository.tcIR" />
+		</child>
+		<child name="LLCollection" key="{880BD091-BEB8-46F5-90E1-C18140C1B134}" type="Low-Level Procedures Collection" typeId="{2D89293F-6B07-4679-9906-EFAE4B1A433C}" pluginName="Low-Level Procedures Container">
+			<data path="LLCollection1\LLCollection.tcLLC" />
+		</child>
+		<child name="Stores" key="{49D3008A-EE1E-4E79-8B6C-27A114C9E51E}" type="Stores" typeId="{5238AF17-5FE2-48FF-8BCC-9803A975A4F4}" pluginName="Stores">
+			<data path="Stores\Stores.tcStores" />
+		</child>
+	</children>
+	<folders>
+		<folder caption="Advanced" description="A logical folder that is used to organize project items and elements." moniker="{69583268-92F3-49FA-B573-C831F5ABC27B}">
+			<references>
+				<ref key="{A51D8846-35D8-43A0-88AC-B86D1A7D2CD4}" />
+				<ref key="{BCC26E12-B805-40B4-8160-E9EFDA1542E2}" />
+				<ref key="{880BD091-BEB8-46F5-90E1-C18140C1B134}" />
+				<ref key="{49D3008A-EE1E-4E79-8B6C-27A114C9E51E}" />
+			</references>
+		</folder>
+	</folders>
+	<config language="{90F89436-9452-4F95-9882-6B5210079F13}" />
+	<testItems key="{25CA201D-B9C7-4D62-9590-6D7EC6DD9347}">
+		<children>
+			<testItem name="login" key="{30A2CE01-FDCB-431F-A6CE-1805F94B0CDE}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="输入正确的用户名与密码登录计划系统&#13;&#10;" key="{F08A1B93-DC5D-4259-B8E2-174CD9AC1807}" group="False" enabled="True" testMoniker="{9870FC79-4C69-46EA-B82E-8BD83E5C9F4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="输入错误的用户名登录系统" key="{B13727C8-04C8-442B-9A27-0D074D986713}" group="False" enabled="True" testMoniker="{EB45B816-65DB-492F-B7AD-FD1BA3CE10E8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="输入错误的密码登录系统" key="{073C95AF-487A-465C-BC9A-D8FB733391E2}" group="False" enabled="True" testMoniker="{321CF873-3AA3-45B2-ADAA-7587D1794AA2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="不输入用户名、密码，点击login按钮" key="{47677034-BD05-44C6-8FED-06335F2DD75E}" group="False" enabled="True" testMoniker="{9AD4ACBC-7D5C-41F5-86DA-C8B5F17D43E4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="输入正确的用户名与密码点击Exit登录计划系统" key="{68A32F83-96BD-4C73-BAC6-DA03C0D34312}" group="False" enabled="True" testMoniker="{9C7F8637-8D95-4E76-8AE0-2FB735E59ECC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="点击PatientMagement页面点击Log Out退出登录" key="{616683B1-5BDA-4060-9960-4B3003DBD271}" group="False" enabled="True" testMoniker="{18A2F134-1204-4C9D-B9C4-932C94FB8B4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="关闭登录窗口" key="{27521D52-E3E4-4678-AE3B-66E18484C57F}" group="False" enabled="True" testMoniker="{2EE6563E-18D4-4649-BC4F-1E7C0BA33AF8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="点击PatientMagement页面点击右上角x后点击【YES】按钮关闭TPS软件" key="{B5082E28-601B-4767-A751-BF1AD4A83BEF}" group="False" enabled="True" testMoniker="{DF69CB42-A63A-4216-BD38-85E16363DD7E}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="点击PatientMagement页面点击右上角x后点击【NO】按钮退出到登录界面&#13;&#10;" key="{3CE59D9A-0BB8-4283-910C-2F16017EB442}" group="False" enabled="True" testMoniker="{693A9846-DD4B-481B-8072-A2B18E3B4A3A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="点击PatientMagement页面点击右上角x后点击【Cancel】按钮继续停留在PatientMagement界面" key="{21F5305F-E1B5-464A-8A07-4B6B4D92CEC7}" group="False" enabled="True" testMoniker="{3E536B72-44F8-45B3-ADE1-62C8622A9CE6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="physicaldata" key="{68B1BE8B-AC80-4176-9166-FAC8254ADE18}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="ProjectTestItem6" key="{8BCBB86E-1F37-45F3-BECE-85128497EBF3}" group="False" enabled="False" testMoniker="{435E22B0-64E5-4938-8A6F-466AABC9CEBE}TPS_BeiHang_toudao_071" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="systemsettings" key="{82B884FD-734A-4587-A6D3-F1439B093884}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="ProjectTestItem5" key="{D6388119-ADAC-4A43-85F5-5EC80DABE7D6}" group="False" enabled="False" testMoniker="{ED1CEF01-86A5-4AF9-84D0-C22F088D3866}TPS_BeiHang_toudao_036" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="usernamagement" key="{59184077-BEDA-4B28-B563-8B2F5F2EAF3E}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="新建用户" key="{723742AD-20EE-4C9C-8FED-7B87F957B72D}" group="False" enabled="True" testMoniker="{58B75C39-CC17-4380-A18B-1A9AFDFED149}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="成功修改账号密码" key="{63CACA3C-13E8-47D2-AF2A-9BF6BE7AA2E6}" group="False" enabled="True" testMoniker="{A5619393-C0DC-4A61-B33C-170C6A8E77A5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="检查修改密码的界面字段" key="{68D5B337-2C09-446F-8BE9-3315969E640A}" group="False" enabled="True" testMoniker="{6BAFFD1A-4235-4820-9B2D-E6B588064D3F}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="点击cancel按钮，取消修改密码操作" key="{49C7E84F-80DF-4BF3-AD1F-DAD49D9AD4D2}" group="False" enabled="True" testMoniker="{F41E5698-45DE-42EF-9072-1DD91838B507}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="检查user management字段及按钮" key="{5423365F-8D95-47B4-9F95-DA3C9EE3A376}" group="False" enabled="True" testMoniker="{D34955A0-C139-4A1A-B8C3-51193D35C8E0}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="新建用户时，点击Cancel按钮" key="{DCA4D5AE-A171-43DA-B4D4-AE0B4C30C194}" group="False" enabled="True" testMoniker="{ED102BF1-7BAE-411A-AD67-AD038FAB4648}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="输入特殊字符修改密码" key="{B733A34B-481F-4412-904C-3FEE76EAD1CC}" group="False" enabled="True" testMoniker="{93E52620-B819-4937-ACFF-F758DBDD1C26}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="修改User Type" key="{E9027DB5-2EA8-406C-87CC-07D5002CAD70}" group="False" enabled="True" testMoniker="{9EA3F4D6-41D7-4DCC-A42E-E10C79E2E50A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="修改User Type点Cancel" key="{4B9398F5-0459-4DFE-A563-F86DB3737C4D}" group="False" enabled="True" testMoniker="{7761D7BB-80E3-455D-92DF-93506ED78CE3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="删除用户成功" key="{13CA561C-0A62-4411-B713-F017F0B29502}" group="False" enabled="True" testMoniker="{A8376F0A-8C40-4545-896A-87F56D5483E3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="取消删除用户操作" key="{A4B3D84E-1E88-4314-A762-012298556483}" group="False" enabled="True" testMoniker="{519DE3E7-6567-4FD8-AAC6-02466B66B378}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="新建用户时密码为空提示Password cannot be NULL" key="{ED2E43DC-788A-4A4C-80C6-566C3FF7CB78}" group="False" enabled="True" testMoniker="{208FE485-ACAE-4E4E-B17E-89BA85123ACC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="添加已存在的用户提示Existing User Name" key="{39456932-A534-4B06-8581-B7860F00FCE3}" group="False" enabled="True" testMoniker="{79DF9820-6792-4ED0-BC27-D953A2C0B7C6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="EXIT用例新增测试用例" key="{925F8F31-24FA-46AF-BCB6-451A30C35B99}" group="False" enabled="True" testMoniker="{F85ECDF2-0E49-4624-88D9-F81EC30FE343}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="patientmanagement" key="{B003F621-E70F-4E86-844E-B7D20DEFFB78}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="ProjectTestItem4" key="{6231CA38-E3CC-4366-AE75-EBB1A1370F0A}" group="False" enabled="False" testMoniker="{5252CED4-41E1-43A0-B5E8-1AA13C679A85}TPS_BeiHang_toudao_230" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="ProjectTestItem1" key="{4B7B88EF-52E1-4812-9E36-E0A4F58D5B46}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}test" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+		</children>
+	</testItems>
+	<variables key="{877F95DE-E330-473D-9EA8-05A5E3AE92EE}">
+		<data Version="3">
+			<Items>
+				<Variable Name="username" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="6F0075007200" />
+				</Variable>
+				<Variable Name="password" Type="{B06407F3-6641-45A9-9692-DDE5B231F2CD}" Local="False">
+					<DefValue StrValue="380039003600310045003300440032004600340044003800420033004600310039003400390046004400460039003100310032003900380043003900380033004200450045003400" />
+				</Variable>
+				<Variable Name="wrongpassword" Type="{B06407F3-6641-45A9-9692-DDE5B231F2CD}" Local="False">
+					<DefValue StrValue="3800390036003100360033004400310046003400440038004200330046003100390034003900460044004600390031003200320046003900430042003100390042004100320044004400320043004200" />
+				</Variable>
+				<Variable Name="wrongusername" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="7500730065007200" />
+				</Variable>
+				<Variable Name="newpatientname" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="74006500730074005F00700061007400690065006E007400" />
+				</Variable>
+				<Variable Name="newpatientID" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="74006500730074005F0069006400" />
+				</Variable>
+				<Variable Name="editpatientname" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="74006500730074005F0065006400690074005F00700061007400690065006E007400" />
+				</Variable>
+				<Variable Name="newpatientnamechinese" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="4B6DD58B" />
+				</Variable>
+				<Variable Name="newusername" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="74006500730074007500730065007200" />
+				</Variable>
+				<Variable Name="newuserpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="310032003300" />
+				</Variable>
+				<Variable Name="newuserconfirmpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="310032003300" />
+				</Variable>
+				<Variable Name="newusertype" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="50006C0061006E006E0069006E006700500068007900730069006300690073007400" />
+				</Variable>
+				<Variable Name="editusertype" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="560069007300690074006F007200" />
+				</Variable>
+				<Variable Name="edituserpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="340035003600" />
+				</Variable>
+				<Variable Name="edituserconfirmpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="340035003600" />
+				</Variable>
+				<Variable Name="newmachinename" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="540065007300740020004E006500770020004D0061006300680069006E006500" />
+				</Variable>
+				<Variable Name="editmachinename" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="650064006900740020004E006500770020004D0061006300680069006E0065002000" />
+				</Variable>
+				<Variable Name="IndelPlan" Type="{F38B9AD1-7B22-410F-95FC-6D9420FDE947}" Local="False">
+					<DefValue />
+				</Variable>
+				<Variable Name="contourLibName" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="54004500530054005F004300540056003100" />
+				</Variable>
+				<Variable Name="contourLibType" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="4F0041005200" />
+				</Variable>
+				<Variable Name="editContourLibName" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="45004400490054005F004300540056003100" />
+				</Variable>
+				<Variable Name="editContourLibType" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="53004B0049004E00" />
+				</Variable>
+			</Items>
+		</data>
+	</variables>
+	<settings key="{CDE57756-6D31-4709-B719-465F1C969CE4}">
+		<settingsVersion value="12.60" />
+		<setting name="JavaFXOpenApp_NodeByClassNameFilters" type="6" rowIndex="8" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="1" enabled="True" />
+			</columns>
+			<data>
+				<row val0="False" val1="*" val2="False" />
+				<row val0="True" val1="javafx.scene.SubScene" val2="True" />
+				<row val0="True" val1="javafx.scene.control.Control" val2="True" />
+				<row val0="True" val1="javafx.scene.web.WebView" val2="False" />
+				<row val0="False" val1="javafx.scene.canvas.Canvas" val2="True" />
+				<row val0="False" val1="javafx.scene.image.ImageView" val2="True" />
+				<row val0="False" val1="javafx.scene.media.MediaView" val2="True" />
+				<row val0="True" val1="com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer" val2="True" />
+				<row val0="True" val1="com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer" val2="True" />
+			</data>
+		</setting>
+		<setting name="{42651A7C-4287-4C91-AE26-98CBD2EA9355}" type="1" value="False" />
+		<setting name="{A2568CC8-7E8E-42C5-A87D-B69684A1E616}" type="1" value="True" />
+		<setting name="{3EADAFE2-0CD4-4B1E-A2A9-B184E94FDCC7}" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="UTF-16" />
+				<row val0="UTF-8" />
+				<row val0="ANSI" />
+				<row val0="Auto" />
+			</data>
+		</setting>
+		<setting name="RecreateActiveXObjects" type="1" value="False" />
+		<setting name="{0BE15905-46A9-40D6-9BE2-892EC4AABBD4}" type="1" value="True" />
+		<setting name="{9273E75A-1D1D-4F5F-9421-28A4BD60D485}" type="1" value="True" />
+		<setting name="{239AE5E0-D898-415D-8ECB-EBEB31D3F66F}" type="6" rowIndex="2" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="False" val1="*" />
+				<row val0="True" val1="DirectUIHWND" />
+				<row val0="True" val1="Windows.UI.Core.CoreWindow" />
+			</data>
+		</setting>
+		<setting name="{E3AC1830-9216-4DC9-AB7B-884F3B0E9A48}" type="2" value="0" />
+		<setting name="{0CC2421A-8395-402E-B303-80AE4D4658A4}" type="1" value="True" />
+		<setting name="{7E9D3E8B-DFF5-4737-A877-E94B6B932BCD}" type="1" value="True" />
+		<setting name="{6BA39D6A-88C9-49B1-A310-A31F46136DFB}" type="1" value="False" />
+		<setting name="{2FCB2EB2-336E-4FD4-96A3-8710A73ADDD8}" type="1" value="True" />
+		<setting name="{FE195F25-7DC0-457F-9336-71ED39243753}" type="5" value="126_0_0_0_97_113_115_111_1_0_0_0_4_0_0_0_114_0_111_0_111_0_116_0_1_0_0_0_9_0_0_0_102_0_111_0_114_0_109_0_97_0_116_0_107_0_101_0_121_0_1_0_0_0_38_0_0_0_123_0_66_0_65_0_55_0_52_0_53_0_49_0_54_0_57_0_45_0_70_0_51_0_52_0_68_0_45_0_52_0_55_0_49_0_48_0_45_0_66_0_51_0_55_0_70_0_45_0_68_0_53_0_69_0_70_0_69_0_56_0_65_0_53_0_49_0_51_0_51_0_57_0_125_0_1_0_0_0_16_0_0_0_112_0_110_0_103_0_99_0_111_0_110_0_102_0_105_0_103_0_117_0_114_0_97_0_116_0_105_0_111_0_110_0_2_0_0_0_16_0_0_0_99_0_111_0_109_0_112_0_114_0_101_0_115_0_115_0_105_0_111_0_110_0_108_0_101_0_118_0_101_0_108_0_0_0_0_0_4_0_0_0_10_0_0_0_105_0_110_0_116_0_101_0_114_0_108_0_97_0_99_0_101_0_100_0_5_0_0_0_0_0_0_0_0_0_" />
+		<setting name="{C32B04F8-59F6-4F95-8E50-12818E0DECC7}" type="6" rowIndex="3" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="pmLowest" />
+				<row val0="pmLower" />
+				<row val0="pmNormal" />
+				<row val0="pmHigher" />
+				<row val0="pmHighest" />
+			</data>
+		</setting>
+		<setting name="{3FC03B2F-1B76-433D-86AE-20B18B2CA600}" type="1" value="True" />
+		<setting name="{A4D0B1B0-14DA-4AFA-8AFC-E82D0400E7E9}" type="1" value="True" />
+		<setting name="CountProcessesOfAllUsers" type="1" value="True" />
+		<setting name="{949057FA-CBDC-4A23-BB7F-9A25DCAE8729}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Off" />
+				<row val0="Capture images" />
+			</data>
+		</setting>
+		<setting name="{EF07B18F-C1B0-489E-84EF-A6A0A578C45C}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Top-level parent" />
+				<row val0="Desktop" />
+			</data>
+		</setting>
+		<setting name="{0DEF6033-13D4-4335-97E9-CC6F1FC04342}" type="1" value="True" />
+		<setting name="{DF56DCEA-130B-4D36-8893-5FDC090AFB17}" type="1" value="False" />
+		<setting name="CLRBridge_SelectedComponents" type="6" rowIndex="-1" colIndex="1">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="1" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{85CD048A-29FF-4ABF-95A6-B915AEA2C10D}" type="1" value="False" />
+		<setting name="{2044DC7F-423E-4668-8114-68D23AE97AD6}" type="2" value="100" />
+		<setting name="Recording_TestedAppsOnly" type="1" value="True" />
+		<setting name="{FB1CAF99-7FA6-447C-B963-D862CA8BFF89}" type="2" value="3000" />
+		<setting name="{3B76535B-58AD-456C-837E-091A5C480F6C}" type="1" value="True" />
+		<setting name="{3AE91BBD-F37D-40E6-B49D-D2F1EF68E285}" type="1" value="False" />
+		<setting name="{90FD1116-F071-44C8-AB72-F1916C2B3A1B}" type="1" value="False" />
+		<setting name="JavaFXOpenApp_ExposedCustomNodes" type="6" rowIndex="-1" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{CE0B0B5B-F813-482E-BBEC-6E12A96D3B83}" type="1" value="False" />
+		<setting name="{D5773345-4407-4A8A-ACE6-0F0A9C8787C8}" type="1" value="False" />
+		<setting name="{C8F95D39-4AC0-4855-9D60-6E7E3BD87B30}" type="1" value="False" />
+		<setting name="{4FD668CC-C8C3-46B4-A220-8DDE5CD7A39F}" type="6" rowIndex="-1" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="TextRecognizer_AcceptedProcesses" type="6" rowIndex="-1" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{AF49D9D4-83CD-4BEA-BF27-8D70D88AC840}" type="1" value="False" />
+		<setting name="{6BE019A2-A836-4B31-84D9-F9DE78869D51}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Tree" />
+				<row val0="Flat" />
+			</data>
+		</setting>
+		<setting name="{F7C29680-06BB-4F85-B0E3-C06AE2282A66}" type="1" value="False" />
+		<setting name="{596CA0D0-27CB-40D3-BAA5-BC1CECFF25AC}" type="6" rowIndex="-1" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{0BD6AE2E-E5D9-4AD0-9BF3-2483D329B22A}" type="1" value="True" />
+		<setting name="JavaBridge_ClassPaths" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{3FC2A7B4-F4AF-4807-8D37-C3EE096DD330}" type="2" value="1024" />
+		<setting name="{9EB8E8E6-D2F2-4A8A-ADFB-492E8C0EAFEF}" type="2" value="5000" />
+		<setting name="{1DB8307D-FA4B-43E7-8E11-9F8F41ABD7E9}" type="1" value="True" />
+		<setting name="{47A56F4F-F2D3-4697-BEC8-632B29D5A344}" type="6" rowIndex="11" colIndex="0">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="False" val1="*" />
+				<row val0="False" val1="MsoCommandBar*" />
+				<row val0="False" val1="_Ww*" />
+				<row val0="False" val1="OpusApp" />
+				<row val0="False" val1="Vfp*" />
+				<row val0="False" val1="bosa_sdm_Microsoft Word *" />
+				<row val0="False" val1="Internet Explorer_Server" />
+				<row val0="False" val1="XTPToolBar" />
+				<row val0="False" val1="XTPDockingPaneTabbedContainer" />
+				<row val0="False" val1="XTPTaskPanel" />
+				<row val0="False" val1="XTPReport" />
+				<row val0="False" val1="XTPPopupBar" />
+			</data>
+		</setting>
+		<setting name="TextRecognizer_AcceptedWindows" type="6" rowIndex="-1" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{15C8845F-53E4-4045-9800-74766ABC4B34}" type="2" value="0" />
+		<setting name="{18FD096E-E6B8-4D3D-9619-71670FC81D48}" type="1" value="False" />
+		<setting name="{3EDDD87D-14FB-46FB-9609-CEDE76C0CED7}" type="1" value="False" />
+		<setting name="{45AE3709-5569-4F74-BD85-C222C71981ED}" type="1" value="True" />
+		<setting name="DraggingDelay" type="2" value="50" />
+		<setting name="ObjectMapping_Objects" type="6" rowIndex="753" colIndex="3">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+			</columns>
+			<data>
+				<row val0="TStringGrid" val1="{5D10BA13-D5F4-44D5-A18B-E977D654418D}" val2="1" val3="4" />
+				<row val0="TDBGrid" val1="{4DF62D40-DBF1-4485-9889-B820A9AEFE6C}" val2="1" val3="4" />
+				<row val0="TDBGridInplaceEdit" val1="{EA1ED5E0-6FA5-49D3-BC03-DC82F68650A4}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Editors.TextEdit" val1="{D1710323-38BD-48DB-9AA1-3395F6E8B67F}" val2="9" val3="12" />
+				<row val0="DevExpress.Xpf.Grid.GridControl" val1="{4BF81308-9129-4A88-9C4D-B4AACF14BCC5}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Grid.GridControl" val1="{4BF81308-9129-4A88-9C4D-B4AACF14BCC5}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.DataPresenter.HeaderPresenter" val1="{7F83A670-2AFE-4E7D-B799-105F9399F003}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Grid.TableView" val1="{3F71B937-8770-43F5-8548-9D440FA7973A}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Grid.TableView" val1="{3F71B937-8770-43F5-8548-9D440FA7973A}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Grid.RowIndicatorControl" val1="{8BA45DB9-14F8-4DF4-8DA8-5E8A4B6A46FD}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Grid.RowIndicator" val1="{5F8086ED-343F-4FFD-A8B2-588E127BA332}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Grid.GridRow" val1="{B3F5BE4E-A990-43F4-A05C-B5D584AA4BD7}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Grid.GroupRowExpandButton" val1="{1E620879-DDE6-44AE-A7D2-AC3898DB1E35}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Grid.GridGroupExpandButton" val1="{1E620879-DDE6-44AE-A7D2-AC3898DB1E35}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Grid.GridGroupExpandButton" val1="{1E620879-DDE6-44AE-A7D2-AC3898DB1E35}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Grid.GridColumnHeader" val1="{A120A02C-52BD-46E0-88DB-463845938576}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Grid.GridColumnHeader" val1="{A120A02C-52BD-46E0-88DB-463845938576}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Editors.TextEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Editors.PopupBaseEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Editors.InplaceBaseEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Editors.DateEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Editors.ComboBoxEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Editors.CheckEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Editors.ButtonEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Editors.TextEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Editors.PopupBaseEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Editors.DateEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Editors.ComboBoxEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Editors.CheckEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Editors.ButtonEdit" val1="{93A27B32-6B11-45E5-85F7-31381A687575}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Grid.NewItemsCellsControl" val1="{C1DAFDCB-BE9C-4F4F-B60D-E02F3E06C6E7}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Grid.CellsControl" val1="{C1DAFDCB-BE9C-4F4F-B60D-E02F3E06C6E7}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Editors.ButtonEdit" val1="{8D4216FF-0AF6-4329-8EAE-6FB41CFA6A71}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Bars.BarManager" val1="{613F8BC9-A50C-4715-8330-4647B060CE5F}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Bars.BarManager" val1="{613F8BC9-A50C-4715-8330-4647B060CE5F}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Bars.BarSubItemLinkControl" val1="{880C80AC-A77B-4E1B-9706-05D47AC4E6D0}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Bars.BarSubItemLinkControl" val1="{880C80AC-A77B-4E1B-9706-05D47AC4E6D0}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Bars.BarSubItemLink" val1="{5BC8FA2D-3BE0-4533-94FB-BF094A4C525F}" val2="9" val3="12" />
+				<row val0="DevExpress.Wpf.Bars.BarSubItemLink" val1="{5BC8FA2D-3BE0-4533-94FB-BF094A4C525F}" val2="9" val3="12" />
+				<row val0="DevExpress.Xpf.Bars.BarStaticItemLinkControl" val1="{E352C0DE-7620-495C-A17B-852FFEDE38E4}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Bars.BarStaticItemLinkControl" val1="{E352C0DE-7620-495C-A17B-852FFEDE38E4}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Bars.BarSplitButtonItemLinkControl" val1="{5B68CB85-9F3D-4237-B3D9-EAB68008E35A}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Bars.BarSplitButtonItemLinkControl" val1="{5B68CB85-9F3D-4237-B3D9-EAB68008E35A}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Bars.BarItemLinkSeparatorControl" val1="{E098CDC1-4341-40D9-89CE-C8722A79D47F}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Bars.BarItemLinkSeparatorControl" val1="{E098CDC1-4341-40D9-89CE-C8722A79D47F}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Bars.BarItemLinkSeparator" val1="{837CC283-792C-4A91-ACA8-006754959249}" val2="9" val3="12" />
+				<row val0="DevExpress.Wpf.Bars.BarItemLinkSeparator" val1="{837CC283-792C-4A91-ACA8-006754959249}" val2="9" val3="12" />
+				<row val0="DevExpress.Xpf.Bars.BarItemLink" val1="{FEB14E31-5184-4A6A-956E-867EC48A3AC5}" val2="9" val3="12" />
+				<row val0="DevExpress.Wpf.Bars.BarItemLink" val1="{FEB14E31-5184-4A6A-956E-867EC48A3AC5}" val2="9" val3="12" />
+				<row val0="DevExpress.Xpf.Bars.BarEditItemLinkControl" val1="{7B358D65-F835-4040-AE8E-C4A9374DDDC8}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Bars.BarEditItemLinkControl" val1="{7B358D65-F835-4040-AE8E-C4A9374DDDC8}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Bars.BarCheckItemLinkControl" val1="{893C72DF-6B0A-42A6-AFFB-0A449CA60811}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Bars.BarCheckItemLinkControl" val1="{893C72DF-6B0A-42A6-AFFB-0A449CA60811}" val2="1" val3="4" />
+				<row val0="DevExpress.Xpf.Bars.BarCheckItemLink" val1="{B3A79034-9D29-445A-8F08-5BB97B298201}" val2="9" val3="12" />
+				<row val0="DevExpress.Wpf.Bars.BarCheckItemLink" val1="{B3A79034-9D29-445A-8F08-5BB97B298201}" val2="9" val3="12" />
+				<row val0="DevExpress.Xpf.Bars.BarButtonItemLinkControl" val1="{2BD1FA7C-F60A-4F12-A53A-19D6EE741CF1}" val2="1" val3="4" />
+				<row val0="DevExpress.Wpf.Bars.BarButtonItemLinkControl" val1="{2BD1FA7C-F60A-4F12-A53A-19D6EE741CF1}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraVerticalGrid.VGridControl" val1="{4792DF39-290B-4124-B7EC-B280754BE686}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraVerticalGrid.Rows.PGridVirtualRows" val1="{D2F71912-1C0D-4BCB-8426-45D7456FE6E4}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraTreeList.TreeList" val1="{4E2B1C05-5327-458C-9B0B-7AC3519DD78A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraTreeList.Demos.ClipboardTreeListControl" val1="{4E2B1C05-5327-458C-9B0B-7AC3519DD78A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraSpreadsheet.SpreadsheetFieldListTreeView" val1="{4E2B1C05-5327-458C-9B0B-7AC3519DD78A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraScheduler.UI.ResourcesTree" val1="{4E2B1C05-5327-458C-9B0B-7AC3519DD78A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraPrinting.Native.WinControls.BookmarkTreeView" val1="{4E2B1C05-5327-458C-9B0B-7AC3519DD78A}" val2="1" val3="4" />
+				<row val0="DevExpress.Snap.Extensions.Native.SnapFieldListTreeView" val1="{4E2B1C05-5327-458C-9B0B-7AC3519DD78A}" val2="1" val3="4" />
+				<row val0="DevExpress.Snap.Extensions.Native.ReportExplorerTreeList" val1="{4E2B1C05-5327-458C-9B0B-7AC3519DD78A}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Templates.ActionContainers.TreeListNavigationControl" val1="{4E2B1C05-5327-458C-9B0B-7AC3519DD78A}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Core.ModelEditor.NodesTree.ModelTreeList" val1="{4E2B1C05-5327-458C-9B0B-7AC3519DD78A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraTab.XtraTabControl" val1="{23235683-F199-43FA-9DA8-E33E40ED7AB9}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraGauges.Demos.NonFocusableTabControl" val1="{23235683-F199-43FA-9DA8-E33E40ED7AB9}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.Popup.PopupColorEditForm+ColorEditTabControl" val1="{23235683-F199-43FA-9DA8-E33E40ED7AB9}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraNavBar.NavBarControl" val1="{270E99B4-1C42-4B05-AE1F-47C684D4E120}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Templates.Navigation.XafNavBarControl" val1="{270E99B4-1C42-4B05-AE1F-47C684D4E120}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Templates.ActionContainers.NavBarNavigationControl" val1="{270E99B4-1C42-4B05-AE1F-47C684D4E120}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraSpreadsheet.MailMergeParametersGrid" val1="{A502D888-22FA-44E9-827E-8E7539B76841}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraGrid.GridControl" val1="{A502D888-22FA-44E9-827E-8E7539B76841}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraGrid.Views.Layout.LayoutView" val1="{8E3C05BE-FA7D-4EC1-BA2C-EA96E9452159}" val2="9" val3="12" />
+				<row val0="DevExpress.XtraGrid.Views.Grid.GridView" val1="{77160B2A-B463-40D5-B817-1EC93AAB9B4A}" val2="9" val3="12" />
+				<row val0="DevExpress.XtraGrid.Views.BandedGrid.BandedGridView" val1="{77160B2A-B463-40D5-B817-1EC93AAB9B4A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView" val1="{77160B2A-B463-40D5-B817-1EC93AAB9B4A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraGrid.Views.Card.CardView" val1="{FE0C084C-EBEB-4DB7-8FB9-62F22DD20C5E}" val2="9" val3="12" />
+				<row val0="DevExpress.XtraEditors.ZoomTrackBarControl" val1="{21DA9023-146E-4081-AD78-24350803F9AA}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.TrackBarControl" val1="{21DA9023-146E-4081-AD78-24350803F9AA}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.TimeEdit" val1="{213EE9BD-8D0C-4B97-92F4-ED3CBE890DDD}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.TextEdit" val1="{20CF579D-5F91-4FF9-9022-AA52DB547765}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Editors.StringEdit" val1="{20CF579D-5F91-4FF9-9022-AA52DB547765}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.SpinEdit" val1="{22AD6961-335E-4EEF-A572-49C87661DDB0}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Editors.SingleEdit" val1="{22AD6961-335E-4EEF-A572-49C87661DDB0}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraWizard.WizardButton" val1="{2D169C74-8758-4082-9C23-05CA7753561A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraScheduler.Design.SchedulerSimpleCommandButton" val1="{2D169C74-8758-4082-9C23-05CA7753561A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.SimpleButton" val1="{2D169C74-8758-4082-9C23-05CA7753561A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.CloseButton" val1="{2D169C74-8758-4082-9C23-05CA7753561A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.CalculatorButton" val1="{2D169C74-8758-4082-9C23-05CA7753561A}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraVerticalGrid.Internal.VGridVertScrollBar" val1="{299EB6EA-AA39-4FFF-83C6-ED7C3815DB26}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraLayout.Scrolling.VTLScrollBar" val1="{299EB6EA-AA39-4FFF-83C6-ED7C3815DB26}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraGrid.Scrolling.VCrkScrollBar" val1="{299EB6EA-AA39-4FFF-83C6-ED7C3815DB26}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraGrid.Scrolling.HCrkScrollBar" val1="{299EB6EA-AA39-4FFF-83C6-ED7C3815DB26}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.VScrollBar" val1="{299EB6EA-AA39-4FFF-83C6-ED7C3815DB26}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.HScrollBar" val1="{299EB6EA-AA39-4FFF-83C6-ED7C3815DB26}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraBars.Ribbon.RibbonControl" val1="{2773DCB3-6018-4A6D-B3B7-9517F4277DBD}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Templates.Ribbon.XafRibbonControlV2" val1="{2773DCB3-6018-4A6D-B3B7-9517F4277DBD}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.RadioGroup" val1="{27B792BA-B8C1-4FC4-9590-714F5EF9771E}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraVerticalGrid.PropertyGridControl" val1="{635EAE53-DBF4-4687-9EA9-7CF45EFBB9DD}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Core.ModelEditor.AttributesPropertyGrid" val1="{635EAE53-DBF4-4687-9EA9-7CF45EFBB9DD}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.PopupContainerEdit" val1="{2857A9CA-E2C7-4B02-A98A-85D70F1B909B}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.ColorEdit" val1="{2857A9CA-E2C7-4B02-A98A-85D70F1B909B}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.CalcEdit" val1="{2857A9CA-E2C7-4B02-A98A-85D70F1B909B}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.MemoEdit" val1="{2DCCDB04-A4B0-4A5F-AACF-528909A1F838}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraSpreadsheet.Forms.SpreadsheetFieldsCustomizationListBox" val1="{20ADA010-F82F-4F87-BFF5-D9DEACF59692}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraSpreadsheet.Forms.SpreadsheetCustomizationListBox" val1="{20ADA010-F82F-4F87-BFF5-D9DEACF59692}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraPivotGrid.Customization.ExcelFieldCustomizationList" val1="{20ADA010-F82F-4F87-BFF5-D9DEACF59692}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraGrid.Views.Grid.Customization.ColumnCustomizationListBox" val1="{20ADA010-F82F-4F87-BFF5-D9DEACF59692}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.Popup.PopupListBox" val1="{20ADA010-F82F-4F87-BFF5-D9DEACF59692}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.Popup.PopupImageComboBoxEditListBox" val1="{20ADA010-F82F-4F87-BFF5-D9DEACF59692}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.Popup.ColorListBox" val1="{20ADA010-F82F-4F87-BFF5-D9DEACF59692}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.ListBoxControl" val1="{20ADA010-F82F-4F87-BFF5-D9DEACF59692}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.ImageListBoxControl" val1="{20ADA010-F82F-4F87-BFF5-D9DEACF59692}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.HyperLinkEdit" val1="{29D8078C-9359-4218-90D3-879BC145DFEE}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.DateEdit" val1="{24C2003B-4433-42A0-BCFC-086C60610616}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Editors.DateTimeEdit" val1="{24C2003B-4433-42A0-BCFC-086C60610616}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraSpreadsheet.SpreadsheetNameBoxControl" val1="{2721A064-B6BA-41DE-A53A-8B14AD2F8DDE}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraScheduler.UI.DurationEdit" val1="{2721A064-B6BA-41DE-A53A-8B14AD2F8DDE}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.MRUEdit" val1="{2721A064-B6BA-41DE-A53A-8B14AD2F8DDE}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.ImageComboBoxEdit" val1="{2721A064-B6BA-41DE-A53A-8B14AD2F8DDE}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.FontEdit" val1="{2721A064-B6BA-41DE-A53A-8B14AD2F8DDE}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.ComboBoxEdit" val1="{2721A064-B6BA-41DE-A53A-8B14AD2F8DDE}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Editors.EnumEdit" val1="{2721A064-B6BA-41DE-A53A-8B14AD2F8DDE}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraScheduler.UI.ResourcesCheckedListBoxControl" val1="{275065AD-5216-485B-B45B-4460DDC5F8A5}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.CheckedListBoxControl" val1="{275065AD-5216-485B-B45B-4460DDC5F8A5}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.CheckEdit" val1="{2E90DF69-49AD-4973-91EC-3D35D124FD0C}" val2="1" val3="4" />
+				<row val0="DevExpress.ExpressApp.Win.Editors.BooleanEdit" val1="{2E90DF69-49AD-4973-91EC-3D35D124FD0C}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.ButtonEdit" val1="{2A43FACC-E136-471C-9341-EC9423E952B6}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.MemoExEdit" val1="{25D3067A-AE99-4099-A1B8-6B4D2FDA275D}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraEditors.ImageEdit" val1="{25D3067A-AE99-4099-A1B8-6B4D2FDA275D}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraBars.Objects.TitleBarControl" val1="{2D662548-9A7E-4D83-8D97-CCA04A95CEDC}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraBars.Controls.FloatingBarControl" val1="{2D662548-9A7E-4D83-8D97-CCA04A95CEDC}" val2="1" val3="4" />
+				<row val0="DevExpress.XtraBars.Controls.DockedBarControl" val1="{2D662548-9A7E-4D83-8D97-CCA04A95CEDC}" val2="1" val3="4" />
+				<row val0="TcxTrackBar" val1="{D92FA9B9-8A45-42D5-B25B-34575873A5B4}" val2="1" val3="4" />
+				<row val0="TcxSpinButton" val1="{39AE4017-4C2F-4A43-A823-372F06B3E54F}" val2="1" val3="4" />
+				<row val0="TdxRibbon" val1="{37C2BFFA-FED3-4008-872D-CCDA3340DEF5}" val2="1" val3="4" />
+				<row val0="TcxRadioGroup" val1="{FCD35733-0235-4469-9982-E2FB92E1463F}" val2="1" val3="4" />
+				<row val0="TcxCustomRadioGroupButton" val1="{1110A4FF-8D64-4C6E-84D2-07874707E90D}" val2="1" val3="4" />
+				<row val0="TcxRadioButton" val1="{03842696-3AF8-44A9-AEC3-BF053B8606CC}" val2="1" val3="4" />
+				<row val0="TcxTreeList" val1="{39A7EADF-A1C9-447C-932F-B8687C7241A6}" val2="1" val3="4" />
+				<row val0="TcxDBTreeList" val1="{39A7EADF-A1C9-447C-932F-B8687C7241A6}" val2="1" val3="4" />
+				<row val0="TcxGrid" val1="{E05F4483-F323-4923-9BF8-F66A1300F42E}" val2="1" val3="4" />
+				<row val0="TcxGridTableView" val1="{70280EA2-040B-4F74-9F15-B60E85458995}" val2="1" val3="4" />
+				<row val0="TcxGridServerModeTableView" val1="{70280EA2-040B-4F74-9F15-B60E85458995}" val2="1" val3="4" />
+				<row val0="TcxGridDBTableView" val1="{70280EA2-040B-4F74-9F15-B60E85458995}" val2="1" val3="4" />
+				<row val0="TcxGridDBBandedTableView" val1="{70280EA2-040B-4F74-9F15-B60E85458995}" val2="1" val3="4" />
+				<row val0="TcxGridBandedTableView" val1="{70280EA2-040B-4F74-9F15-B60E85458995}" val2="1" val3="4" />
+				<row val0="TcxGridRowIndicatorHitTest" val1="{EB79BB2A-A052-40BC-89B5-11D6B0442417}" val2="1" val3="4" />
+				<row val0="TcxGridRecordCellHitTest" val1="{C776AB75-9A6B-4D8D-BF64-F6CF67F09254}" val2="1" val3="4" />
+				<row val0="TcxGridExpandButtonHitTest" val1="{D927B27D-2EBB-4071-A355-D609AE260D7B}" val2="1" val3="4" />
+				<row val0="TcxGridColumnHeaderHitTest" val1="{0D03BD42-41D9-4F24-9DAF-25E06231F021}" val2="1" val3="4" />
+				<row val0="TcxGridSite" val1="{E45AE7F0-4413-43CA-9F11-22CFDB5BF983}" val2="1" val3="4" />
+				<row val0="TcxGridMasterDataRow" val1="{04D5B5DA-EE3C-46B6-A172-5F6ACD39273F}" val2="1" val3="4" />
+				<row val0="TcxCustomInnerTextEdit" val1="{8BD666AF-B9E4-4ABB-8985-3B6BDB288972}" val2="1" val3="4" />
+				<row val0="TcxCustomDropDownInnerEdit" val1="{8BD666AF-B9E4-4ABB-8985-3B6BDB288972}" val2="1" val3="4" />
+				<row val0="TcxCustomComboBoxInnerEdit" val1="{8BD666AF-B9E4-4ABB-8985-3B6BDB288972}" val2="1" val3="4" />
+				<row val0="TcxBlobEdit" val1="{8BD666AF-B9E4-4ABB-8985-3B6BDB288972}" val2="1" val3="4" />
+				<row val0="TcxGridGroupRow" val1="{516C938C-FDA1-4DA7-A087-20BAE0E103BC}" val2="1" val3="4" />
+				<row val0="TcxGridDBCardView" val1="{2B8D0210-962E-41FC-8F1D-79A3FF1C620D}" val2="1" val3="4" />
+				<row val0="TcxGridCardView" val1="{2B8D0210-962E-41FC-8F1D-79A3FF1C620D}" val2="1" val3="4" />
+				<row val0="TcxGridCardRowCellHitTest" val1="{B531873F-6D9B-4BB8-A689-E7A1B5EF73B3}" val2="1" val3="4" />
+				<row val0="TcxGridCardRowCaptionHitTest" val1="{70953F89-02B0-4A4F-9129-31E87FD79D31}" val2="1" val3="4" />
+				<row val0="TcxImageComboBox" val1="{7818F2A6-D528-4CED-B94A-3EC5D0947ADC}" val2="1" val3="4" />
+				<row val0="TcxImageComboBoxListBox" val1="{5DCF1525-884A-4D00-96B8-8045297F8916}" val2="1" val3="4" />
+				<row val0="TcxVerticalGrid" val1="{92C1DB4C-1C2F-45E4-B78A-B7397E920D8F}" val2="1" val3="4" />
+				<row val0="TcxDBVerticalGrid" val1="{92C1DB4C-1C2F-45E4-B78A-B7397E920D8F}" val2="1" val3="4" />
+				<row val0="TdxNavBar" val1="{CF1C898E-DDB8-40E8-A733-66782343A3BF}" val2="1" val3="4" />
+				<row val0="TcxComboBox" val1="{5BD2A037-DAA3-4459-A136-7876BED5FF3C}" val2="1" val3="4" />
+				<row val0="TcxComboBoxListBox" val1="{459404BF-C53C-4843-8139-F342C4814A4C}" val2="1" val3="4" />
+				<row val0="TcxColorComboBox" val1="{50F9CED5-49B1-4C41-A779-66C272799460}" val2="1" val3="4" />
+				<row val0="TcxCustomColorComboBoxListBox" val1="{4F9DD564-86E9-45D5-A5EF-F7DCDE19F4AD}" val2="1" val3="4" />
+				<row val0="TcxCheckListBox" val1="{E419D118-4348-4175-97ED-8C4F9BDC0333}" val2="1" val3="4" />
+				<row val0="TcxCustomInnerCheckListBox" val1="{7F757BC1-C303-449A-9C52-E9AFACB62C30}" val2="1" val3="4" />
+				<row val0="TcxCheckBox" val1="{9730F61B-E6A3-42CB-8EF6-8D9A3CA8382A}" val2="1" val3="4" />
+				<row val0="TcxButton" val1="{9DC4764A-EF1B-4559-BFFA-73D2277DA9B4}" val2="1" val3="4" />
+				<row val0="TdxDockControl" val1="{C065D7B9-D3F1-4EAB-86FC-6C2FD750C21B}" val2="1" val3="4" />
+				<row val0="TdxRibbonPopupMenuControl" val1="{59489E99-59FA-4E2A-BA88-DF231D11A071}" val2="1" val3="4" />
+				<row val0="TdxBarSubMenuControl" val1="{59489E99-59FA-4E2A-BA88-DF231D11A071}" val2="1" val3="4" />
+				<row val0="TdxRibbonQuickAccessToolbarBarControl" val1="{659E9BF6-6CFC-4D5E-9079-861138FB9057}" val2="1" val3="4" />
+				<row val0="TdxRibbonQuickAccessBarControl" val1="{659E9BF6-6CFC-4D5E-9079-861138FB9057}" val2="1" val3="4" />
+				<row val0="TdxRibbonGroupBarControl" val1="{7C146CBE-3588-4A4B-98FC-B61686B96239}" val2="1" val3="4" />
+				<row val0="TdxRibbonApplicationMenuControl" val1="{4703813A-2878-48F2-8C4A-4B59C7B1592C}" val2="1" val3="4" />
+				<row val0="TdxBarSubItem" val1="{4E24E43C-B194-4B6E-89DF-4DE8A3A3766A}" val2="1" val3="4" />
+				<row val0="TCustomdxBarSubItem" val1="{4E24E43C-B194-4B6E-89DF-4DE8A3A3766A}" val2="1" val3="4" />
+				<row val0="TdxBarLargeButton" val1="{1B1F07AB-89F9-4827-B72B-823585790ED4}" val2="1" val3="4" />
+				<row val0="TdxBarButton" val1="{1B1F07AB-89F9-4827-B72B-823585790ED4}" val2="1" val3="4" />
+				<row val0="TdxBarControl" val1="{E59E102B-9528-4836-B3CF-5385D6155E87}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.DataPresenter.XamDataGrid" val1="{B731207F-36F4-4585-9449-9999D7CC16A3}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.Editors.ValueEditor" val1="{6A4F838E-A518-4910-BAEC-6CEAD1B8D1F2}" val2="9" val3="12" />
+				<row val0="Infragistics.Windows.DataPresenter.RecordSelector" val1="{2AAF6925-676D-487F-805D-245E8D7B4082}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.DataPresenter.RecordListControl" val1="{9D13A612-88BD-4F8F-83E3-64494E897539}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.DataPresenter.RecordCollection" val1="{0EFE239C-82F3-4B48-B7F9-9CDA818A3A73}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.DataPresenter.LabelPresenter" val1="{49E809A6-E1DC-4638-8D69-471161A3C994}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.DataPresenter.GroupByRecordCollection" val1="{5730E828-4BED-47CF-9625-32E34E331D80}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.DataPresenter.ExpandableFieldRecordCollection" val1="{90E53767-48B6-4909-B904-E54BEABCF250}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.DataPresenter.DataRecordPresenter" val1="{89A6458E-11F9-46BC-9EF8-42FDA88522F4}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.DataPresenter.DataRecordCollection" val1="{C128D987-556B-4631-A21C-25BBBC86ECEA}" val2="1" val3="4" />
+				<row val0="Infragistics.Windows.DataPresenter.CellValuePresenter" val1="{57342D9C-5DB8-4A3C-AEF5-7C1AF5B8D800}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinTree.UltraTree" val1="{337E67D6-C631-4F10-9BD1-7D7AC5A3F691}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinToolbars.UltraToolbarsDockArea" val1="{F0BB3574-1BFB-43F4-997A-D63E98794BBC}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinToolbars.StateButtonTool" val1="{FF5A33A0-D3E0-4FC5-855B-9B7FFF5B9FDB}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinToolbars.RibbonGroup" val1="{6D87A30E-78D0-43C9-96C5-FC637E3E741B}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinToolbars.PopupMenuTool" val1="{8DE1E68B-2628-4D1D-9032-6E836DC63E8F}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinToolbars.ListTool" val1="{8CA4FB05-674F-436B-A1B4-52ADB1FA1279}" val2="9" val3="12" />
+				<row val0="Infragistics.Win.UltraWinToolbars.LabelTool" val1="{5567D70B-6495-4C17-9491-7A3C172088CE}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinToolbars.ButtonTool" val1="{6C7F8442-DC86-4C70-AEEB-840EEB856C40}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinTabControl.UltraTabControl" val1="{3ABE8596-5548-4B5C-A592-DD41FF77473C}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinSchedule.UltraMonthViewMulti" val1="{5AAFDFFC-1765-448D-96CF-4EA40F72488E}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinListView.UltraListView" val1="{4BB9E129-6AAB-43AD-83AE-F0F57238F225}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.UltraGrid" val1="{46F90EDA-E15B-4E2B-9314-9648494AF72C}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.TextUIElement" val1="{3C0CFEDC-1D59-4F9F-827D-772560D2D6B0}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.RowSelectorUIElement" val1="{80902470-B840-422E-B1F8-FA994FAEF4AC}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.MergedCellUIElement" val1="{FC882BF0-873D-4C85-B843-C9E50492CC8C}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.HeaderUIElement" val1="{759F48FB-1140-45EF-8C4B-BFDDB2919F58}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.GroupByRowUIElement" val1="{7003FC63-3ACA-47CC-A026-CB4D6B6C7172}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.GroupByRowExpansionIndicatorUIElement" val1="{BD80B3F0-09F1-4108-999B-BD54EA8793BC}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.ExpansionIndicatorUIElement" val1="{13894916-BF7E-4715-A834-AD60E0121DB0}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.CellUIElement" val1="{6CAA3837-AA2A-4434-82EB-DF8A2940D87E}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.CardLabelUIElement" val1="{69572935-495F-41DD-A4CF-FADA3369ACE9}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.CardCaptionUIElement" val1="{CCBDC537-2315-4E00-8570-B2461BD12F5A}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinExplorerBar.UltraExplorerBar" val1="{53111B1A-9EFB-40CE-9A38-B124241EBC1B}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.Misc.UltraDropDownButton" val1="{540D1798-82A9-47C2-AE69-3CCA3A71C246}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinDock.WindowDockingArea" val1="{FE80B51F-618A-4E24-9242-3521FE064CB1}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinDock.DockableWindow" val1="{FE80B51F-618A-4E24-9242-3521FE064CB1}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.UltraCombo" val1="{D3FF9EEE-60FA-45E0-B370-707EC842786A}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinGrid.ComboDropDownControl" val1="{2E063560-7239-4BD1-9349-385AC25132A4}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinSchedule.UltraCalendarCombo" val1="{E435AC7B-CCB0-4BE0-90BE-26A654AE5673}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.Misc.UltraButton" val1="{890C509A-632D-48BF-AC9E-A70C0C4ACD97}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinMaskedEdit.UltraMaskedEdit" val1="{1C4E7510-4D4A-4D9E-B2B1-CC414AB2A7FC}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.UltraWinCalc.UltraCalculatorDropDown" val1="{1C4E7510-4D4A-4D9E-B2B1-CC414AB2A7FC}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.UltraTextEditor" val1="{1C4E7510-4D4A-4D9E-B2B1-CC414AB2A7FC}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.UltraNumericEditor" val1="{1C4E7510-4D4A-4D9E-B2B1-CC414AB2A7FC}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.UltraFontNameEditor" val1="{1C4E7510-4D4A-4D9E-B2B1-CC414AB2A7FC}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.UltraDateTimeEditor" val1="{1C4E7510-4D4A-4D9E-B2B1-CC414AB2A7FC}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.UltraCurrencyEditor" val1="{1C4E7510-4D4A-4D9E-B2B1-CC414AB2A7FC}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.StateEditorButton" val1="{7F6163B0-26E7-495E-95CF-5D6A16E73E33}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.SpinEditorButton" val1="{ACA6A16B-B396-49C0-BBC1-C7A39CE4B5AA}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.EditorButton" val1="{679AF11C-B091-485C-9511-D7C56C2DF449}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.DropDownEditorButton" val1="{E5CA258C-C8BF-408B-A5FD-89F2DFCC599A}" val2="1" val3="4" />
+				<row val0="Infragistics.Win.UltraWinEditors.AutoRepeatEditorButton" val1="{61DD2D24-E9D9-46A7-A26C-6D9B72905489}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.TreeView" val1="{002C7E36-C231-45E9-B39A-B922C2323FCD}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.ToggleButton" val1="{2572CF10-8BB8-4A56-AB4E-77DBE3B6B834}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.TextField" val1="{C874EE80-E334-461F-865A-6534D010ABE2}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.TextArea" val1="{C5DE7C7F-743E-4806-97A9-FF373AC41C29}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.TableView" val1="{BA16EB08-B6C0-46D8-B7FA-279BB52F5B46}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.TabPane" val1="{0B424D7A-4886-40E3-9A99-BCBABD1F701C}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.Slider" val1="{0FFB5F4F-9B1D-42D5-A0F5-BD24FAEB9461}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.ScrollPane" val1="{C87EBB1F-1461-48A4-86FA-E529071CFEFA}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.ScrollBar" val1="{81D3D94F-21CF-49E9-817F-746C76A1F7C3}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.RadioButton" val1="{20205A13-C6B6-4B15-B76D-D72BFB3F502A}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.MenuButton" val1="{A0F75FD6-1F37-4D1F-A30D-ECDE0E5B2883}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.MenuBar" val1="{B9EE4D2B-EFDD-4B46-BA66-BE354CDFB0FA}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.RadioMenuItem" val1="{B4020E55-3878-4B1C-B6A7-5694DE668A5A}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.CheckMenuItem" val1="{186BF98D-5459-427B-B977-49F216FACB4B}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.ListView" val1="{9FBE6284-026A-4768-814E-48DB66C03096}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.Hyperlink" val1="{14629300-CEB3-40D1-A602-9E5BAFC77759}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.ComboBox" val1="{AA389CAB-EB7B-48F1-8566-24E21912886C}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.ColorPicker" val1="{A2FAE7B7-7E7C-4AB3-8764-76314448DC2B}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.ChoiceBox" val1="{E4E61534-FD69-4AAC-A5ED-1F7188432BD9}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.CheckBox" val1="{FBA55967-F837-4E3A-9C9D-AFABC9E37E9C}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.Button" val1="{ACDB16E8-46BD-49A6-9CCA-C6142CACD40C}" val2="1" val3="4" />
+				<row val0="javafx.scene.control.Accordion" val1="{82D00244-A466-49FC-AAAE-5EF832949EA5}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DatePicker" val1="{A97D0F38-C9D5-4DB8-B8CE-5CC054831F20}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.DatePicker" val1="{A97D0F38-C9D5-4DB8-B8CE-5CC054831F20}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DataGrid" val1="{174A3CDD-C3BC-4571-A4DB-C3F73BF515F1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.DataGrid" val1="{174A3CDD-C3BC-4571-A4DB-C3F73BF515F1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DataGridTextColumn" val1="{4EAD40BF-0CFE-442C-947D-8A2D58C739B3}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.DataGridTextColumn" val1="{4EAD40BF-0CFE-442C-947D-8A2D58C739B3}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DataGridHyperlinkColumn" val1="{E2071728-B47E-4D24-8D4F-E9E56301D680}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.DataGridHyperlinkColumn" val1="{E2071728-B47E-4D24-8D4F-E9E56301D680}" val2="1" val3="4" />
+				<row val0="System.Windows.Documents.Hyperlink" val1="{94799952-6726-4F81-956A-B6801308552C}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DataGridRow" val1="{948C9A15-94E7-460F-9265-DFC36C71291D}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.DataGridRow" val1="{948C9A15-94E7-460F-9265-DFC36C71291D}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Primitives.DataGridColumnHeader" val1="{0B56862E-61A5-46A1-BD88-8C5319D339AE}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Primitives.DataGridColumnHeader" val1="{0B56862E-61A5-46A1-BD88-8C5319D339AE}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DataGridCell" val1="{3DC76248-EE22-4240-8D64-D2FF72D49916}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.DataGridCell" val1="{3DC76248-EE22-4240-8D64-D2FF72D49916}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DataGridComboBoxColumn" val1="{648D8B2E-F5A8-4299-A25B-B4E9F6FCFFBE}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.DataGridComboBoxColumn" val1="{648D8B2E-F5A8-4299-A25B-B4E9F6FCFFBE}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DataGridComboBoxColumn+TextBlockComboBox" val1="{275D5E41-A0EA-4685-B9A5-C644635C0A69}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.DataGridComboBoxColumn+TextBlockComboBox" val1="{275D5E41-A0EA-4685-B9A5-C644635C0A69}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DataGridCheckBoxColumn" val1="{5864F214-4534-49AD-AC13-9F39A2ED5612}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.DataGridCheckBoxColumn" val1="{5864F214-4534-49AD-AC13-9F39A2ED5612}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Calendar" val1="{F7720484-5956-4022-A841-8406202EF8C1}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.MonthCalendar" val1="{F7720484-5956-4022-A841-8406202EF8C1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Calendar" val1="{F7720484-5956-4022-A841-8406202EF8C1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Primitives.CalendarDayButton" val1="{1EF9A127-1595-44F2-AABE-FB9B7B408054}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Primitives.CalendarDayButton" val1="{1EF9A127-1595-44F2-AABE-FB9B7B408054}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.Ribbon" val1="{B12B513F-9F8E-4A60-B774-ABAF79EC8F93}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.Ribbon" val1="{B12B513F-9F8E-4A60-B774-ABAF79EC8F93}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonToggleButton" val1="{C58B4AA2-260D-47F9-9FF3-08B13853773E}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonToggleButton" val1="{C58B4AA2-260D-47F9-9FF3-08B13853773E}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonTextBox" val1="{CCB59672-CEB6-4008-B85B-3635E6F97AF6}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonTwoLineText" val1="{CCB59672-CEB6-4008-B85B-3635E6F97AF6}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonTextBox" val1="{CCB59672-CEB6-4008-B85B-3635E6F97AF6}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonTabHeader" val1="{725A379B-343E-4148-9E93-AAA1BD1B6870}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonTabHeader" val1="{725A379B-343E-4148-9E93-AAA1BD1B6870}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonTab" val1="{B9121168-A8C5-45E9-87AF-41597B8B641A}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonTab" val1="{B9121168-A8C5-45E9-87AF-41597B8B641A}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonSplitButton" val1="{2C87A7BA-708B-4F74-B182-8CE4933431CC}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonSplitButton" val1="{2C87A7BA-708B-4F74-B182-8CE4933431CC}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Separator" val1="{6331D0F9-0931-4406-AA38-110A32C5EE79}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonSeparator" val1="{6331D0F9-0931-4406-AA38-110A32C5EE79}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonGroup" val1="{E4BE6FCA-6F0F-44F0-B908-4C64CCAA7DA0}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonGroup" val1="{E4BE6FCA-6F0F-44F0-B908-4C64CCAA7DA0}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Separator" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.TwoLineLabel" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.SplitButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonToggleButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonTextBox" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonTabHeader" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonTab" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonSystemButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonSplitButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonSeparator" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonQuickAccessToolBar" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonMenuItem" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonMenuButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonLabel" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonDropDownButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonDialogLauncher" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonControlGroup" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonComboBoxItem" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonComboBox" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonCheckBox" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonApplicationMenuItem" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonApplicationMenu" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.MenuItem" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.TwoLineLabel" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.SplitButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonTwoLineText" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonToggleButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonTextBox" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonTabHeader" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonTab" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonSystemButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonSplitButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonSeparator" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonQuickAccessToolBar" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonMenuItem" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonMenuButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonLabel" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonDropDownButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonDialogLauncher" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonControlGroup" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonComboBoxItem" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonComboBox" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonCheckBox" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonButton" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonApplicationMenuItem" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonApplicationMenu" val1="{D42CF702-50A4-4FDF-8985-8163964277D1}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonQuickAccessToolBar" val1="{6B19E083-BCBE-4437-A8CC-DD0F3E7F34D4}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonQuickAccessToolBar" val1="{6B19E083-BCBE-4437-A8CC-DD0F3E7F34D4}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.SplitButton" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonMenuItem" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonMenuButton" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonApplicationMenuItem" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.MenuItem" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.SplitButton" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonMenuItem" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonMenuButton" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonApplicationSplitMenuItem" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonApplicationMenuItem" val1="{58E38241-2476-456C-9126-376CD8BCBFE9}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.TwoLineLabel" val1="{258867A5-F349-4A18-B5D9-0C392DEFC7DF}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonLabel" val1="{258867A5-F349-4A18-B5D9-0C392DEFC7DF}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.TwoLineLabel" val1="{258867A5-F349-4A18-B5D9-0C392DEFC7DF}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonLabel" val1="{258867A5-F349-4A18-B5D9-0C392DEFC7DF}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonDropDownButton" val1="{59961675-0280-4B7B-8A20-B3A795597F95}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonDropDownButton" val1="{59961675-0280-4B7B-8A20-B3A795597F95}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonControlGroup" val1="{7302000B-64EB-4D3C-BF0E-B742D308B03C}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonControlGroup" val1="{7302000B-64EB-4D3C-BF0E-B742D308B03C}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonComboBoxItem" val1="{3E619A73-F1D0-4648-A541-B51D0395C159}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonComboBoxItem" val1="{3E619A73-F1D0-4648-A541-B51D0395C159}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonComboBox" val1="{4C810240-3305-47D0-9184-DD3386607C58}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonComboBox" val1="{4C810240-3305-47D0-9184-DD3386607C58}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonCheckBox" val1="{32407751-849B-49F3-BC39-ADE5CE08EF04}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonCheckBox" val1="{32407751-849B-49F3-BC39-ADE5CE08EF04}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonSystemButton" val1="{BE092A7D-E782-40C0-83AF-B0D9BE75C85F}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonDialogLauncher" val1="{BE092A7D-E782-40C0-83AF-B0D9BE75C85F}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonButton" val1="{BE092A7D-E782-40C0-83AF-B0D9BE75C85F}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonSystemButton" val1="{BE092A7D-E782-40C0-83AF-B0D9BE75C85F}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonDialogLauncher" val1="{BE092A7D-E782-40C0-83AF-B0D9BE75C85F}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonButton" val1="{BE092A7D-E782-40C0-83AF-B0D9BE75C85F}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonApplicationMenu" val1="{6775D25D-91F6-4163-8C85-25B799F34CEA}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonApplicationMenu" val1="{6775D25D-91F6-4163-8C85-25B799F34CEA}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.ToolStrip" val1="{43385D8A-A4F1-4196-9AED-E76CA20DA56D}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.BindingNavigator" val1="{43385D8A-A4F1-4196-9AED-E76CA20DA56D}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.ToolStripPanelItem+ToolStripInternal" val1="{43385D8A-A4F1-4196-9AED-E76CA20DA56D}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.ToolStripEx" val1="{43385D8A-A4F1-4196-9AED-E76CA20DA56D}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.RibbonControlAdvHeader" val1="{43385D8A-A4F1-4196-9AED-E76CA20DA56D}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.ToolStripSplitButton" val1="{41EE6591-7987-4A4C-A047-2BC90E401AC2}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.ToolStripSeparator" val1="{C167BE41-63B1-40EF-BB9D-59A3D202E91D}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.ToolStripLabel" val1="{ADBA0D80-DE1A-4832-930D-11066B02C94D}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.ToolStripDropDownButton" val1="{BA471C4E-A1CC-4D43-9AF3-CD5561E8A4F4}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.ToolStripButton" val1="{8A82A6D9-AD69-492F-827B-9E0C519F946E}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.StatusStrip" val1="{9C010E22-C219-46A6-8F86-AF8E953793AE}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.StatusStripEx" val1="{9C010E22-C219-46A6-8F86-AF8E953793AE}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.RadioButton" val1="{2B3ECC15-48BD-4EE1-A05A-E9DEF78758F9}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.PropertyGrid" val1="{0C3F6C45-A0F0-4A64-8B9F-3F501886F835}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.PropertyGridInternal.PropertyGridView" val1="{C8087DB9-0E5D-42A8-8B99-393B98F6AD4E}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.PropertyGridInternal.PropertyGridView+GridViewEdit" val1="{9A5C2358-7DA1-465A-9C8A-BBACE1A8BF02}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.PropertyGridInternal.DropDownButton" val1="{9A5C2358-7DA1-465A-9C8A-BBACE1A8BF02}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.NumericUpDown" val1="{2F05EDD5-CF72-4D40-AD3E-C0EE1C1F5784}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.MenuStrip" val1="{15FFDEF3-85DC-410D-8C69-9C932A298719}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.ContextMenuStrip" val1="{576B3A17-7BE1-4062-BB4E-57FC984A6F32}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.StatusContextMenuStrip" val1="{576B3A17-7BE1-4062-BB4E-57FC984A6F32}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.RibbonControlAdvHeader+QuickItemsDropDownButton+QuickItemsDropDownMenu" val1="{576B3A17-7BE1-4062-BB4E-57FC984A6F32}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.ContextMenuStripEx" val1="{576B3A17-7BE1-4062-BB4E-57FC984A6F32}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.LinkLabel" val1="{2717DC1B-CD24-49F0-9A51-3B3EFF52D0DB}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.DomainUpDown" val1="{227F3826-946A-46A4-AE7C-1E8EB4B2E573}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.DataGridView" val1="{00449488-6269-4FB9-BCA2-B65714FF759D}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.DataGridViewTextBoxCell" val1="{22707C71-F6B0-4319-AEDA-0B385D97D8D8}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.DataGrid" val1="{37FBCBE4-C430-465A-B90E-71D292BE03E7}" val2="1" val3="4" />
+				<row val0="System.Windows.Forms.CheckBox" val1="{2CCD87DF-6030-4E5F-8F7B-8099D6C31B7D}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.TreeView" val1="{6758C706-E755-4512-AF04-A8F248B42180}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Primitives.ToggleButton" val1="{D10E1C65-40F7-43DC-B811-462C753F0717}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.TextBox" val1="{D5FD38B7-0318-4040-A1DD-32E1C230E9F5}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.TabControl" val1="{B58FA9C0-B798-4C53-A4F7-34FC6B46AB9E}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Slider" val1="{F3FEDE4A-D316-4CF6-A946-730C5FCE0E3D}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ScrollViewer" val1="{C419736F-2A5B-4CA9-8F86-531C039E4DB8}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Primitives.ScrollBar" val1="{23985BC6-D94E-41F8-974A-64CC98940A7B}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.RichTextBox" val1="{5BD07518-755F-4B2C-A689-0DEF7CB087DC}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.RadioButton" val1="{8E611BC8-353B-4908-B434-B792F7533B13}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.PasswordBox" val1="{0B6A165E-BCF5-4E57-9A51-0FF69FDE766B}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ListBox" val1="{3DBB2013-92CA-4940-8EF7-44BC66BBD5DE}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DataGrid" val1="{7B077660-0269-473B-A395-26ECCC048D10}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DatePicker" val1="{FAF05181-B8AB-4D60-A653-7E74B4752205}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ComboBox" val1="{BEE2BDAE-F121-4F8B-8561-BC7CD467BC28}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.CheckBox" val1="{60657688-CEA4-4F70-93FA-AAB8FCBF338D}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Calendar" val1="{5536FFA2-8294-4B29-99C1-1B571D0C242F}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.HyperlinkButton" val1="{B3F74872-C011-461F-804D-E2D90A1D323D}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Button" val1="{B3F74872-C011-461F-804D-E2D90A1D323D}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.AutoCompleteBox" val1="{5A08BAFD-6A2D-4752-BC84-96170AC159FB}" val2="1" val3="4" />
+				<row val0="CMFCToolBar" val1="{223CE953-783D-4A1A-976A-300C9D0186F6}" val2="1" val3="4" />
+				<row val0="CMFCTabCtrl" val1="{3A24073F-764A-47DD-A7B2-F0B9BAF0A9F0}" val2="1" val3="4" />
+				<row val0="CMFCOutlookBarTabCtrl" val1="{3A24073F-764A-47DD-A7B2-F0B9BAF0A9F0}" val2="1" val3="4" />
+				<row val0="CMFCTabButton" val1="{4DDAE352-F58A-4541-9C74-D2E89C544217}" val2="1" val3="4" />
+				<row val0="CMFCStatusBar" val1="{DDDC2FFB-7429-46D5-9678-B671EB63448D}" val2="1" val3="4" />
+				<row val0="CMFCRibbonBar" val1="{58A129BE-DB6B-444B-A657-D5F6747AD6E3}" val2="1" val3="4" />
+				<row val0="CMFCRibbonTab" val1="{9470E502-293D-47C5-816F-394A1C98C8B5}" val2="1" val3="4" />
+				<row val0="CMFCRibbonPanelMenuBar" val1="{97B18189-73A6-4ED9-92D0-1BC26AF93EDB}" val2="1" val3="4" />
+				<row val0="CMFCRibbonRecentFilesList" val1="{41E5E6A4-053E-435A-A5DC-52253224BA8B}" val2="1" val3="4" />
+				<row val0="CMFCRibbonQuickAccessToolBar" val1="{41E5E6A4-053E-435A-A5DC-52253224BA8B}" val2="1" val3="4" />
+				<row val0="CMFCRibbonButtonsGroup" val1="{41E5E6A4-053E-435A-A5DC-52253224BA8B}" val2="1" val3="4" />
+				<row val0="CRibbonUndoLabel" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CRibbonCategoryScroll" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonUndoButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonStatusBarPane" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonStatusBarCustomizeButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonQuickAccessCustomizeButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonMainPanelButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonLinkCtrl" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonLaunchButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonLabel" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonGalleryIcon" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonGallery" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonFontComboBox" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonEdit" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonDefaultPanelButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonContextCaption" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonComboBox" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonColorMenuButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonColorButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonCheckBox" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonCaptionButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonApplicationButton" val1="{742EDCD6-0455-4462-A093-A7E711CEDFA2}" val2="1" val3="4" />
+				<row val0="CMFCRibbonGallery" val1="{EE1F1DBE-8D20-4682-88BA-BA547EE3314B}" val2="1" val3="4" />
+				<row val0="CMFCRibbonDefaultPanelButton" val1="{7C7649B9-4EA6-4345-A8FF-B472315FFF7F}" val2="1" val3="4" />
+				<row val0="CMFCRibbonCheckBox" val1="{D00C777C-2001-4823-BB9A-50248CA27340}" val2="1" val3="4" />
+				<row val0="CMFCPropertyGridCtrl" val1="{4F50F803-7C03-41AB-8B96-E47F43D77A78}" val2="1" val3="4" />
+				<row val0="CMFCMenuButton" val1="{5D959243-E03C-45D1-ABFF-1AD36A76085F}" val2="1" val3="4" />
+				<row val0="CMFCMenuBar" val1="{61D51FC9-35A1-4B7F-B667-10C967DEE55B}" val2="1" val3="4" />
+				<row val0="CMFCPopupMenuBar" val1="{A71ADACC-E313-468A-B877-B552B83F1A35}" val2="1" val3="4" />
+				<row val0="CMFCEditBrowseCtrl" val1="{0BF15E85-068A-42D0-980D-6757DDED30EB}" val2="1" val3="4" />
+				<row val0="oracle.ewt.dTree.DTree" val1="{0D5FE239-9370-4E4C-A42D-9F2A59C1E909}" val2="1" val3="4" />
+				<row val0="oracle.forms.ui.VTextField" val1="{7FDC176E-DDC5-459C-8946-9C4AA79DC7C2}" val2="1" val3="4" />
+				<row val0="oracle.forms.ui.FormsTabPanel" val1="{3041AC91-A46E-40E8-8DF6-D24848F57F4D}" val2="1" val3="4" />
+				<row val0="oracle.forms.ui.VRadioButton" val1="{5D58C059-AF6E-4DCD-B689-845785F552BA}" val2="1" val3="4" />
+				<row val0="oracle.forms.ui.VPopList" val1="{D30FBD9A-95CD-4AA7-A8A1-D3C3ED728F4B}" val2="1" val3="4" />
+				<row val0="oracle.forms.ui.VTList" val1="{105B2253-D99C-40C5-B1B6-F6FB5081C5A5}" val2="1" val3="4" />
+				<row val0="oracle.forms.ui.VComboBox" val1="{B8FD04AD-BBAF-4405-AF36-9A122A454DAA}" val2="1" val3="4" />
+				<row val0="oracle.forms.ui.VCheckbox" val1="{C89018DB-B889-460F-8F22-D102942F7DDA}" val2="1" val3="4" />
+				<row val0="oracle.ewt.button.ButtonBar" val1="{16A11E35-FFDF-4B95-9626-B5867401ED9E}" val2="1" val3="4" />
+				<row val0="oracle.forms.ui.VButton" val1="{14B18BA4-2C50-4604-BC61-32C4628682DA}" val2="1" val3="4" />
+				<row val0="oracle.ewt.button.PushButton" val1="{14B18BA4-2C50-4604-BC61-32C4628682DA}" val2="1" val3="4" />
+				<row val0="CGXRecordWnd" val1="{A0853993-ECB1-43F2-8D72-EED8D89B7D13}" val2="9" val3="12" />
+				<row val0="CGXRecordView" val1="{A0853993-ECB1-43F2-8D72-EED8D89B7D13}" val2="9" val3="12" />
+				<row val0="CGXGridWnd" val1="{A0853993-ECB1-43F2-8D72-EED8D89B7D13}" val2="9" val3="12" />
+				<row val0="CGXGridView" val1="{A0853993-ECB1-43F2-8D72-EED8D89B7D13}" val2="9" val3="12" />
+				<row val0="CGXDaoRecordWnd" val1="{A0853993-ECB1-43F2-8D72-EED8D89B7D13}" val2="9" val3="12" />
+				<row val0="CGXDaoRecordView" val1="{A0853993-ECB1-43F2-8D72-EED8D89B7D13}" val2="9" val3="12" />
+				<row val0="CGXAdoRecordWnd" val1="{A0853993-ECB1-43F2-8D72-EED8D89B7D13}" val2="9" val3="12" />
+				<row val0="CGXAdoRecordView" val1="{A0853993-ECB1-43F2-8D72-EED8D89B7D13}" val2="9" val3="12" />
+				<row val0="Stingray.Grid.GridControl" val1="{D6CC5448-CD71-496E-8612-78314655A135}" val2="1" val3="4" />
+				<row val0="javax.swing.JTree" val1="{FA98F18D-09D4-423E-94D0-F822397B369C}" val2="1" val3="4" />
+				<row val0="javax.swing.JToolBar" val1="{A978648F-2B98-42EA-9B88-313F326959A4}" val2="1" val3="4" />
+				<row val0="javax.swing.JToggleButton" val1="{526C06EE-D0F5-4038-A174-172D34A1FA7B}" val2="1" val3="4" />
+				<row val0="javax.swing.JTextField" val1="{3D30CB6B-934E-4787-8686-D2DC944F9C07}" val2="1" val3="4" />
+				<row val0="javax.swing.JFormattedTextField" val1="{3D30CB6B-934E-4787-8686-D2DC944F9C07}" val2="1" val3="4" />
+				<row val0="javax.swing.JTextPane" val1="{A5ACBD31-EFEE-4377-A289-510AD94E4B4E}" val2="1" val3="4" />
+				<row val0="javax.swing.JTextArea" val1="{A5ACBD31-EFEE-4377-A289-510AD94E4B4E}" val2="1" val3="4" />
+				<row val0="javax.swing.JEditorPane" val1="{A5ACBD31-EFEE-4377-A289-510AD94E4B4E}" val2="1" val3="4" />
+				<row val0="javax.swing.JTable" val1="{5FC86967-5765-46CC-9EC7-0CD1819D15E0}" val2="1" val3="4" />
+				<row val0="javax.swing.table.JTableHeader" val1="{2C53FFA6-B4AC-464B-ABF3-1C363024ED27}" val2="1" val3="4" />
+				<row val0="javax.swing.JTabbedPane" val1="{9C7A9C5B-96A7-46F8-8F71-7DB3262F22BB}" val2="1" val3="4" />
+				<row val0="javax.swing.JSpinner" val1="{49BA71C6-8A9E-4EEF-BC35-B2F618F79D67}" val2="1" val3="4" />
+				<row val0="javax.swing.JSlider" val1="{8EB26B4A-C26F-46DE-897C-282740A9C2FE}" val2="1" val3="4" />
+				<row val0="javax.swing.JScrollPane" val1="{6EA27BFE-7A0E-4AB4-9DC6-6486E47EC32C}" val2="1" val3="4" />
+				<row val0="javax.swing.JScrollPane$ScrollBar" val1="{9A5DD4B7-FE5C-4E55-A7C6-A66E8C1D942B}" val2="1" val3="4" />
+				<row val0="javax.swing.JScrollBar" val1="{9A5DD4B7-FE5C-4E55-A7C6-A66E8C1D942B}" val2="1" val3="4" />
+				<row val0="javax.swing.JRadioButton" val1="{8EB0BD9E-D470-4078-823D-94CC2E1CC78B}" val2="1" val3="4" />
+				<row val0="javax.swing.JPasswordField" val1="{2DE03994-1524-4838-88B6-07CF537142F5}" val2="1" val3="4" />
+				<row val0="javax.swing.JMenuBar" val1="{D0D387BB-2DA3-4294-A55F-7DF642F1975D}" val2="9" val3="12" />
+				<row val0="javax.swing.JMenu" val1="{EBABD24B-370C-469D-ABEB-75AFA4C9C1AE}" val2="9" val3="12" />
+				<row val0="javax.swing.JRadioButtonMenuItem" val1="{269EC47C-1911-47FC-83D4-8C43FE45B32E}" val2="1" val3="4" />
+				<row val0="javax.swing.JCheckBoxMenuItem" val1="{21399519-3421-4366-82A0-8B707D81F4CA}" val2="1" val3="4" />
+				<row val0="javax.swing.JList" val1="{D63DD295-BF60-4C19-BF07-579676F1146B}" val2="9" val3="12" />
+				<row val0="javax.swing.JComboBox" val1="{C5BDADF2-41F0-4398-B76A-995160721368}" val2="1" val3="4" />
+				<row val0="javax.swing.JCheckBox" val1="{B9215B74-2F96-4065-9FB3-9D1526EEBAD7}" val2="1" val3="4" />
+				<row val0="javax.swing.plaf.basic.BasicOptionPaneUI$ButtonFactory$ConstrainedButton" val1="{AA8311A8-D893-4F5F-88F3-5BA33E9B94AA}" val2="1" val3="4" />
+				<row val0="javax.swing.JButton" val1="{AA8311A8-D893-4F5F-88F3-5BA33E9B94AA}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.TreeViewAdv" val1="{559E2A93-0780-416B-B420-360FC17F5614}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.TrackBarEx" val1="{89B2F48C-6E10-44C2-B657-65DF2C80FCBB}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.XPMenus.XPToolBar" val1="{7CBA9788-8BC6-4815-9D91-D0F4BC72170C}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.XPMenus.BarControlInternal" val1="{7CBA9788-8BC6-4815-9D91-D0F4BC72170C}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.TabControlAdv" val1="{F4F87936-89B8-423D-AC15-B28EE359A11D}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.MDITabPanel" val1="{F4F87936-89B8-423D-AC15-B28EE359A11D}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.DockTabControl" val1="{F4F87936-89B8-423D-AC15-B28EE359A11D}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.ScrollButtons" val1="{B9032B63-E0D7-4AB2-8BC6-6EF1E6D71EFF}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.VScrollBarCustomDraw" val1="{F9B37809-D679-406F-ADB5-1C184932E3F0}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.ScrollBarCustomDraw" val1="{F9B37809-D679-406F-ADB5-1C184932E3F0}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.HScrollBarCustomDraw" val1="{F9B37809-D679-406F-ADB5-1C184932E3F0}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.RadioButtonAdv" val1="{410CE24B-382E-476C-9F03-06D88F048472}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Grid.Grouping.GridGroupingControl" val1="{9DEBBD73-C69F-4DE2-934B-7063A921AB55}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Grid.Grouping.GridTableControl" val1="{CF8D60BA-C4B0-43A9-95A4-E487EEB56ABE}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Grid.GridOriginalTextBoxControl" val1="{A6D6A550-C537-4E2B-881A-48B47337650B}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Schedule.ScheduleGrid" val1="{4498B852-AACD-47F7-96EC-901917A3E1FC}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Grid.GridListControlChild" val1="{4498B852-AACD-47F7-96EC-901917A3E1FC}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Grid.GridControl" val1="{4498B852-AACD-47F7-96EC-901917A3E1FC}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.ComboDropDown" val1="{228FCEB4-3C71-485E-99EB-233EF33948E4}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.ComboBoxBase" val1="{8C1C2777-8489-4EFD-B570-BFE9B7A90C83}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.ComboBoxAdv" val1="{8C1C2777-8489-4EFD-B570-BFE9B7A90C83}" val2="1" val3="4" />
+				<row val0="Syncfusion.Windows.Forms.Tools.CheckBoxAdv" val1="{8AB93163-5B55-4345-9D7A-4788EABDE894}" val2="1" val3="4" />
+				<row val0="Telerik.Windows.Controls.RadToggleButton" val1="{9123A9D8-9E20-4A3F-87BB-7C61C0BD1D31}" val2="1" val3="4" />
+				<row val0="Telerik.Windows.Controls.RadSplitButton" val1="{B2C3E774-604B-4221-AC5B-96E654CB291D}" val2="1" val3="4" />
+				<row val0="Telerik.Windows.Controls.RadRadioButton" val1="{A35AC025-D894-437D-BE21-0B93A47CAB31}" val2="1" val3="4" />
+				<row val0="Telerik.Windows.Controls.RadGridView" val1="{6A35438F-150B-43A9-B351-C90E6961E113}" val2="1" val3="4" />
+				<row val0="Telerik.Windows.Controls.RadDropDownButton" val1="{77CF74C9-86D4-40E8-A98B-C540A4D488A5}" val2="1" val3="4" />
+				<row val0="Telerik.Windows.Controls.RadComboBox" val1="{E02CE057-1DE0-41A0-BE1C-001E93CB6F69}" val2="1" val3="4" />
+				<row val0="Telerik.Windows.Controls.RadPathButton" val1="{495B6F1D-2C52-4ED8-B6B1-B8109110FD2D}" val2="1" val3="4" />
+				<row val0="Telerik.Windows.Controls.RadButton" val1="{495B6F1D-2C52-4ED8-B6B1-B8109110FD2D}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadTreeView" val1="{0E4FFB0D-34D1-4CC4-85B5-D6D3871B6471}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadTrackBar" val1="{260B8996-CA8D-4355-A0D9-745BCA71624D}" val2="9" val3="12" />
+				<row val0="Telerik.WinControls.UI.RadToggleButton" val1="{F975E540-B22D-47D9-8460-A8007D3F6A70}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadTextBox" val1="{4036BF63-B369-4A9F-8F32-93017893B840}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadTabStrip" val1="{115BEE21-B24D-47F8-8254-9DF7CA068B6E}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadSplitButton" val1="{14B4F68B-DBC2-485B-BB4E-D6CAD08D13A8}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadSpinEditor" val1="{6A4361BB-0932-4A04-BE49-258B2B3564CB}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadScrollBar" val1="{190B8795-C681-4BB3-A345-45F5D76E05EB}" val2="9" val3="12" />
+				<row val0="Telerik.WinControls.UI.RadScrollablePanel" val1="{721CC8C3-F6F8-4746-BD07-1DD0C71CDF9F}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadRibbonBar" val1="{7A3165B3-5A2D-4FF6-B1D2-31FE0B7BCF46}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadRadioButton" val1="{11E1D717-55B9-4D86-9A50-38208A6DD941}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadPanelBar" val1="{95638501-808C-44DE-BD14-303014D9B3FE}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadPageView" val1="{3BF1B50D-415E-4DA9-973A-ACD68ED27F50}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadMultiColumnComboBox" val1="{FCF34291-6E63-4C30-92EF-8858B73359BB}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadMenu" val1="{06A4B39B-A897-498A-A557-56048C3BD4EA}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadMaskedEditBox" val1="{2F1A9C74-AD6A-4599-8868-7F585D8E045B}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadListControl" val1="{C96F50CE-A66F-44A5-B9AC-2EB980F762A4}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadListBox" val1="{71EA01AA-C42E-4843-A984-DA4BF9D6F673}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadGridView" val1="{10B9EF27-A3A7-41CA-989D-A95C58BE6E0A}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.MultiColumnComboGridView" val1="{10B9EF27-A3A7-41CA-989D-A95C58BE6E0A}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadDropDownList" val1="{C963C37E-9360-4409-BB73-6FC4B7EDE4AE}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadDropDownButton" val1="{BADFFC2E-5EDC-44CF-AC23-881440C2F5CC}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.Docking.DocumentTabStrip" val1="{66AE24AA-3A71-490A-9D0C-5D335A9BC298}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadDateTimePicker" val1="{17504A7F-0314-4C2C-AB44-1697C2D92DEB}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadComboBox" val1="{E26CBE9B-AA56-47EE-906C-CA051E85FBF9}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadCheckBox" val1="{2B1FE413-3E83-4A69-AE1D-BD501DF0BD87}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadCalendar" val1="{6B98C127-50E3-4A4F-96B8-BDB24259F6F3}" val2="1" val3="4" />
+				<row val0="Telerik.WinControls.UI.RadButton" val1="{A9FC044B-2ECD-4C04-880C-A136708B704D}" val2="1" val3="4" />
+				<row val0="TAdvStringGrid" val1="{72BA6A06-1D42-459C-B0DD-75D807E3856B}" val2="1" val3="4" />
+				<row val0="TDBAdvGlowButton" val1="{2367D70B-D280-4D73-BA8D-CEFFF634E971}" val2="1" val3="4" />
+				<row val0="TAdvGlowButton" val1="{2367D70B-D280-4D73-BA8D-CEFFF634E971}" val2="1" val3="4" />
+				<row val0="*TreeView*" val1="{14AAE3C1-2C95-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="WindowsForms*.msctls_trackbar32.*" val1="{82A06E44-FA22-474C-8913-A5C63854D9F4}" val2="1" val3="4" />
+				<row val0="TTrackBar.*" val1="{82A06E44-FA22-474C-8913-A5C63854D9F4}" val2="1" val3="4" />
+				<row val0="TTrackBar" val1="{82A06E44-FA22-474C-8913-A5C63854D9F4}" val2="1" val3="4" />
+				<row val0="Slider*WndClass" val1="{82A06E44-FA22-474C-8913-A5C63854D9F4}" val2="1" val3="4" />
+				<row val0="msctls_trackbar32" val1="{82A06E44-FA22-474C-8913-A5C63854D9F4}" val2="1" val3="4" />
+				<row val0="msctls_trackbar" val1="{82A06E44-FA22-474C-8913-A5C63854D9F4}" val2="1" val3="4" />
+				<row val0="tooltips_class32" val1="{BF35DDFF-53B0-4961-AEBF-84EB92393001}" val2="1" val3="4" />
+				<row val0="*ToolBar*" val1="{B8A32261-5D3E-11D4-8F45-005004347D8A}" val2="1" val3="4" />
+				<row val0="TTabbedNotebook" val1="{2EB3EB61-57B8-11D4-8F40-005004347D8A}" val2="1" val3="4" />
+				<row val0="TPropertySheetControl" val1="{2EB3EB61-57B8-11D4-8F40-005004347D8A}" val2="1" val3="4" />
+				<row val0="TPageControl.*" val1="{2EB3EB61-57B8-11D4-8F40-005004347D8A}" val2="1" val3="4" />
+				<row val0="TPageControl" val1="{2EB3EB61-57B8-11D4-8F40-005004347D8A}" val2="1" val3="4" />
+				<row val0="TabStrip20WndClass" val1="{2EB3EB61-57B8-11D4-8F40-005004347D8A}" val2="1" val3="4" />
+				<row val0="_wx_SysTabCtl32" val1="{2EB3EB61-57B8-11D4-8F40-005004347D8A}" val2="1" val3="4" />
+				<row val0="*TabControl*" val1="{2EB3EB61-57B8-11D4-8F40-005004347D8A}" val2="1" val3="4" />
+				<row val0="SysLink" val1="{06374633-0A16-47EA-BFE5-38CE84C02760}" val2="1" val3="4" />
+				<row val0="Link?Window" val1="{06374633-0A16-47EA-BFE5-38CE84C02760}" val2="1" val3="4" />
+				<row val0="WindowsForms*.msctls_statusbar32.*" val1="{CC40A511-13AD-11D6-A1B1-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="TStatusBar" val1="{CC40A511-13AD-11D6-A1B1-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="msctls_statusbar32" val1="{CC40A511-13AD-11D6-A1B1-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="*UpDown*" val1="{2E138281-4EAB-11D5-A0A2-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="WindowsForms*.SCROLLBAR.*" val1="{23375892-4DD6-11D5-A0A0-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="TScrollBar.*" val1="{23375892-4DD6-11D5-A0A0-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="TScrollBar" val1="{23375892-4DD6-11D5-A0A0-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="ThunderVScrollBar" val1="{23375892-4DD6-11D5-A0A0-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="ThunderRT6VScrollBar" val1="{23375892-4DD6-11D5-A0A0-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="ThunderRT6HScrollBar" val1="{23375892-4DD6-11D5-A0A0-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="ThunderHScrollBar" val1="{23375892-4DD6-11D5-A0A0-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="ScrollBar" val1="{23375892-4DD6-11D5-A0A0-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="Thunder*OptionButton" val1="{BE24E79E-E35C-4B75-834C-F462EE9396A1}" val2="1" val3="4" />
+				<row val0="TGroupButton*" val1="{BE24E79E-E35C-4B75-834C-F462EE9396A1}" val2="1" val3="4" />
+				<row val0="*RadioButton*" val1="{BE24E79E-E35C-4B75-834C-F462EE9396A1}" val2="1" val3="4" />
+				<row val0="*SysPager*" val1="{574A6D81-63E7-11D5-A0B8-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="*PageScroller*" val1="{574A6D81-63E7-11D5-A0B8-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="*SysMonthCal*" val1="{58572EB1-5FBF-11D5-A0B1-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="*MonthView*" val1="{58572EB1-5FBF-11D5-A0B1-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="*MonthCalendar*" val1="{58572EB1-5FBF-11D5-A0B1-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="*ListView*" val1="{006B78B2-3612-11D4-8F07-005004347D8A}" val2="1" val3="4" />
+				<row val0="WindowsForms*.LISTBOX.*" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="WFC.LISTBOX" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="TListBox*" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="ThunderRT6ListBox" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="ThunderRT6FileListBox" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="TDBListBox.*" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="TDBListBox" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="TcxInnerListBox" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="TColorListBox*" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="TCheckListBox*" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="REListBox20W" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="ListBox" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="ComboLBox" val1="{A5B47A61-32CC-11D4-8F05-005004347D8A}" val2="1" val3="4" />
+				<row val0="SysIPAddress32" val1="{5335DB5E-B351-46BD-B6F5-EDC1E53D9F65}" val2="1" val3="4" />
+				<row val0="*HotKey*" val1="{9E687D31-4F7F-11D5-A0A4-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="THeaderControl*" val1="{9F70C780-C783-4339-95F3-503F2E726C90}" val2="1" val3="4" />
+				<row val0="msvb_lib_header" val1="{9F70C780-C783-4339-95F3-503F2E726C90}" val2="1" val3="4" />
+				<row val0="*SysHeader*" val1="{9F70C780-C783-4339-95F3-503F2E726C90}" val2="1" val3="4" />
+				<row val0="WindowsForms*.EDIT*" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="WFC.EDIT" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TseDBEdit" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TMemo.*" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TMemo" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TMaskEdit.*" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TMaskEdit" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TLabeledEdit.*" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TLabeledEdit" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="Thunder*TextBox" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TEdit.*" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TEdit" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TDBMemo.*" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TDBMemo" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TDBEdit.*" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TDBEdit" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TcxCustomInnerTextEdit" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="TcxCustomInnerMemo" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="RichTextWndClass" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="EDIT" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="*RichEdit*" val1="{3080C640-C91C-11D4-998B-AB0FB1A63070}" val2="1" val3="4" />
+				<row val0="DTPicker*" val1="{3A50BFD1-649F-11D5-A0B9-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="*DateTimePick*" val1="{3A50BFD1-649F-11D5-A0B9-0050DA82B17A}" val2="1" val3="4" />
+				<row val0="WindowsForms*.COMBOBOX.*" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="TMyComboBox" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="ThunderRT?ComboBox" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="Thunder*DriveListBox" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="TDBComboBox.*" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="TDBComboBox" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="TComboBoxEx.*" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="TComboBoxEx" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="TComboBox.*" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="TComboBox" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="TColorBox*" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="ComboBoxEx32" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="ComboBox" val1="{4ED1CDF0-2C75-11D4-8EF9-005004347D8A}" val2="1" val3="4" />
+				<row val0="*CHECKBOX*" val1="{345FC421-561B-11D4-8F3B-005004347D8A}" val2="1" val3="4" />
+				<row val0="WindowsForms*BUTTON*" val1="{716CF203-263D-11D4-8EF3-005004347D8A}" val2="1" val3="4" />
+				<row val0="Thunder*CommandButton" val1="{716CF203-263D-11D4-8EF3-005004347D8A}" val2="1" val3="4" />
+				<row val0="TButton*" val1="{716CF203-263D-11D4-8EF3-005004347D8A}" val2="1" val3="4" />
+				<row val0="TBitBtn*" val1="{716CF203-263D-11D4-8EF3-005004347D8A}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.TreeView" val1="{23CA88EC-EFE7-4E11-A88F-E84AD06CACC2}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.TreeView" val1="{23CA88EC-EFE7-4E11-A88F-E84AD06CACC2}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.TreeViewItem" val1="{216D249E-9650-4064-82DF-1CA85D6D5771}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Slider" val1="{9DDA2BEA-7B80-4D47-AD49-6B31B02502AB}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.VTrackBar" val1="{9DDA2BEA-7B80-4D47-AD49-6B31B02502AB}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.HTrackBar" val1="{9DDA2BEA-7B80-4D47-AD49-6B31B02502AB}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ToolBar" val1="{EAD16A26-B713-4E49-9F87-1940B9661C85}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.Toolbar" val1="{EAD16A26-B713-4E49-9F87-1940B9661C85}" val2="1" val3="4" />
+				<row val0="Microsoft.VisualStudio.PlatformUI.VsToolBar" val1="{EAD16A26-B713-4E49-9F87-1940B9661C85}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Separator" val1="{3B4EC9A3-445D-4857-9278-9B5A6F88FA4E}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonToggleButton" val1="{60448B69-1869-463D-AA8E-7CDBAF895396}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Primitives.ToggleButton" val1="{60448B69-1869-463D-AA8E-7CDBAF895396}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonToggleButton" val1="{60448B69-1869-463D-AA8E-7CDBAF895396}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.TabControl" val1="{22F63B6A-7794-4220-932A-A649B28DBEF6}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.Tab" val1="{22F63B6A-7794-4220-932A-A649B28DBEF6}" val2="1" val3="4" />
+				<row val0="Microsoft.VisualStudio.PlatformUI.Shell.Controls.TabGroupControl" val1="{22F63B6A-7794-4220-932A-A649B28DBEF6}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.TabItem" val1="{D7264C63-99E5-4F18-8A9E-061850402752}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ScrollViewer" val1="{DA984D0C-F368-43AD-A3D5-BA01698FA4EC}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Primitives.ScrollBar" val1="{7BD78970-0594-45F3-B2B3-8E704A52DEA0}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.VScrollBar" val1="{7BD78970-0594-45F3-B2B3-8E704A52DEA0}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.HScrollBar" val1="{7BD78970-0594-45F3-B2B3-8E704A52DEA0}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Primitives.RepeatButton" val1="{6F41C1BF-9AD9-4582-80AD-764BC28F7715}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.RadioButton" val1="{72B58A51-7D18-46DD-8737-7BAECDB5B83A}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.RadioButton" val1="{72B58A51-7D18-46DD-8737-7BAECDB5B83A}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.PasswordBox" val1="{1E93DB76-A5D1-41D3-827B-4F3C4FA4D811}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Menu" val1="{32A55CD5-69DF-4FE4-A464-B694F9CB0867}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.Menu" val1="{32A55CD5-69DF-4FE4-A464-B694F9CB0867}" val2="1" val3="4" />
+				<row val0="Microsoft.VisualStudio.PlatformUI.VsMenu" val1="{32A55CD5-69DF-4FE4-A464-B694F9CB0867}" val2="1" val3="4" />
+				<row val0="System.Windows.Documents.TextEditorContextMenu+EditorMenuItem" val1="{0C13A381-418B-4462-88CD-C0DE9BD61C7B}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.MenuItem" val1="{0C13A381-418B-4462-88CD-C0DE9BD61C7B}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.MenuItem" val1="{0C13A381-418B-4462-88CD-C0DE9BD61C7B}" val2="1" val3="4" />
+				<row val0="Microsoft.VisualStudio.PlatformUI.VsMenuItem" val1="{0C13A381-418B-4462-88CD-C0DE9BD61C7B}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ListView" val1="{B9A9F1AE-78E9-45EF-97B8-7FB1AAA83B10}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.ListView" val1="{B9A9F1AE-78E9-45EF-97B8-7FB1AAA83B10}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ListViewItem" val1="{5CEAEF61-E993-47F7-A7DA-DE5569A95B49}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ListBox" val1="{6BD0992C-9447-4381-AA22-C5F8337AE51B}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.PictureListBox" val1="{6BD0992C-9447-4381-AA22-C5F8337AE51B}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.ListBox" val1="{6BD0992C-9447-4381-AA22-C5F8337AE51B}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ListBoxItem" val1="{FFAF27AB-F8D8-4BD8-B63C-71AFE09D5D05}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.FlowDocumentScrollViewer" val1="{3F2A409F-FC9D-4E73-8EDA-9B2D188AE8BF}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Expander" val1="{6EF097D7-CFF7-45AB-A65D-65E6B11DADFE}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.TextBox" val1="{8F3B6407-1902-4D8E-B0F3-0F30B91696CB}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.SingleLineEdit" val1="{8F3B6407-1902-4D8E-B0F3-0F30B91696CB}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.MultiLineEdit" val1="{8F3B6407-1902-4D8E-B0F3-0F30B91696CB}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.DocumentViewer" val1="{EF70825E-C6FC-4DAE-8DD6-EECB47A0B278}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ComboBox" val1="{9ED25AB1-23E5-4FDE-ABFF-29A9643D17AA}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.DropDownPictureListBox" val1="{9ED25AB1-23E5-4FDE-ABFF-29A9643D17AA}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.DropDownListBox" val1="{9ED25AB1-23E5-4FDE-ABFF-29A9643D17AA}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.ComboBoxItem" val1="{8221CE2E-248D-430C-B3AC-C7CCE2AFDCE0}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Ribbon.RibbonCheckBox" val1="{AB750D7D-984A-4E85-B33E-7A72AB4F1276}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.CheckBox" val1="{AB750D7D-984A-4E85-B33E-7A72AB4F1276}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.CheckBox" val1="{AB750D7D-984A-4E85-B33E-7A72AB4F1276}" val2="1" val3="4" />
+				<row val0="Microsoft.Windows.Controls.Ribbon.RibbonCheckBox" val1="{AB750D7D-984A-4E85-B33E-7A72AB4F1276}" val2="1" val3="4" />
+				<row val0="System.Windows.Controls.Button" val1="{1A675744-E683-4366-AD5D-BC00BE8FB9E1}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.ToolbarButton" val1="{1A675744-E683-4366-AD5D-BC00BE8FB9E1}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.PictureButton" val1="{1A675744-E683-4366-AD5D-BC00BE8FB9E1}" val2="1" val3="4" />
+				<row val0="Sybase.PowerBuilder.WPF.Controls.CommandButton" val1="{1A675744-E683-4366-AD5D-BC00BE8FB9E1}" val2="1" val3="4" />
+				<row val0="Microsoft.VisualStudio.PlatformUI.VsButton" val1="{1A675744-E683-4366-AD5D-BC00BE8FB9E1}" val2="1" val3="4" />
+				<row val0="Xceed.Grid.GridControl" val1="{B8490919-AF4B-4FFB-BE8D-D109CFFE8011}" val2="1" val3="4" />
+				<row val0="Xceed.Grid.InsertionRow" val1="{871DFF07-FF9C-451B-A82B-6BC52572B3E9}" val2="1" val3="4" />
+				<row val0="Xceed.Grid.GroupManagerRow" val1="{188DA7FC-DCC2-446A-B289-742EFF890503}" val2="1" val3="4" />
+				<row val0="Xceed.Grid.Group" val1="{1A5396A5-4397-4440-8767-0B7966F2799A}" val2="1" val3="4" />
+				<row val0="Xceed.Grid.DetailGridManager" val1="{AAB93C87-CE28-4478-A8D6-0684AC3EAF88}" val2="1" val3="4" />
+				<row val0="Xceed.Grid.DataRow" val1="{CE3AAD13-7A7B-4DBC-A6B4-F64820638AAE}" val2="1" val3="4" />
+				<row val0="Xceed.Grid.ColumnManagerRow" val1="{5F0157E5-6936-49CE-B0DC-EBF5D93182BC}" val2="1" val3="4" />
+			</data>
+		</setting>
+		<setting name="{A892B59C-EC27-4ABB-8305-4F885C9BC8CA}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Depth-first" />
+				<row val0="Breadth-first" />
+			</data>
+		</setting>
+		<setting name="{24DB98D6-5EF8-47BF-977E-C2FD2C5F5FB3}" type="5" value="Log" />
+		<setting name="{3BAA9083-AE46-48CE-BFF4-A656DECF8E2F}" type="1" value="False" />
+		<setting name="{3E8BAA4F-EA09-4DD1-BD8E-DA765C8CF39B}" type="1" value="True" />
+		<setting name="{BE6D588C-BDC7-42E0-8BAE-3E3D8B0F7E83}" type="1" value="True" />
+		<setting name="{F544BC81-7A86-4230-B1FC-1B685211A0B4}" type="5" value="Format: PNG; Compression level: 4" />
+		<setting name="JavaOpenApp_DoNotRecognizeChildSWTAsParent" type="1" value="False" />
+		<setting name="{94ACE9B9-2204-49E3-89A5-87766C9A615E}" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{98C6A210-59EF-4CD6-AA7E-B41953DEC74A}" type="1" value="False" />
+		<setting name="{BF9B6482-CEA1-4402-BA61-9702404F1F12}" type="1" value="True" />
+		<setting name="{C3267834-69E4-4CD8-B16A-B60A9BB8A3B4}" type="1" value="False" />
+		<setting name="{1398B0BE-92B7-4650-A467-751B8FAAB738}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Update existing frames and capture new frames, if needed" />
+				<row val0="Update existing frames only" />
+			</data>
+		</setting>
+		<setting name="ApplicationHangingProcessFilterMode" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Use all processes" />
+				<row val0="Use only tested applications" />
+				<row val0="Use only selected processes" />
+				<row val0="Ignore selected processes" />
+				<row val0="Ignore all processes" />
+			</data>
+		</setting>
+		<setting name="ApplicationHangingProcessList" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{3A4F97B3-D3D3-41E5-BE37-C419B02D488A}" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="1" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="ApplicationHangingTimeout" type="2" value="30000" />
+		<setting name="CLRBridge_PreferredApartmentModel" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Does not matter" />
+				<row val0="Single-threaded apartment" />
+				<row val0="Multi-threaded apartment" />
+			</data>
+		</setting>
+		<setting name="{C371F52C-2F81-459B-8A40-380AAA4FB590}" type="1" value="True" />
+		<setting name="{EF65967B-5D67-41D0-9E90-1E07D7ECE759}" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="NativeQtObject" />
+				<row val0="NativeTextObject" />
+			</data>
+		</setting>
+		<setting name="KeyPressingDelay" type="2" value="50" />
+		<setting name="{AE3F26D8-A5BD-4172-9F50-F2B9D1D03611}" type="1" value="True" />
+		<setting name="CLRBridge_PreferredArchitecture" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="The same as the operating system" />
+				<row val0="32-bit" />
+				<row val0="64-bit" />
+			</data>
+		</setting>
+		<setting name="JavaFXOpenApp_DoNotRecognizeJavaFXStageAsAWTComponent" type="1" value="True" />
+		<setting name="{890C6D5A-4706-498E-A6EA-CA765851BB97}" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Use all processes" />
+				<row val0="Use only tested applications" />
+				<row val0="Use only selected processes" />
+				<row val0="Ignore selected processes" />
+			</data>
+		</setting>
+		<setting name="{E5242A20-9B70-4540-AEFD-7012791D3284}" type="1" value="True" />
+		<setting name="JavaBridge_Classes" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{D80391D4-892F-4CEC-865E-B7FACB3FAC84}" type="2" value="10" />
+		<setting name="MouseMovementDelay" type="2" value="20" />
+		<setting name="{A383BA1A-68CF-40AE-9FCD-B3E554E9ADD7}" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Off" />
+				<row val0="Capture images" />
+			</data>
+		</setting>
+	</settings>
+	<analysis key="{8DD8C211-722D-47FA-8161-02129320F61B}" />
+	<scc key="{00000000-0000-0000-0000-000000000000}" name="">
+		<data />
+	</scc>
+	<issueTracking key="{797097F6-846D-4E3F-9A87-68D21BA2CA6A}">
+		<Templates>
+			<Template Id="{1EB17ADF-E4EB-404D-97DC-AD758A1E8C1D}" ConnectionId="{00000000-0000-0000-0000-000000000000}" Description="This template is used by TestComplete&apos;s Log subsystem to post test results to an issue-tracking system. You can also use it at your desire." Name="CreateWorkItem" IsSystem="True" ItemTypeName="" ProjectName="" IsEditing="False" ItemId="">
+				<Fields>
+					<Field ItemId="{16E7B9AA-9324-4826-B70D-19B7188004EC}" AliasIsRequired="True" DBFieldNameIsRequired="False" Value="" DBFieldName="" Alias="Subject" />
+					<Field ItemId="{5FD34E69-31F7-4F96-B55B-ECF5340918FA}" AliasIsRequired="True" DBFieldNameIsRequired="False" Value="" DBFieldName="" Alias="Description" />
+				</Fields>
+			</Template>
+		</Templates>
+	</issueTracking>
+</Root>

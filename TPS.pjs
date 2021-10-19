@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{24B6FA0B-0143-461A-9758-AEB9E9A9428B}" version="12.0" key="{1CA2CF19-17D1-4BA6-AAFE-9F8B497E2840}">
+	<children>
+		<child name="IndelPlanHead" key="{A1E463B7-4531-444F-B75E-703F5D4AA63B}" type="Project" typeId="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}" pluginName="">
+			<data path="IndelPlanHead\IndelPlanHead.mds" />
+		</child>
+	</children>
+	<folders />
+	<testItems key="{CA4FE033-40C3-4870-BBB7-F976B815899F}">
+		<children>
+			<testItem key="{A1E463B7-4531-444F-B75E-703F5D4AA63B}" enabled="True" timeout="0" stopOnError="True" description="" />
+		</children>
+	</testItems>
+	<variables key="{82584A17-B5AE-4636-A7D3-5AFF1B9EF60F}">
+		<data Version="3" />
+	</variables>
+	<analysis key="{DFE0D7EB-DFC5-4CC2-AF0D-5FD3D113F7BD}" />
+	<scc key="{C900492B-D218-429C-9AA0-264B7D78CA88}" name="Git Plugin">
+		<data />
+	</scc>
+	<extender key="{1A3FC97E-9A66-4716-B166-35D10B4146E0}" />
+</Root>

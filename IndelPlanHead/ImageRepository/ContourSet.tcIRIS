@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{302E54A8-7D5B-4593-9563-357C2734256B}" version="1140" key="{4DD65D13-227F-4302-BCB6-63CD5A08CDA4}" type="Image Set" typeId="{302E54A8-7D5B-4593-9563-357C2734256B}">
+	<config nodeName="ContourSet" />
+	<testData />
+	<data>
+		<item caption="wangbangai_without_target_contour" moniker="{54A5A121-7006-401A-9617-DCAB32D9E9D2}" isComposite="False" simpleMode="True" currentImageIndex="0">
+			<image imageFileName="Data\wangbangai_no_contour.png" initialHash="4E297F86" selectionLeft="712" selectionTop="255" selectionWidth="496" selectionHeight="596" initialLeft="712" initialTop="255" initialWidth="496" initialHeight="596" pixelTolerance="2956" colorTolerance="0" deviceName="" />
+		</item>
+		<item caption="wangbangai_with_target_contour" moniker="{7702E2CA-4886-47D3-98FC-77C037AEE590}" isComposite="False" simpleMode="True" currentImageIndex="0">
+			<image imageFileName="Data\wangbangai_with_target_contour.png" initialHash="A49C58F6" selectionLeft="711" selectionTop="251" selectionWidth="502" selectionHeight="604" initialLeft="711" initialTop="251" initialWidth="502" initialHeight="604" pixelTolerance="3032" colorTolerance="0" deviceName="" />
+		</item>
+	</data>
+</Root>

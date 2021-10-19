@@ -1,5 +1,5 @@
 ﻿const globalConstant = require("global_constant")
-const launchwithlogic = require("launch_with_logic")
+const launch = require("launch")
 const login = require("login")
 const utilsfunctions = require("utils_functions")
 const findinlist = require("find_in_list")
@@ -7,7 +7,7 @@ const exitwithlogic = require("exit_with_logic")
 
 function TPS_BeiHang_toudao_063() {
   const IndelPlan = Project.Variables.IndelPlan
-  launchwithlogic.launchWithLogic()
+  launch.launch()
   login.login(Project.Variables.username, Project.Variables.password)
   IndelPlan.patientManagement.frame.pushButton_PhyData.Click()
   utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)

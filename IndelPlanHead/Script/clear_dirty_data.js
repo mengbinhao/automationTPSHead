@@ -1,5 +1,5 @@
 ﻿const globalConstant = require("global_constant")
-const launchwithlogic = require("launch_with_logic")
+const launch = require("launch")
 const login = require("login")
 const patient = require("patient")
 const user = require("user")
@@ -11,7 +11,7 @@ const clearDirtyData = () => {
   const IndelPlan = Project.Variables.IndelPlan
   const dirtyData = IndelPlan.dirtyData
   
-  launchwithlogic.launchWithLogic()
+  launch.launch()
   login.login(Project.Variables.username, Project.Variables.password)
   
   const contourArr = IndelPlan.dirtyData.get(globalConstant.obj.addContourLib)

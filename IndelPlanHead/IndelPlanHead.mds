@@ -102,7 +102,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="usernamagement" key="{59184077-BEDA-4B28-B563-8B2F5F2EAF3E}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="usernamagement" key="{59184077-BEDA-4B28-B563-8B2F5F2EAF3E}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="新建用户" key="{723742AD-20EE-4C9C-8FED-7B87F957B72D}" group="False" enabled="True" testMoniker="{58B75C39-CC17-4380-A18B-1A9AFDFED149}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">

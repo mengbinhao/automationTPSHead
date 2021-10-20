@@ -10,3 +10,12 @@ Log/
 
 # Ignore backup files
 *.bak
+
+# Ignore IndelPlanHead\Log
+IndelPlanHead/Log/
+
+# Ignore Script\Visualizer
+IndelPlanHead/Script/Visualizer/
+
+# Ignore KeywordTests\Visualizer
+IndelPlanHead/KeywordTests/Visualizer/

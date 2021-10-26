@@ -11,21 +11,16 @@ function testcase() {
   login.login(Project.Variables.username, Project.Variables.password)
   
   user.gotoUserListWindow(IndelPlan)
+  user.openNewUserWindow(IndelPlan)
+  user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
 
-  const userList = IndelPlan.user_management.UserList
-  let isUserExisting = findinlist.isItemExitInList(Project.Variables.newusername, globalConstant.obj.userNameColumn, userList)
-  
+  const isUserExisting = findinlist.isItemExitInList(Project.Variables.newusername, globalConstant.obj.userNameColumn, IndelPlan.user_management.UserList)
   if (isUserExisting) {
-    Log.Error(`Prerequisites is not correct`)
+    Log.Checkpoint("Add user successfully!")
   } else {
-    user.openNewUserWindow(IndelPlan)
-    user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
-    isUserExisting = findinlist.isItemExitInList(Project.Variables.newusername, globalConstant.obj.userNameColumn, userList)
-    let checkObj = {}
-    checkObj.isUserExisting = isUserExisting
-    aqObject.CheckProperty(checkObj, "isUserExisting", cmpEqual, true)
-    checkObj = null
+    Log.Error("Add user fail!")
   }
+
   user.exitUserListWindow(IndelPlan)
   exitwithlogic.exitWithLogic(false, false, 1)
 }

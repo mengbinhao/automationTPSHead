@@ -13,35 +13,35 @@ function testcase() {
   login.login(Project.Variables.username, Project.Variables.password)
   
   user.gotoUserListWindow(IndelPlan)
-
-  const userList = IndelPlan.user_management.UserList
-  let isUserExisting = findinlist.isItemExitInList(Project.Variables.newusername, globalConstant.obj.userNameColumn, userList)
+  user.openNewUserWindow(IndelPlan)
+  user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
+  user.exitUserListWindow(IndelPlan)
+  exitwithlogic.exitWithLogic(false, false, 2)
+  //login with new user
+  login.login(Project.Variables.newusername, Project.Variables.newuserpassword)
+  //visitor authority
+  user.updateUserPassword(IndelPlan, Project.Variables.newuserpassword, Project.Variables.edituserpassword, Project.Variables.edituserpassword)
+  exitwithlogic.exitWithLogic(false, false, 2)
   
-  if (isUserExisting) {
-    Log.Error(`Prerequisites is not correct`)
-  } else {
-    user.openNewUserWindow(IndelPlan)
-    user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
-    user.exitUserListWindow(IndelPlan)
-    exitwithlogic.exitWithLogic(false, false, 2)
-    login.login(Project.Variables.newusername, Project.Variables.newuserpassword)
-    user.updateUserPassword(IndelPlan, Project.Variables.newuserpassword, '456', '456')
-    exitwithlogic.exitWithLogic(false, false, 2)
-    login.login(Project.Variables.newusername, '456')
+  //relogin after changing password
+  login.login(Project.Variables.newusername, Project.Variables.edituserpassword)
+  aqObject.CheckProperty(IndelPlan.patientManagement.frame.groupBox_3, "VisibleOnScreen", cmpEqual, true)
+  
+  /*  
+  //check login name
+  const group = IndelPlan.patientManagement.frame.groupBox_3
+  aqObject.CheckProperty(group.label_UserName, "text", cmpEqual, `User Name: ${Project.Variables.newusername}`)
     
-    //check login name
-    const group = IndelPlan.patientManagement.frame.groupBox_3
-    aqObject.CheckProperty(group.label_UserName, "text", cmpEqual, `User Name: ${Project.Variables.newusername}`)
-    
-    //check login time
-    const systemCurrentTime = utils_functions.getTimeAsFormatStr("%H:%M")
-    const systemOneMinuteBeforeTime = utils_functions.getTimeIntervalAsFormatStr("%H:%M", 3, -1)
-    const ret1 = aqString.FindLast(group.label_LoginTime.text,systemCurrentTime)
-    const ret2 = aqString.FindLast(group.label_LoginTime.text,systemOneMinuteBeforeTime)
-    if (strictEqual(ret1, -1) && strictEqual(ret2, -1)) {
-      Log.Error("Login Time is not correct!")
-    } {
-      Log.Checkpoint("Login Time is correct!")
-    }
+  //check login time
+  const systemCurrentTime = utils_functions.getTimeAsFormatStr("%H:%M")
+  const systemOneMinuteBeforeTime = utils_functions.getTimeIntervalAsFormatStr("%H:%M", 3, -1)
+  const ret1 = aqString.FindLast(group.label_LoginTime.text,systemCurrentTime)
+  const ret2 = aqString.FindLast(group.label_LoginTime.text,systemOneMinuteBeforeTime)
+  if (strictEqual(ret1, -1) && strictEqual(ret2, -1)) {
+    Log.Error("Login Time is not correct!")
+  } {
+    Log.Checkpoint("Login Time is correct!")
   }
+  */
+  exitwithlogic.exitWithLogic(false, false, 1)
 }

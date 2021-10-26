@@ -12,23 +12,17 @@ function testcase() {
   
   user.gotoUserListWindow(IndelPlan)
 
-  const userList = IndelPlan.user_management.UserList
-  let isUserExisting = findinlist.isItemExitInList(Project.Variables.newusername, globalConstant.obj.userNameColumn, userList)
-  
-  if (isUserExisting) {
-    Log.Error(`Prerequisites is not correct`)
+  user.openNewUserWindow(IndelPlan)
+  user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
+  user.deleteUser(IndelPlan, Project.Variables.newusername, false)
+
+  const isExisting = findinlist.isItemExitInList(Project.Variables.newusername, globalConstant.obj.userNameColumn, IndelPlan.user_management.UserList)
+  if (!isExisting) {
+    Log.Checkpoint("Delete user Successfully!")
   } else {
-    user.openNewUserWindow(IndelPlan)
-    user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
-    user.deleteUser(IndelPlan, Project.Variables.newusername, false)
-    const idx = findinlist.isItemInListReturnIndex(Project.Variables.newusername, globalConstant.obj.userNameColumn, userList)
-    const isExisting = findinlist.isItemExitInList(Project.Variables.newusername, globalConstant.obj.userNameColumn, userList)
-    if (!isExisting) {
-      Log.Checkpoint("Delete user Successfully!")
-    } else {
-      Log.Error("Delete user Fail!")
-    }
+    Log.Error("Delete user Fail!")
   }
+  
   user.exitUserListWindow(IndelPlan)
   exitwithlogic.exitWithLogic(false, false, 1)
 }

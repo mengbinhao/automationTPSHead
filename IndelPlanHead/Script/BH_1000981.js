@@ -12,7 +12,6 @@ function testcase() {
   login.login(Project.Variables.username, Project.Variables.password)
   
   user.gotoUserListWindow(IndelPlan)
-  aqObject.CheckProperty(IndelPlan.user_management, "Exists", cmpEqual, true)
   user.exitUserListWindow(IndelPlan)
   aqObject.CheckProperty(IndelPlan.user_management, "Exists", cmpEqual, false)
   exitwithlogic.exitWithLogic(false, false, 1)

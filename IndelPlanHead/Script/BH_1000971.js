@@ -15,9 +15,7 @@ function testcase() {
   user.openNewUserWindow(IndelPlan)
   user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype, true)
   
-  const currentCount = IndelPlan.user_management.UserList.wRowCount
-  
-  if (strictEqual(previousCount, currentCount)) {
+  if (strictEqual(previousCount, IndelPlan.user_management.UserList.wRowCount)) {
     Log.Checkpoint('Cancel add new user successfully!')
   } else {
     Log.Error('Cancel add new user Fail!')

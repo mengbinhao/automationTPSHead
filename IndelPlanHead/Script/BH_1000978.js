@@ -12,19 +12,11 @@ function testcase() {
   login.login(Project.Variables.username, Project.Variables.password)
   
   user.gotoUserListWindow(IndelPlan)
-
-  const userList = IndelPlan.user_management.UserList
-  let isUserExisting = findinlist.isItemExitInList(Project.Variables.newusername, globalConstant.obj.userNameColumn, userList)
-  
-  if (isUserExisting) {
-    Log.Error(`Prerequisites is not correct`)
-  } else {
-    user.openNewUserWindow(IndelPlan)
-    user.addUser(IndelPlan, Project.Variables.newusername, "", Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
-    aqObject.CheckProperty(IndelPlan.user_nullpassword_popup, "Exists", cmpEqual, true)
-    common.handlePopupDialog(IndelPlan.user_nullpassword_popup)
-    IndelPlan.user_newusercClass.pushButton_Cancel.ClickButton()
-  }
+  user.openNewUserWindow(IndelPlan)
+  user.addUser(IndelPlan, Project.Variables.newusername, "", Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
+  aqObject.CheckProperty(IndelPlan.user_nullpassword_popup, "Exists", cmpEqual, true)
+  common.handlePopupDialog(IndelPlan.user_nullpassword_popup)
+  IndelPlan.user_newusercClass.pushButton_Cancel.ClickButton()
   user.exitUserListWindow(IndelPlan)
   exitwithlogic.exitWithLogic(false, false, 1)
 }

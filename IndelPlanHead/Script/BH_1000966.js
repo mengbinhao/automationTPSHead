@@ -11,7 +11,6 @@ function testcase() {
   login.login(Project.Variables.username, Project.Variables.password)
   
   user.gotoUserListWindow(IndelPlan)
-
   const userList = IndelPlan.user_management.UserList
   const rowIdx = findinlist.isItemInListReturnIndex(Project.Variables.username, globalConstant.obj.userNameColumn, userList)
   userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)

@@ -9,6 +9,14 @@ function testcase() {
 
   const dateArea = IndelPlan.patientManagement.groupBox_2
 
+  aqObject.CheckProperty(dateArea.radioButton_AllDate, "wChecked", cmpEqual, false)
+  aqObject.CheckProperty(dateArea.radioButton_Today, "wChecked", cmpEqual, false)
+  aqObject.CheckProperty(dateArea.radioButton_Yesterday, "wChecked", cmpEqual, false)
+  aqObject.CheckProperty(dateArea.radioButton_Week, "wChecked", cmpEqual, false)
+  aqObject.CheckProperty(dateArea.radioButton_Month, "wChecked", cmpEqual, true)
+  aqObject.CheckProperty(dateArea.radioButton_Between, "wChecked", cmpEqual, false)
+
+  dateArea.radioButton_AllDate.ClickButton()
   aqObject.CheckProperty(dateArea.radioButton_AllDate, "wChecked", cmpEqual, true)
   aqObject.CheckProperty(dateArea.radioButton_Today, "wChecked", cmpEqual, false)
   aqObject.CheckProperty(dateArea.radioButton_Yesterday, "wChecked", cmpEqual, false)
@@ -38,14 +46,6 @@ function testcase() {
   aqObject.CheckProperty(dateArea.radioButton_Yesterday, "wChecked", cmpEqual, false)
   aqObject.CheckProperty(dateArea.radioButton_Week, "wChecked", cmpEqual, true)
   aqObject.CheckProperty(dateArea.radioButton_Month, "wChecked", cmpEqual, false)
-  aqObject.CheckProperty(dateArea.radioButton_Between, "wChecked", cmpEqual, false)
-
-  dateArea.radioButton_Month.ClickButton()
-  aqObject.CheckProperty(dateArea.radioButton_AllDate, "wChecked", cmpEqual, false)
-  aqObject.CheckProperty(dateArea.radioButton_Today, "wChecked", cmpEqual, false)
-  aqObject.CheckProperty(dateArea.radioButton_Yesterday, "wChecked", cmpEqual, false)
-  aqObject.CheckProperty(dateArea.radioButton_Week, "wChecked", cmpEqual, false)
-  aqObject.CheckProperty(dateArea.radioButton_Month, "wChecked", cmpEqual, true)
   aqObject.CheckProperty(dateArea.radioButton_Between, "wChecked", cmpEqual, false)
 
   dateArea.radioButton_Between.ClickButton()

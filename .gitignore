@@ -16,6 +16,9 @@ IndelPlanHead/Log/
 
 # Ignore Script\Visualizer
 IndelPlanHead/Script/Visualizer/
+IndelPlanHead/Script/test*.js
 
 # Ignore KeywordTests\Visualizer
 IndelPlanHead/KeywordTests/Visualizer/
+IndelPlanHead/Events/{95932320-399D-4E37-B126-F46F9FB179DB}/GeneralEvents1.tcax.tlb
+IndelPlanHead/Events/{95932320-399D-4E37-B126-F46F9FB179DB}/GeneralEvents0.tcax.tlb

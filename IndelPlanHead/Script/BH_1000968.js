@@ -27,10 +27,10 @@ function testcase() {
   checkObj = null
   */
   
-  aqObject.CheckProperty(IndelPlan.user_management.pushButton_NewUser, "VisibleOnScreen", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_management.pushButton_EditUser, "VisibleOnScreen", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_management.pushButton_DelUser, "VisibleOnScreen", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_management.pushButton_Exit, "VisibleOnScreen", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.user_management.pushButton_NewUser, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.user_management.pushButton_EditUser, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.user_management.pushButton_DelUser, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.user_management.pushButton_Exit, "Visible", cmpEqual, true)
 
   user.exitUserListWindow(IndelPlan)
   exitwithlogic.exitWithLogic(false, false, 1)

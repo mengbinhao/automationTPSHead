@@ -16,12 +16,12 @@ function testcase() {
   userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
   IndelPlan.user_management.pushButton_EditUser.ClickButton()
   
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_username, "VisibleOnScreen", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_password, "VisibleOnScreen", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_confirmpassword, "VisibleOnScreen", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_usertype, "VisibleOnScreen", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.pushButton_OK, "VisibleOnScreen", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.pushButton_Cancel, "VisibleOnScreen", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_username, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_password, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_confirmpassword, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_usertype, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.user_newusercClass.pushButton_OK, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.user_newusercClass.pushButton_Cancel, "Visible", cmpEqual, true)
   IndelPlan.user_newusercClass.pushButton_Cancel.ClickButton()
   
   user.exitUserListWindow(IndelPlan)

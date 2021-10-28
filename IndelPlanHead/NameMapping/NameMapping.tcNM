@@ -493,6 +493,197 @@
 																					</Property>
 																				</Properties>
 																			</Child>
+																			<Child Name="groupBox_4" Key="{AECA0B36-1207-477E-8458-712AB21CFBA5}" ParallelWalk="True">
+																				<Image FileName="-667622444" Left="276" Top="760" Right="1905" Bottom="960" />
+																				<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="groupBox_4" Type="5" />
+																					</Property>
+																				</Properties>
+																				<Children>
+																					<Child Name="label_15" Key="{D5E31592-01A4-46E2-8294-C42FE428A074}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="288" Top="790" Right="369" Bottom="813" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="label_15" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="lineEdit_CreateTime" Key="{B71E6AAA-064E-4311-90F8-D4530A65DAB3}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="375" Top="790" Right="808" Bottom="813" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="lineEdit_CreateTime" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="label_19" Key="{BA0A64DD-729D-42FF-BA98-36D6926F8E50}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="814" Top="790" Right="898" Bottom="813" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="label_19" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="lineEdit_StudyCount" Key="{0009A901-5132-420C-8905-058308B9429C}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="904" Top="790" Right="1338" Bottom="813" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="lineEdit_StudyCount" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="label_23" Key="{FDDC8F49-213B-48AB-962E-4E1E55D27C5A}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="1344" Top="790" Right="1454" Bottom="813" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="label_23" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="lineEdit_PlanCount" Key="{51951D03-81B8-4C3D-9A03-21AD27903CF4}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="1460" Top="790" Right="1893" Bottom="813" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="lineEdit_PlanCount" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="label_16" Key="{16908586-14B1-4458-A3DB-A433D7ECC34B}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="288" Top="821" Right="369" Bottom="844" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="label_16" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="lineEdit_TreatTime" Key="{77F82F25-DD34-464D-A736-208C2DB6F780}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="375" Top="821" Right="808" Bottom="844" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="lineEdit_TreatTime" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="label_20" Key="{D9FA6382-0B0B-4EBD-9892-6C51974CB192}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="814" Top="821" Right="898" Bottom="844" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="label_20" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="lineEdit_ContourCount" Key="{5C60EC3C-88A1-4AF0-A917-3CCF6E94A4E3}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="904" Top="821" Right="1338" Bottom="844" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="lineEdit_ContourCount" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="label_22" Key="{FA709A04-E5A7-4B1C-B625-071D8D6B039A}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="1344" Top="821" Right="1454" Bottom="844" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="label_22" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="lineEdit_UFPlanCount" Key="{A1418EB9-1C2F-4C3E-BA16-2C5796ACD7D1}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="1460" Top="821" Right="1893" Bottom="844" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="lineEdit_UFPlanCount" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="label_17" Key="{90A7F22F-AFB1-4763-B8AC-4C35F96772A6}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="288" Top="852" Right="369" Bottom="875" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="label_17" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="lineEdit_CreateDoc" Key="{AEF55AFC-DE18-49E5-8B71-91667D4611B9}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="375" Top="852" Right="808" Bottom="875" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="lineEdit_CreateDoc" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="label_21" Key="{8D9F59FE-BD4A-4994-9214-06C5BDDA28EE}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="814" Top="852" Right="898" Bottom="875" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="label_21" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="lineEdit_TCCount" Key="{99592A30-B19D-4FDE-A725-CF7F09193F31}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="904" Top="852" Right="1338" Bottom="875" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="lineEdit_TCCount" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="label_24" Key="{B9779E40-87C4-47EC-8DF3-04033130119B}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="1344" Top="852" Right="1454" Bottom="875" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="label_24" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="lineEdit_UTPlanCount" Key="{C66ACDF5-B1CC-4EEC-9AF3-373B7C5A8C4F}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="1460" Top="852" Right="1893" Bottom="875" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="lineEdit_UTPlanCount" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="label_18" Key="{8610DF4B-CD7B-45F8-B7D2-8F9746760565}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="288" Top="883" Right="369" Bottom="943" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="label_18" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="textEdit_Note" Key="{2E238C46-803A-487E-8D85-EA79CFC1BEA4}" ParallelWalk="True">
+																						<Image FileName="-667622444" Left="375" Top="883" Right="1893" Bottom="943" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="textEdit_Note" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																				</Children>
+																			</Child>
 																		</Children>
 																	</Child>
 																	<Child Name="PatientDataClass" Key="{7D7E56BD-C4F5-45FC-B969-C9BEBC4A1646}" ParallelWalk="True">
@@ -6754,6 +6945,28 @@
 										<Child Name="lineEdit_SearchPatient" Owner="{A4DB8D5D-791E-4183-9D77-A538346DDAC9}" />
 									</Child>
 									<Child Name="treeWidget_PatientList" Owner="{EA03D15F-EA17-4F83-8C63-BD6887C28066}" />
+									<Child Name="groupBox_4" Owner="{AECA0B36-1207-477E-8458-712AB21CFBA5}">
+										<Child Name="label_15" Owner="{D5E31592-01A4-46E2-8294-C42FE428A074}" />
+										<Child Name="lineEdit_CreateTime" Owner="{B71E6AAA-064E-4311-90F8-D4530A65DAB3}" />
+										<Child Name="label_19" Owner="{BA0A64DD-729D-42FF-BA98-36D6926F8E50}" />
+										<Child Name="lineEdit_StudyCount" Owner="{0009A901-5132-420C-8905-058308B9429C}" />
+										<Child Name="label_23" Owner="{FDDC8F49-213B-48AB-962E-4E1E55D27C5A}" />
+										<Child Name="lineEdit_PlanCount" Owner="{51951D03-81B8-4C3D-9A03-21AD27903CF4}" />
+										<Child Name="label_16" Owner="{16908586-14B1-4458-A3DB-A433D7ECC34B}" />
+										<Child Name="lineEdit_TreatTime" Owner="{77F82F25-DD34-464D-A736-208C2DB6F780}" />
+										<Child Name="label_20" Owner="{D9FA6382-0B0B-4EBD-9892-6C51974CB192}" />
+										<Child Name="lineEdit_ContourCount" Owner="{5C60EC3C-88A1-4AF0-A917-3CCF6E94A4E3}" />
+										<Child Name="label_22" Owner="{FA709A04-E5A7-4B1C-B625-071D8D6B039A}" />
+										<Child Name="lineEdit_UFPlanCount" Owner="{A1418EB9-1C2F-4C3E-BA16-2C5796ACD7D1}" />
+										<Child Name="label_17" Owner="{90A7F22F-AFB1-4763-B8AC-4C35F96772A6}" />
+										<Child Name="lineEdit_CreateDoc" Owner="{AEF55AFC-DE18-49E5-8B71-91667D4611B9}" />
+										<Child Name="label_21" Owner="{8D9F59FE-BD4A-4994-9214-06C5BDDA28EE}" />
+										<Child Name="lineEdit_TCCount" Owner="{99592A30-B19D-4FDE-A725-CF7F09193F31}" />
+										<Child Name="label_24" Owner="{B9779E40-87C4-47EC-8DF3-04033130119B}" />
+										<Child Name="lineEdit_UTPlanCount" Owner="{C66ACDF5-B1CC-4EEC-9AF3-373B7C5A8C4F}" />
+										<Child Name="label_18" Owner="{8610DF4B-CD7B-45F8-B7D2-8F9746760565}" />
+										<Child Name="textEdit_Note" Owner="{2E238C46-803A-487E-8D85-EA79CFC1BEA4}" />
+									</Child>
 								</Child>
 								<Child Name="PatientDataClass" Owner="{7D7E56BD-C4F5-45FC-B969-C9BEBC4A1646}">
 									<Child Name="groupBox_6" Owner="{DA815BFA-1059-4C0E-B160-325D50538A8A}">

@@ -25,7 +25,7 @@ function testcase() {
   
   //relogin after changing password
   login.login(Project.Variables.newusername, Project.Variables.edituserpassword)
-  aqObject.CheckProperty(IndelPlan.patientManagement.frame.groupBox_3, "VisibleOnScreen", cmpEqual, true)
+  aqObject.CheckProperty(IndelPlan.patientManagement.frame.groupBox_3, "Visible", cmpEqual, true)
   
   /*  
   //check login name

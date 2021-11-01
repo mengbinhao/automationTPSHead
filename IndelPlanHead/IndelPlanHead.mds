@@ -102,7 +102,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="usernamagement" key="{59184077-BEDA-4B28-B563-8B2F5F2EAF3E}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="usernamagement" key="{59184077-BEDA-4B28-B563-8B2F5F2EAF3E}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="新建用户" key="{723742AD-20EE-4C9C-8FED-7B87F957B72D}" group="False" enabled="True" testMoniker="{58B75C39-CC17-4380-A18B-1A9AFDFED149}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -163,10 +163,74 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="patientmanagement" key="{B003F621-E70F-4E86-844E-B7D20DEFFB78}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="patientmanagement" key="{B003F621-E70F-4E86-844E-B7D20DEFFB78}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem4" key="{6231CA38-E3CC-4366-AE75-EBB1A1370F0A}" group="False" enabled="False" testMoniker="{5252CED4-41E1-43A0-B5E8-1AA13C679A85}TPS_BeiHang_toudao_230" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="关闭患者界面-点击yes" key="{3648D43C-389A-42B8-96AF-800077D6CF0A}" group="False" enabled="False" testMoniker="{B1DFAA63-E245-4CA3-8DAC-F6F38397C220}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="关闭患者界面-点击No" key="{54B97672-5C99-4FC6-8ECB-9F03E7DC11BE}" group="False" enabled="False" testMoniker="{A8623E07-B00A-40FD-BC82-FA798CFCDD13}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="关闭患者界面-点击Cancel" key="{19B66844-0E28-4C21-9B2F-73548387C525}" group="False" enabled="False" testMoniker="{F1CB48CE-B3CD-44F0-8E61-1E501CB59C96}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="检查患者管理界面" key="{0B1E3602-7F3F-4300-A0A9-7FC85E18B70B}" group="False" enabled="False" testMoniker="{0510C9E6-5889-46B4-8E0B-0A84E19620B0}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="选择计划状态" key="{A11567C6-5F72-4DF9-ABB4-032A15411284}" group="False" enabled="False" testMoniker="{9CB2B956-B221-49EE-A18D-CDB4B9A7CA10}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="选择时间段&#13;&#10;" key="{1AFF03E4-DB97-41B0-883C-3AF21383177D}" group="False" enabled="False" testMoniker="{E6FAA66B-3DCF-471B-95F8-9185C51CEBCF}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="筛选ID符合的患者&#13;&#10;" key="{C6377E3E-8E31-4581-9679-4247BF36748D}" group="False" enabled="False" testMoniker="{9C937985-0D17-40BB-BA41-78867FD1AAD3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="筛选Name符合的患者" key="{76CA1F5A-7B48-4B80-8578-47C227582B43}" group="False" enabled="False" testMoniker="{7A06E28B-3BF2-4979-BA83-79D4E65270CB}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="筛选ID和Name都不符合的患者" key="{550D3829-55B0-416C-988E-FDDAECE56285}" group="False" enabled="False" testMoniker="{B30A661D-4A0D-4370-A055-FC1D5624D11A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="筛选ID和Name都符合的患者" key="{219617E4-4A0F-42F7-AB19-321F7154D896}" group="False" enabled="False" testMoniker="{B79F0B1C-1A8E-451B-BAD0-2A205A01EFFA}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="新建患者" key="{9F6A5F4D-6DDA-4B4D-820A-0312BEF37D86}" group="False" enabled="True" testMoniker="{F1E14B2E-9178-4817-BBDF-11F11073D150}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="重复创建同ID的患者" key="{A9D2418A-3181-46D8-8928-781A2C0CD537}" group="False" enabled="True" testMoniker="{3C53B742-09EE-4075-BD7C-E18EBACB6C98}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="取消创建患者" key="{3259B96C-B62F-4274-8E24-2D068E4C44D8}" group="False" enabled="True" testMoniker="{6651DFBD-8EE9-48F6-8A80-22AB0FC775B5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="修改患者信息" key="{1F693648-9D02-46C6-B058-03797FE00F65}" group="False" enabled="True" testMoniker="{EAF76F67-8980-4F81-B308-4CB35CE829C9}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="删除患者" key="{EAFBF2DF-D05D-4BDE-8A09-161C894E6BCF}" group="False" enabled="True" testMoniker="{E45CCE24-2CD8-4613-880F-0C2E4787CCA2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="取消删除患者" key="{716DE018-A079-40E4-954E-2C06C126AB7C}" group="False" enabled="True" testMoniker="{DF36E063-D137-4CB0-882B-B3190F96E16C}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="加载患者" key="{69E075FF-00FF-484A-9F24-DFFDDEC3F5BD}" group="False" enabled="True" testMoniker="{3592C3BF-0D3B-41AD-8D06-05EE78D7BEF4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

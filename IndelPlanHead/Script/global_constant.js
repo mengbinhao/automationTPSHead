@@ -52,6 +52,9 @@ obj.studyName = 'StudyName'
 obj.contourType = 'Type'
 
 
+//patient info
+obj.defaultPatientGender = 'Male'
+
 //for magic number or string
 //obj.userMaxLength = 30
 //obj.passMaxLength = 10

@@ -7,14 +7,13 @@ const __handleGamaImporterClass = indel => {
 }
 
 const __handlePatientDataClass = (indel, isUpdatePatient = true) => {
-  indel.main.Close()
+  indel.patientDataClass.groupBox_6.pushButton_Close.ClickButton()
   if (isUpdatePatient) {
     indel.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
   } else {
     indel.patient_update_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
   }
-  indel.main_quit_popup.qt_msgbox_buttonbox.buttonCancel.ClickButton()
 }
 
 const __checkTabExists = (tabWidget, tabName) => {
@@ -164,7 +163,7 @@ const changePatientDetailTab = (indel, tabName, isPlanFinish = false) => {
 
 const gotoPatientManagement = (indel, isUpdatePatient = false) => {
   //login window
-  if (indel.loginClass.Exists) return
+  if (indel.loginClass.VisibleOnScreen) return
   //already in main page
   if (indel.patientManagement.frame.pushButton_Logout.Visible) return
   //check if can close import_GamaImporterClass window
@@ -172,8 +171,9 @@ const gotoPatientManagement = (indel, isUpdatePatient = false) => {
   //check if can changedetail
   if (!strictEqual(getPatientDetailTabName(indel), globalConstant.obj.patientManagement)) {
     changePatientDetailTab(indel, globalConstant.obj.patientManagement)
-  } 
-  //__handlePatientDataClass(indel, isUpdatePatient)
+  }
+  if (indel.patientDataClass.VisibleOnScreen) __handlePatientDataClass(indel, isUpdatePatient)
+  
 }
 
 module.exports.changePatientDetailTab = changePatientDetailTab

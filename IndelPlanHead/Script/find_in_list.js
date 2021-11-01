@@ -57,6 +57,14 @@ const isItemExistInMoreListReturnIndex = (val, columnName, list) => {
   return globalConstant.obj.notFoundIndex
 }
 
+const getOneRowValueForMoreListFromRowIndex = (idx, list) => {
+  let ret = []
+  for (let i = 0; i <= 8; i++) {
+    ret.push(list.wItems.Item(idx).Text(i))
+  }
+  return ret
+}
+
 //for patient/images/contour/settingcheck/machine_change_view list
 const getFieldValueForMoreListFromRowAndCol = (row, col, list) => list.wItems.Item(row).Text(col) || globalConstant.obj.emptyString
 
@@ -96,6 +104,7 @@ module.exports.getFieldValueFromRow = getFieldValueFromRow
 module.exports.getHeaderFromList = getHeaderFromList
 module.exports.isItemExistInMoreList = isItemExistInMoreList
 module.exports.isItemExistInMoreListReturnIndex = isItemExistInMoreListReturnIndex
+module.exports.getOneRowValueForMoreListFromRowIndex = getOneRowValueForMoreListFromRowIndex
 module.exports.getFieldValueForMoreListFromRowAndCol = getFieldValueForMoreListFromRowAndCol
 module.exports.getFieldValueForMoreListFromOtherField = getFieldValueForMoreListFromOtherField
 module.exports.getPatientReturnObject = getPatientReturnObject

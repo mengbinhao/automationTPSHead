@@ -687,7 +687,7 @@
 																		</Children>
 																	</Child>
 																	<Child Name="PatientDataClass" Key="{7D7E56BD-C4F5-45FC-B969-C9BEBC4A1646}" ParallelWalk="True">
-																		<Image FileName="-1925634469" Left="18" Top="131" Right="1918" Bottom="981" />
+																		<Image FileName="-1191293" Left="18" Top="131" Right="1918" Bottom="981" />
 																		<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
 																		<Properties>
 																			<Property Name="QtClassName">
@@ -708,7 +708,7 @@
 																				</Properties>
 																				<Children>
 																					<Child Name="pushButton_Close" Key="{117615D3-AF55-4CD6-AAA4-2F7E806198D6}" ParallelWalk="True">
-																						<Image FileName="1087153999" Left="1828" Top="170" Right="1895" Bottom="231" />
+																						<Image FileName="-1191293" Left="1828" Top="170" Right="1895" Bottom="231" />
 																						<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
 																						<Properties>
 																							<Property Name="objectName">
@@ -1865,6 +1865,122 @@
 												<Value PropertyType="0" Value="lineEdit_2" Type="5" />
 											</Property>
 										</Properties>
+									</Child>
+									<Child Name="radioButton" Key="{190BCC36-B314-412B-96DF-073F30AB584A}" ParallelWalk="True">
+										<Image FileName="-1407324256" Left="78" Top="99" Right="194" Bottom="122" />
+										<TypeInfo Item0="{B788593A-7C6E-4431-B30A-96D07DD4D21B}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="radioButton" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="radioButton_2" Key="{DEE539F4-3DA0-4EC3-BAB9-C3B3C00159EF}" ParallelWalk="True">
+										<Image FileName="-1407324256" Left="200" Top="99" Right="317" Bottom="122" />
+										<TypeInfo Item0="{B788593A-7C6E-4431-B30A-96D07DD4D21B}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="radioButton_2" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="spinBox_Height" Key="{55BA3D83-C33B-43E4-9AE6-56E490AA621B}" ParallelWalk="True">
+										<Image FileName="-1407324256" Left="78" Top="128" Right="317" Bottom="151" />
+										<TypeInfo Item0="{6FB203EB-B82C-4999-BB56-84ECD3F4073B}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="spinBox_Height" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="qt_spinbox_lineedit" Key="{B6D290AB-500C-4AB4-917F-96E1D9585CDD}" ParallelWalk="True">
+												<Image FileName="-1407324256" Left="79" Top="129" Right="300" Bottom="150" />
+												<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="qt_spinbox_lineedit" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="spinBox_Age" Key="{DB2BDF8B-8254-41E2-BBE8-2B1D2A36A59A}" ParallelWalk="True">
+										<Image FileName="-1407324256" Left="78" Top="186" Right="317" Bottom="209" />
+										<TypeInfo Item0="{6FB203EB-B82C-4999-BB56-84ECD3F4073B}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="spinBox_Age" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="qt_spinbox_lineedit" Key="{C54D9799-D244-49D8-9107-63E7E77D82CF}" ParallelWalk="True">
+												<Image FileName="-1407324256" Left="79" Top="187" Right="300" Bottom="208" />
+												<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="qt_spinbox_lineedit" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="spinBox_Weight" Key="{412D98EF-35DD-4C43-8AAE-6D2FD16266D4}" ParallelWalk="True">
+										<Image FileName="-1407324256" Left="78" Top="157" Right="317" Bottom="180" />
+										<TypeInfo Item0="{6FB203EB-B82C-4999-BB56-84ECD3F4073B}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="spinBox_Weight" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="qt_spinbox_lineedit" Key="{F9CE4FA8-EB5D-436F-A5E2-A6A24CC3CEC2}" ParallelWalk="True">
+												<Image FileName="-1407324256" Left="79" Top="158" Right="300" Bottom="179" />
+												<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="qt_spinbox_lineedit" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="lineEdit_5" Key="{C892FD00-F879-4E69-9597-0A89126CAC4C}" ParallelWalk="True">
+										<Image FileName="-1407324256" Left="78" Top="215" Right="317" Bottom="238" />
+										<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="lineEdit_5" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="lineEdit_6" Key="{E34FB1EB-13F0-49EE-9AA7-A174EC644222}" ParallelWalk="True">
+										<Image FileName="-1407324256" Left="78" Top="244" Right="317" Bottom="267" />
+										<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="lineEdit_6" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="textEdit_7" Key="{0EE08E26-5086-45CE-981C-71D1587F07E1}" ParallelWalk="True">
+										<Image FileName="-1407324256" Left="78" Top="273" Right="317" Bottom="455" />
+										<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="textEdit_7" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="qt_scrollarea_viewport" Key="{4636FEB8-3E90-42A7-BA3C-E8C46262E427}" ParallelWalk="True">
+												<Image FileName="-1407324256" Left="79" Top="274" Right="316" Bottom="454" />
+												<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="qt_scrollarea_viewport" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
 									</Child>
 								</Children>
 							</Child>
@@ -7120,6 +7236,22 @@
 				<Child Name="cancelButton" Owner="{7A9809F3-A0B2-44C5-BF97-D7C01AD9849E}" />
 				<Child Name="name" Owner="{4E2F6CDB-5B9C-4742-99C5-9910FEDAED1A}" />
 				<Child Name="id" Owner="{63DA3762-6058-4A15-AB3A-6651DF3C9585}" />
+				<Child Name="radioButton" Owner="{190BCC36-B314-412B-96DF-073F30AB584A}" />
+				<Child Name="radioButton_2" Owner="{DEE539F4-3DA0-4EC3-BAB9-C3B3C00159EF}" />
+				<Child Name="spinBox_Height" Owner="{55BA3D83-C33B-43E4-9AE6-56E490AA621B}">
+					<Child Name="qt_spinbox_lineedit" Owner="{B6D290AB-500C-4AB4-917F-96E1D9585CDD}" />
+				</Child>
+				<Child Name="spinBox_Age" Owner="{DB2BDF8B-8254-41E2-BBE8-2B1D2A36A59A}">
+					<Child Name="qt_spinbox_lineedit" Owner="{C54D9799-D244-49D8-9107-63E7E77D82CF}" />
+				</Child>
+				<Child Name="spinBox_Weight" Owner="{412D98EF-35DD-4C43-8AAE-6D2FD16266D4}">
+					<Child Name="qt_spinbox_lineedit" Owner="{F9CE4FA8-EB5D-436F-A5E2-A6A24CC3CEC2}" />
+				</Child>
+				<Child Name="lineEdit_5" Owner="{C892FD00-F879-4E69-9597-0A89126CAC4C}" />
+				<Child Name="lineEdit_6" Owner="{E34FB1EB-13F0-49EE-9AA7-A174EC644222}" />
+				<Child Name="textEdit_7" Owner="{0EE08E26-5086-45CE-981C-71D1587F07E1}">
+					<Child Name="qt_scrollarea_viewport" Owner="{4636FEB8-3E90-42A7-BA3C-E8C46262E427}" />
+				</Child>
 			</Child>
 			<Child Name="patient_delete_popup" Owner="{6742392D-25A4-4FAE-9A84-9AA600DE7E73}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{9801E481-EDCB-4C26-AC02-B93E27F14FA6}">

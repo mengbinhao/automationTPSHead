@@ -11,6 +11,62 @@ const __handleDirtyDate = (indel, patientId) => {
   }
 }
 
+const __inputPatientFields = (npc, args) => {
+  const [patientID, patientName, gender, height, weight, age, address, phone, note] = args
+  if (!patientID || !patientName) return
+  npc.name.Keys(patientName)
+  npc.id.Keys(patientID)
+  if (strictEqual(gender, globalConstant.obj.defaultPatientGender)) {
+    npc.radioButton.ClickButton()
+  } else {
+    npc.radioButton_2.ClickButton()
+  }
+  if (height && height > 0 && height <= 600) npc.spinBox_Height.qt_spinbox_lineedit.Keys(height)
+  if (weight && weight > 0 && weight <= 300) npc.spinBox_Weight.qt_spinbox_lineedit.Keys(weight)
+  if (age && age > 0 && height <= 200) npc.spinBox_Age.qt_spinbox_lineedit.Keys(age)
+  address && npc.lineEdit_5.Keys(address)
+  phone && npc.lineEdit_6.Keys(phone)
+  note && npc.textEdit_7.Keys(note)
+}
+
+const __inputEditPatientFields = (npc, args) => {
+  const [patientName, gender, height, weight, age, address, phone, note] = args
+  if (patientName) {
+    npc.name.clear()
+    npc.name.Keys(patientName)
+  }
+  
+  if (strictEqual(gender, globalConstant.obj.defaultPatientGender)) {
+    npc.radioButton.ClickButton()
+  } else {
+    npc.radioButton_2.ClickButton()
+  }
+  if (height && height > 0 && height <= 600) {
+    npc.spinBox_Height.qt_spinbox_lineedit.clear()
+    npc.spinBox_Height.qt_spinbox_lineedit.Keys(height)
+  }
+  if (weight && weight > 0 && weight <= 300) {
+    npc.spinBox_Weight.qt_spinbox_lineedit.clear()
+    npc.spinBox_Weight.qt_spinbox_lineedit.Keys(weight)
+  }
+  if (age && age > 0 && height <= 200) {
+    npc.spinBox_Age.qt_spinbox_lineedit.clear()
+    npc.spinBox_Age.qt_spinbox_lineedit.Keys(age)
+  }
+  if (address){
+    npc.lineEdit_5.clear()
+    npc.lineEdit_5.Keys(address)
+  }
+  if (phone) {
+    npc.lineEdit_6.clear()
+    npc.lineEdit_6.Keys(phone)
+  }
+  if (note) {
+    npc.textEdit_7.clear()
+    npc.textEdit_7.Keys(note)
+  } 
+}
+
 const openNewPatientWindow = indel => {
   indel.patientManagement.pushButton_NewPatient.ClickButton()
 }
@@ -37,44 +93,40 @@ const loadPatient = (indel, patientId) => {
   }
 }
 
-const addPatientActivity = (indel, patientId, patientName) => {
+const addPatientActivity = (indel, ...args) => {
   openNewPatientWindow(indel)
-  addPatient(indel, patientId, patientName, false)
+  addPatient(indel, false, args)
 }
 
-const addPatient = (indel, patientId = "", patientName = "", isCancel = false) => {
+const addPatient = (indel, isCancel = false, args) => {
   const npc = indel.patient_newpatientClass
-  patientId && npc.name.Keys(patientName)
-  patientName && npc.id.Keys(patientId)
+  __inputPatientFields(npc, args)
 
   if (!isCancel) {
     npc.createButton.ClickButton()
     if (!indel.patient_exists_popup.Exists && !indel.patient_no_name_or_id_popup.Exists) {
-      indel.dirtyData.get(globalConstant.obj.addPatient).push(patientId)
+      indel.dirtyData.get(globalConstant.obj.addPatient).push(aqConvert.IntToStr(args[0]))
     }  
   } else {
     npc.cancelButton.ClickButton()
   }
 }
 
-const editPatient = (indel, patientId, editPatientName = "", isCancel = false) => {
+const editPatient = (indel, isCancel = false, patientId, ...args) => {
   const patientList = indel.patientManagement.treeWidget_PatientList
   const isExist = findinlist.isItemExistInMoreList(patientId, globalConstant.obj.patientIDColumn, patientList)
     
   if (isExist) {
     patientList.ClickItem(patientId)
     indel.patientManagement.pushButton_EditPatient.ClickButton()
-    if (editPatientName) {
-      indel.patient_newpatientClass.name.wText = globalConstant.obj.emptyString
-      indel.patient_newpatientClass.name.Keys(editPatientName)
-    }
-    isCancel ? indel.patient_newpatientClass.createButton.ClickButton() : indel.patient_newpatientClass.cancelButton.ClickButton()
+    __inputEditPatientFields(indel.patient_newpatientClass, args)
+    !isCancel ? indel.patient_newpatientClass.createButton.ClickButton() : indel.patient_newpatientClass.cancelButton.ClickButton()
   } else {
     Log.Warning(`Can not find patient with patientId=${patientId} when editing patient`)
   }
 }
 
-const deletePatient = (indel, patientId, isCancel = false) => {
+const deletePatient = (indel, isCancel = false, patientId) => {
   const patientList = indel.patientManagement.treeWidget_PatientList
   const isExist = findinlist.isItemExistInMoreList(patientId, globalConstant.obj.patientIDColumn, patientList)
   

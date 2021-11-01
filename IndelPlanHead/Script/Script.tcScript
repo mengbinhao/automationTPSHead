@@ -157,12 +157,6 @@
 		<child name="coordinate" key="{68E9D565-5F73-4FDB-95E5-39BB43B6D647}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="coordinate.js" />
 		</child>
-		<child name="testPicture" key="{4EE9C992-6B74-4C6E-9238-7572B1E5F0AE}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="testPicture.js" />
-		</child>
-		<child name="testLog" key="{3ACF547C-9E07-4EB7-AE66-47915479B5B8}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="testLog.js" />
-		</child>
 		<child name="export_test_result" key="{BC0605D4-1621-4808-ABD7-2EB2844EF09D}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="export_test_result.js" />
 		</child>
@@ -229,6 +223,39 @@
 		<child name="BH_1000995" key="{E6FAA66B-3DCF-471B-95F8-9185C51CEBCF}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1000995.js" />
 		</child>
+		<child name="BH_1000996" key="{F1E14B2E-9178-4817-BBDF-11F11073D150}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1000996.js" />
+		</child>
+		<child name="BH_1000997" key="{6651DFBD-8EE9-48F6-8A80-22AB0FC775B5}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1000997.js" />
+		</child>
+		<child name="BH_1000998" key="{EAF76F67-8980-4F81-B308-4CB35CE829C9}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1000998.js" />
+		</child>
+		<child name="BH_1000999" key="{E45CCE24-2CD8-4613-880F-0C2E4787CCA2}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1000999.js" />
+		</child>
+		<child name="BH_1001000" key="{DF36E063-D137-4CB0-882B-B3190F96E16C}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001000.js" />
+		</child>
+		<child name="BH_1001004" key="{3592C3BF-0D3B-41AD-8D06-05EE78D7BEF4}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001004.js" />
+		</child>
+		<child name="BH_1001007" key="{3C53B742-09EE-4075-BD7C-E18EBACB6C98}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001007.js" />
+		</child>
+		<child name="BH_1001009" key="{7A06E28B-3BF2-4979-BA83-79D4E65270CB}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001009.js" />
+		</child>
+		<child name="BH_1001010" key="{B30A661D-4A0D-4370-A055-FC1D5624D11A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001010.js" />
+		</child>
+		<child name="BH_1001011" key="{B79F0B1C-1A8E-451B-BAD0-2A205A01EFFA}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001011.js" />
+		</child>
+		<child name="BH_1000994" key="{9C937985-0D17-40BB-BA41-78867FD1AAD3}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1000994.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -294,6 +321,17 @@
 						<ref key="{0510C9E6-5889-46B4-8E0B-0A84E19620B0}" />
 						<ref key="{9CB2B956-B221-49EE-A18D-CDB4B9A7CA10}" />
 						<ref key="{E6FAA66B-3DCF-471B-95F8-9185C51CEBCF}" />
+						<ref key="{F1E14B2E-9178-4817-BBDF-11F11073D150}" />
+						<ref key="{6651DFBD-8EE9-48F6-8A80-22AB0FC775B5}" />
+						<ref key="{EAF76F67-8980-4F81-B308-4CB35CE829C9}" />
+						<ref key="{E45CCE24-2CD8-4613-880F-0C2E4787CCA2}" />
+						<ref key="{DF36E063-D137-4CB0-882B-B3190F96E16C}" />
+						<ref key="{3592C3BF-0D3B-41AD-8D06-05EE78D7BEF4}" />
+						<ref key="{3C53B742-09EE-4075-BD7C-E18EBACB6C98}" />
+						<ref key="{7A06E28B-3BF2-4979-BA83-79D4E65270CB}" />
+						<ref key="{B30A661D-4A0D-4370-A055-FC1D5624D11A}" />
+						<ref key="{B79F0B1C-1A8E-451B-BAD0-2A205A01EFFA}" />
+						<ref key="{9C937985-0D17-40BB-BA41-78867FD1AAD3}" />
 					</references>
 				</folder>
 				<folder caption="systemsetting" description="A logical folder that is used to organize project items and elements." moniker="">

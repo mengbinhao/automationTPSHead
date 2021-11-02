@@ -60,6 +60,16 @@ const initUI = () => {
   const PatientManagementWidget = indel.centralWidget.stackedWidget.page.PatientManagementWidget
   indel.patientManagement = PatientManagementWidget.PatientManagement
   
+  
+  //patient import on the right top corner 
+  indel.patient_dlgSelectImportPath =mainProcess.patient_dlgSelectImportPath
+  indel.patient_DlgImportClass = mainProcess.patient_DlgImportClass
+  indel.patient_DlgExportClass = mainProcess.patient_DlgExportClass
+  indel.patient_export_done_popup = mainProcess.patient_export_done_popup
+  indel.patient_import_done_popup = mainProcess.patient_import_done_popup
+  indel.patient_import_error_popup = mainProcess.patient_import_error_popup
+  
+  
   //user_management
   indel.user_management = mainProcess.user_management
   indel.user_newusercClass = mainProcess.user_newusercClass

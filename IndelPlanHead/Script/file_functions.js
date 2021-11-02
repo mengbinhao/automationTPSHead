@@ -60,6 +60,10 @@ const getFullFolderNameWithPartialName = (path, folderPartialName) => {
   return globalConstant.obj.emptyString
 }
 
+const getFolderDateLastModifiedTime = (path) => {
+  return aqFileSystem.GetFolderInfo(path).DateLastModified
+}
+
 module.exports.isExists = isExists
 module.exports.createFile = createFile
 module.exports.deleteFile = deleteFile
@@ -70,3 +74,4 @@ module.exports.readFileByLine = readFileByLine
 module.exports.appendTextToFile = appendTextToFile
 module.exports.isSpecificFolderWithPartialNameExist = isSpecificFolderWithPartialNameExist
 module.exports.getFullFolderNameWithPartialName = getFullFolderNameWithPartialName
+module.exports.getFolderDateLastModifiedTime = getFolderDateLastModifiedTime

@@ -9,8 +9,7 @@ function TPS_BeiHang_toudao_034() {
   login.login(Project.Variables.username, Project.Variables.password)
   IndelPlan.patientManagement.frame.pushButton_SystemSetting.Click()
   
-  const checkFields = ['TPS database connection test', 'DICOM gate database connection test', 'Default physical data existence test', 
-        'Machine parameters test', 'Collimator, TMR and OAR test', 'Electron density map test', 'System settings test']
+  const checkFields = ['TPS database connection test', 'DICOM gate database connection test', 'Default physical data existence test', 'Machine parameters test', 'Collimator, TMR and OAR test', 'Electron density map test', 'System settings test']
 
   IndelPlan.systemsettingsClass.tabWidget.setCurrentIndex(1)
   

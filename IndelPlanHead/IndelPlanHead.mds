@@ -42,11 +42,11 @@
 			<testItem name="login" key="{30A2CE01-FDCB-431F-A6CE-1805F94B0CDE}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="输入正确的用户名与密码登录计划系统&#13;&#10;" key="{F08A1B93-DC5D-4259-B8E2-174CD9AC1807}" group="False" enabled="True" testMoniker="{9870FC79-4C69-46EA-B82E-8BD83E5C9F4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="输入正确的用户名与密码登录计划系统&#13;&#10;" key="{F08A1B93-DC5D-4259-B8E2-174CD9AC1807}" group="False" enabled="False" testMoniker="{9870FC79-4C69-46EA-B82E-8BD83E5C9F4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="输入错误的用户名登录系统" key="{B13727C8-04C8-442B-9A27-0D074D986713}" group="False" enabled="False" testMoniker="{EB45B816-65DB-492F-B7AD-FD1BA3CE10E8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="输入错误的用户名登录系统" key="{B13727C8-04C8-442B-9A27-0D074D986713}" group="False" enabled="True" testMoniker="{EB45B816-65DB-492F-B7AD-FD1BA3CE10E8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

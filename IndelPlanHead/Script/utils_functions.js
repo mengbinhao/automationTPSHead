@@ -61,21 +61,21 @@ const getTimeAsFormatStr = (formatStr) => aqConvert.DateTimeToFormatStr(aqDateTi
 //3 AddMinutes
 //4 AddMonths
 //5 AddSeconds
-const getTimeIntervalAsFormatStr = (formatStr, invervalUnit, inverva) => {
+const getTimeIntervalAsFormatStr = (inputDate, intervalUnit, interval) => {
   const now = aqDateTime.Now()
   let ret
-  if (1 === invervalUnit) {
-    ret = aqDateTime.AddDays(now, inverva)
-  } else if (2 === invervalUnit) {
-    ret = aqDateTime.AddHours(now, inverva)
-  } else if (3 === invervalUnit) {
-    ret = aqDateTime.AddMinutes(now, inverva)
-  } else if (4 === invervalUnit) {
-    ret = aqDateTime.AddMonths(now, inverva)
-  } else if (5 === invervalUnit) {
-    ret = aqDateTime.AddSeconds(now, inverva)
+  if (1 === intervalUnit) {
+    ret = aqDateTime.AddDays(now, interval)
+  } else if (2 === intervalUnit) {
+    ret = aqDateTime.AddHours(now, interval)
+  } else if (3 === intervalUnit) {
+    ret = aqDateTime.AddMinutes(now, interval)
+  } else if (4 === intervalUnit) {
+    ret = aqDateTime.AddMonths(now, interval)
+  } else if (5 === intervalUnit) {
+    ret = aqDateTime.AddSeconds(now, interval)
   } else {
-    Log.Error('wrong params in invervalUnit = ${invervalUnit}')
+    Log.Error('wrong params in intervalUnit = ${intervalUnit}')
   }
   return aqConvert.DateTimeToFormatStr(ret, formatStr)
 }

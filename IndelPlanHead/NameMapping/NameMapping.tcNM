@@ -7063,6 +7063,33 @@
 											</Property>
 										</Properties>
 									</Child>
+									<Child Name="pushButton_SelectAll" Key="{5774AAF0-375D-4F78-AEAC-A92F96FCAEC8}" ParallelWalk="True">
+										<Image FileName="138331727" Left="25" Top="619" Right="125" Bottom="651" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="pushButton_SelectAll" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="pushButton_SelectNone" Key="{F3AD797D-D63B-4FCA-BDEB-2C2997BA0F11}" ParallelWalk="True">
+										<Image FileName="138331727" Left="131" Top="619" Right="231" Bottom="651" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="pushButton_SelectNone" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="treeWidget_PatientList" Key="{60B7A71A-63D9-4C8F-8EDC-AE3F88FFD021}" ParallelWalk="True">
+										<Image FileName="138331727" Left="19" Top="41" Right="842" Bottom="604" />
+										<TypeInfo Item0="{1A92C808-A25A-4313-89F1-548C3AFA2520}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="treeWidget_PatientList" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
 								</Children>
 							</Child>
 							<Child Name="MessageBox55" Key="{9BA5F485-DC1F-4D61-9893-B0333CA35DFC}" ParallelWalk="True">
@@ -7116,7 +7143,7 @@
 										<Value PropertyType="0" Value="QMessageBox" Type="5" />
 									</Property>
 									<Property Name="QtText">
-										<Value PropertyType="0" Value="500061007400690065006E007400730020006400610074006100200069006D0070006F0072007400200064006F006E00650021000D000A004500720072006F00720020006F006300630075007200730020007700680065006E00200069006D0070006F007200740069006E0067002000740068006500730065002000700061007400690065006E00740073003A000D000A007400650073007400700061007400690065006E00740040003800390039003700360036003800280041006C007200650061006400790020006500780069007300740029000D000A00" Type="7" />
+										<Value PropertyType="0" Value="500061007400690065006E007400730020006400610074006100200069006D0070006F0072007400200064006F006E00650021000D000A004500720072006F00720020006F006300630075007200730020007700680065006E00200069006D0070006F007200740069006E0067002000740068006500730065002000700061007400690065006E00740073003A000D000A002A00" Type="7" />
 									</Property>
 									<Property Name="Index">
 										<Value PropertyType="0" Value="1" Type="0" />
@@ -7187,6 +7214,33 @@
 											</Property>
 										</Properties>
 									</Child>
+									<Child Name="treeWidget_PatientList" Key="{A8B5A3D5-1F84-442E-9D7C-91A4EFB32115}" ParallelWalk="True">
+										<Image FileName="989474901" Left="19" Top="110" Right="914" Bottom="624" />
+										<TypeInfo Item0="{1A92C808-A25A-4313-89F1-548C3AFA2520}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="treeWidget_PatientList" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="pushButton_SelectAll" Key="{042BB7D2-EC4D-422E-A636-26407C8BBF02}" ParallelWalk="True">
+										<Image FileName="1914869225" Left="708" Top="56" Right="808" Bottom="96" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="pushButton_SelectAll" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="pushButton_SelectNone" Key="{26EB6F6E-0D1B-4F9F-AD6B-0F38AACAFC13}" ParallelWalk="True">
+										<Image FileName="1914869225" Left="814" Top="56" Right="914" Bottom="96" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="pushButton_SelectNone" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
 								</Children>
 							</Child>
 							<Child Name="MessageBox88" Key="{8DCB198E-B3F3-4498-A88B-ED5BD43ADE1F}" ParallelWalk="True">
@@ -7215,6 +7269,49 @@
 										<Children>
 											<Child Name="buttonOk" Key="{7476F132-A58E-4C74-93C7-F80ECC8710EE}" ParallelWalk="True">
 												<Image FileName="804919290" Left="169" Top="83" Right="235" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="OK" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="MessageBox89" Key="{B061FC1F-854C-40AD-A924-99D0F3DDBE20}" ParallelWalk="True">
+								<Image FileName="1538500056" Left="0" Top="0" Right="280" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="The export path does not exist!" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{3CF9ACE8-933A-4493-89C1-7CE300148747}" ParallelWalk="True">
+										<Image FileName="1538500056" Left="14" Top="74" Right="266" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{8F74CB27-7BEC-4FDF-A37A-365DA41F5E6E}" ParallelWalk="True">
+												<Image FileName="1538500056" Left="200" Top="83" Right="266" Bottom="109" />
 												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
 												<Properties>
 													<Property Name="QtClassName">
@@ -8100,6 +8197,9 @@
 			<Child Name="patient_DlgImportClass" Owner="{D0D85CF2-714E-47A6-B4CE-ED771ECC1072}">
 				<Child Name="pushButton_Ok" Owner="{0F720DC2-AF92-460A-932C-FB62B18FAA34}" />
 				<Child Name="pushButton_Cancel" Owner="{FE077611-CA7F-45B2-B0B0-D5DA875096E1}" />
+				<Child Name="pushButton_SelectAll" Owner="{5774AAF0-375D-4F78-AEAC-A92F96FCAEC8}" />
+				<Child Name="pushButton_SelectNone" Owner="{F3AD797D-D63B-4FCA-BDEB-2C2997BA0F11}" />
+				<Child Name="treeWidget_PatientList" Owner="{60B7A71A-63D9-4C8F-8EDC-AE3F88FFD021}" />
 			</Child>
 			<Child Name="patient_import_done_popup" Owner="{9BA5F485-DC1F-4D61-9893-B0333CA35DFC}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{DE7A05EC-EED0-4270-BB2F-24A0FD7CD514}">
@@ -8115,10 +8215,18 @@
 				<Child Name="lineEdit_Path" Owner="{FD2AE8AC-44D7-48BD-9F44-AC894C148C3F}" />
 				<Child Name="pushButton_Ok" Owner="{E17BA710-1252-4763-9877-254FF0376149}" />
 				<Child Name="pushButton_Cancel" Owner="{B6AA361E-DF45-407E-9133-29A8F98DF163}" />
+				<Child Name="treeWidget_PatientList" Owner="{A8B5A3D5-1F84-442E-9D7C-91A4EFB32115}" />
+				<Child Name="pushButton_SelectAll" Owner="{042BB7D2-EC4D-422E-A636-26407C8BBF02}" />
+				<Child Name="pushButton_SelectNone" Owner="{26EB6F6E-0D1B-4F9F-AD6B-0F38AACAFC13}" />
 			</Child>
 			<Child Name="patient_export_done_popup" Owner="{8DCB198E-B3F3-4498-A88B-ED5BD43ADE1F}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{84B10BF6-F720-47FB-A2FA-D2991A9E2DF3}">
 					<Child Name="buttonOk" Owner="{7476F132-A58E-4C74-93C7-F80ECC8710EE}" />
+				</Child>
+			</Child>
+			<Child Name="patient_export_error_popup" Owner="{B061FC1F-854C-40AD-A924-99D0F3DDBE20}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{3CF9ACE8-933A-4493-89C1-7CE300148747}">
+					<Child Name="buttonOk" Owner="{8F74CB27-7BEC-4FDF-A37A-365DA41F5E6E}" />
 				</Child>
 			</Child>
 		</Child>

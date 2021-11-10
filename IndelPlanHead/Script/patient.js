@@ -144,6 +144,61 @@ const deletePatient = (indel, isCancel = false, patientId) => {
   }
 }
 
+const exportPatientData = (indel, isCancel = false, patientId, path) => {
+  if (indel.patientManagement.VisibleOnScreen) {
+    indel.patientManagement.groupBox_7.pushButton_Export.ClickButton()
+    const dlg = indel.patient_DlgExportClass
+    dlg.pushButton_SelectAll.ClickButton()
+    dlg.lineEdit_Path.Keys(path)
+    !isCancel ? dlg.pushButton_Ok.ClickButton() : dlg.pushButton_Cancel.ClickButton()
+    //should choice target node first
+    /*
+    const list = dlg.treeWidget_PatientList
+    const idx = findinlist.isItemExistInMoreListReturnIndex(patientId, globalConstant.obj.patientIDColumn, list)
+    if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
+      //list.wItems.Item(idx).Collapse()
+      //list.wItems.Item(idx).Expand()
+      dlg.lineEdit_Path.Keys(path)
+      !isCancel ? dlg.pushButton_Ok.ClickButton() : dlg.pushButton_Cancel.ClickButton()
+    } else {
+      Log.Error("can not find export target patient!")
+    }
+    */
+  } else {
+    Log.Warning(`Can not exportPatientData due to window is not right`) 
+  }
+}
+
+const importPatientData = (indel, isCancel = false, patientId, path) => {
+  if (indel.patientManagement.VisibleOnScreen) {
+    indel.patientManagement.groupBox_7.pushButton_Import.ClickButton()
+    const dlgip = indel.patient_dlgSelectImportPath
+    dlgip.Edit.Keys(path)
+    dlgip.btn_2.ClickButton()
+    const dlgic = indel.patient_DlgImportClass
+    dlgic.pushButton_SelectAll.ClickButton()
+    if (!isCancel) {
+      dlgic.pushButton_Ok.ClickButton()
+      if (indel.patient_import_done_popup.Exists) indel.dirtyData.get(globalConstant.obj.addPatient).push(patientId)
+    } else {
+      dlgic.pushButton_Cancel.ClickButton()
+    }
+    //should choice target node first
+    /*
+    const list = dlgic.treeWidget_PatientList
+    const idx = findinlist.isItemExistInMoreListReturnIndex(patientId, globalConstant.obj.patientIDColumn, list)
+    if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
+      //list.wItems.Item(idx).Click()
+      !isCancel ? dlgic.pushButton_Ok.ClickButton() : dlgic.pushButton_Cancel.ClickButton()
+    } else {
+      Log.Error("can not find import target patient!")
+    }
+    */
+  } else {
+    Log.Warning(`Can not importPatientData due to window is not right`) 
+  }
+}
+
 const deletePatientForDirtyData = (indel, deletePatients) => {
   const patientList = indel.patientManagement.treeWidget_PatientList
   let dp = deletePatients.pop()
@@ -168,4 +223,6 @@ module.exports.addPatientActivity = addPatientActivity
 module.exports.editPatient = editPatient
 module.exports.deletePatient = deletePatient
 module.exports.loadPatient = loadPatient
+module.exports.exportPatientData = exportPatientData
+module.exports.importPatientData = importPatientData
 module.exports.deletePatientForDirtyData = deletePatientForDirtyData

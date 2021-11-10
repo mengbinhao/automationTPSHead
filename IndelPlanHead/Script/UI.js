@@ -61,11 +61,12 @@ const initUI = () => {
   indel.patientManagement = PatientManagementWidget.PatientManagement
   
   
-  //patient import on the right top corner 
+  //patient export/import on the right top corner 
   indel.patient_dlgSelectImportPath =mainProcess.patient_dlgSelectImportPath
   indel.patient_DlgImportClass = mainProcess.patient_DlgImportClass
   indel.patient_DlgExportClass = mainProcess.patient_DlgExportClass
   indel.patient_export_done_popup = mainProcess.patient_export_done_popup
+  indel.patient_export_error_popup = mainProcess.patient_export_error_popup
   indel.patient_import_done_popup = mainProcess.patient_import_done_popup
   indel.patient_import_error_popup = mainProcess.patient_import_error_popup
   

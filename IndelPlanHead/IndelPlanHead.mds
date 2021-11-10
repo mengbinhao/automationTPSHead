@@ -39,7 +39,7 @@
 	<config language="{90F89436-9452-4F95-9882-6B5210079F13}" />
 	<testItems key="{25CA201D-B9C7-4D62-9590-6D7EC6DD9347}">
 		<children>
-			<testItem name="login" key="{30A2CE01-FDCB-431F-A6CE-1805F94B0CDE}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="login" key="{30A2CE01-FDCB-431F-A6CE-1805F94B0CDE}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="输入正确的用户名与密码登录计划系统&#13;&#10;" key="{F08A1B93-DC5D-4259-B8E2-174CD9AC1807}" group="False" enabled="False" testMoniker="{9870FC79-4C69-46EA-B82E-8BD83E5C9F4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -196,7 +196,7 @@
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="新建患者" key="{9F6A5F4D-6DDA-4B4D-820A-0312BEF37D86}" group="False" enabled="True" testMoniker="{F1E14B2E-9178-4817-BBDF-11F11073D150}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="新建患者" key="{9F6A5F4D-6DDA-4B4D-820A-0312BEF37D86}" group="False" enabled="True" testMoniker="{F1E14B2E-9178-4817-BBDF-11F11073D150}testcase" count="5" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -224,12 +224,28 @@
 						<testParameters />
 						<children />
 					</testItem>
+					<testItem name="导出备份功能" key="{1705E43D-5FBB-4269-B696-458118846F22}" group="False" enabled="True" testMoniker="{B8DE5A45-9A46-466F-A727-C11B409225BA}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="导出路径错误" key="{BCB66C0E-364D-401F-BE4B-5EB9C536BEAC}" group="False" enabled="True" testMoniker="{C97C25B4-9C8A-4308-BBAC-D75B59DD53B1}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="导入备份功能" key="{EA8B4A12-6415-42EB-8FA0-AB1B885ADC9D}" group="False" enabled="True" testMoniker="{7137721E-2579-4713-B73D-631BD96727F7}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="导入重复的患者&#13;&#10;" key="{FD58960D-74AE-449E-9138-FFBCA1E441CD}" group="False" enabled="True" testMoniker="{F48B7F1B-C583-4D29-B770-E7F6C5F4A4BA}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
 				</children>
 			</testItem>
-			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{4B7B88EF-52E1-4812-9E36-E0A4F58D5B46}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}test" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem1" key="{4B7B88EF-52E1-4812-9E36-E0A4F58D5B46}" group="False" enabled="False" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}test" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

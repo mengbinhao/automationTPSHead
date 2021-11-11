@@ -4,14 +4,10 @@ const common = require("common")
 
 //isQuitPopup 1 means yes, 2 means no, 3 means cancel
 const exitWithLogic = (isPatientSavePopup = false, isCurrentPlanFinishedPopup = false, isQuitPopup = 1) => {
-  const IndelPlan = Project.Variables.IndelPlan
-  //need loginClass active and at front
-  //IndelPlan.loginClass.Close();
-    
-  //too violence, unnormal exit, will popup an unnormal window when next login
+  const IndelPlan = Project.Variables.IndelPlan    
+  //too violence, will popup an unnormal window when next login
   //Sys.Process(IndelPlan.procesName).Terminate()
-    
-  //close INDELP~1 process 
+
   //can not close directly due to pupup a comfirm popup
   //Sys.Process(IndelPlan.procesName).Close()
   common.gotoPatientManagement(IndelPlan)

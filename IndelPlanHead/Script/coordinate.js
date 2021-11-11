@@ -23,7 +23,22 @@ const getRectangleCoordinate = () => {
   return rectangle
 }
 
+//from 0 to infinity
+const getPatientExportNodeCorrdinate = (idx) => {
+  const coordX = 522, coordY = 320, step = 20
+  return [coordX, coordY + step * idx]
+}
+
+const getPatientImportNodeCorrdinate = (idx) => {
+  const coordX = 580, coordY = 260, step = 20
+  return [coordX, coordY + step * idx]
+}
+
+
+
 module.exports.getPlanCanvasNearMiddleCoordinate = getPlanCanvasNearMiddleCoordinate
 module.exports.getNearMiddleCoordinate = getNearMiddleCoordinate
 module.exports.getTriangleCoordinate = getTriangleCoordinate
 module.exports.getRectangleCoordinate = getRectangleCoordinate
+module.exports.getPatientExportNodeCorrdinate = getPatientExportNodeCorrdinate
+module.exports.getPatientImportNodeCorrdinate = getPatientImportNodeCorrdinate

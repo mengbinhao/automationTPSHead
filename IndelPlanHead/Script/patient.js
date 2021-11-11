@@ -1,6 +1,7 @@
 ﻿const globalConstant = require("global_constant")
 const utilsfunctions = require("utils_functions")
 const findinlist = require("find_in_list")
+const coordinate = require("coordinate")
 
 const __handleDirtyDate = (indel, patientId) => {
   const dirtydPatients = indel.dirtyData.get(globalConstant.obj.addPatient)
@@ -153,11 +154,12 @@ const exportPatientData = (indel, isCancel = false, patientId, path) => {
     !isCancel ? dlg.pushButton_Ok.ClickButton() : dlg.pushButton_Cancel.ClickButton()
     //should choice target node first
     /*
-    const list = dlg.treeWidget_PatientList
-    const idx = findinlist.isItemExistInMoreListReturnIndex(patientId, globalConstant.obj.patientIDColumn, list)
+    const idx = findinlist.isItemExistInMoreListReturnIndex(patientId, globalConstant.obj.patientIDColumn, dlg.treeWidget_PatientList)
     if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
-      //list.wItems.Item(idx).Collapse()
-      //list.wItems.Item(idx).Expand()
+      const [desX, desY] = coordinate.getPatientExportNodeCorrdinate(idx)
+      LLPlayer.MouseMove(desX, desY, globalConstant.obj.delayMouseHalfSecond)
+      LLPlayer.MouseDown(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
+      LLPlayer.MouseUp(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
       dlg.lineEdit_Path.Keys(path)
       !isCancel ? dlg.pushButton_Ok.ClickButton() : dlg.pushButton_Cancel.ClickButton()
     } else {
@@ -185,10 +187,12 @@ const importPatientData = (indel, isCancel = false, patientId, path) => {
     }
     //should choice target node first
     /*
-    const list = dlgic.treeWidget_PatientList
-    const idx = findinlist.isItemExistInMoreListReturnIndex(patientId, globalConstant.obj.patientIDColumn, list)
+    const idx = findinlist.isItemExistInMoreListReturnIndex(patientId, globalConstant.obj.patientIDColumn, dlgic.treeWidget_PatientList)
     if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
-      //list.wItems.Item(idx).Click()
+      const [desX, desY] = coordinate.getPatientImportNodeCorrdinate(idx)
+      LLPlayer.MouseMove(desX, desY, globalConstant.obj.delayMouseHalfSecond)
+      LLPlayer.MouseDown(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
+      LLPlayer.MouseUp(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
       !isCancel ? dlgic.pushButton_Ok.ClickButton() : dlgic.pushButton_Cancel.ClickButton()
     } else {
       Log.Error("can not find import target patient!")

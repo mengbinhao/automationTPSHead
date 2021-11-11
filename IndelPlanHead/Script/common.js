@@ -173,7 +173,6 @@ const gotoPatientManagement = (indel, isUpdatePatient = false) => {
     changePatientDetailTab(indel, globalConstant.obj.patientManagement)
   }
   if (indel.patientDataClass.VisibleOnScreen) __handlePatientDataClass(indel, isUpdatePatient)
-  
 }
 
 module.exports.changePatientDetailTab = changePatientDetailTab

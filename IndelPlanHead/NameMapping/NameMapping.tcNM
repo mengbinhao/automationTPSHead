@@ -3817,7 +3817,7 @@
 								</Children>
 							</Child>
 							<Child Name="ReloadClass" Key="{4F31A466-FF6F-4B39-8FA7-B2BEF7346C6C}" ParallelWalk="True">
-								<Image FileName="-1234251922" Left="0" Top="0" Right="458" Bottom="259" />
+								<Image FileName="-2082144450" Left="0" Top="0" Right="458" Bottom="259" />
 								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
 								<Properties>
 									<Property Name="objectName">

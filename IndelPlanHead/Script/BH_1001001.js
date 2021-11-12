@@ -12,20 +12,22 @@ function testcase() {
 
   const path = "D:\\IndelPlan\\export"
   const patientFolderName = "testpatient@8997668"
-  patient.addPatientActivity(IndelPlan, 8997668, "testpatient", "Male", 180, 60, 80, "north east", 18812341235, "note")
   
-  const beforeExportDate = aqDateTime.Now()
-  
-  patient.exportPatientData(IndelPlan, false, aqConvert.IntToStr(8997668), path)
-  
-  aqObject.CheckProperty(IndelPlan.patient_export_done_popup, "Exists", cmpEqual, true)   
-  IndelPlan.patient_export_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
-  IndelPlan.patient_DlgExportClass.pushButton_Cancel.ClickButton()
-
-  if (file_functions.isExists(path, patientFolderName) && strictEqual(aqDateTime.Compare(beforeExportDate, file_functions.getFolderDateLastModifiedTime(path + globalConstant.obj.backslash + patientFolderName)), -1)) {
-    Log.Checkpoint("Export patient data successfully!")
+  if (IndelPlan.patientManagement.treeWidget_PatientList.wItems.Count !== 0) {
+    Log.Error("Have already existing patient data")
   } else {
-    Log.Error("Export patient data fail!")
+    patient.addPatientActivity(IndelPlan, 8997668, "testpatient", "Male", 180, 60, 80, "north east", 18812341235, "note")
+    const beforeExportDate = aqDateTime.Now()
+    patient.exportPatientData(IndelPlan, false, aqConvert.IntToStr(8997668), path)
+    aqObject.CheckProperty(IndelPlan.patient_export_done_popup, "Exists", cmpEqual, true)   
+    IndelPlan.patient_export_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    IndelPlan.patient_DlgExportClass.pushButton_Cancel.ClickButton()
+
+    if (file_functions.isExists(path, patientFolderName) && strictEqual(aqDateTime.Compare(beforeExportDate, file_functions.getFolderDateLastModifiedTime(path + globalConstant.obj.backslash + patientFolderName)), -1)) {
+      Log.Checkpoint("Export patient data successfully!")
+    } else {
+      Log.Error("Export patient data fail!")
+    }
   }
 
   exitwithlogic.exitWithLogic(false, false, 1)

@@ -149,13 +149,16 @@ const exportPatientData = (indel, isCancel = false, patientId, path) => {
   if (indel.patientManagement.VisibleOnScreen) {
     indel.patientManagement.groupBox_7.pushButton_Export.ClickButton()
     const dlg = indel.patient_DlgExportClass
+    /*
     dlg.pushButton_SelectAll.ClickButton()
     dlg.lineEdit_Path.Keys(path)
     !isCancel ? dlg.pushButton_Ok.ClickButton() : dlg.pushButton_Cancel.ClickButton()
-    //should choice target node first
-    /*
+    */
+  
+    //use coordinate to choice target node
     const idx = findinlist.isItemExistInMoreListReturnIndex(patientId, globalConstant.obj.patientIDColumn, dlg.treeWidget_PatientList)
     if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
+      dlg.pushButton_SelectNone.ClickButton()
       const [desX, desY] = coordinate.getPatientExportNodeCorrdinate(idx)
       LLPlayer.MouseMove(desX, desY, globalConstant.obj.delayMouseHalfSecond)
       LLPlayer.MouseDown(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
@@ -165,7 +168,7 @@ const exportPatientData = (indel, isCancel = false, patientId, path) => {
     } else {
       Log.Error("can not find export target patient!")
     }
-    */
+
   } else {
     Log.Warning(`Can not exportPatientData due to window is not right`) 
   }
@@ -178,6 +181,7 @@ const importPatientData = (indel, isCancel = false, patientId, path) => {
     dlgip.Edit.Keys(path)
     dlgip.btn_2.ClickButton()
     const dlgic = indel.patient_DlgImportClass
+    /*
     dlgic.pushButton_SelectAll.ClickButton()
     if (!isCancel) {
       dlgic.pushButton_Ok.ClickButton()
@@ -185,19 +189,25 @@ const importPatientData = (indel, isCancel = false, patientId, path) => {
     } else {
       dlgic.pushButton_Cancel.ClickButton()
     }
-    //should choice target node first
-    /*
+    */
+
+    //use coordinate to choice target node
     const idx = findinlist.isItemExistInMoreListReturnIndex(patientId, globalConstant.obj.patientIDColumn, dlgic.treeWidget_PatientList)
     if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
+      dlgic.pushButton_SelectNone.ClickButton()
       const [desX, desY] = coordinate.getPatientImportNodeCorrdinate(idx)
       LLPlayer.MouseMove(desX, desY, globalConstant.obj.delayMouseHalfSecond)
       LLPlayer.MouseDown(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
       LLPlayer.MouseUp(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
-      !isCancel ? dlgic.pushButton_Ok.ClickButton() : dlgic.pushButton_Cancel.ClickButton()
+      if (!isCancel) {
+        dlgic.pushButton_Ok.ClickButton()
+        if (indel.patient_import_done_popup.Exists) indel.dirtyData.get(globalConstant.obj.addPatient).push(patientId)
+      } else {
+        dlgic.pushButton_Cancel.ClickButton()
+      }
     } else {
       Log.Error("can not find import target patient!")
     }
-    */
   } else {
     Log.Warning(`Can not importPatientData due to window is not right`) 
   }

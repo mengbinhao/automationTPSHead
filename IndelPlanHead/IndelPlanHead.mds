@@ -39,10 +39,10 @@
 	<config language="{90F89436-9452-4F95-9882-6B5210079F13}" />
 	<testItems key="{25CA201D-B9C7-4D62-9590-6D7EC6DD9347}">
 		<children>
-			<testItem name="login" key="{30A2CE01-FDCB-431F-A6CE-1805F94B0CDE}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="login" key="{30A2CE01-FDCB-431F-A6CE-1805F94B0CDE}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="输入正确的用户名与密码登录计划系统&#13;&#10;" key="{F08A1B93-DC5D-4259-B8E2-174CD9AC1807}" group="False" enabled="False" testMoniker="{9870FC79-4C69-46EA-B82E-8BD83E5C9F4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="输入正确的用户名与密码登录计划系统&#13;&#10;" key="{F08A1B93-DC5D-4259-B8E2-174CD9AC1807}" group="False" enabled="True" testMoniker="{9870FC79-4C69-46EA-B82E-8BD83E5C9F4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -50,35 +50,35 @@
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="输入错误的密码登录系统" key="{073C95AF-487A-465C-BC9A-D8FB733391E2}" group="False" enabled="False" testMoniker="{321CF873-3AA3-45B2-ADAA-7587D1794AA2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="输入错误的密码登录系统" key="{073C95AF-487A-465C-BC9A-D8FB733391E2}" group="False" enabled="True" testMoniker="{321CF873-3AA3-45B2-ADAA-7587D1794AA2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="不输入用户名、密码，点击login按钮" key="{47677034-BD05-44C6-8FED-06335F2DD75E}" group="False" enabled="False" testMoniker="{9AD4ACBC-7D5C-41F5-86DA-C8B5F17D43E4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="不输入用户名、密码，点击login按钮" key="{47677034-BD05-44C6-8FED-06335F2DD75E}" group="False" enabled="True" testMoniker="{9AD4ACBC-7D5C-41F5-86DA-C8B5F17D43E4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="输入正确的用户名与密码点击Exit登录计划系统" key="{68A32F83-96BD-4C73-BAC6-DA03C0D34312}" group="False" enabled="False" testMoniker="{9C7F8637-8D95-4E76-8AE0-2FB735E59ECC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="输入正确的用户名与密码点击Exit登录计划系统" key="{68A32F83-96BD-4C73-BAC6-DA03C0D34312}" group="False" enabled="True" testMoniker="{9C7F8637-8D95-4E76-8AE0-2FB735E59ECC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="点击PatientMagement页面点击Log Out退出登录" key="{616683B1-5BDA-4060-9960-4B3003DBD271}" group="False" enabled="False" testMoniker="{18A2F134-1204-4C9D-B9C4-932C94FB8B4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="点击PatientMagement页面点击Log Out退出登录" key="{616683B1-5BDA-4060-9960-4B3003DBD271}" group="False" enabled="True" testMoniker="{18A2F134-1204-4C9D-B9C4-932C94FB8B4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="关闭登录窗口" key="{27521D52-E3E4-4678-AE3B-66E18484C57F}" group="False" enabled="False" testMoniker="{2EE6563E-18D4-4649-BC4F-1E7C0BA33AF8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="关闭登录窗口" key="{27521D52-E3E4-4678-AE3B-66E18484C57F}" group="False" enabled="True" testMoniker="{2EE6563E-18D4-4649-BC4F-1E7C0BA33AF8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="点击PatientMagement页面点击右上角x后点击【YES】按钮关闭TPS软件" key="{B5082E28-601B-4767-A751-BF1AD4A83BEF}" group="False" enabled="False" testMoniker="{DF69CB42-A63A-4216-BD38-85E16363DD7E}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="点击PatientMagement页面点击右上角x后点击【YES】按钮关闭TPS软件" key="{B5082E28-601B-4767-A751-BF1AD4A83BEF}" group="False" enabled="True" testMoniker="{DF69CB42-A63A-4216-BD38-85E16363DD7E}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="点击PatientMagement页面点击右上角x后点击【NO】按钮退出到登录界面&#13;&#10;" key="{3CE59D9A-0BB8-4283-910C-2F16017EB442}" group="False" enabled="False" testMoniker="{693A9846-DD4B-481B-8072-A2B18E3B4A3A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="点击PatientMagement页面点击右上角x后点击【NO】按钮退出到登录界面&#13;&#10;" key="{3CE59D9A-0BB8-4283-910C-2F16017EB442}" group="False" enabled="True" testMoniker="{693A9846-DD4B-481B-8072-A2B18E3B4A3A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="点击PatientMagement页面点击右上角x后点击【Cancel】按钮继续停留在PatientMagement界面" key="{21F5305F-E1B5-464A-8A07-4B6B4D92CEC7}" group="False" enabled="False" testMoniker="{3E536B72-44F8-45B3-ADE1-62C8622A9CE6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="点击PatientMagement页面点击右上角x后点击【Cancel】按钮继续停留在PatientMagement界面" key="{21F5305F-E1B5-464A-8A07-4B6B4D92CEC7}" group="False" enabled="True" testMoniker="{3E536B72-44F8-45B3-ADE1-62C8622A9CE6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -92,7 +92,7 @@
 				<testParameters />
 				<children />
 			</testItem>
-			<testItem name="usernamagement" key="{59184077-BEDA-4B28-B563-8B2F5F2EAF3E}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="usernamagement" key="{59184077-BEDA-4B28-B563-8B2F5F2EAF3E}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="新建用户" key="{723742AD-20EE-4C9C-8FED-7B87F957B72D}" group="False" enabled="True" testMoniker="{58B75C39-CC17-4380-A18B-1A9AFDFED149}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -153,7 +153,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="patientmanagement" key="{B003F621-E70F-4E86-844E-B7D20DEFFB78}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="patientmanagement" key="{B003F621-E70F-4E86-844E-B7D20DEFFB78}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="关闭患者界面-点击yes" key="{3648D43C-389A-42B8-96AF-800077D6CF0A}" group="False" enabled="True" testMoniker="{B1DFAA63-E245-4CA3-8DAC-F6F38397C220}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -242,14 +242,10 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{4B7B88EF-52E1-4812-9E36-E0A4F58D5B46}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}test" count="1" timeout="1" stopOnError="2" stopOnException="2" description="">
-						<testParameters />
-						<children />
-					</testItem>
-					<testItem name="ProjectTestItem2" key="{F3A7FFCB-CA38-4354-882E-138CDF600B84}" group="False" enabled="False" testMoniker="{9870FC79-4C69-46EA-B82E-8BD83E5C9F4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem1" key="{4B7B88EF-52E1-4812-9E36-E0A4F58D5B46}" group="False" enabled="False" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}test" count="1" timeout="1" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

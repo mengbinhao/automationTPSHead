@@ -1066,6 +1066,21 @@
 																	</Child>
 																</Children>
 															</Child>
+															<Child Name="ProgressBar" Key="{9AC9E0A3-5D64-4F6B-A1A9-54F2CDE0D14F}" ParallelWalk="True">
+																<Image FileName="1122783201" Left="567" Top="555" Right="1367" Bottom="585" />
+																<TypeInfo Item0="{6D37FC1B-5E23-4374-926C-3976C07F37B7}" />
+																<Properties>
+																	<Property Name="QtClassName">
+																		<Value PropertyType="0" Value="QProgressBar" Type="5" />
+																	</Property>
+																	<Property Name="QtText">
+																		<Value PropertyType="0" Value="0%" Type="5" />
+																	</Property>
+																	<Property Name="Index">
+																		<Value PropertyType="0" Value="1" Type="0" />
+																	</Property>
+																</Properties>
+															</Child>
 														</Children>
 													</Child>
 													<Child Name="PlanGUI" Key="{38561D5E-CE17-474A-A2F9-7A399B24BF49}" ParallelWalk="True">
@@ -1469,6 +1484,24 @@
 												</Children>
 											</Child>
 										</Children>
+									</Child>
+									<Child Name="pbImport" Key="{627D92F7-3BFD-4407-A45E-ECE009E2DD1A}" ParallelWalk="True">
+										<Image FileName="-282235742" Left="1810" Top="260" Right="1908" Bottom="300" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="pbImport" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="pbExport" Key="{3C48680C-E67A-46A2-895D-4651E91F0363}" ParallelWalk="True">
+										<Image FileName="-282235742" Left="1700" Top="260" Right="1798" Bottom="300" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="pbExport" Type="5" />
+											</Property>
+										</Properties>
 									</Child>
 								</Children>
 							</Child>
@@ -7329,6 +7362,196 @@
 									</Child>
 								</Children>
 							</Child>
+							<Child Name="GamaExporterClass" Key="{8337D4C6-92F6-4DC1-A383-6D4F74D38E56}" ParallelWalk="True">
+								<Image FileName="-1432175287" Left="0" Top="0" Right="794" Bottom="654" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="objectName">
+										<Value PropertyType="0" Value="GamaExporterClass" Type="5" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="pushButton_SelectAll" Key="{CE7E1F1E-2819-4A97-84AE-14AB50114356}" ParallelWalk="True">
+										<Image FileName="-1432175287" Left="19" Top="595" Right="119" Bottom="635" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="pushButton_SelectAll" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="pushButton_SelectNone" Key="{C98F2B2B-F4C0-4E33-B5CD-D50C44709532}" ParallelWalk="True">
+										<Image FileName="-1916468522" Left="131" Top="595" Right="231" Bottom="635" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="pushButton_SelectNone" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="pushButton_Ok" Key="{7690ACE1-8D55-414E-B349-A7FA31D45583}" ParallelWalk="True">
+										<Image FileName="-1432175287" Left="569" Top="595" Right="669" Bottom="635" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="pushButton_Ok" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="pushButton_Cancel" Key="{A0D54688-6496-41C7-ABB1-B2589F95FFDC}" ParallelWalk="True">
+										<Image FileName="-1432175287" Left="675" Top="595" Right="775" Bottom="635" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="pushButton_Cancel" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="lineEdit_Path" Key="{32FD7736-89B0-436C-94BC-1071AD2F95D5}" ParallelWalk="True">
+										<Image FileName="-1432175287" Left="125" Top="42" Right="669" Bottom="65" />
+										<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="lineEdit_Path" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="QFileDialog" Key="{34911854-8EF5-4796-A7E0-7FE81035C99A}" ParallelWalk="True">
+								<Image FileName="-974293034" Left="0" Top="0" Right="679" Bottom="453" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="objectName">
+										<Value PropertyType="0" Value="QFileDialog" Type="5" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="fileNameEdit" Key="{7D1139BD-D1E7-4EEB-84EE-FEAC8ECDA7BB}" ParallelWalk="True">
+										<Image FileName="-574362933" Left="109" Top="378" Right="588" Bottom="401" />
+										<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="fileNameEdit" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="buttonBox" Key="{770C6BF6-0D30-4F3B-8836-878F8952EF1E}" ParallelWalk="True">
+										<Image FileName="-207177761" Left="594" Top="376" Right="660" Bottom="434" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="buttonBox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonChoose" Key="{F0B439F7-CC6B-40F2-846F-7AD1C673DF78}" ParallelWalk="True">
+												<Image FileName="-207177761" Left="594" Top="376" Right="660" Bottom="402" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="&amp;Choose" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="buttonCancel" Key="{F8DBE8B2-BE9F-4AFF-9B48-E064DB59D99F}" ParallelWalk="True">
+												<Image FileName="-447785394" Left="594" Top="408" Right="660" Bottom="434" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="Cancel" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="2" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="MessageBox90" Key="{5DE85E2C-EB2F-476C-B7D0-65A6AFB74179}" ParallelWalk="True">
+								<Image FileName="880538884" Left="0" Top="0" Right="183" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Export finished !" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{4FC46A6D-9A6E-475F-A22B-1714947CFB1C}" ParallelWalk="True">
+										<Image FileName="880538884" Left="14" Top="74" Right="169" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{054F4334-F268-42F7-A5F3-611202B731C5}" ParallelWalk="True">
+												<Image FileName="880538884" Left="103" Top="83" Right="169" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="OK" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="RProgressDialog" Key="{46C919BB-759C-4AA2-A502-C0720FE3EB8E}" ParallelWalk="True">
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="RProgressDialog" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="Label" Key="{5A7BFE81-7E35-4362-9AEC-0E07B442F40A}" ParallelWalk="True">
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="QtClassName">
+												<Value PropertyType="0" Value="QLabel" Type="5" />
+											</Property>
+											<Property Name="QtText">
+												<Value PropertyType="0" Value="" Type="5" />
+											</Property>
+											<Property Name="QtIndex">
+												<Value PropertyType="0" Value="2" Type="0" />
+											</Property>
+										</Properties>
+									</Child>
+								</Children>
+							</Child>
 						</Children>
 					</Child>
 					<Child Name="GamaReg" Key="{4F18D14D-4B00-4A71-AFC8-2504351E9417}" ParallelWalk="True">
@@ -7491,6 +7714,7 @@
 							<Child Name="canvas" Owner="{6A61A37D-5F80-49A5-9C17-D4F199FDB973}">
 								<Child Name="C2DViewer" Owner="{F5C36294-2673-4250-8228-AD0E0B312733}" />
 							</Child>
+							<Child Name="ProgressBar" Owner="{9AC9E0A3-5D64-4F6B-A1A9-54F2CDE0D14F}" />
 						</Child>
 						<Child Name="PlanGUI" Owner="{38561D5E-CE17-474A-A2F9-7A399B24BF49}">
 							<Child Name="widget" Owner="{34E67FDC-90B9-49E1-8A41-D3F5DBC56F2C}">
@@ -7550,6 +7774,8 @@
 						</Child>
 					</Child>
 				</Child>
+				<Child Name="pbImport" Owner="{627D92F7-3BFD-4407-A45E-ECE009E2DD1A}" />
+				<Child Name="pbExport" Owner="{3C48680C-E67A-46A2-895D-4651E91F0363}" />
 			</Child>
 			<Child Name="main_quit_popup" Owner="{8DFA172E-A81C-40B5-916C-289BD1608C6F}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{02024A94-DF7D-4D05-864B-F3E4BC39D474}">
@@ -8228,6 +8454,28 @@
 				<Child Name="qt_msgbox_buttonbox" Owner="{3CF9ACE8-933A-4493-89C1-7CE300148747}">
 					<Child Name="buttonOk" Owner="{8F74CB27-7BEC-4FDF-A37A-365DA41F5E6E}" />
 				</Child>
+			</Child>
+			<Child Name="import_GamaExporterClass" Owner="{8337D4C6-92F6-4DC1-A383-6D4F74D38E56}">
+				<Child Name="pushButton_SelectAll" Owner="{CE7E1F1E-2819-4A97-84AE-14AB50114356}" />
+				<Child Name="pushButton_SelectNone" Owner="{C98F2B2B-F4C0-4E33-B5CD-D50C44709532}" />
+				<Child Name="pushButton_Ok" Owner="{7690ACE1-8D55-414E-B349-A7FA31D45583}" />
+				<Child Name="pushButton_Cancel" Owner="{A0D54688-6496-41C7-ABB1-B2589F95FFDC}" />
+				<Child Name="lineEdit_Path" Owner="{32FD7736-89B0-436C-94BC-1071AD2F95D5}" />
+			</Child>
+			<Child Name="import_GamaImporterClass_QFileDialog" Owner="{34911854-8EF5-4796-A7E0-7FE81035C99A}">
+				<Child Name="fileNameEdit" Owner="{7D1139BD-D1E7-4EEB-84EE-FEAC8ECDA7BB}" />
+				<Child Name="buttonBox" Owner="{770C6BF6-0D30-4F3B-8836-878F8952EF1E}">
+					<Child Name="buttonChoose" Owner="{F0B439F7-CC6B-40F2-846F-7AD1C673DF78}" />
+					<Child Name="buttonCancel" Owner="{F8DBE8B2-BE9F-4AFF-9B48-E064DB59D99F}" />
+				</Child>
+			</Child>
+			<Child Name="import_export_finished_popup" Owner="{5DE85E2C-EB2F-476C-B7D0-65A6AFB74179}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{4FC46A6D-9A6E-475F-A22B-1714947CFB1C}">
+					<Child Name="buttonOk" Owner="{054F4334-F268-42F7-A5F3-611202B731C5}" />
+				</Child>
+			</Child>
+			<Child Name="RProgressDialog" Owner="{46C919BB-759C-4AA2-A502-C0720FE3EB8E}">
+				<Child Name="Label" Owner="{5A7BFE81-7E35-4362-9AEC-0E07B442F40A}" />
 			</Child>
 		</Child>
 		<Child Name="GamaReg" Owner="{4F18D14D-4B00-4A71-AFC8-2504351E9417}">

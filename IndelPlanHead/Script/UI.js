@@ -60,6 +60,11 @@ const initUI = () => {
   const PatientManagementWidget = indel.centralWidget.stackedWidget.page.PatientManagementWidget
   indel.patientManagement = PatientManagementWidget.PatientManagement
   
+  //save progress
+  indel.progressDialog = mainProcess.ProgressDialog
+  //register study progress
+  indel.rProgressDialog = mainProcess.RProgressDialog
+  
   
   //patient export/import on the right top corner 
   indel.patient_dlgSelectImportPath =mainProcess.patient_dlgSelectImportPath
@@ -116,8 +121,16 @@ const initUI = () => {
   indel.detail_tc_no_copy_plan_selected_popup = mainProcess.detail_tc_no_copy_plan_selected_popup
   indel.detail_tc_copy_plan_popup = mainProcess.detail_tc_copy_plan_popup
       
-  //import
+  //import study window
   indel.import_GamaImporterClass = mainProcess.import_GamaImporterClass 
+  
+  //export study
+  indel.import_GamaExporterClass = mainProcess.import_GamaExporterClass 
+  indel.import_export_finished_popup = mainProcess.import_export_finished_popup
+  
+  //export study
+  indel.import_GamaImporterClass_QFileDialog = mainProcess.import_GamaImporterClass_QFileDialog 
+  
   indel.import_not_register_popup = mainProcess.import_not_register_popup
   indel.import_close_popup = mainProcess.import_close_popup
   indel.import_reimport_popup = mainProcess.import_reimport_popup

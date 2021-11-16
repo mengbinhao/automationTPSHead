@@ -39,7 +39,7 @@
 	<config language="{90F89436-9452-4F95-9882-6B5210079F13}" />
 	<testItems key="{25CA201D-B9C7-4D62-9590-6D7EC6DD9347}">
 		<children>
-			<testItem name="login" key="{30A2CE01-FDCB-431F-A6CE-1805F94B0CDE}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="login" key="{30A2CE01-FDCB-431F-A6CE-1805F94B0CDE}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="输入正确的用户名与密码登录计划系统&#13;&#10;" key="{F08A1B93-DC5D-4259-B8E2-174CD9AC1807}" group="False" enabled="True" testMoniker="{9870FC79-4C69-46EA-B82E-8BD83E5C9F4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -242,7 +242,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="ProjectTestItem1" key="{4B7B88EF-52E1-4812-9E36-E0A4F58D5B46}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}test" count="1" timeout="1" stopOnError="2" stopOnException="2" description="">

@@ -17,9 +17,9 @@ function GeneralEvents_OnStopTest(Sender) {
   //check if this is the last script
   if (strictEqual(++IndelPlan.currentRunningItem, IndelPlan.maxRunningItem)) {
     //export result
-    //exportTestResult.exportTestResult()
+    exportTestResult.exportTestResult()
     //in case file generated completely
-    //utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+    utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
     //post defect
     //postJIRA.postToJIRA(null)
     //send email

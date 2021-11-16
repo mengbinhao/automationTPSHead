@@ -3,7 +3,6 @@ const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
-const find_in_list = require("find_in_list")
 
 function testcase() {
   const IndelPlan = Project.Variables.IndelPlan

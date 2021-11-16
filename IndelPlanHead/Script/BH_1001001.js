@@ -3,7 +3,7 @@ const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
-const file_functions = require("file_functions")
+const fileFunctions = require("file_functions")
 
 function testcase() {
   const IndelPlan = Project.Variables.IndelPlan
@@ -23,7 +23,7 @@ function testcase() {
     IndelPlan.patient_export_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
     IndelPlan.patient_DlgExportClass.pushButton_Cancel.ClickButton()
 
-    if (file_functions.isExists(path, patientFolderName) && strictEqual(aqDateTime.Compare(beforeExportDate, file_functions.getFolderDateLastModifiedTime(path + globalConstant.obj.backslash + patientFolderName)), -1)) {
+    if (fileFunctions.isExists(path, patientFolderName) && strictEqual(aqDateTime.Compare(beforeExportDate, fileFunctions.getFolderDateLastModifiedTime(path + globalConstant.obj.backslash + patientFolderName)), -1)) {
       Log.Checkpoint("Export patient data successfully!")
     } else {
       Log.Error("Export patient data fail!")

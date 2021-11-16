@@ -2,7 +2,7 @@
 const utilsfunctions = require("utils_functions")
 const findinlist = require("find_in_list")
 const patient = require("patient")
-const filefunctions = require("file_functions")
+const fileFunctions = require("file_functions")
 
 const __isTabRangeExists = (tabIdx, maxIdx) => {
   return 0 <= tabIdx && tabIdx <= maxIdx
@@ -164,7 +164,7 @@ const deleteMachine = (indel, machineName, isCancel = false) => {
 
 const getExportFolder = () => {
     const exportFolder = aqFileSystem.GetFileDrive(TestedApps.Items(0).Path) + globalConstant.obj.backslash + globalConstant.obj.exportFolder
-    filefunctions.createFolder(exportFolder)
+    fileFunctions.createFolder(exportFolder)
     return exportFolder
 }
 

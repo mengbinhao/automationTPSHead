@@ -5,7 +5,7 @@ const logout = require("logout")
 const exitwithlogic = require("exit_with_logic")
 const user = require("user")
 const findinlist = require("find_in_list")
-const utils_functions = require("utils_functions")
+const utilsFunctions = require("utils_functions")
 
 function testcase() {
   const IndelPlan = Project.Variables.IndelPlan
@@ -33,8 +33,8 @@ function testcase() {
   aqObject.CheckProperty(group.label_UserName, "text", cmpEqual, `User Name: ${Project.Variables.newusername}`)
     
   //check login time
-  const systemCurrentTime = utils_functions.getTimeAsFormatStr("%H:%M")
-  const systemOneMinuteBeforeTime = utils_functions.getTimeIntervalAsFormatStr("%H:%M", 3, -1)
+  const systemCurrentTime = utilsFunctions.getTimeAsFormatStr("%H:%M")
+  const systemOneMinuteBeforeTime = utilsFunctions.getTimeIntervalAsFormatStr("%H:%M", 3, -1)
   const ret1 = aqString.FindLast(group.label_LoginTime.text,systemCurrentTime)
   const ret2 = aqString.FindLast(group.label_LoginTime.text,systemOneMinuteBeforeTime)
   if (strictEqual(ret1, -1) && strictEqual(ret2, -1)) {

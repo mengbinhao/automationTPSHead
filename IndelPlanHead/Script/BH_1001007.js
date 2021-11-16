@@ -1,10 +1,7 @@
-﻿const globalConstant = require("global_constant")
-const launch = require("launch")
+﻿const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
-const findinlist = require("find_in_list")
-const utils_functions = require("utils_functions")
 const common = require("common")
 
 function testcase() {

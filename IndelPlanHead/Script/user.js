@@ -1,5 +1,4 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
 const findinlist = require("find_in_list")
 
 const USER_TYPE = ['Visitor', 'PlanningPhysicist', 'RadiationPhysicist', 'RadiationTherapist', 'ChiefDoctor', 'Technician'];

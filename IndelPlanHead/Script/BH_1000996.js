@@ -4,7 +4,6 @@ const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
 const findinlist = require("find_in_list")
-const utils_functions = require("utils_functions")
 
 const __compareDateAndTime = (loginTime, loginTimeOneMinuteAfter, createTime) => {
   if (strictEqual(createTime, loginTime) || strictEqual(createTime, loginTimeOneMinuteAfter)) return true
@@ -29,11 +28,6 @@ function testcase() {
     const vals = findinlist.getOneRowValueForMoreListFromRowIndex(idx, list)
     aqConvert.DateTimeToFormatStr(aqDateTime.Now(), "%H:%M")
     const createTime = aqString.SubString(vals.pop(), 11, 5)
-    Log.Message(ret)
-    Log.Message(vals.join(''))
-    Log.Message(loginTime)
-    Log.Message(loginTimeOneMinuteAfter)
-    Log.Message(createTime)
     if (!strictEqual(ret, vals.join('')) || !__compareDateAndTime(loginTime, loginTimeOneMinuteAfter, createTime)) {
       Log.Error("Add patient fail!")
     } else {

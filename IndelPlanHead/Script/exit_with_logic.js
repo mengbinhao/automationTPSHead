@@ -1,5 +1,5 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
+const utilsFunctions = require("utils_functions")
 const common = require("common")
 
 //isQuitPopup 1 means yes, 2 means no, 3 means cancel
@@ -33,7 +33,7 @@ const exitWithLogic = (isPatientSavePopup = false, isCurrentPlanFinishedPopup = 
     if (IndelPlan.loginClass.Visible) IndelPlan.loginClass.Close()
   }
   //have to delay for restarting normally
-  utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
 }
 
 module.exports.exitWithLogic = exitWithLogic

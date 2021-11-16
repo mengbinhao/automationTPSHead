@@ -3,7 +3,7 @@ const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
-const find_in_list = require("find_in_list")
+const findInList = require("find_in_list")
 
 function testcase() {
   const IndelPlan = Project.Variables.IndelPlan
@@ -26,7 +26,7 @@ function testcase() {
   IndelPlan.patient_import_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
   IndelPlan.patient_DlgImportClass.pushButton_Cancel.ClickButton()
 
-  const isExist = find_in_list.isItemExistInMoreList(patientID, globalConstant.obj.patientIDColumn, IndelPlan.patientManagement.treeWidget_PatientList)
+  const isExist = findInList.isItemExistInMoreList(patientID, globalConstant.obj.patientIDColumn, IndelPlan.patientManagement.treeWidget_PatientList)
   
   if (isExist) {
     Log.Checkpoint("Import patient data successfully!")

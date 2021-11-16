@@ -14,6 +14,8 @@ const exportTestResult = () => {
   
   if (slPacker.Pack(fileList, globalConstant.obj.workDir, archivePath)) {
     Log.Message("Files compressed successfully!")
+    //copy to jenkins workspace
+    aqFile.Copy(`${globalConstant.obj.TC_compressedReport}`, `${globalConstant.obj.Jenkins_workspace}`, false)
   } else {
     Log.Error("Files compressed fail!")
   }

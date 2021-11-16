@@ -111,4 +111,8 @@ obj.JIRA_password = "123456"
 obj.JIRA_project_key = "TEST"
 obj.JIRA_issue_type = "Defect"
 
+//Jenkins related
+obj.TC_compressedReport = Project.ConfigPath + "Log\\PackedResults\\" + "CompressedReport.ZIP" 
+obj.Jenkins_workspace = "C:\\Windows\\System32\\config\\systemprofile\\AppData\\Local\\Jenkins\\.jenkins\\workspace\\IndelPlanAutomation\\TestReport"
+
 module.exports.obj = obj

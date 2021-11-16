@@ -19,7 +19,7 @@ function GeneralEvents_OnStopTest(Sender) {
     //export result
     exportTestResult.exportTestResult()
     //in case file generated completely
-    utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+    utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
     //post defect
     //postJIRA.postToJIRA(null)
     //send email

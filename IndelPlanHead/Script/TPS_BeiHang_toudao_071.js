@@ -7,23 +7,24 @@ const findinlist = require("find_in_list")
 const exitwithlogic = require("exit_with_logic")
 
 function TPS_BeiHang_toudao_071() {
-  const IndelPlan = Project.Variables.IndelPlan
-  const configList = IndelPlan.machinemanagementClass.ConfigList
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
+  const configList = indelPlan.machine_management.ConfigList
   
   launchwithlogic.launchWithLogic()
-  login.login(Project.Variables.username, Project.Variables.password)
-  IndelPlan.patientManagement.frame.pushButton_PhyData.Click()
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
+  indelPlan.patientManagement.frame.pushButton_PhyData.Click()
   utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
   
-  physicaldata.addEmptyMachine(IndelPlan, Project.Variables.newmachinename, false)
+  physicaldata.addEmptyMachine(indelPlan, pv, Project.Variables.new_machine_name, false)
   utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
   
-  const RowIdx = findinlist.isItemInListReturnIndex(Project.Variables.newmachinename, globalConstant.obj.machineConfigNameColumn, configList) 
+  const RowIdx = findinlist.isItemInListReturnIndex(Project.Variables.new_machine_name, globalConstant.obj.machineConfigNameColumn, configList) 
   
   if (!strictEqual(RowIdx, globalConstant.obj.notFoundIndex)) {
     let prev = findinlist.getFieldValueFromRow(RowIdx, 'Last Edit Time', configList)
     
-    physicaldata.editMachine(IndelPlan, Project.Variables.newmachinename, 0, 'text', 'Machine Name:', Project.Variables.editmachinename, false)
+    physicaldata.editMachine(indelPlan, Project.Variables.new_machine_name, 0, 'text', 'Machine Name:', Project.Variables.edit_machine_name, false)
     
     utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
     
@@ -40,7 +41,7 @@ function TPS_BeiHang_toudao_071() {
   } else {
     Log.Error(`TPS_BeiHang_toudao_071 Failed`)
   }
-  IndelPlan.machinemanagementClass.Close()
+  indelPlan.machine_management.Close()
   exitwithlogic.exitWithLogic(false, true)
 }
 

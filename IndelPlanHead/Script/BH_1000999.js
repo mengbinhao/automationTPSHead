@@ -6,16 +6,17 @@ const patient = require("patient")
 const findinlist = require("find_in_list")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
-
-  const ret = "8997668testpatient2F811816118812341236north east1note1"
-  patient.addPatientActivity(IndelPlan, 8997668, "testpatient", "Male", 180, 60, 80, "north east", 18812341235, "note")
-  patient.deletePatient(IndelPlan, false, aqConvert.IntToStr(8997668))
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  const list = IndelPlan.patientManagement.treeWidget_PatientList
-  const isExist = findinlist.isItemExistInMoreList(aqConvert.IntToStr(8997668), globalConstant.obj.patientIDColumn, list)
+  patient.addPatientActivity(indelPlan, pv, Project.Variables.new_patientID, Project.Variables.new_patient_name, Project.Variables.new_patient_gender, Project.Variables.new_patient_height, Project.Variables.new_patient_weight, Project.Variables.new_patient_age, Project.Variables.new_patient_address, Project.Variables.new_patient_phone, Project.Variables.new_patient_note)
+  
+  patient.deletePatient(indelPlan, pv, false, Project.Variables.new_patientID)
+  
+  const list = indelPlan.patientManagement.treeWidget_PatientList
+  const isExist = findinlist.isItemExistInMoreList(Project.Variables.new_patientID, globalConstant.obj.patientIDColumn, list)
   
   if (!isExist) {
     Log.Checkpoint("Delete patient successfully!")

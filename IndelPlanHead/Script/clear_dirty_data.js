@@ -8,32 +8,35 @@ const physicaldata = require("physical_data")
 const exitwithlogic = require("exit_with_logic")
 
 const clearDirtyData = () => {
-  const IndelPlan = Project.Variables.IndelPlan
-  const dirtyData = IndelPlan.dirtyData
-  
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  const contourArr = IndelPlan.dirtyData.get(globalConstant.obj.addContourLib)
-  const patientArr = IndelPlan.dirtyData.get(globalConstant.obj.addPatient)
-  const userArr = IndelPlan.dirtyData.get(globalConstant.obj.addUser)
-  const machineArr = IndelPlan.dirtyData.get(globalConstant.obj.addMachine)
+  const contourArr = pv.dirtyData.get(globalConstant.obj.addContourLib)
+  const patientArr = pv.dirtyData.get(globalConstant.obj.addPatient)
+  const userArr = pv.dirtyData.get(globalConstant.obj.addUser)
+  const machineArr = pv.dirtyData.get(globalConstant.obj.addMachine)
   
   //delete must be suquence
   if (contourArr.length > 0) {
-    contour.deleteContourForDirtyData(IndelPlan, contourArr)
+    Log.Message("Clear Contour test data")
+    contour.deleteContourForDirtyData(indelPlan, contourArr)
   }
   if (patientArr.length > 0) {
-    patient.deletePatientForDirtyData(IndelPlan, patientArr)
+    Log.Message("Clear Patient test data")
+    patient.deletePatientForDirtyData(indelPlan, patientArr)
   }
   if (userArr.length > 0) {
-    user.deleteUserForDirtyData(IndelPlan, userArr)
+    Log.Message("Clear User test data")
+    user.deleteUserForDirtyData(indelPlan, userArr)
   }
   if (machineArr.length > 0){
-    physicaldata.deleteMachineForDirtyData(IndelPlan, machineArr)
+    Log.Message("Clear Machine test data")
+    physicaldata.deleteMachineForDirtyData(indelPlan, machineArr)
   }
 
   exitwithlogic.exitWithLogic(false, false, 1)
 }
 
-module.exports.clearDirtyData = clearDirtyData;
+module.exports.clearDirtyData = clearDirtyData

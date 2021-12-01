@@ -8,29 +8,30 @@ const findinlist = require("find_in_list")
 const utilsFunctions = require("utils_functions")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  user.gotoUserListWindow(IndelPlan)
-  user.openNewUserWindow(IndelPlan)
-  user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
-  user.exitUserListWindow(IndelPlan)
+  user.gotoUserListWindow(indelPlan)
+  user.openNewUserWindow(indelPlan)
+  user.addUser(indelPlan, pv, Project.Variables.new_username, Project.Variables.new_user_password, Project.Variables.new_user_confirmpassword, Project.Variables.new_usertype)
+  user.exitUserListWindow(indelPlan)
   exitwithlogic.exitWithLogic(false, false, 2)
   //login with new user
-  login.login(Project.Variables.newusername, Project.Variables.newuserpassword)
+  login.login(indelPlan, Project.Variables.new_username, Project.Variables.new_user_password)
   //visitor authority
-  user.updateUserPassword(IndelPlan, Project.Variables.newuserpassword, Project.Variables.edituserpassword, Project.Variables.edituserpassword)
+  user.updateUserPassword(indelPlan, Project.Variables.new_user_password, Project.Variables.edit_user_password, Project.Variables.edit_user_password)
   exitwithlogic.exitWithLogic(false, false, 2)
   
   //relogin after changing password
-  login.login(Project.Variables.newusername, Project.Variables.edituserpassword)
-  aqObject.CheckProperty(IndelPlan.patientManagement.frame.groupBox_3, "Visible", cmpEqual, true)
+  login.login(indelPlan, Project.Variables.new_username, Project.Variables.edit_user_password)
+  aqObject.CheckProperty(indelPlan.patientManagement.frame.groupBox_3, "Visible", cmpEqual, true)
   
   /*  
   //check login name
-  const group = IndelPlan.patientManagement.frame.groupBox_3
-  aqObject.CheckProperty(group.label_UserName, "text", cmpEqual, `User Name: ${Project.Variables.newusername}`)
+  const group = indelPlan.patientManagement.frame.groupBox_3
+  aqObject.CheckProperty(group.label_UserName, "text", cmpEqual, `User Name: ${Project.Variables.new_username}`)
     
   //check login time
   const systemCurrentTime = utilsFunctions.getTimeAsFormatStr("%H:%M")

@@ -27,137 +27,137 @@ const __setContourAttribute = (obj, contourLibType, contourLibName) => {
   obj.ContourName.SetText(contourLibName)
 }
 
-const __handleDirtyDate = (indel, contourLibName) => {
-  const dirtydContours = indel.dirtyData.get(globalConstant.obj.addContourLib)
+const __handleContourDirtyData = (pv, contourLibName) => {
+  const dirtydContours = pv.dirtyData.get(globalConstant.obj.addContourLib)
   if (dirtydContours.includes(contourLibName)) {
-    indel.dirtyData.set(globalConstant.obj.addContourLib, dirtydContours.filter(val => val !== contourLibName))
+    pv.dirtyData.set(globalConstant.obj.addContourLib, dirtydContours.filter(val => val !== contourLibName))
   } else {
-    Log.Warning(`can not __handleDirtyDate due to contourLibName=${contourLibName}`)
+    Log.Warning(`can not __handleContourDirtyData due to contourLibName=${contourLibName}`)
   }
 }
  
-const generateRandomCTVName = indel => {
+const generateRandomCTVName = indelPlan => {
   const ctvNmber = utilsfunctions.getRandomInt(10000, 1000)
   return `CTV${ctvNmber}`
 }
 
 // true means ContourLib, false means PlanLib
-const addContourLib = (indel, contourLibName, contourLibType, libType = true, isAdd = false) => {
+const addContourLib = (indelPlan, pv, contourLibName, contourLibType, libType = true, isAdd = false) => {
   const __fulfillAdd = (isAdd, popupDialog, dirtyData, contourLibName, type) => {
     if (isAdd) {
-      indel.contour_DlgContourItemClass.OperationDone.ClickButton()
+      indelPlan.contour_new_contourItem.OperationDone.ClickButton()
       if (!popupDialog.Exists && type) {
         dirtyData.get(globalConstant.obj.addContourLib).push(contourLibName)
       }
     } else {
-      indel.contour_DlgContourItemClass.OperationCancel.ClickButton()
+      indelPlan.contour_new_contourItem.OperationCancel.ClickButton()
     }
   }
 
-  if(!__checkContourTypeExists(contourLibType, indel.contour_DlgContourItemClass.ContourType)) {
+  if(!__checkContourTypeExists(contourLibType, indelPlan.contour_new_contourItem.ContourType)) {
     Log.Error(`Please input valid contourLibType, contourLibType=${contourLibType}`)
     Runner.Stop(true)
   }
   
   if (strictEqual(libType, true)) {
-    indel.ContourGUIClass.groupBox_4.AddToLib.ClickButton()
-    __setContourAttribute(indel.contour_DlgContourItemClass, contourLibType, contourLibName)
-    __fulfillAdd(isAdd, indel.contour_lib_exist_popup, indel.dirtyData, contourLibName, true)
+    indelPlan.ContourGUI.groupBox_4.AddToLib.ClickButton()
+    __setContourAttribute(indelPlan.contour_new_contourItem, contourLibType, contourLibName)
+    __fulfillAdd(isAdd, indelPlan.contour_lib_exist_popup, pv.dirtyData, contourLibName, true)
   } else {
-    indel.ContourGUIClass.groupBox_6.AddPlanContour.ClickButton()
-    __setContourAttribute(indel.contour_DlgContourItemClass, contourLibType, contourLibName)
-    __fulfillAdd(isAdd, indel.contour_planlib_exist_popup, indel.dirtyData, contourLibName, false)
+    indelPlan.ContourGUI.groupBox_6.AddPlanContour.ClickButton()
+    __setContourAttribute(indelPlan.contour_new_contourItem, contourLibType, contourLibName)
+    __fulfillAdd(isAdd, indelPlan.contour_planlib_exist_popup, pv.dirtyData, contourLibName, false)
   }
 }
 
-const editContourLib = (indel, contourLibName, editContourLibName, editContourLibType, libType = true, isEdit = false) => {
-  if(!__checkContourTypeExists(editContourLibType, indel.contour_DlgContourItemClass.ContourType)) {
+const editContourLib = (indelPlan, contourLibName, editContourLibName, editContourLibType, libType = true, isEdit = false) => {
+  if(!__checkContourTypeExists(editContourLibType, indelPlan.contour_new_contourItem.ContourType)) {
     Log.Error(`Please input valid contourLibType, contourLibType,=${editContourLibType}`)
     Runner.Stop(true)
   }
   
   let contourLibList = null
   if (libType) {
-    contourLibList = indel.ContourGUIClass.groupBox_4.ContourLib 
+    contourLibList = indelPlan.ContourGUI.groupBox_4.ContourLib 
   } else {
-    contourLibList = indel.ContourGUIClass.groupBox_6.PlanLib
+    contourLibList = indelPlan.ContourGUI.groupBox_6.PlanLib
   }
   const isExist =  findinlist.isItemExistInMoreList(contourLibName, globalConstant.obj.nameColumn, contourLibList)
   
   if (isExist) {
     contourLibList.ClickItem(contourLibName)
     if (libType) {
-      indel.ContourGUIClass.groupBox_4.EditContourLib.ClickButton()
+      indelPlan.ContourGUI.groupBox_4.EditContourLib.ClickButton()
     } else {
-      indel.ContourGUIClass.groupBox_6.EditPlanLib.ClickButton()
+      indelPlan.ContourGUI.groupBox_6.EditPlanLib.ClickButton()
     }
-    __setContourAttribute(indel.contour_DlgContourItemClass, editContourLibType, editContourLibName)
-    isEdit ? indel.contour_DlgContourItemClass.OperationDone.ClickButton() : indel.contour_DlgContourItemClass.OperationCancel.ClickButton()
+    __setContourAttribute(indelPlan.contour_new_contourItem, editContourLibType, editContourLibName)
+    isEdit ? indelPlan.contour_new_contourItem.OperationDone.ClickButton() : indelPlan.contour_new_contourItem.OperationCancel.ClickButton()
   } else {
     Log.Warning(`can not find target contourLib to update, contourLibName=${contourLibName}`)
   }
 }
 
-const deleteContourLib = (indel, contourLibName,libType = true, isDelete = false) => {
+const deleteContourLib = (indelPlan, pv, contourLibName,libType = true, isDelete = false) => {
   let contourLibList = null
   if (libType) {
-    contourLibList = indel.ContourGUIClass.groupBox_4.ContourLib
+    contourLibList = indelPlan.ContourGUI.groupBox_4.ContourLib
   } else {
-    contourLibList = indel.ContourGUIClass.groupBox_6.PlanLib
+    contourLibList = indelPlan.ContourGUI.groupBox_6.PlanLib
   }
   const isExist =  findinlist.isItemExistInMoreList(contourLibName, globalConstant.obj.nameColumn, contourLibList)
   
   if (isExist) {
     contourLibList.ClickItem(contourLibName)
     if (libType) {
-      indel.ContourGUIClass.groupBox_4.DeleteFromContourLib.ClickButton()
+      indelPlan.ContourGUI.groupBox_4.DeleteFromContourLib.ClickButton()
     } else {
-      indel.ContourGUIClass.groupBox_6.DeleteFromPlanLib.ClickButton()
+      indelPlan.ContourGUI.groupBox_6.DeleteFromPlanLib.ClickButton()
     }
     if (!libType) {
       if (isDelete) {
-        indel.contour_delete_planlib_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()        
+        indelPlan.contour_delete_planlib_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()        
       } else {
-        indel.contour_delete_planlib_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+        indelPlan.contour_delete_planlib_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
       }
     } else {
-      __handleDirtyDate(indel, contourLibName)
+      __handleContourDirtyData(pv, contourLibName)
     }
   } else {
     Log.Warning(`can not find contourLib to delete, contourLibName=${contourLibName}`)
   }
 }
 
-const loadContourLib = (indel, contourLibName) => {
-  const contourLibList = indel.ContourGUIClass.groupBox_4.ContourLib
+const loadContourLib = (indelPlan, contourLibName) => {
+  const contourLibList = indelPlan.ContourGUI.groupBox_4.ContourLib
   const isExist =  findinlist.isItemExistInMoreList(contourLibName, globalConstant.obj.nameColumn, contourLibList)
   
   if (isExist) {
     contourLibList.ClickItem(contourLibName)
-    indel.ContourGUIClass.groupBox_4.LoadToPlanLib.ClickButton()
+    indelPlan.ContourGUI.groupBox_4.LoadToPlanLib.ClickButton()
   } else {
     Log.Warning(`can not loadContourLib due to contourLibName=${contourLibName}`)
   }
 }
 
 //maybe multi SKIN ContourLib, choose first find one
-const loadContourLibByType = (indel, contourLibType) => {
-  const contourLibList = indel.ContourGUIClass.groupBox_4.ContourLib
+const loadContourLibByType = (indelPlan, contourLibType) => {
+  const contourLibList = indelPlan.ContourGUI.groupBox_4.ContourLib
   const rowIdx =  findinlist.isItemExistInMoreListReturnIndex(contourLibType, globalConstant.obj.contourType, contourLibList)
   
   if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
     contourLibList.ClickItem(rowIdx)
-    indel.ContourGUIClass.groupBox_4.LoadToPlanLib.ClickButton()
+    indelPlan.ContourGUI.groupBox_4.LoadToPlanLib.ClickButton()
   } else {
     Log.Warning(`can not loadContourLibByType due to contourLibType=${contourLibType}`)
   }
 }
 
 //goto contour page
-const gotoContourWindow = indel => {
-  if (indel.patientDataClass.VisibleOnScreen) {
-    indel.patientDataClass.groupBox_6.pushButton_Contour.ClickButton()
-    if (indel.contour_no_study_exist_popup.Exists) {
+const gotoContourWindow = indelPlan => {
+  if (indelPlan.PatientData.VisibleOnScreen) {
+    indelPlan.PatientData.groupBox_6.pushButton_Contour.ClickButton()
+    if (indelPlan.contour_no_study_exist_popup.Exists) {
       Log.Warning(`gotoRegisteredContour fail due to no Study exist`)
     }
   } else {
@@ -165,74 +165,74 @@ const gotoContourWindow = indel => {
   }
 }
 
-const loadAndContourSKINActivity = indel => {
-  loadContourLibByType(indel, "SKIN")
-  indel.tabWidget.qt_tabwidget_stackedwidget.tab_2.toolButton_17.ClickButton()
+const loadAndContourSKINActivity = indelPlan => {
+  loadContourLibByType(indelPlan, "SKIN")
+  indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_2.toolButton_17.ClickButton()
   const position = coordinate.getNearMiddleCoordinate()
   LLPlayer.MouseDown(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
   LLPlayer.MouseUp(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
   utilsfunctions.delay(globalConstant.obj.delayThirtySeconds)
 }
 
-const loadAndContourTargetAreaByLineActivity = (indel, contourLibName) => {
-  loadContourLib(indel, contourLibName)
-  indel.ContourGUIClass.groupBox_5.pbManualSketch.ClickButton()
-  target_related.drawTriangleNearMiddle(indel)
-  indel.ContourGUIClass.canvas.C2DViewer.ClickR()
-  indel.ContourGUIClass.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMousePositiveDelta)
+const loadAndContourTargetAreaByLineActivity = (indelPlan, contourLibName) => {
+  loadContourLib(indelPlan, contourLibName)
+  indelPlan.ContourGUI.groupBox_5.pbManualSketch.ClickButton()
+  target_related.drawTriangleNearMiddle(indelPlan)
+  indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
+  indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMousePositiveDelta)
   const position = coordinate.getNearMiddleCoordinate()
   LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond * 3)
   LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)
-  indel.ContourGUIClass.canvas.C2DViewer.ClickR()
+  indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
 
-  indel.ContourGUIClass.groupBox_5.Interpolate.ClickButton()
+  indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
   
   /* need to handle exception popup
-  if (indel.contour_interpolate_error_popup.Exists) {
-   indel.contour_interpolate_error_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+  if (indelPlan.contour_interpolate_error_popup.Exists) {
+   indelPlan.contour_interpolate_error_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
    Log.Error(`loadAndContourTargetAreaByLineActivity failure`)
   }
   */
 }
 
-const loadAndContourTargetAreaByBrushActivity = (indel, contourLibName) => {
-  loadContourLib(indel, contourLibName)
-  indel.ContourGUIClass.groupBox_5.BrushTool.ClickButton()
+const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
+  loadContourLib(indelPlan, contourLibName)
+  indelPlan.ContourGUI.groupBox_5.BrushTool.ClickButton()
   let i = 0
   while (i < 10) {
-    target_related.drawRectangleNearMiddle(indel)
+    target_related.drawRectangleNearMiddle(indelPlan)
     i++
   }
   utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
-  indel.ContourGUIClass.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMousePositiveDelta)
+  indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMousePositiveDelta)
   const position = coordinate.getNearMiddleCoordinate()
   LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
   LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)
-  indel.ContourGUIClass.canvas.C2DViewer.ClickR()
-  indel.ContourGUIClass.groupBox_5.Interpolate.ClickButton()
+  indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
+  indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
   utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
   /* need to handle exception popup
-    if (indel.contour_interpolate_error_popup.Exists) {
-     indel.contour_interpolate_error_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    if (indelPlan.contour_interpolate_error_popup.Exists) {
+     indelPlan.contour_interpolate_error_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
      Log.Error(`loadAndContourTargetAreaByLineActivity failure`)
     }
   */
 }
 
-const deleteContourForDirtyData = (indel, deleteContours) => {
-  indel.patientManagement.treeWidget_PatientList.wItems.Item(0).Click()
-  indel.patientManagement.pushButton_LoadPatient.ClickButton()
-  indel.patientDataClass.groupBox_6.pushButton_Contour.ClickButton()
+const deleteContourForDirtyData = (indelPlan, deleteContours) => {
+  indelPlan.patientManagement.treeWidget_PatientList.wItems.Item(0).Click()
+  indelPlan.patientManagement.pushButton_LoadPatient.ClickButton()
+  indelPlan.PatientData.groupBox_6.pushButton_Contour.ClickButton()
   
-  const contourLibList = indel.ContourGUIClass.groupBox_4.ContourLib
+  const contourLibList = indelPlan.ContourGUI.groupBox_4.ContourLib
   let dc = deleteContours.pop()
   while (dc) {
     contourLibList.ClickItem(dc)
-    indel.ContourGUIClass.groupBox_4.DeleteFromContourLib.ClickButton()
+    indelPlan.ContourGUI.groupBox_4.DeleteFromContourLib.ClickButton()
     dc = deleteContours.pop()
   }
-  common.changePatientDetailTab(indel, globalConstant.obj.patientManagement)
-  patient.fromPatientDetailToMain(indel)
+  common.changePatientDetailTab(indelPlan, globalConstant.obj.patientManagement)
+  patient.fromPatientDetailToMain(indelPlan)
 }
 
 module.exports.addContourLib = addContourLib

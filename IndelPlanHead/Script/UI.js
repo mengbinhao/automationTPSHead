@@ -1,227 +1,192 @@
-﻿const globalConstant = require("global_constant")
-const indel = {}
+﻿const indelPlan = {}
 
-const __initMap = (map) => {
-  map.set(globalConstant.obj.addContourLib, [])
-  map.set(globalConstant.obj.addPatient, [])
-  map.set(globalConstant.obj.addUser, [])
-  map.set(globalConstant.obj.addMachine, []) 
-  return map
-}
+const init = () => {
+  const mappingName = NameMapping.Sys.IndelplanV2
 
-
-
-const __calculateRunningTestItems = () =>{
-  let count = 0
-
-  const __doCalculateRunningTestItems  = testItem => {
-    if (testItem.ElementToBeRun && testItem.Enabled) {
-      count++
-    } else {
-      if (testItem.Enabled) {   
-        for (let i = 0; i < testItem.ItemCount; i++) {
-          __doCalculateRunningTestItems(testItem.TestItem(i))
-        }
-      }
-    }
-  }
-
-  for (let i = 0; i < Project.TestItems.ItemCount; i++) {
-    __doCalculateRunningTestItems(Project.TestItems.TestItem(i))
-  }
+  //Login
+  indelPlan.login = mappingName.login
+  indelPlan.login_noninput_popup = mappingName.login_noninput_popup
+  indelPlan.login_wrong_username_popup = mappingName.login_wrong_username_popup
+  indelPlan.login_wrong_password_popup = mappingName.login_wrong_password_popup
   
-  return count
-}
 
-const initUI = () => {
-  //clear test data
-  indel.dirtyData = __initMap(new Map())
+  //main (ContourGUIClass、PatientDataClass、PatientManagement、PlanGUI)
+  indelPlan.main = mappingName.main
+  indelPlan.centralWidget = indelPlan.main.centralWidget
+  indelPlan.tabWidget = indelPlan.centralWidget.tabWidget
   
-  //check if is last running testItem
-  indel.maxRunningItem = __calculateRunningTestItems()
-  indel.currentRunningItem = 0
 
-  indel.procesName = 'IndelPlanV2.0'
-  const mainProcess = Aliases.IndelPlanV2_0
+  //Common
+  indelPlan.main_quit_popup = mappingName.main_quit_popup
+  indelPlan.main_contour_choose_patient_first_popup = mappingName.main_contour_choose_patient_first_popup
+  indelPlan.main_plan_start_plan_module_first_popup = mappingName.main_plan_start_plan_module_first_popup
+  indelPlan.main_save_progress = mappingName.main_save_progress
+  indelPlan.patient_update_popup = mappingName.patient_update_popup
+  indelPlan.patient_update_fail_popup = mappingName.patient_update_fail_popup
   
-  //login
-  indel.loginClass = mainProcess.login
-  indel.login_noninput_popup = mainProcess.login_noninput_popup
-  indel.login_wrong_username_popup = mainProcess.login_wrong_username_popup
-  indel.login_wrong_password_popup = mainProcess.login_wrong_password_popup
-  
-  //main
-  //patientmanagement
-  indel.main = mainProcess.main
-  indel.main_quit_popup = mainProcess.main_quit_popup
-  indel.centralWidget = indel.main.centralWidget
-  indel.tabWidget = indel.centralWidget.tabWidget
-  
-  const PatientManagementWidget = indel.centralWidget.stackedWidget.page.PatientManagementWidget
-  indel.patientManagement = PatientManagementWidget.PatientManagement
-  
-  //save progress
-  indel.progressDialog = mainProcess.ProgressDialog
-  //register study progress
-  indel.rProgressDialog = mainProcess.RProgressDialog
+
+  //Unnormal Window
+  indelPlan.login_unnormal = mappingName.login_unnormal
+  indelPlan.login_nonnormal_popup = mappingName.login_nonnormal_popup
+  indelPlan.login_loggedin_popup = mappingName.login_loggedin_popup  
   
   
+  //PatientManagement
+  const patientManagementWidget = indelPlan.centralWidget.stackedWidget.page.PatientManagementWidget
+  indelPlan.patientManagement = patientManagementWidget.PatientManagement
   //patient export/import on the right top corner 
-  indel.patient_dlgSelectImportPath =mainProcess.patient_dlgSelectImportPath
-  indel.patient_DlgImportClass = mainProcess.patient_DlgImportClass
-  indel.patient_DlgExportClass = mainProcess.patient_DlgExportClass
-  indel.patient_export_done_popup = mainProcess.patient_export_done_popup
-  indel.patient_export_error_popup = mainProcess.patient_export_error_popup
-  indel.patient_import_done_popup = mainProcess.patient_import_done_popup
-  indel.patient_import_error_popup = mainProcess.patient_import_error_popup
-  
-  
-  //user_management
-  indel.user_management = mainProcess.user_management
-  indel.user_newusercClass = mainProcess.user_newusercClass
-  indel.user_exists_popup = mainProcess.user_exists_popup
-  indel.user_delete_popup = mainProcess.user_delete_popup
-  indel.user_wrongpassword_popup = mainProcess.user_wrongpassword_popup
-  indel.user_nullpassword_popup = mainProcess.user_nullpassword_popup
-  indel.login_nonnormal_popup = mainProcess.login_nonnormal_popup
-  indel.login_loggedin_popup = mainProcess.login_loggedin_popup
-  indel.login_ReloadClass = mainProcess.login_ReloadClass
+  indelPlan.patient_dlgSelectImportPath =mappingName.patient_dlgSelectImportPath
+  indelPlan.patient_importer = mappingName.patient_importer
+  indelPlan.patient_exporter = mappingName.patient_exporter
+  indelPlan.patient_export_done_popup = mappingName.patient_export_done_popup
+  indelPlan.patient_export_error_popup = mappingName.patient_export_error_popup
+  indelPlan.patient_import_done_popup = mappingName.patient_import_done_popup
+  indelPlan.patient_import_error_popup = mappingName.patient_import_error_popup
+  //New Patient Window
+  indelPlan.patient_new_patient = mappingName.patient_new_patient
+  indelPlan.patient_exists_popup = mappingName.patient_exists_popup
+  indelPlan.patient_no_name_or_id_popup = mappingName.patient_no_name_or_id_popup 
+  indelPlan.patient_delete_popup = mappingName.patient_delete_popup
+  indelPlan.patient_delete_nochoice_popup = mappingName.patient_delete_nochoice_popup
 
+
+  //PatientDataClass
+  indelPlan.PatientData = patientManagementWidget.PatientData
+  indelPlan.detail_fuse_more_studys_popup = mappingName.detail_fuse_more_studys_popup
   
-  indel.user_information = mainProcess.user_information
   
-  //patient
-  indel.patient_update_popup = mainProcess.patient_update_popup
-  //same as delete current user popup
-  indel.patient_delete_nochoice_popup = mainProcess.patient_delete_nochoice_popup
-  indel.patient_newpatientClass = mainProcess.patient_newpatientClass
-  indel.patient_delete_popup = mainProcess.patient_delete_popup
-  indel.patient_exists_popup = mainProcess.patient_exists_popup
-  indel.patient_no_name_or_id_popup = mainProcess.patient_no_name_or_id_popup
+  //Study Related
+  indelPlan.detail_study_delete_popup = mappingName.detail_study_delete_popup
+  indelPlan.detail_study_delete_inuse_popup = mappingName.detail_study_delete_inuse_popup
+
     
-  //patient detail
-  indel.patientDataClass = PatientManagementWidget.PatientDataClass
-  indel.detail_function_need_two_study_popup = mainProcess.detail_function_need_two_study_popup
-  indel.detail_function_two_same_study_popup = mainProcess.detail_function_two_same_study_popup
-  indel.detail_study_delete_popup = mainProcess.detail_study_delete_popup
+  //TreatCourse Related
+  indelPlan.detail_tc_new_treatcourse = mappingName.detail_tc_new_treatcourse
+  indelPlan.detail_tc_addplan_no_contours_or_studys_popup = mappingName.detail_tc_addplan_no_contours_or_studys_popup
+  indelPlan.detail_tc_no_item_selected_popup = mappingName.detail_tc_no_item_selected_popup
+  indelPlan.detail_tc_no_tc_selected_popup = mappingName.detail_tc_no_tc_selected_popup
+  indelPlan.detail_tc_new_plan = mappingName.detail_tc_new_plan
+  indelPlan.detail_tc_addplan_no_selected_contour_popup = mappingName.detail_tc_addplan_no_selected_contour_popup
+  indelPlan.detail_tc_addplan_no_selected_skin_popup = mappingName.detail_tc_addplan_no_selected_skin_popup
+  indelPlan.detail_tc_addplan_no_selected_target_popup = mappingName.detail_tc_addplan_no_selected_target_popup
+  indelPlan.detail_tc_delete_tc_inuse_popup = mappingName.detail_tc_delete_tc_inuse_popup
+  indelPlan.detail_tc_delete_plan_popup = mappingName.detail_tc_delete_plan_popup
+  indelPlan.detail_tc_delete_tc_popup = mappingName.detail_tc_delete_tc_popup
+  indelPlan.detail_tc_no_plan_selected_popup = mappingName.detail_tc_no_plan_selected_popup
+  indelPlan.detail_tc_copy_plan_popup = mappingName.detail_tc_copy_plan_popup
+  indelPlan.detail_tc_addplan_not_ct_popup = mappingName.detail_tc_addplan_not_ct_popup  
   
-  //TreatCourse
-  indel.detail_tc_TreatcourseAddClass = mainProcess.detail_tc_TreatcourseAddClass
-  indel.detail_tc_no_set_no_bodypart_popup = mainProcess.detail_tc_no_set_no_bodypart_popup
-  indel.detail_tc_addplan_no_contour_or_study_popup = mainProcess.detail_tc_addplan_no_contour_or_study_popup
-  indel.detail_tc_no_selected_popup = mainProcess.detail_tc_no_selected_popup
-  indel.detail_tc_no_treatcourse_selected_popup = mainProcess.detail_tc_no_treatcourse_selected_popup
-  indel.detail_plan_PlanAddClass = mainProcess.detail_plan_PlanAddClass
-  indel.detail_tc_addplan_no_selected_contour_popup = mainProcess.detail_tc_addplan_no_selected_contour_popup
-  indel.detail_tc_addplan_no_selected_skin_contour_popup = mainProcess.detail_tc_addplan_no_selected_skin_contour_popup
-  indel.detail_tc_addplan_no_selected_target_contour_popup = mainProcess.detail_tc_addplan_no_selected_target_contour_popup
-  indel.detail_tc_delete_tc_in_use_popup = mainProcess.detail_tc_delete_tc_in_use_popup
-  indel.detail_tc_delete_plan_popup = mainProcess.detail_tc_delete_plan_popup
-  indel.detail_tc_delete_tc_popup = mainProcess.detail_tc_delete_tc_popup
-  indel.detail_tc_no_copy_plan_selected_popup = mainProcess.detail_tc_no_copy_plan_selected_popup
-  indel.detail_tc_copy_plan_popup = mainProcess.detail_tc_copy_plan_popup
-      
-  //import study window
-  indel.import_GamaImporterClass = mainProcess.import_GamaImporterClass 
   
-  //export study
-  indel.import_GamaExporterClass = mainProcess.import_GamaExporterClass 
-  indel.import_export_finished_popup = mainProcess.import_export_finished_popup
+  //Register Study Window
+  indelPlan.register_importer = mappingName.register_importer
+  //Auto Extract Progress
+  indelPlan.register_auto_extract_progress = mappingName.register_auto_extract_progress
+  //Export Study
+  indelPlan.register_exporter = mappingName.register_exporter
+  indelPlan.register_export_done_popup = mappingName.register_export_done_popup
+  //Import Study
+  indelPlan.register_import_QFileDialog = mappingName.register_import_QFileDialog
+  indelPlan.register_save_not_register_popup = mappingName.register_save_not_register_popup
+  indelPlan.register_close_popup = mappingName.register_close_popup
+  indelPlan.register_overwrite_data_popup = mappingName.register_overwrite_data_popup
+  indelPlan.register_import_error_popup = mappingName.register_import_error_popup
+  indelPlan.register_delete_all_popup = mappingName.register_delete_all_popup
+  indelPlan.register_delete_patient_popup = mappingName.register_delete_patient_popup
+  indelPlan.register_delete_series_popup = mappingName.register_delete_series_popup
+  indelPlan.register_delete_not_selected_popup = mappingName.register_delete_not_selected_popup
+  indelPlan.register_selected_study_popup = mappingName.register_selected_study_popup
+  indelPlan.register_less_slices_popup = mappingName.register_less_slices_popup
+  indelPlan.register_save_collision_detection_popup = mappingName.register_save_collision_detection_popup
+  indelPlan.register_save_ct_voxels_popup = mappingName.register_save_ct_voxels_popup
+  indelPlan.register_save_confirm_popup = mappingName.register_save_confirm_popup
+  indelPlan.register_save_done_popup = mappingName.register_save_done_popup
+  //Deviation Window
+  indelPlan.register_CDeviationTableDlg = mappingName.register_CDeviationTableDlg
+
   
-  //export study
-  indel.import_GamaImporterClass_QFileDialog = mainProcess.import_GamaImporterClass_QFileDialog 
-  
-  indel.import_not_register_popup = mainProcess.import_not_register_popup
-  indel.import_close_popup = mainProcess.import_close_popup
-  indel.import_reimport_popup = mainProcess.import_reimport_popup
-  indel.import_delete_all_popup = mainProcess.import_delete_all_popup
-  indel.import_delete_patient_popup = mainProcess.import_delete_patient_popup
-  indel.import_delete_series_popup = mainProcess.import_delete_series_popup
-  indel.import_delete_not_selected_popup = mainProcess.import_delete_not_selected_popup
-  indel.import_load_not_selected_popup = mainProcess.import_load_not_selected_popup
-  indel.import_extract_not_import_popup = mainProcess.import_extract_not_import_popup
-  indel.import_extract_can_not_locate_frame_popup = mainProcess.import_extract_can_not_locate_frame_popup
-  indel.import_extract_head_axial_popup = mainProcess.import_extract_head_axial_popup
-  indel.import_extract_unsupported_dicom_series_popup = mainProcess.import_extract_unsupported_dicom_series_popup
-  indel.import_register_popup = mainProcess.import_register_popup
-  indel.import_save_collision_detection_popup = mainProcess.import_save_collision_detection_popup
-  indel.import_save_ct_popup = mainProcess.import_save_ct_popup
-  indel.import_save_inform_confirm_popup = mainProcess.import_save_inform_confirm_popup
-  indel.import_save_successfully_popup = mainProcess.import_save_successfully_popup
-  indel.import_save_out_of_size_popup = mainProcess.import_save_out_of_size_popup
-  
-  indel.import_CDeviationTableDlg = mainProcess.import_CDeviationTableDlg
-  
-  //contour
-  indel.ContourGUIClass = indel.centralWidget.stackedWidget.ContourGUIClass
-  indel.contour_no_study_exist_popup = mainProcess.contour_no_study_exist_popup
-  indel.contour_no_skin_type_contour_exist_popup = mainProcess.contour_no_skin_type_contour_exist_popup
-  indel.contour_skin_not_complete_popup = mainProcess.contour_skin_not_complete_popup
-  indel.contour_choose_patient_first_popup = mainProcess.contour_choose_patient_first_popup
-  indel.contour_auto_sketch_no_choose_popup = mainProcess.contour_auto_sketch_no_choose_popup
-  indel.contour_draw_skin_first_popup = mainProcess.contour_draw_skin_first_popup
-  indel.contour_planlib_remove_empty_contour_popup = mainProcess.contour_planlib_remove_empty_contour_popup
-  indel.contour_delete_planlib_popup = mainProcess.contour_delete_planlib_popup
-  indel.contour_draw_out_of_skin_popup = mainProcess.contour_draw_out_of_skin_popup
-  indel.contour_draw_interpolate_two_layer_popup = mainProcess.contour_draw_interpolate_two_layer_popup
-  indel.contour_draw_interpolate_layer_between_popup = mainProcess.contour_draw_interpolate_layer_between_popup
-  
-  //contourLib
-  indel.contour_DlgContourItemClass = mainProcess.contour_DlgContourItemClass
-  indel.contour_lib_exist_popup = mainProcess.contour_lib_exist_popup
-  indel.contour_planlib_exist_popup = mainProcess.contour_planlib_exist_popup
+  //ContourGUIClass
+  indelPlan.ContourGUI = indelPlan.centralWidget.stackedWidget.ContourGUI
+  indelPlan.contour_no_study_exist_popup = mappingName.contour_no_study_exist_popup
+  indelPlan.contour_no_skin_type_contour_exist_popup = mappingName.contour_no_skin_type_contour_exist_popup
+  indelPlan.contour_skin_not_complete_popup = mappingName.contour_skin_not_complete_popup
+  indelPlan.contour_auto_sketch_popup = mappingName.contour_auto_sketch_popup
+  indelPlan.contour_draw_skin_first_popup = mappingName.contour_draw_skin_first_popup
+  //Draw then clear all contours
+  indelPlan.contour_planlib_empty_contours_remove_popup = mappingName.contour_planlib_empty_contours_remove_popup
+  indelPlan.contour_delete_planlib_popup = mappingName.contour_delete_planlib_popup
+  indelPlan.contour_draw_out_of_skin_popup = mappingName.contour_draw_out_of_skin_popup
+  indelPlan.contour_interpolate_atleast_two_layer_popup = mappingName.contour_interpolate_atleast_two_layer_popup
+
+  //ContourLib
+  indelPlan.contour_new_contourItem = mappingName.contour_new_contourItem
+  indelPlan.contour_lib_exist_popup = mappingName.contour_lib_exist_popup
+  indelPlan.contour_planlib_exist_popup = mappingName.contour_planlib_exist_popup
   //two Edit and isoPick
-  indel.contour_edit_and_iso_no_choose_popup = mainProcess.contour_edit_and_iso_no_choose_popup
+  indelPlan.contour_edit_and_isopick_no_choose_popup = mappingName.contour_edit_and_isopick_no_choose_popup
   //Load、Upload、Stat
-  indel.contour_load_upload_stat_no_choose_popup = mainProcess.contour_load_upload_stat_no_choose_popup
+  indelPlan.contour_load_upload_stat_no_choose_popup = mappingName.contour_load_upload_stat_no_choose_popup
   
-  //plan
-  indel.PlanGUI = indel.centralWidget.stackedWidget.PlanGUI
-  indel.plan_start_plan_module_popup = mainProcess.plan_start_plan_module_popup
-  indel.plan_current_plan_finished_popup = mainProcess.plan_current_plan_finished_popup
-  indel.plan_PlanListClass = mainProcess.plan_PlanListClass
-  indel.plan_no_focus_popup = mainProcess.plan_no_focus_popup
-  indel.plan_do_fine_calculate_popup = mainProcess.plan_do_fine_calculate_popup
-  indel.plan_no_set_popup = mainProcess.plan_no_set_popup
-  indel.plan_no_finished_popup = mainProcess.plan_no_finished_popup
-  indel.plan_confirm_focus_popup = mainProcess.plan_confirm_focus_popup
-  indel.plan_add_not_ct_popup = mainProcess.plan_add_not_ct_popup
   
-  //fraction
-  indel.plan_dlgfractionClass = mainProcess.plan_dlgfractionClass
+  //Switch to Plandesign Popup PlanList Window
+  indelPlan.plan_PlanList = mappingName.plan_PlanList
   
-  //plan confirm  
-  indel.plan_plandlgConformClass = mainProcess.plan_plandlgConformClass
-  indel.plan_confirm_AuthorityCheckDlgClass = mainProcess.plan_confirm_AuthorityCheckDlgClass
-  indel.plan_confirm_no_user_popup = mainProcess.plan_confirm_no_user_popup
-  indel.plan_confirm_wrong_password_popup = mainProcess.plan_confirm_wrong_password_popup
-  indel.plan_confirmed_popup = mainProcess.plan_confirmed_popup
 
-  //settings
-  indel.system_systemsettingsClass = mainProcess.system_systemsettingsClass
-
+  //PlanGUI
+  indelPlan.PlanGUI = indelPlan.centralWidget.stackedWidget.PlanGUI
+  indelPlan.plan_do_fine_dose_calculate_popup = mappingName.plan_do_fine_dose_calculate_popup
+  indelPlan.plan_no_focus_detected_popup = mappingName.plan_no_focus_detected_popup
+  indelPlan.plan_unfinished_popup = mappingName.plan_unfinished_popup
+  indelPlan.plan_set_prescription_dose_popup = mappingName.plan_set_prescription_dose_popup
+  //Fraction
+  indelPlan.plan_dlgfraction = mappingName.plan_dlgfraction
+  indelPlan.plan_finished_popup = mappingName.plan_finished_popup
+  indelPlan.plan_not_used_focus_reordered_popup = mappingName.plan_not_used_focus_reordered_popup
+  //Plan Confirm Window
+  indelPlan.plan_confirm = mappingName.plan_confirm
+  //Plan Sign Window
+  indelPlan.plan_confirm_sign = mappingName.plan_confirm_sign  
+  indelPlan.plan_confirm_wrong_user_popup = mappingName.plan_confirm_wrong_user_popup
+  indelPlan.plan_confirm_wrong_password_popup = mappingName.plan_confirm_wrong_password_popup
+  indelPlan.plan_confirmed_popup = mappingName.plan_confirmed_popup
+  
+    
+  //User Management
+  indelPlan.user_management = mappingName.user_management
+  indelPlan.user_new_user = mappingName.user_new_user
+  indelPlan.user_exists_popup = mappingName.user_exists_popup
+  indelPlan.user_delete_popup = mappingName.user_delete_popup
+  indelPlan.user_null_password_popup = mappingName.user_null_password_popup
+  indelPlan.user_null_name_popup = mappingName.user_null_name_popup
+  indelPlan.user_delete_current_popup = mappingName.user_delete_current_popup
+  indelPlan.user_incorrect_confirm_password_popup = mappingName.user_incorrect_confirm_password_popup
+  //User Information window
+  indelPlan.user_information = mappingName.user_information
+  
+  
   //Physical Data
-  indel.machine_managementClass = mainProcess.machine_managementClass
-  indel.machine_addmachineClass = mainProcess.machine_addmachineClass
-  indel.machine_addmachinedetailClass = mainProcess.machine_addmachinedetailClass
-  indel.machine_less_TMR_popup = mainProcess.machine_less_TMR_popup
-  indel.machine_less_OAR_popup = mainProcess.machine_less_OAR_popup
-  indel.machine_add_confirm_popup = mainProcess.machine_add_confirm_popup
-  indel.machine_exists_popup = mainProcess.machine_exists_popup
-  indel.machine_PhyDataChangeViewerClass = mainProcess.machine_PhyDataChangeViewerClass
-  indel.machine_delete_popup = mainProcess.machine_delete_popup
-  indel.machine_delete_default_popup = mainProcess.machine_delete_default_popup
-  indel.machine_delete_used_plan_popup = mainProcess.machine_delete_used_plan_popup
-  indel.machine_import_exists_popup = mainProcess.machine_import_exists_popup
-  indel.machine_set_current_popup = mainProcess.machine_set_current_popup
-  indel.machine_edit_popup = mainProcess.machine_edit_popup
-  //indel.dlgImportConfigs = mainProcess.dlgImportConfigs
+  indelPlan.machine_management = mappingName.machine_management
+  indelPlan.machine_new_machine = mappingName.machine_new_machine
+  indelPlan.machine_new_machine_detail = mappingName.machine_new_machine_detail
+  indelPlan.machine_less_TMR_popup = mappingName.machine_less_TMR_popup
+  indelPlan.machine_less_OAR_popup = mappingName.machine_less_OAR_popup
+  indelPlan.machine_add_confirm_data_popup = mappingName.machine_add_confirm_data_popup
+  indelPlan.machine_exists_popup = mappingName.machine_exists_popup
+  indelPlan.machine_edit_popup = mappingName.machine_edit_popup
+  indelPlan.machine_delete_popup = mappingName.machine_delete_popup
+  indelPlan.machine_delete_default_popup = mappingName.machine_delete_default_popup
+  //indelPlan.machinePhyDataChangeViewerClass = mappingName.machine_PhyDataChangeViewerClass
+  //indelPlan.machineDeleteUsedPlanPopup = mappingName.machine_delete_used_plan_popup
+  //indelPlan.machineSetCurrentPopup = mappingName.machine_set_current_popup
+  //indelPlan.dlgImportConfigs = mappingName.dlgImportConfigs
   
-  return indel
+  
+  //System Settings
+  indelPlan.system_settings = mappingName.system_settings 
+  
+  return indelPlan
 }
 
-const getUI = () => indel
+const getUI = () => indelPlan
 
 
-
-module.exports.initUI = initUI
+module.exports.init = init

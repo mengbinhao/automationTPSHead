@@ -4,11 +4,11 @@ const patient = require("patient")
 const exitwithlogic = require("exit_with_logic")
 
 function TPS_BeiHang_toudao_023() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launchwithlogic.launchWithLogic()
-  login.login(Project.Variables.username, Project.Variables.password)
-  IndelPlan.patientManagement.frame.pushButton_SystemSetting.Click()
-  aqObject.CheckProperty(IndelPlan.systemsettingsClass, "VisibleOnScreen", cmpEqual, true)
-  IndelPlan.systemsettingsClass.pushButton_Cancel.Click()
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
+  indelPlan.patientManagement.frame.pushButton_SystemSetting.Click()
+  aqObject.CheckProperty(indelPlan.system_settings, "VisibleOnScreen", cmpEqual, true)
+  indelPlan.system_settings.pushButton_Cancel.Click()
   exitwithlogic.exitWithLogic(false, true)
 }

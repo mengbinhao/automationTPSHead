@@ -3,15 +3,14 @@ const common = require("common")
 const exitwithlogic = require("exit_with_logic")
 
 function testcase() {  
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launch.launch()
-  IndelPlan.loginClass.pushButton.ClickButton()
-  
-  const loginNoninputPopup = IndelPlan.login_noninput_popup
-  aqObject.CheckProperty(loginNoninputPopup, "VisibleOnScreen", cmpEqual, true)
+  indelPlan.login.pushButton.ClickButton()
+
+  aqObject.CheckProperty(indelPlan.login_noninput_popup, "VisibleOnScreen", cmpEqual, true)
   const expectedStr = `Illegal input.
 Please input username, password and database.`
-  aqObject.CheckProperty(loginNoninputPopup.qt_msgbox_label, "text", cmpEqual, expectedStr)  
-  common.handlePopupDialog(loginNoninputPopup)
+  aqObject.CheckProperty(indelPlan.login_noninput_popup.qt_msgbox_label, "text", cmpEqual, expectedStr)  
+  common.handlePopupDialog(indelPlan.login_noninput_popup)
   exitwithlogic.exitWithLogic(false, false, 2)
 }

@@ -5,15 +5,15 @@ const exitwithlogic = require("exit_with_logic")
 const common = require("common")
 
 function testcase() {  
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
-  const group = Project.Variables.IndelPlan.patientManagement.frame.groupBox_3
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
+  const group = indelPlan.patientManagement.frame.groupBox_3
   aqObject.CheckProperty(group.label_UserName, "text", cmpEqual, `User Name: ${Project.Variables.username}`)   
 
-  const tabName = common.getPatientDetailTabName(IndelPlan)
+  const tabName = common.getPatientDetailTabName(indelPlan)
   if (strictEqual(tabName, globalConstant.obj.patientManagement)) {
-    Log.Checkpoint(`default focused tab is ${globalConstant.obj.patientManagement}`);
+    Log.Checkpoint(`default focused tab is ${globalConstant.obj.patientManagement}`)
   } else {
     Log.Error(`default main tab should be ${globalConstant.obj.patientManagement}`)
   }

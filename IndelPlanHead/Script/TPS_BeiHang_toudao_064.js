@@ -6,22 +6,23 @@ const physicaldata = require("physical_data")
 const exitwithlogic = require("exit_with_logic")
 
 function TPS_BeiHang_toudao_064() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
   launchwithlogic.launchWithLogic()
-  login.login(Project.Variables.username, Project.Variables.password)
-  IndelPlan.patientManagement.frame.pushButton_PhyData.Click()
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
+  indelPlan.patientManagement.frame.pushButton_PhyData.Click()
   utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
   
-  const previousRowCount = IndelPlan.machinemanagementClass.ConfigList.wRowCount
+  const previousRowCount = indelPlan.machine_management.ConfigList.wRowCount
   
-  physicaldata.addEmptyMachine(IndelPlan, Project.Variables.newmachinename, false)
+  physicaldata.addEmptyMachine(indelPlan, pv, Project.Variables.new_machine_name, false)
   
-  const curRowCount = IndelPlan.machinemanagementClass.ConfigList.wRowCount
+  const curRowCount = indelPlan.machine_management.ConfigList.wRowCount
   let checkObj = {}
   checkObj.count = curRowCount
   aqObject.CheckProperty(checkObj, "count", cmpEqual, previousRowCount + 1)
   checkObj = null
   
-  IndelPlan.machinemanagementClass.Close()
+  indelPlan.machine_management.Close()
   exitwithlogic.exitWithLogic(false, true)
 }

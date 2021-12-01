@@ -5,14 +5,16 @@ const patient = require("patient")
 const common = require("common")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
 
-  patient.addPatientActivity(IndelPlan, 8997668, "testpatient", "Male", 180, 60, 80, "north east", 18812341235, "note")
-  patient.loadPatient(IndelPlan,  aqConvert.IntToStr(8997668))
+  patient.addPatientActivity(indelPlan, pv, Project.Variables.new_patientID, Project.Variables.new_patient_name, Project.Variables.new_patient_gender, Project.Variables.new_patient_height, Project.Variables.new_patient_weight, Project.Variables.new_patient_age, Project.Variables.new_patient_address, Project.Variables.new_patient_phone, Project.Variables.new_patient_note)
+  
+  patient.loadPatient(indelPlan,  Project.Variables.new_patientID)
 
-  aqObject.CheckProperty(IndelPlan.patientDataClass, "VisibleOnScreen", cmpEqual, true)
+  aqObject.CheckProperty(indelPlan.PatientData, "VisibleOnScreen", cmpEqual, true)
   
   exitwithlogic.exitWithLogic(false, false, 1)
 }

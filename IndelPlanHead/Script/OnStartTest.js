@@ -1,12 +1,11 @@
 ﻿const globalConstant = require("global_constant")
 const UI = require("UI")
+const projectVariable = require("project_variable")
 
 function GeneralEvents_OnStartTest(Sender) {
-  if (!Project.Variables.VariableExists(globalConstant.obj.projectObjectVaiableName)) {
-    Project.Variables.AddVariable(globalConstant.obj.projectObjectVaiableName, globalConstant.obj.projectObjectVaiableType)
-  } else {
-    if (strictEqual(Project.Variables.IndelPlan, null)) {
-      Project.Variables.IndelPlan = UI.initUI()
-    }
+  if (!Project.Variables.isInit) {
+    Project.Variables.IndelPlan = UI.init()
+    Project.Variables.ProjectVariable = projectVariable.init()
+    Project.Variables.isInit = true
   }
 }

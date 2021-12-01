@@ -46,39 +46,39 @@
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="输入错误的用户名登录系统" key="{B13727C8-04C8-442B-9A27-0D074D986713}" group="False" enabled="False" testMoniker="{EB45B816-65DB-492F-B7AD-FD1BA3CE10E8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="输入错误的用户名登录系统" key="{B13727C8-04C8-442B-9A27-0D074D986713}" group="False" enabled="True" testMoniker="{EB45B816-65DB-492F-B7AD-FD1BA3CE10E8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="输入错误的密码登录系统" key="{073C95AF-487A-465C-BC9A-D8FB733391E2}" group="False" enabled="False" testMoniker="{321CF873-3AA3-45B2-ADAA-7587D1794AA2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="输入错误的密码登录系统" key="{073C95AF-487A-465C-BC9A-D8FB733391E2}" group="False" enabled="True" testMoniker="{321CF873-3AA3-45B2-ADAA-7587D1794AA2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="不输入用户名、密码，点击login按钮" key="{47677034-BD05-44C6-8FED-06335F2DD75E}" group="False" enabled="False" testMoniker="{9AD4ACBC-7D5C-41F5-86DA-C8B5F17D43E4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="不输入用户名、密码，点击login按钮" key="{47677034-BD05-44C6-8FED-06335F2DD75E}" group="False" enabled="True" testMoniker="{9AD4ACBC-7D5C-41F5-86DA-C8B5F17D43E4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="输入正确的用户名与密码点击Exit登录计划系统" key="{68A32F83-96BD-4C73-BAC6-DA03C0D34312}" group="False" enabled="False" testMoniker="{9C7F8637-8D95-4E76-8AE0-2FB735E59ECC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="输入正确的用户名与密码点击Exit登录计划系统" key="{68A32F83-96BD-4C73-BAC6-DA03C0D34312}" group="False" enabled="True" testMoniker="{9C7F8637-8D95-4E76-8AE0-2FB735E59ECC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="点击PatientMagement页面点击Log Out退出登录" key="{616683B1-5BDA-4060-9960-4B3003DBD271}" group="False" enabled="False" testMoniker="{18A2F134-1204-4C9D-B9C4-932C94FB8B4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="点击PatientMagement页面点击Log Out退出登录" key="{616683B1-5BDA-4060-9960-4B3003DBD271}" group="False" enabled="True" testMoniker="{18A2F134-1204-4C9D-B9C4-932C94FB8B4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="关闭登录窗口" key="{27521D52-E3E4-4678-AE3B-66E18484C57F}" group="False" enabled="False" testMoniker="{2EE6563E-18D4-4649-BC4F-1E7C0BA33AF8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="关闭登录窗口" key="{27521D52-E3E4-4678-AE3B-66E18484C57F}" group="False" enabled="True" testMoniker="{2EE6563E-18D4-4649-BC4F-1E7C0BA33AF8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="点击PatientMagement页面点击右上角x后点击【YES】按钮关闭TPS软件" key="{B5082E28-601B-4767-A751-BF1AD4A83BEF}" group="False" enabled="False" testMoniker="{DF69CB42-A63A-4216-BD38-85E16363DD7E}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="点击PatientMagement页面点击右上角x后点击【YES】按钮关闭TPS软件" key="{B5082E28-601B-4767-A751-BF1AD4A83BEF}" group="False" enabled="True" testMoniker="{DF69CB42-A63A-4216-BD38-85E16363DD7E}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="点击PatientMagement页面点击右上角x后点击【NO】按钮退出到登录界面&#13;&#10;" key="{3CE59D9A-0BB8-4283-910C-2F16017EB442}" group="False" enabled="False" testMoniker="{693A9846-DD4B-481B-8072-A2B18E3B4A3A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="点击PatientMagement页面点击右上角x后点击【NO】按钮退出到登录界面&#13;&#10;" key="{3CE59D9A-0BB8-4283-910C-2F16017EB442}" group="False" enabled="True" testMoniker="{693A9846-DD4B-481B-8072-A2B18E3B4A3A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="点击PatientMagement页面点击右上角x后点击【Cancel】按钮继续停留在PatientMagement界面" key="{21F5305F-E1B5-464A-8A07-4B6B4D92CEC7}" group="False" enabled="False" testMoniker="{3E536B72-44F8-45B3-ADE1-62C8622A9CE6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="点击PatientMagement页面点击右上角x后点击【Cancel】按钮继续停留在PatientMagement界面" key="{21F5305F-E1B5-464A-8A07-4B6B4D92CEC7}" group="False" enabled="True" testMoniker="{3E536B72-44F8-45B3-ADE1-62C8622A9CE6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -196,7 +196,7 @@
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="新建患者" key="{9F6A5F4D-6DDA-4B4D-820A-0312BEF37D86}" group="False" enabled="True" testMoniker="{F1E14B2E-9178-4817-BBDF-11F11073D150}testcase" count="5" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="新建患者" key="{9F6A5F4D-6DDA-4B4D-820A-0312BEF37D86}" group="False" enabled="True" testMoniker="{F1E14B2E-9178-4817-BBDF-11F11073D150}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -232,7 +232,7 @@
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="导入备份功能" key="{EA8B4A12-6415-42EB-8FA0-AB1B885ADC9D}" group="False" enabled="True" testMoniker="{7137721E-2579-4713-B73D-631BD96727F7}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="导入备份功能" key="{EA8B4A12-6415-42EB-8FA0-AB1B885ADC9D}" group="False" enabled="True" testMoniker="{7137721E-2579-4713-B73D-631BD96727F7}testcase" count="3" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -242,10 +242,10 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{4B7B88EF-52E1-4812-9E36-E0A4F58D5B46}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}test" count="1" timeout="1" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem1" key="{4B7B88EF-52E1-4812-9E36-E0A4F58D5B46}" group="False" enabled="False" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}test" count="1" timeout="1" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -262,65 +262,95 @@
 				<Variable Name="password" Type="{B06407F3-6641-45A9-9692-DDE5B231F2CD}" Local="False">
 					<DefValue StrValue="380039003600310045003300440032004600340044003800420033004600310039003400390046004400460039003100310032003900380043003900380033004200450045003400" />
 				</Variable>
-				<Variable Name="wrongpassword" Type="{B06407F3-6641-45A9-9692-DDE5B231F2CD}" Local="False">
+				<Variable Name="wrong_password" Type="{B06407F3-6641-45A9-9692-DDE5B231F2CD}" Local="False">
 					<DefValue StrValue="3800390036003100360033004400310046003400440038004200330046003100390034003900460044004600390031003200320046003900430042003100390042004100320044004400320043004200" />
 				</Variable>
-				<Variable Name="wrongusername" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="wrong_username" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="7500730065007200" />
 				</Variable>
-				<Variable Name="newpatientname" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="74006500730074005F00700061007400690065006E007400" />
+				<Variable Name="new_patient_name" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="7400650073007400700061007400690065006E007400" />
 				</Variable>
-				<Variable Name="newpatientID" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="74006500730074005F0069006400" />
+				<Variable Name="new_patientID" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="3800390039003700360036003800" />
 				</Variable>
-				<Variable Name="editpatientname" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="74006500730074005F0065006400690074005F00700061007400690065006E007400" />
-				</Variable>
-				<Variable Name="newpatientnamechinese" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="4B6DD58B" />
-				</Variable>
-				<Variable Name="newusername" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="new_username" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="74006500730074007500730065007200" />
 				</Variable>
-				<Variable Name="newuserpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="new_user_password" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="310032003300" />
 				</Variable>
-				<Variable Name="newuserconfirmpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="new_user_confirmpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="310032003300" />
 				</Variable>
-				<Variable Name="newusertype" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="new_usertype" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="50006C0061006E006E0069006E006700500068007900730069006300690073007400" />
 				</Variable>
-				<Variable Name="editusertype" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="edit_usertype" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="560069007300690074006F007200" />
 				</Variable>
-				<Variable Name="edituserpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="edit_user_password" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="340035003600" />
 				</Variable>
-				<Variable Name="edituserconfirmpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="340035003600" />
-				</Variable>
-				<Variable Name="newmachinename" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="new_machine_name" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="540065007300740020004E006500770020004D0061006300680069006E006500" />
 				</Variable>
-				<Variable Name="editmachinename" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="edit_machine_name" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="650064006900740020004E006500770020004D0061006300680069006E0065002000" />
 				</Variable>
 				<Variable Name="IndelPlan" Type="{F38B9AD1-7B22-410F-95FC-6D9420FDE947}" Local="False">
 					<DefValue />
 				</Variable>
-				<Variable Name="contourLibName" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="contourlib_name" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="54004500530054005F004300540056003100" />
 				</Variable>
-				<Variable Name="contourLibType" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="contourlib_type" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="4F0041005200" />
 				</Variable>
-				<Variable Name="editContourLibName" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="edit_contourlib_name" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="45004400490054005F004300540056003100" />
 				</Variable>
-				<Variable Name="editContourLibType" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="edit_contourlib_type" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="53004B0049004E00" />
+				</Variable>
+				<Variable Name="new_patientID_2" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="3100390039003700360036003100" />
+				</Variable>
+				<Variable Name="new_patient_name_2" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="7400650073007400700061007400690065006E0074003200" />
+				</Variable>
+				<Variable Name="new_patient_gender" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="4D0061006C006500" />
+				</Variable>
+				<Variable Name="new_patient_height" Type="{88422C25-DDF4-4EA1-B7CC-95779A023F5D}" Local="False">
+					<DefValue IntValue="180" />
+				</Variable>
+				<Variable Name="new_patient_weight" Type="{88422C25-DDF4-4EA1-B7CC-95779A023F5D}" Local="False">
+					<DefValue IntValue="60" />
+				</Variable>
+				<Variable Name="new_patient_age" Type="{88422C25-DDF4-4EA1-B7CC-95779A023F5D}" Local="False">
+					<DefValue IntValue="80" />
+				</Variable>
+				<Variable Name="new_patient_address" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="6E006F0072007400680020006500610073007400" />
+				</Variable>
+				<Variable Name="new_patient_phone" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="31003800380031003200330034003100320033003500" />
+				</Variable>
+				<Variable Name="new_patient_note" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="6E006F0074006500" />
+				</Variable>
+				<Variable Name="isInit" Type="{D25FDC80-E78F-4209-88B6-6FE2B0771206}" Local="False">
+					<DefValue BoolValue="False" />
+				</Variable>
+				<Variable Name="ProjectVariable" Type="{F38B9AD1-7B22-410F-95FC-6D9420FDE947}" Local="False">
+					<DefValue />
+				</Variable>
+				<Variable Name="project_rerun" Type="{88422C25-DDF4-4EA1-B7CC-95779A023F5D}" Local="False">
+					<DefValue IntValue="1" />
+				</Variable>
+				<Variable Name="project_process_name" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="49006E00640065006C0050006C0061006E0056003200" />
 				</Variable>
 			</Items>
 		</data>
@@ -436,7 +466,7 @@
 			<data />
 		</setting>
 		<setting name="{CE0B0B5B-F813-482E-BBEC-6E12A96D3B83}" type="1" value="False" />
-		<setting name="{D5773345-4407-4A8A-ACE6-0F0A9C8787C8}" type="1" value="False" />
+		<setting name="{D5773345-4407-4A8A-ACE6-0F0A9C8787C8}" type="1" value="True" />
 		<setting name="{C8F95D39-4AC0-4855-9D60-6E7E3BD87B30}" type="1" value="False" />
 		<setting name="{4FD668CC-C8C3-46B4-A220-8DDE5CD7A39F}" type="6" rowIndex="-1" colIndex="2">
 			<columns>

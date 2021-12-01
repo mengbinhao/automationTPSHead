@@ -6,18 +6,18 @@ const physicaldata = require("physical_data")
 const exitwithlogic = require("exit_with_logic")
 
 function TPS_BeiHang_toudao_065() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launchwithlogic.launchWithLogic()
-  login.login(Project.Variables.username, Project.Variables.password)
-  IndelPlan.patientManagement.frame.pushButton_PhyData.Click()
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
+  indelPlan.patientManagement.frame.pushButton_PhyData.Click()
   utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
   
-  IndelPlan.machinemanagementClass.add_btn.Click()
-  IndelPlan.addmachineClass.LineEdit.SetText(Project.Variables.newmachinename)
-  IndelPlan.addmachineClass.DialogButtonBox.buttonOk.ClickButton()
+  indelPlan.machine_management.add_btn.Click()
+  indelPlan.machine_new_machine.LineEdit.SetText(Project.Variables.new_machine_name)
+  indelPlan.machine_new_machine.DialogButtonBox.buttonOk.ClickButton()
   
   const ret = "General Information,Source,Collimator,Machine,TMR,OAR,HU-ED,FrameParameters"  
-  const widget = IndelPlan.machine_addmachinedetailClass.tabWidget
+  const widget = indelPlan.machine_new_machine_detail.tabWidget
   let val = ""
   for (let i = 0; i < widget.wTabCount; i++) {
     val += widget.wTabCaption(i) + ","
@@ -29,7 +29,7 @@ function TPS_BeiHang_toudao_065() {
   } else {
     Log.Error("TPS_BeiHang_toudao_065 Failed")
   }
-  IndelPlan.machine_addmachinedetailClass.Close()
-  IndelPlan.machinemanagementClass.Close()
+  indelPlan.machine_new_machine_detail.Close()
+  indelPlan.machine_management.Close()
   exitwithlogic.exitWithLogic(false, true)
 }

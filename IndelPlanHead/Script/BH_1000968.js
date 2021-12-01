@@ -6,12 +6,12 @@ const user = require("user")
 const findinlist = require("find_in_list")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  user.gotoUserListWindow(IndelPlan)
-  const headers = findinlist.getHeaderFromList(IndelPlan.user_management.UserList)
+  user.gotoUserListWindow(indelPlan)
+  const headers = findinlist.getHeaderFromList(indelPlan.user_management.UserList)
   const match = "User Name,User Type,Login Information,Login Time"
   if (strictEqual(headers, match)) {
     Log.Checkpoint("User List header includs ${match}")
@@ -21,17 +21,17 @@ function testcase() {
   
   /*
   let checkObj = {}
-  const prop = findinlist.getHeaderFromList(IndelPlan.user_management.UserList)
+  const prop = findinlist.getHeaderFromList(indelPlan.user_management.UserList)
   checkObj.header = prop
   aqObject.CheckProperty(checkObj, "header", cmpEqual, "User Name,User Type,Login Information,Login Time")
   checkObj = null
   */
   
-  aqObject.CheckProperty(IndelPlan.user_management.pushButton_NewUser, "Visible", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_management.pushButton_EditUser, "Visible", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_management.pushButton_DelUser, "Visible", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_management.pushButton_Exit, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(indelPlan.user_management.pushButton_NewUser, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(indelPlan.user_management.pushButton_EditUser, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(indelPlan.user_management.pushButton_DelUser, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(indelPlan.user_management.pushButton_Exit, "Visible", cmpEqual, true)
 
-  user.exitUserListWindow(IndelPlan)
+  user.exitUserListWindow(indelPlan)
   exitwithlogic.exitWithLogic(false, false, 1)
 }

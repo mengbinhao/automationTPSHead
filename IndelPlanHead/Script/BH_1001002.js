@@ -4,34 +4,45 @@ const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
 const findInList = require("find_in_list")
+const fileFunctions = require("file_functions")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
+
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
 
-  const path = "D:\\IndelPlan\\export"
-  const patientID = aqConvert.IntToStr(8997668)
+  if (indelPlan.patientManagement.treeWidget_PatientList.wItems.Count !== 0) {
+    Log.Error("Should no patient data first")
+  } else { 
+    const path = globalConstant.obj.patientDataFolder
+    const patientFolderName = `${Project.Variables.new_patient_name}@${Project.Variables.new_patientID}`
   
-  patient.addPatientActivity(IndelPlan, patientID, "testpatient", "Male", 180, 60, 80, "north east", 18812341235, "note")
+    //delete target folder first
+    fileFunctions.deleteFolder(path + globalConstant.obj.backslash + patientFolderName, true)
 
-  patient.exportPatientData(IndelPlan, false, patientID, path)
-  IndelPlan.patient_export_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
-  IndelPlan.patient_DlgExportClass.pushButton_Cancel.ClickButton()
+    patient.addPatientActivity(indelPlan, pv, Project.Variables.new_patientID, Project.Variables.new_patient_name, Project.Variables.new_patient_gender, Project.Variables.new_patient_height, Project.Variables.new_patient_weight, Project.Variables.new_patient_age, Project.Variables.new_patient_address, Project.Variables.new_patient_phone, Project.Variables.new_patient_note)
 
-  patient.deletePatient(IndelPlan, false, patientID)
+    patient.exportPatientData(indelPlan, false, Project.Variables.new_patientID, path)
+    indelPlan.patient_export_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    indelPlan.patient_exporter.pushButton_Cancel.ClickButton()
+
+    patient.deletePatient(indelPlan, pv, false, Project.Variables.new_patientID)
   
-  patient.importPatientData(IndelPlan, false, patientID, path)
-  aqObject.CheckProperty(IndelPlan.patient_import_done_popup, "Exists", cmpEqual, true)   
-  IndelPlan.patient_import_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
-  IndelPlan.patient_DlgImportClass.pushButton_Cancel.ClickButton()
+    patient.importPatientData(indelPlan, pv, false, Project.Variables.new_patientID, path)
 
-  const isExist = findInList.isItemExistInMoreList(patientID, globalConstant.obj.patientIDColumn, IndelPlan.patientManagement.treeWidget_PatientList)
-  
-  if (isExist) {
-    Log.Checkpoint("Import patient data successfully!")
-  } else {
-    Log.Checkpoint("Import patient data fail!")
+    aqObject.CheckProperty(indelPlan.patient_import_done_popup, "Exists", cmpEqual, true)
+
+    indelPlan.patient_import_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    indelPlan.patient_importer.pushButton_Cancel.ClickButton()
+
+    const isExist = findInList.isItemExistInMoreList(Project.Variables.new_patientID, globalConstant.obj.patientIDColumn, indelPlan.patientManagement.treeWidget_PatientList)
+    if (isExist) {
+      Log.Checkpoint("Import patient data successfully!")
+    } else {
+      Log.Checkpoint("Import patient data fail!")
+    }
   }
 
   exitwithlogic.exitWithLogic(false, false, 1)

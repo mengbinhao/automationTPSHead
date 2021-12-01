@@ -3,152 +3,152 @@ const utilsfunctions = require("utils_functions")
 const findinlist = require("find_in_list")
 const coordinate = require("coordinate")
 
-const __handleDirtyDate = (indel, patientId) => {
-  const dirtydPatients = indel.dirtyData.get(globalConstant.obj.addPatient)
+const __handlePatientDirtyData = (pv, patientId) => {
+  const dirtydPatients = pv.dirtyData.get(globalConstant.obj.addPatient)
   if (dirtydPatients.includes(patientId)) {
-    indel.dirtyData.set(globalConstant.obj.addPatient, dirtydPatients.filter(val => val !== patientId))
+    pv.dirtyData.set(globalConstant.obj.addPatient, dirtydPatients.filter(val => val !== patientId))
   } else {
-    Log.Warning(`can not __handleDirtyDate due to patientId=${patientId}`)
+    Log.Warning(`can not __handlePatientDirtyData due to patientId=${patientId}`)
   }
 }
 
-const __inputPatientFields = (npc, args) => {
+const __inputPatientFields = (pnp, args) => {
   const [patientID, patientName, gender, height, weight, age, address, phone, note] = args
   if (!patientID || !patientName) return
-  npc.name.Keys(patientName)
-  npc.id.Keys(patientID)
+  pnp.lineEdit.Keys(patientName)
+  pnp.lineEdit_2.Keys(patientID)
   if (strictEqual(gender, globalConstant.obj.defaultPatientGender)) {
-    npc.radioButton.ClickButton()
+    pnp.radioButton.ClickButton()
   } else {
-    npc.radioButton_2.ClickButton()
+    pnp.radioButton_2.ClickButton()
   }
-  if (height && height > 0 && height <= 600) npc.spinBox_Height.qt_spinbox_lineedit.Keys(height)
-  if (weight && weight > 0 && weight <= 300) npc.spinBox_Weight.qt_spinbox_lineedit.Keys(weight)
-  if (age && age > 0 && height <= 200) npc.spinBox_Age.qt_spinbox_lineedit.Keys(age)
-  address && npc.lineEdit_5.Keys(address)
-  phone && npc.lineEdit_6.Keys(phone)
-  note && npc.textEdit_7.Keys(note)
+  if (height && height > 0 && height <= 600) pnp.spinBox_Height.qt_spinbox_lineedit.Keys(height)
+  if (weight && weight > 0 && weight <= 300) pnp.spinBox_Weight.qt_spinbox_lineedit.Keys(weight)
+  if (age && age > 0 && height <= 200) pnp.spinBox_Age.qt_spinbox_lineedit.Keys(age)
+  address && pnp.lineEdit_5.Keys(address)
+  phone && pnp.lineEdit_6.Keys(phone)
+  note && pnp.textEdit_7.Keys(note)
 }
 
-const __inputEditPatientFields = (npc, args) => {
+const __inputEditPatientFields = (pnp, args) => {
   const [patientName, gender, height, weight, age, address, phone, note] = args
   if (patientName) {
-    npc.name.clear()
-    npc.name.Keys(patientName)
+    pnp.lineEdit.clear()
+    pnp.lineEdit.Keys(patientName)
   }
   
   if (strictEqual(gender, globalConstant.obj.defaultPatientGender)) {
-    npc.radioButton.ClickButton()
+    pnp.radioButton.ClickButton()
   } else {
-    npc.radioButton_2.ClickButton()
+    pnp.radioButton_2.ClickButton()
   }
   if (height && height > 0 && height <= 600) {
-    npc.spinBox_Height.qt_spinbox_lineedit.clear()
-    npc.spinBox_Height.qt_spinbox_lineedit.Keys(height)
+    pnp.spinBox_Height.qt_spinbox_lineedit.clear()
+    pnp.spinBox_Height.qt_spinbox_lineedit.Keys(height)
   }
   if (weight && weight > 0 && weight <= 300) {
-    npc.spinBox_Weight.qt_spinbox_lineedit.clear()
-    npc.spinBox_Weight.qt_spinbox_lineedit.Keys(weight)
+    pnp.spinBox_Weight.qt_spinbox_lineedit.clear()
+    pnp.spinBox_Weight.qt_spinbox_lineedit.Keys(weight)
   }
   if (age && age > 0 && height <= 200) {
-    npc.spinBox_Age.qt_spinbox_lineedit.clear()
-    npc.spinBox_Age.qt_spinbox_lineedit.Keys(age)
+    pnp.spinBox_Age.qt_spinbox_lineedit.clear()
+    pnp.spinBox_Age.qt_spinbox_lineedit.Keys(age)
   }
   if (address){
-    npc.lineEdit_5.clear()
-    npc.lineEdit_5.Keys(address)
+    pnp.lineEdit_5.clear()
+    pnp.lineEdit_5.Keys(address)
   }
   if (phone) {
-    npc.lineEdit_6.clear()
-    npc.lineEdit_6.Keys(phone)
+    pnp.lineEdit_6.clear()
+    pnp.lineEdit_6.Keys(phone)
   }
   if (note) {
-    npc.textEdit_7.clear()
-    npc.textEdit_7.Keys(note)
+    pnp.textEdit_7.clear()
+    pnp.textEdit_7.Keys(note)
   } 
 }
 
-const openNewPatientWindow = indel => {
-  indel.patientManagement.pushButton_NewPatient.ClickButton()
+const openNewPatientWindow = indelPlan => {
+  indelPlan.patientManagement.pushButton_NewPatient.ClickButton()
 }
 
-const exitPatientWindow = indel => {
-  indel.patient_newpatientClass.Close()
+const exitPatientWindow = indelPlan => {
+  indelPlan.patient_new_patient.Close()
 }
 
-const fromPatientDetailToMain = indel => {
-  indel.patientDataClass.groupBox_6.pushButton_Close.Click()
-  indel.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+const fromPatientDetailToMain = indelPlan => {
+  indelPlan.PatientData.groupBox_6.pushButton_Close.Click()
+  indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
   utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
 }
 
-const loadPatient = (indel, patientId) => {
-  const patientList = indel.patientManagement.treeWidget_PatientList
+const loadPatient = (indelPlan, patientId) => {
+  const patientList = indelPlan.patientManagement.treeWidget_PatientList
   const isExist = findinlist.isItemExistInMoreList(patientId, globalConstant.obj.patientIDColumn, patientList)
  
   if (isExist) {
     patientList.ClickItem(patientId)
-    indel.patientManagement.pushButton_LoadPatient.ClickButton()
+    indelPlan.patientManagement.pushButton_LoadPatient.ClickButton()
   } else {
     Log.Warning(`Can not find patient with patientId=${patientId} when loading patient`)
   }
 }
 
-const addPatientActivity = (indel, ...args) => {
-  openNewPatientWindow(indel)
-  addPatient(indel, false, args)
+const addPatientActivity = (indelPlan, pv, ...args) => {
+  openNewPatientWindow(indelPlan)
+  addPatient(indelPlan, pv, false, args)
 }
 
-const addPatient = (indel, isCancel = false, args) => {
-  const npc = indel.patient_newpatientClass
-  __inputPatientFields(npc, args)
+const addPatient = (indelPlan, pv, isCancel = false, args) => {
+  const pnp = indelPlan.patient_new_patient
+  __inputPatientFields(pnp, args)
 
   if (!isCancel) {
-    npc.createButton.ClickButton()
-    if (!indel.patient_exists_popup.Exists && !indel.patient_no_name_or_id_popup.Exists) {
-      indel.dirtyData.get(globalConstant.obj.addPatient).push(aqConvert.IntToStr(args[0]))
+    pnp.pushButton_2.ClickButton()
+    if (!indelPlan.patient_exists_popup.Exists && !indelPlan.patient_no_name_or_id_popup.Exists) {
+      pv.dirtyData.get(globalConstant.obj.addPatient).push(aqConvert.IntToStr(args[0]))
     }  
   } else {
-    npc.cancelButton.ClickButton()
+    pnp.pushButton_4.ClickButton()
   }
 }
 
-const editPatient = (indel, isCancel = false, patientId, ...args) => {
-  const patientList = indel.patientManagement.treeWidget_PatientList
+const editPatient = (indelPlan, isCancel = false, patientId, ...args) => {
+  const patientList = indelPlan.patientManagement.treeWidget_PatientList
   const isExist = findinlist.isItemExistInMoreList(patientId, globalConstant.obj.patientIDColumn, patientList)
     
   if (isExist) {
     patientList.ClickItem(patientId)
-    indel.patientManagement.pushButton_EditPatient.ClickButton()
-    __inputEditPatientFields(indel.patient_newpatientClass, args)
-    !isCancel ? indel.patient_newpatientClass.createButton.ClickButton() : indel.patient_newpatientClass.cancelButton.ClickButton()
+    indelPlan.patientManagement.pushButton_EditPatient.ClickButton()
+    __inputEditPatientFields(indelPlan.patient_new_patient, args)
+    !isCancel ? indelPlan.patient_new_patient.pushButton_2.ClickButton() : indelPlan.patient_new_patient.pushButton_4.ClickButton()
   } else {
     Log.Warning(`Can not find patient with patientId=${patientId} when editing patient`)
   }
 }
 
-const deletePatient = (indel, isCancel = false, patientId) => {
-  const patientList = indel.patientManagement.treeWidget_PatientList
+const deletePatient = (indelPlan, pv, isCancel = false, patientId) => {
+  const patientList = indelPlan.patientManagement.treeWidget_PatientList
   const isExist = findinlist.isItemExistInMoreList(patientId, globalConstant.obj.patientIDColumn, patientList)
   
   if (isExist) {
     patientList.ClickItem(patientId)
-    indel.patientManagement.pushButton_DeletePatient.ClickButton()
+    indelPlan.patientManagement.pushButton_DeletePatient.ClickButton()
     if (!isCancel) {
-      indel.patient_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-      __handleDirtyDate(indel, patientId)
+      indelPlan.patient_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+      __handlePatientDirtyData(pv, patientId)
     } else {
-      indel.patient_delete_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+      indelPlan.patient_delete_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
     }
   } else {
     Log.Warning(`Can not find patient with patientId=${patientId} when deleting patient`)
   }
 }
 
-const exportPatientData = (indel, isCancel = false, patientId, path) => {
-  if (indel.patientManagement.VisibleOnScreen) {
-    indel.patientManagement.groupBox_7.pushButton_Export.ClickButton()
-    const dlg = indel.patient_DlgExportClass
+const exportPatientData = (indelPlan, isCancel = false, patientId, path) => {
+  if (indelPlan.patientManagement.VisibleOnScreen) {
+    indelPlan.patientManagement.groupBox_7.pushButton_Export.ClickButton()
+    const dlg = indelPlan.patient_exporter
     /*
     dlg.pushButton_SelectAll.ClickButton()
     dlg.lineEdit_Path.Keys(path)
@@ -174,18 +174,24 @@ const exportPatientData = (indel, isCancel = false, patientId, path) => {
   }
 }
 
-const importPatientData = (indel, isCancel = false, patientId, path) => {
-  if (indel.patientManagement.VisibleOnScreen) {
-    indel.patientManagement.groupBox_7.pushButton_Import.ClickButton()
-    const dlgip = indel.patient_dlgSelectImportPath
+const importPatientData = (indelPlan, pv, isCancel = false, patientId, path) => {
+  if (indelPlan.patientManagement.VisibleOnScreen) {
+    indelPlan.patientManagement.groupBox_7.pushButton_Import.ClickButton()
+    const dlgip = indelPlan.patient_dlgSelectImportPath
+    //resolve overlap window of history blocks choose button
+    Win32API.ShowWindowAsync(dlgip.Handle, Win32API.SW_MAXIMIZE)
+    utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
     dlgip.Edit.Keys(path)
-    dlgip.btn_2.ClickButton()
-    const dlgic = indel.patient_DlgImportClass
+    LLPlayer.MouseMove(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, globalConstant.obj.delayMouseHalfSecond)
+    LLPlayer.KeyDown(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)
+    LLPlayer.KeyUp(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)
+    dlgip.btn_.ClickButton()
+    const dlgic = indelPlan.patient_importer
     /*
     dlgic.pushButton_SelectAll.ClickButton()
     if (!isCancel) {
       dlgic.pushButton_Ok.ClickButton()
-      if (indel.patient_import_done_popup.Exists) indel.dirtyData.get(globalConstant.obj.addPatient).push(patientId)
+      if (indelPlan.patient_import_done_popup.Exists) pv.dirtyData.get(globalConstant.obj.addPatient).push(patientId)
     } else {
       dlgic.pushButton_Cancel.ClickButton()
     }
@@ -201,7 +207,7 @@ const importPatientData = (indel, isCancel = false, patientId, path) => {
       LLPlayer.MouseUp(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
       if (!isCancel) {
         dlgic.pushButton_Ok.ClickButton()
-        if (indel.patient_import_done_popup.Exists) indel.dirtyData.get(globalConstant.obj.addPatient).push(patientId)
+        if (indelPlan.patient_import_done_popup.Exists) pv.dirtyData.get(globalConstant.obj.addPatient).push(patientId)
       } else {
         dlgic.pushButton_Cancel.ClickButton()
       }
@@ -213,15 +219,15 @@ const importPatientData = (indel, isCancel = false, patientId, path) => {
   }
 }
 
-const deletePatientForDirtyData = (indel, deletePatients) => {
-  const patientList = indel.patientManagement.treeWidget_PatientList
+const deletePatientForDirtyData = (indelPlan, deletePatients) => {
+  const patientList = indelPlan.patientManagement.treeWidget_PatientList
   let dp = deletePatients.pop()
   while (dp) {
     const isExist = findinlist.isItemExistInMoreList(dp, globalConstant.obj.patientIDColumn, patientList)  
     if (isExist) {
       patientList.ClickItem(dp)
-      indel.patientManagement.pushButton_DeletePatient.ClickButton()
-      indel.patient_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+      indelPlan.patientManagement.pushButton_DeletePatient.ClickButton()
+      indelPlan.patient_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     } else {
       Log.Warning(`Can not find patient with patientId=${patientId} when deletePatientForDirtyData`)
     }

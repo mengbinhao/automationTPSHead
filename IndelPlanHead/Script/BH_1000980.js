@@ -7,17 +7,18 @@ const findinlist = require("find_in_list")
 const common = require("common")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  user.gotoUserListWindow(IndelPlan)
-  user.openNewUserWindow(IndelPlan)
+  user.gotoUserListWindow(indelPlan)
+  user.openNewUserWindow(indelPlan)
   //check our user
-  user.addUser(IndelPlan, Project.Variables.username, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
-  aqObject.CheckProperty(IndelPlan.user_exists_popup, "Exists", cmpEqual, true)
-  common.handlePopupDialog(IndelPlan.user_exists_popup)
-  IndelPlan.user_newusercClass.pushButton_Cancel.ClickButton()
-  user.exitUserListWindow(IndelPlan)
+  user.addUser(indelPlan, pv, Project.Variables.username, Project.Variables.new_user_password, Project.Variables.new_user_confirmpassword, Project.Variables.new_usertype)
+  aqObject.CheckProperty(indelPlan.user_exists_popup, "Exists", cmpEqual, true)
+  common.handlePopupDialog(indelPlan.user_exists_popup)
+  indelPlan.user_new_user.pushButton_Cancel.ClickButton()
+  user.exitUserListWindow(indelPlan)
   exitwithlogic.exitWithLogic(false, false, 1)
 }

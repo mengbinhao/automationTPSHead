@@ -4,33 +4,29 @@ const common = require("common")
 
 //isQuitPopup 1 means yes, 2 means no, 3 means cancel
 const exitWithLogic = (isPatientSavePopup = false, isCurrentPlanFinishedPopup = false, isQuitPopup = 1) => {
-  const IndelPlan = Project.Variables.IndelPlan    
-  //too violence, will popup an unnormal window when next login
-  //Sys.Process(IndelPlan.procesName).Terminate()
-
-  //can not close directly due to pupup a comfirm popup
-  //Sys.Process(IndelPlan.procesName).Close()
-  common.gotoPatientManagement(IndelPlan)
+  const indelPlan = Project.Variables.IndelPlan    
+  //goto PatientManagement first
+  common.gotoPatientManagement(indelPlan)
   
-  if (IndelPlan.tabWidget.Visible) {
-    IndelPlan.main.Close()
+  if (indelPlan.patientManagement.Visible) {
+    indelPlan.main.Close()
     if (isPatientSavePopup) {
-      IndelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+      indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     }
 
     if (isCurrentPlanFinishedPopup) {
-      IndelPlan.plan_current_plan_finished_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+      indelPlan.plan_finished_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     }
     
-    if (strictEqual(isQuitPopup, globalConstant.obj.exitYes)) {
-      IndelPlan.main_quit_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-    } else if (strictEqual(isQuitPopup, globalConstant.obj.exitNo)) {
-      IndelPlan.main_quit_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
-    } else if (strictEqual(isQuitPopup, globalConstant.obj.exitCancel)) {
-      IndelPlan.main_quit_popup.qt_msgbox_buttonbox.buttonCancel.ClickButton()
+    if (strictEqual(isQuitPopup, 1)) {
+      indelPlan.main_quit_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+    } else if (strictEqual(isQuitPopup, 2)) {
+      indelPlan.main_quit_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+    } else if (strictEqual(isQuitPopup, 3)) {
+      indelPlan.main_quit_popup.qt_msgbox_buttonbox.buttonCancel.ClickButton()
     }
   } else {
-    if (IndelPlan.loginClass.Visible) IndelPlan.loginClass.Close()
+    if (indelPlan.login.Visible) indelPlan.login.Close()
   }
   //have to delay for restarting normally
   utilsFunctions.delay(globalConstant.obj.delayTenSeconds)

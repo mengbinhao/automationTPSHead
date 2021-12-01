@@ -5,142 +5,142 @@ const USER_TYPE = ['Visitor', 'PlanningPhysicist', 'RadiationPhysicist', 'Radiat
 
 const __getUserType = () => USER_TYPE
 
-const __choiceUserType = (indel, newUserType) => {
+const __choiceUserType = (indelPlan, newUserType) => {
   if (__getUserType().includes(newUserType)) {
-    indel.user_newusercClass.comboBox_UserType.ClickItem(newUserType)
+    indelPlan.user_new_user.comboBox_UserType.ClickItem(newUserType)
   } else {
     Log.Warning(`Can not find UserType=${newUserType} when adding user`)
   }
 }
 
-const __fillUserInfo = (indel, newUserName, newUserPassword, newUserConfirmPassword, newUserType) => {
-  newUserName && indel.user_newusercClass.lineEdit_UserName.Keys(newUserName)
-  newUserPassword && indel.user_newusercClass.lineEdit_Password.Keys(newUserPassword)
-  newUserConfirmPassword && indel.user_newusercClass.lineEdit_PasswordConfirm.Keys(newUserConfirmPassword)
-  newUserType && __choiceUserType(indel, newUserType)
+const __fillUserInfo = (indelPlan, newUserName, newUserPassword, newUserConfirmPassword, newUserType) => {
+  newUserName && indelPlan.user_new_user.lineEdit_UserName.Keys(newUserName)
+  newUserPassword && indelPlan.user_new_user.lineEdit_Password.Keys(newUserPassword)
+  newUserConfirmPassword && indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys(newUserConfirmPassword)
+  newUserType && __choiceUserType(indelPlan, newUserType)
 }
 
-const __handleDirtyDate = (indel, userName) => {
-  const dirtydUsers = indel.dirtyData.get(globalConstant.obj.addUser)
+const __handleUserDirtyData = (pv, userName) => {
+  const dirtydUsers = pv.dirtyData.get(globalConstant.obj.addUser)
   if (dirtydUsers.includes(userName)) {
-    indel.dirtyData.set(globalConstant.obj.addUser, dirtydUsers.filter(val => val !== userName))
+    pv.dirtyData.set(globalConstant.obj.addUser, dirtydUsers.filter(val => val !== userName))
   } else {
-    Log.Warning(`can not __handleDirtyDate due to userName=${userName}`)
+    Log.Warning(`can not __handleUserDirtyData due to userName=${userName}`)
   }
 }
 
-const gotoUserListWindow = (indel) => {
-  indel.patientManagement.frame.pushButton_UserManage.ClickButton()
+const gotoUserListWindow = (indelPlan) => {
+  indelPlan.patientManagement.frame.pushButton_UserManage.ClickButton()
 }
 
-const openNewUserWindow = (indel) => {
-  indel.user_management.pushButton_NewUser.ClickButton()
+const openNewUserWindow = (indelPlan) => {
+  indelPlan.user_management.pushButton_NewUser.ClickButton()
 }
 
-const exitUserListWindow = (indel) => {
-  indel.user_management.pushButton_Exit.Click()
+const exitUserListWindow = (indelPlan) => {
+  indelPlan.user_management.pushButton_Exit.Click()
 }
 
-const addUserActivity = (indel, newUserName = "", newUserPassword = "", newUserConfirmPassword = "", newUserType = "") => {
-  gotoUserListWindow(indel)
-  openNewUserWindow(indel)
-  addUser(indel, newUserName, newUserPassword, newUserConfirmPassword, newUserType, false)
-  exitUserListWindow(indel)
+const addUserActivity = (indelPlan, pv, newUserName = "", newUserPassword = "", newUserConfirmPassword = "", newUserType = "") => {
+  gotoUserListWindow(indelPlan)
+  openNewUserWindow(indelPlan)
+  addUser(indelPlan, pv, newUserName, newUserPassword, newUserConfirmPassword, newUserType, false)
+  exitUserListWindow(indelPlan)
 }
 
-const editUserActivity = (indel, userName, editUserPassword = "", editUserConfirmPassword = "", editUserType = "") => {
-  gotoUserListWindow(indel)
-  openNewUserWindow(indel)
-  editUser(indel, userName, editUserPassword, editUserConfirmPassword, editUserType, false)
-  exitUserListWindow(indel)
+const editUserActivity = (indelPlan, userName, editUserPassword = "", editUserConfirmPassword = "", editUserType = "") => {
+  gotoUserListWindow(indelPlan)
+  openNewUserWindow(indelPlan)
+  editUser(indelPlan, userName, editUserPassword, editUserConfirmPassword, editUserType, false)
+  exitUserListWindow(indelPlan)
 }
 
-const deleteUserActivity = (indel, userName) => {
-  gotoUserListWindow(indel)
-  openNewUserWindow(indel)
-  deleteUser(indel, userName, false)
-  exitUserListWindow(indel)
+const deleteUserActivity = (indelPlan, userName) => {
+  gotoUserListWindow(indelPlan)
+  openNewUserWindow(indelPlan)
+  deleteUser(indelPlan, pv, userName, false)
+  exitUserListWindow(indelPlan)
 }
 
-const addUser = (indel, newUserName = "", newUserPassword = "", newUserConfirmPassword = "", newUserType = "", isCancel = false) => {
-  __fillUserInfo(indel, newUserName, newUserPassword, newUserConfirmPassword, newUserType)
+const addUser = (indelPlan, pv, newUserName = "", newUserPassword = "", newUserConfirmPassword = "", newUserType = "", isCancel = false) => {
+  __fillUserInfo(indelPlan, newUserName, newUserPassword, newUserConfirmPassword, newUserType)
   if (!isCancel) {
-    indel.user_newusercClass.pushButton_OK.ClickButton()
-    if (!indel.user_exists_popup.Exists && !indel.user_wrongpassword_popup.Exists && !indel.user_nullpassword_popup.Exists) {
-      indel.dirtyData.get(globalConstant.obj.addUser).push(newUserName)
+    indelPlan.user_new_user.pushButton_OK.ClickButton()
+    if (!indelPlan.user_exists_popup.Exists && !indelPlan.user_incorrect_confirm_password_popup.Exists && !indelPlan.user_null_password_popup.Exists) {
+      pv.dirtyData.get(globalConstant.obj.addUser).push(newUserName)
     }
   } else {
-    indel.user_newusercClass.pushButton_Cancel.ClickButton()
+    indelPlan.user_new_user.pushButton_Cancel.ClickButton()
   }
 }
 
-const editUser = (indel, userName, editUserPassword = "", editUserConfirmPassword = "", editUserType = "", isCancel = false) => {
-  const userList = indel.user_management.UserList
+const editUser = (indelPlan, userName, editUserPassword = "", editUserConfirmPassword = "", editUserType = "", isCancel = false) => {
+  const userList = indelPlan.user_management.UserList
   const rowIdx = findinlist.isItemInListReturnIndex(userName, globalConstant.obj.userNameColumn, userList)
   if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
     userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
-    indel.user_management.pushButton_EditUser.ClickButton()
+    indelPlan.user_management.pushButton_EditUser.ClickButton()
     if (editUserPassword) {
-      indel.user_newusercClass.lineEdit_Password.wText = globalConstant.obj.emptyString
-      indel.user_newusercClass.lineEdit_Password.Keys(editUserPassword)
+      indelPlan.user_new_user.lineEdit_Password.wText = globalConstant.obj.emptyString
+      indelPlan.user_new_user.lineEdit_Password.Keys(editUserPassword)
     }
     if (editUserConfirmPassword) {
-      indel.user_newusercClass.lineEdit_PasswordConfirm.wText = globalConstant.obj.emptyString
-      indel.user_newusercClass.lineEdit_PasswordConfirm.Keys(editUserConfirmPassword)
+      indelPlan.user_new_user.lineEdit_PasswordConfirm.wText = globalConstant.obj.emptyString
+      indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys(editUserConfirmPassword)
     }
-    editUserType && __choiceUserType(indel, editUserType)
-    !isCancel ? indel.user_newusercClass.pushButton_OK.ClickButton() : indel.user_newusercClass.pushButton_Cancel.ClickButton()
+    editUserType && __choiceUserType(indelPlan, editUserType)
+    !isCancel ? indelPlan.user_new_user.pushButton_OK.ClickButton() : indelPlan.user_new_user.pushButton_Cancel.ClickButton()
   } else {
     Log.Warning(`Can not find user with userName=${userName} when editting user`)
   }
 }
 
-const updateUserPassword = (indel, oldPassword = '', newPassword = '', confirmNewPassword = '', isUpdate = true) => {
-  gotoUserListWindow(indel)
-  oldPassword && indel.user_information.lineEdit_OldPassword.Keys(oldPassword)
-  newPassword && indel.user_information.lineEdit_NewPassword.Keys(newPassword)
-  confirmNewPassword && indel.user_information.lineEdit_PasswordConfirm.Keys(confirmNewPassword)
+const updateUserPassword = (indelPlan, oldPassword = '', newPassword = '', confirmNewPassword = '', isUpdate = true) => {
+  gotoUserListWindow(indelPlan)
+  oldPassword && indelPlan.user_information.lineEdit_OldPassword.Keys(oldPassword)
+  newPassword && indelPlan.user_information.lineEdit_NewPassword.Keys(newPassword)
+  confirmNewPassword && indelPlan.user_information.lineEdit_PasswordConfirm.Keys(confirmNewPassword)
   
   if (isUpdate) {
-    indel.user_information.pushButton_OK.ClickButton()
+    indelPlan.user_information.pushButton_OK.ClickButton()
   } else {
-    indel.user_information.pushButton_Cancel.ClickButton()
+    indelPlan.user_information.pushButton_Cancel.ClickButton()
   }
 }
 
-const deleteUser = (indel, userName, isCancel = false) => {
-  const userList = indel.user_management.UserList
+const deleteUser = (indelPlan, pv, userName, isCancel = false) => {
+  const userList = indelPlan.user_management.UserList
   const rowIdx = findinlist.isItemInListReturnIndex(userName, globalConstant.obj.userNameColumn, userList)
   if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
     userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
-    indel.user_management.pushButton_DelUser.ClickButton()
+    indelPlan.user_management.pushButton_DelUser.ClickButton()
     if (!isCancel) {
-      indel.user_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-      __handleDirtyDate(indel, userName)
+      indelPlan.user_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+      __handleUserDirtyData(pv, userName)
     } else {
-      indel.user_delete_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+      indelPlan.user_delete_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
     }
   } else {
     Log.Warning(`Can not find user with userName=${userName} when deleting user`)
   }
 }
 
-const deleteUserForDirtyData = (indel, deleteUsers) => {
-  gotoUserListWindow(indel)
-  const userList = indel.user_management.UserList
+const deleteUserForDirtyData = (indelPlan, deleteUsers) => {
+  gotoUserListWindow(indelPlan)
+  const userList = indelPlan.user_management.UserList
   let du = deleteUsers.pop()
   while (du) {
     const rowIdx = findinlist.isItemInListReturnIndex(du, globalConstant.obj.userNameColumn, userList)
     if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
       userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
-      indel.user_management.pushButton_DelUser.ClickButton()
-      indel.user_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+      indelPlan.user_management.pushButton_DelUser.ClickButton()
+      indelPlan.user_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     } else {
       Log.Warning(`Can not find user with userName=${du} when deleteUserForDirtyData`)
     }
     du = deleteUsers.pop()
   }
-  exitUserListWindow(indel)
+  exitUserListWindow(indelPlan)
 }
 
 

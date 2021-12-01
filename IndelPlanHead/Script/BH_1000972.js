@@ -6,46 +6,47 @@ const user = require("user")
 const findinlist = require("find_in_list")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  user.gotoUserListWindow(IndelPlan)
-  user.openNewUserWindow(IndelPlan)
-  user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
+  user.gotoUserListWindow(indelPlan)
+  user.openNewUserWindow(indelPlan)
+  user.addUser(indelPlan, pv, Project.Variables.new_username, Project.Variables.new_user_password, Project.Variables.new_user_confirmpassword, Project.Variables.new_usertype)
   
   
-  const userList = IndelPlan.user_management.UserList
-  const rowIdx = findinlist.isItemInListReturnIndex(Project.Variables.newusername, globalConstant.obj.userNameColumn, userList)
+  const userList = indelPlan.user_management.UserList
+  const rowIdx = findinlist.isItemInListReturnIndex(Project.Variables.new_username, globalConstant.obj.userNameColumn, userList)
   userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
-  IndelPlan.user_management.pushButton_EditUser.ClickButton()
+  indelPlan.user_management.pushButton_EditUser.ClickButton()
 
   
-  IndelPlan.user_newusercClass.lineEdit_Password.clear()
+  indelPlan.user_new_user.lineEdit_Password.clear()
   //incase transferred meaning have to type one by one
-  IndelPlan.user_newusercClass.lineEdit_Password.Keys("!")
-  IndelPlan.user_newusercClass.lineEdit_Password.Keys("@")
-  IndelPlan.user_newusercClass.lineEdit_Password.Keys("#")
-  IndelPlan.user_newusercClass.lineEdit_Password.Keys("$")
-  IndelPlan.user_newusercClass.lineEdit_Password.Keys("%")
-  IndelPlan.user_newusercClass.lineEdit_Password.Keys("^")
-  IndelPlan.user_newusercClass.lineEdit_Password.Keys("&")
-  IndelPlan.user_newusercClass.lineEdit_Password.Keys("*")
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.lineEdit_Password, "wText", cmpEqual, "")
+  indelPlan.user_new_user.lineEdit_Password.Keys("!")
+  indelPlan.user_new_user.lineEdit_Password.Keys("@")
+  indelPlan.user_new_user.lineEdit_Password.Keys("#")
+  indelPlan.user_new_user.lineEdit_Password.Keys("$")
+  indelPlan.user_new_user.lineEdit_Password.Keys("%")
+  indelPlan.user_new_user.lineEdit_Password.Keys("^")
+  indelPlan.user_new_user.lineEdit_Password.Keys("&")
+  indelPlan.user_new_user.lineEdit_Password.Keys("*")
+  aqObject.CheckProperty(indelPlan.user_new_user.lineEdit_Password, "wText", cmpEqual, "")
   
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.clear()
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.Keys("!")
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.Keys("@")
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.Keys("#")
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.Keys("$")
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.Keys("%")
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.Keys("^")
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.Keys("&")
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.Keys("*")
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.lineEdit_PasswordConfirm, "wText", cmpEqual, "")
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.clear()
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys("!")
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys("@")
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys("#")
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys("$")
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys("%")
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys("^")
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys("&")
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys("*")
+  aqObject.CheckProperty(indelPlan.user_new_user.lineEdit_PasswordConfirm, "wText", cmpEqual, "")
   
-  IndelPlan.user_newusercClass.pushButton_Cancel.ClickButton()
-  user.exitUserListWindow(IndelPlan)
+  indelPlan.user_new_user.pushButton_Cancel.ClickButton()
+  user.exitUserListWindow(indelPlan)
 
   exitwithlogic.exitWithLogic(false, false, 1)
 }

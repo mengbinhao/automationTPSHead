@@ -4,13 +4,12 @@ const common = require("common")
 const exitwithlogic = require("exit_with_logic")
 
 function testcase() {  
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launch.launch()
-  login.login(Project.Variables.wrongusername, Project.Variables.password)
-  
-  const loginWrongUsernamePopup = IndelPlan.login_wrong_username_popup
-  aqObject.CheckProperty(loginWrongUsernamePopup, "VisibleOnScreen", cmpEqual, true)   
-  aqObject.CheckProperty(loginWrongUsernamePopup.qt_msgbox_label, "Text", cmpEqual, "The username you have typed does not exist.")    
-  common.handlePopupDialog(loginWrongUsernamePopup)
+  login.login(indelPlan, Project.Variables.wrong_username, Project.Variables.password)
+
+  aqObject.CheckProperty(indelPlan.login_wrong_username_popup, "VisibleOnScreen", cmpEqual, true)   
+  aqObject.CheckProperty(indelPlan.login_wrong_username_popup.qt_msgbox_label, "Text", cmpEqual, "The username you have typed does not exist.")    
+  common.handlePopupDialog(indelPlan.login_wrong_username_popup)
   exitwithlogic.exitWithLogic(false, false, 2)
 }

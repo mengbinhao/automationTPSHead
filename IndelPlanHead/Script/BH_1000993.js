@@ -3,11 +3,11 @@ const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
 
-  const planStateArea = IndelPlan.patientManagement.groupBox_5
+  const planStateArea = indelPlan.patientManagement.groupBox_5
 
   aqObject.CheckProperty(planStateArea.radioButton_AllPlan, "wChecked", cmpEqual, true)
   aqObject.CheckProperty(planStateArea.radioButton_Unapproved, "wChecked", cmpEqual, false)

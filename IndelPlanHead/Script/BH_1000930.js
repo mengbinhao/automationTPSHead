@@ -2,8 +2,8 @@
 const login = require("login")
 
 function testcase() {  
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launch.launch()
-  login.loginThenExit(Project.Variables.username, Project.Variables.password)
-  aqObject.CheckProperty(IndelPlan.loginClass, "Exists", cmpEqual, false)   
+  login.loginThenExit(indelPlan, Project.Variables.username, Project.Variables.password)
+  aqObject.CheckProperty(indelPlan.login, "Exists", cmpEqual, false)   
 }

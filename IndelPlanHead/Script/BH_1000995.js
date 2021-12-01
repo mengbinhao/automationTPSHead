@@ -3,11 +3,11 @@ const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
 
-  const dateArea = IndelPlan.patientManagement.groupBox_2
+  const dateArea = indelPlan.patientManagement.groupBox_2
 
   aqObject.CheckProperty(dateArea.radioButton_AllDate, "wChecked", cmpEqual, false)
   aqObject.CheckProperty(dateArea.radioButton_Today, "wChecked", cmpEqual, false)

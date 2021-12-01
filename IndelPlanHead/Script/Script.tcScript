@@ -136,12 +136,6 @@
 		<child name="BH_1000937" key="{3E536B72-44F8-45B3-ADE1-62C8622A9CE6}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1000937.js" />
 		</child>
-		<child name="BH_1000932_afterward" key="{861E1E8A-286E-49A4-A4B2-3D4B1C1A6A03}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="BH_1000932_afterward.js" />
-		</child>
-		<child name="BH_1000933_afterward" key="{86434B06-D621-4728-9B92-5FFC6C1A88F4}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="BH_1000933_afterward.js" />
-		</child>
 		<child name="plan" key="{F0C98E06-CB27-422B-A128-90230185BB1E}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="plan.js" />
 		</child>
@@ -268,6 +262,9 @@
 		<child name="BH_1001012" key="{F48B7F1B-C583-4D29-B770-E7F6C5F4A4BA}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1001012.js" />
 		</child>
+		<child name="project_variable" key="{007C8768-6C7E-42EE-B56B-C996BB86D24A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="project_variable.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -303,6 +300,7 @@
 				<ref key="{BC0605D4-1621-4808-ABD7-2EB2844EF09D}" />
 				<ref key="{9CCBDD5B-FA7F-423A-A489-857F0549A457}" />
 				<ref key="{A98C6CA5-EF77-4D9F-93B3-9E83C9935409}" />
+				<ref key="{007C8768-6C7E-42EE-B56B-C996BB86D24A}" />
 			</references>
 		</folder>
 		<folder caption="cases" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -385,8 +383,6 @@
 						<ref key="{DF69CB42-A63A-4216-BD38-85E16363DD7E}" />
 						<ref key="{693A9846-DD4B-481B-8072-A2B18E3B4A3A}" />
 						<ref key="{3E536B72-44F8-45B3-ADE1-62C8622A9CE6}" />
-						<ref key="{861E1E8A-286E-49A4-A4B2-3D4B1C1A6A03}" />
-						<ref key="{86434B06-D621-4728-9B92-5FFC6C1A88F4}" />
 					</references>
 				</folder>
 			</folders>

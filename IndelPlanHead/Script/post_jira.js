@@ -30,7 +30,7 @@ const postToJIRA = bugs => {
     //Jira.PostAttachment(key, globalConstant.obj.packedResults + globalConstant.obj.compressedFileName + globalConstant.obj.separator + globalConstant.obj.compressedFileSuffix)
     Log.Message("Successfully push to JIRA")
   } else {
-    Log.Message("Fail push to JIRA")
+    Log.Error("Fail push to JIRA")
   }
 }
 

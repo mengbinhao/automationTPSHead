@@ -3,11 +3,11 @@ const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  const management = IndelPlan.patientManagement
+  const management = indelPlan.patientManagement
   const searchArea = management.groupBox_6
   aqObject.CheckProperty(searchArea, "title", cmpEqual, "Search Patient")
   aqObject.CheckProperty(searchArea.lineEdit_SearchPatient, "wText", cmpEqual, "")

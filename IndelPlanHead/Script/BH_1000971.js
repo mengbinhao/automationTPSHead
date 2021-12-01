@@ -6,21 +6,22 @@ const user = require("user")
 const findinlist = require("find_in_list")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  user.gotoUserListWindow(IndelPlan)
-  const previousCount = IndelPlan.user_management.UserList.wRowCount
-  user.openNewUserWindow(IndelPlan)
-  user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype, true)
+  user.gotoUserListWindow(indelPlan)
+  const previousCount = indelPlan.user_management.UserList.wRowCount
+  user.openNewUserWindow(indelPlan)
+  user.addUser(indelPlan, pv, Project.Variables.new_username, Project.Variables.new_user_password, Project.Variables.new_user_confirmpassword, Project.Variables.new_usertype, true)
   
-  if (strictEqual(previousCount, IndelPlan.user_management.UserList.wRowCount)) {
+  if (strictEqual(previousCount, indelPlan.user_management.UserList.wRowCount)) {
     Log.Checkpoint('Cancel add new user successfully!')
   } else {
     Log.Error('Cancel add new user Fail!')
   }
 
-  user.exitUserListWindow(IndelPlan)
+  user.exitUserListWindow(indelPlan)
   exitwithlogic.exitWithLogic(false, false, 1)
 }

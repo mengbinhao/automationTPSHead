@@ -5,17 +5,18 @@ const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  patient.openNewPatientWindow(IndelPlan)
+  patient.openNewPatientWindow(indelPlan)
   
-  const previousCount = IndelPlan.patientManagement.treeWidget_PatientList.wItems.Count
+  const previousCount = indelPlan.patientManagement.treeWidget_PatientList.wItems.Count
   
-  patient.addPatient(IndelPlan, true, [1997661, "testpatient2", "Male", 180, 60, 80, "north east", 18812341235, "note"])
+  patient.addPatient(indelPlan, pv, true, [Project.Variables.new_patientID, Project.Variables.new_patient_name, Project.Variables.new_patient_gender, Project.Variables.new_patient_height, Project.Variables.new_patient_weight, Project.Variables.new_patient_age, Project.Variables.new_patient_address, Project.Variables.new_patient_phone, Project.Variables.new_patient_note])
 
-  const currentCount = IndelPlan.patientManagement.treeWidget_PatientList.wItems.Count
+  const currentCount = indelPlan.patientManagement.treeWidget_PatientList.wItems.Count
   if (strictEqual(previousCount, currentCount)) {
     Log.Checkpoint("Cancel add patient successfully!")
   } else {

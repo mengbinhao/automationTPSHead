@@ -1,18 +1,18 @@
 ﻿const globalConstant = require("global_constant")
 const utilsfunctions = require("utils_functions")
 
-const __handleGamaImporterClass = indel => {
-  indel.import_GamaImporterClass.pbClose.ClickButton()
-  indel.import_close_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+const __closeRegisterImporter = indelPlan => {
+  indelPlan.register_importer.pbClose.ClickButton()
+  indelPlan.register_close_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
 }
 
-const __handlePatientDataClass = (indel, isUpdatePatient = true) => {
-  indel.patientDataClass.groupBox_6.pushButton_Close.ClickButton()
+const __handlePatientData = (indelPlan, isUpdatePatient = true) => {
+  indelPlan.PatientData.groupBox_6.pushButton_Close.ClickButton()
   if (isUpdatePatient) {
-    indel.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+    indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
   } else {
-    indel.patient_update_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+    indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
   }
 }
 
@@ -25,25 +25,25 @@ const __checkTabExists = (tabWidget, tabName) => {
 
 //tabName is where app switch to
 //currentTabName is where app's tab located
-const __handlePopup = (indel, tabName, currentTabName, isPlanFinish) => {
+const __handlePopup = (indelPlan, tabName, currentTabName, isPlanFinish) => {
   const __helper1 = () => {
-    if (indel.contour_planlib_remove_empty_contour_popup.Exists) {
-      indel.contour_planlib_remove_empty_contour_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    if (indelPlan.contour_planlib_empty_contours_remove_popup.Exists) {
+      indelPlan.contour_planlib_empty_contours_remove_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
     }
 
-    if (indel.contour_no_skin_type_contour_exist_popup.Exists) {
-      indel.contour_no_skin_type_contour_exist_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-    } else if (indel.contour_skin_not_complete_popup.Exists) {
-      indel.contour_skin_not_complete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+    if (indelPlan.contour_no_skin_type_contour_exist_popup.Exists) {
+      indelPlan.contour_no_skin_type_contour_exist_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+    } else if (indelPlan.contour_skin_not_complete_popup.Exists) {
+      indelPlan.contour_skin_not_complete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     }
   }
   
   const __helper2 = () =>{
-    if (indel.plan_current_plan_finished_popup.Exists) {
+    if (indelPlan.plan_finished_popup.Exists) {
       if (isPlanFinish) {
-        indel.plan_current_plan_finished_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+        indelPlan.plan_finished_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
       } else {
-        indel.plan_current_plan_finished_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+        indelPlan.plan_finished_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
       }
     }
   }
@@ -51,15 +51,15 @@ const __handlePopup = (indel, tabName, currentTabName, isPlanFinish) => {
   const handler = {
     [globalConstant.obj.patientManagement]: {
       [globalConstant.obj.contour]: () => {
-        if (indel.contour_no_study_exist_popup.Exists) {
-          indel.contour_no_study_exist_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
-        } else if (indel.contour_choose_patient_first_popup.Exists) {
-          indel.contour_choose_patient_first_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+        if (indelPlan.contour_no_study_exist_popup.Exists) {
+          indelPlan.contour_no_study_exist_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+        } else if (indelPlan.main_contour_choose_patient_first_popup.Exists) {
+          indelPlan.main_contour_choose_patient_first_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
         }
       },
       [globalConstant.obj.planDesign]: () => {
-        if (indel.plan_start_plan_module_popup.Exists) {
-          indel.plan_start_plan_module_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+        if (indelPlan.plan_start_plan_module_popup.Exists) {
+          indelPlan.plan_start_plan_module_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
         }
       }
     },
@@ -73,7 +73,7 @@ const __handlePopup = (indel, tabName, currentTabName, isPlanFinish) => {
     },
     [globalConstant.obj.planDesign]: {
       [globalConstant.obj.patientManagement]: () => {
-        if (indel.plan_PlanListClass.Exists) {
+        if (indelPlan.plan_PlanList.Exists) {
           //Sys.Desktop.Keys("[Esc]")
           LLPlayer.KeyDown(VK_ESCAPE, globalConstant.obj.delayMouseOneSecond)
           LLPlayer.KeyUp(VK_ESCAPE, globalConstant.obj.delayMouseOneSecond)
@@ -127,18 +127,18 @@ const getPatientDetailTabIndex = tabName => {
   return patientTabMapped[tabName]
 }
 
-const getPatientDetailTabName = indel => {
-  return indel.tabWidget.wTabCaption(indel.tabWidget.wFocusedTab)
+const getPatientDetailTabName = indelPlan => {
+  return indelPlan.tabWidget.wTabCaption(indelPlan.tabWidget.wFocusedTab)
 }
 
-const changePatientDetailTab = (indel, tabName, isPlanFinish = false) => {
-  if(!__checkTabExists(indel.tabWidget, tabName)) {
+const changePatientDetailTab = (indelPlan, tabName, isPlanFinish = false) => {
+  if(!__checkTabExists(indelPlan.tabWidget, tabName)) {
     Log.Error(`Please input valid tabName, tabName=${tabName}`)
     //stop testcase directly
     Runner.Stop(true)
   }
     
-  const currentTabName = getPatientDetailTabName(indel)
+  const currentTabName = getPatientDetailTabName(indelPlan)
   //return if already located target tab
   if (currentTabName === tabName) {
     Log.Error(`no need to change patient tab`)
@@ -147,34 +147,34 @@ const changePatientDetailTab = (indel, tabName, isPlanFinish = false) => {
   }
 
   //handle PlanListClass at top level
-  if (!indel.plan_PlanListClass.Exists) {
-    indel.tabWidget.ClickTab(tabName)
+  if (!indelPlan.plan_PlanList.Exists) {
+    indelPlan.tabWidget.ClickTab(tabName)
     //just in case
     utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
   }
   
   //handle various popup
-  __handlePopup(indel, tabName, currentTabName, isPlanFinish)
+  __handlePopup(indelPlan, tabName, currentTabName, isPlanFinish)
     
   //check if switch successfully, or stop testcase directly
-  if (getPatientDetailTabName(indel) !== tabName) {
+  if (getPatientDetailTabName(indelPlan) !== tabName) {
     Log.Error(`${Project.TestItems.Current.Name} changePatientDetailTab to ${tabName} fail`)
     Runner.Stop(true)
   }
 }
 
-const gotoPatientManagement = (indel, isUpdatePatient = false) => {
+const gotoPatientManagement = (indelPlan, isUpdatePatient = false) => {
   //login window
-  if (indel.loginClass.VisibleOnScreen) return
+  if (indelPlan.login.VisibleOnScreen) return
   //already in main page
-  if (indel.patientManagement.frame.pushButton_Logout.Visible) return
-  //check if can close import_GamaImporterClass window
-  if (indel.import_GamaImporterClass.pbClose.Exists) __handleGamaImporterClass(indel)
+  if (indelPlan.patientManagement.frame.pushButton_Logout.Visible) return
+  //check if can close register_importer window
+  if (indelPlan.register_importer.pbClose.Exists) __closeRegisterImporter(indelPlan)
   //check if can changedetail
-  if (!strictEqual(getPatientDetailTabName(indel), globalConstant.obj.patientManagement)) {
-    changePatientDetailTab(indel, globalConstant.obj.patientManagement)
+  if (!strictEqual(getPatientDetailTabName(indelPlan), globalConstant.obj.patientManagement)) {
+    changePatientDetailTab(indelPlan, globalConstant.obj.patientManagement)
   }
-  if (indel.patientDataClass.VisibleOnScreen) __handlePatientDataClass(indel, isUpdatePatient)
+  if (indelPlan.PatientData.VisibleOnScreen) __handlePatientData(indelPlan, isUpdatePatient)
 }
 
 module.exports.changePatientDetailTab = changePatientDetailTab

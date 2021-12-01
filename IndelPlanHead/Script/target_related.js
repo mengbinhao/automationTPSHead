@@ -27,10 +27,10 @@ const __addPoint = position => {
   LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
 }
 
-const addOneNearMiddlePoint = indel => {
-  if (indel.PlanGUI.VisibleOnScreen) {
+const addOneNearMiddlePoint = indelPlan => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
     const position = coordinate.getNearMiddleCoordinate()
-    const gamaGngle = indel.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel.groupBox_2.GamaAngle
+    const gamaGngle = indelPlan.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel.groupBox_2.GamaAngle
     do {
        __addPoint(position)
     } while (!gamaGngle.Enabled)
@@ -40,7 +40,7 @@ const addOneNearMiddlePoint = indel => {
   }
 }
 
-const drawTriangleNearMiddle = indel => {
+const drawTriangleNearMiddle = indelPlan => {
   const data = __generateTriangleParameters(coordinate.getTriangleCoordinate())
   LLPlayer.MouseDown(MK_LBUTTON, data.p1.x, data.p1.y, data.p1.delay)
   LLPlayer.MouseDown(MK_LBUTTON, data.p2.x, data.p2.y, data.p2.delay)
@@ -49,24 +49,24 @@ const drawTriangleNearMiddle = indel => {
   LLPlayer.MouseUp(MK_LBUTTON, data.p1.x, data.p1.y, data.p1.delay)
 }
 
-const drawRectangleNearMiddle = indel => {
-  if (indel.ContourGUIClass.VisibleOnScreen) {
+const drawRectangleNearMiddle = indelPlan => {
+  if (indelPlan.ContourGUI.VisibleOnScreen) {
     const data = __generateRectangleParameters(coordinate.getRectangleCoordinate())
-    indel.ContourGUIClass.canvas.C2DViewer.Drag(data.p1.startX, data.p1.startY, data.p1.distanceX, data.p1.distanceY, data.p1.delay)
-    indel.ContourGUIClass.canvas.C2DViewer.Drag(data.p2.startX, data.p2.startY, data.p2.distanceX, data.p2.distanceY, data.p1.delay)
-    indel.ContourGUIClass.canvas.C2DViewer.Drag(data.p3.startX, data.p3.startY, data.p3.distanceX, data.p3.distanceY, data.p1.delay)
-    indel.ContourGUIClass.canvas.C2DViewer.Drag(data.p4.startX, data.p4.startY, data.p4.distanceX, data.p4.distanceY, data.p1.delay)
+    indelPlan.ContourGUI.canvas.C2DViewer.Drag(data.p1.startX, data.p1.startY, data.p1.distanceX, data.p1.distanceY, data.p1.delay)
+    indelPlan.ContourGUI.canvas.C2DViewer.Drag(data.p2.startX, data.p2.startY, data.p2.distanceX, data.p2.distanceY, data.p1.delay)
+    indelPlan.ContourGUI.canvas.C2DViewer.Drag(data.p3.startX, data.p3.startY, data.p3.distanceX, data.p3.distanceY, data.p1.delay)
+    indelPlan.ContourGUI.canvas.C2DViewer.Drag(data.p4.startX, data.p4.startY, data.p4.distanceX, data.p4.distanceY, data.p1.delay)
   } else {
     Log.Warning(`Can not drawRectangleNearMiddle due to window is not right`) 
   }
 }
 
-const addOnePlanNearMiddlePoint = indel => {
-  if (indel.PlanGUI.VisibleOnScreen) {
+const addOnePlanNearMiddlePoint = indelPlan => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
     const position = coordinate.getPlanCanvasNearMiddleCoordinate()
-    const gamaGngle = indel.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel.groupBox_2.GamaAngle
+    const gamaGngle = indelPlan.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel.groupBox_2.GamaAngle
     do {
-       indel.PlanGUI.canvas.PlanC2DViewer.DblClick(position[0], position[1])
+       indelPlan.PlanGUI.canvas.PlanC2DViewer.DblClick(position[0], position[1])
     } while (!gamaGngle.Enabled)
     utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
   } else {

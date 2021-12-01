@@ -6,24 +6,24 @@ const user = require("user")
 const findinlist = require("find_in_list")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  user.gotoUserListWindow(IndelPlan)
-  const userList = IndelPlan.user_management.UserList
+  user.gotoUserListWindow(indelPlan)
+  const userList = indelPlan.user_management.UserList
   const rowIdx = findinlist.isItemInListReturnIndex(Project.Variables.username, globalConstant.obj.userNameColumn, userList)
   userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
-  IndelPlan.user_management.pushButton_EditUser.ClickButton()
+  indelPlan.user_management.pushButton_EditUser.ClickButton()
   
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_username, "Visible", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_password, "Visible", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_confirmpassword, "Visible", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.label_usertype, "Visible", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.pushButton_OK, "Visible", cmpEqual, true)
-  aqObject.CheckProperty(IndelPlan.user_newusercClass.pushButton_Cancel, "Visible", cmpEqual, true)
-  IndelPlan.user_newusercClass.pushButton_Cancel.ClickButton()
+  aqObject.CheckProperty(indelPlan.user_new_user.lineEdit_UserName, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(indelPlan.user_new_user.lineEdit_Password, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(indelPlan.user_new_user.lineEdit_PasswordConfirm, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(indelPlan.user_new_user.comboBox_UserType, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(indelPlan.user_new_user.pushButton_OK, "Visible", cmpEqual, true)
+  aqObject.CheckProperty(indelPlan.user_new_user.pushButton_Cancel, "Visible", cmpEqual, true)
+  indelPlan.user_new_user.pushButton_Cancel.ClickButton()
   
-  user.exitUserListWindow(IndelPlan)
+  user.exitUserListWindow(indelPlan)
   exitwithlogic.exitWithLogic(false, false, 1)
 }

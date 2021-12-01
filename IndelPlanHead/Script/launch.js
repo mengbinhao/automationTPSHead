@@ -1,5 +1,5 @@
 ﻿const launch = () => {
-  TestedApps.IndelPlanV2_0.Run()
+  TestedApps.IndelplanV2.Run()
 }
 
 module.exports.launch = launch

@@ -6,24 +6,30 @@ const patient = require("patient")
 const fileFunctions = require("file_functions")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
+
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
 
-  const path = "D:\\IndelPlan\\export"
-  const patientFolderName = "testpatient@8997668"
-  
-  if (IndelPlan.patientManagement.treeWidget_PatientList.wItems.Count !== 0) {
-    Log.Error("Have already existing patient data")
+  if (indelPlan.patientManagement.treeWidget_PatientList.wItems.Count !== 0) {
+    Log.Error("Should no patient data first")
   } else {
-    patient.addPatientActivity(IndelPlan, 8997668, "testpatient", "Male", 180, 60, 80, "north east", 18812341235, "note")
-    const beforeExportDate = aqDateTime.Now()
-    patient.exportPatientData(IndelPlan, false, aqConvert.IntToStr(8997668), path)
-    aqObject.CheckProperty(IndelPlan.patient_export_done_popup, "Exists", cmpEqual, true)   
-    IndelPlan.patient_export_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
-    IndelPlan.patient_DlgExportClass.pushButton_Cancel.ClickButton()
+    const path = globalConstant.obj.patientDataFolder
+    const patientFolderName = `${Project.Variables.new_patient_name}@${Project.Variables.new_patientID}`
+  
+    //delete target folder first
+    fileFunctions.deleteFolder(path + globalConstant.obj.backslash + patientFolderName, true)
+  
+    patient.addPatientActivity(indelPlan, pv, Project.Variables.new_patientID, Project.Variables.new_patient_name, Project.Variables.new_patient_gender, Project.Variables.new_patient_height, Project.Variables.new_patient_weight, Project.Variables.new_patient_age, Project.Variables.new_patient_address, Project.Variables.new_patient_phone, Project.Variables.new_patient_note)
+      
+    patient.exportPatientData(indelPlan, false, Project.Variables.new_patientID, path)
+    aqObject.CheckProperty(indelPlan.patient_export_done_popup, "Exists", cmpEqual, true)   
+    indelPlan.patient_export_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    indelPlan.patient_exporter.pushButton_Cancel.ClickButton()
 
-    if (fileFunctions.isExists(path, patientFolderName) && strictEqual(aqDateTime.Compare(beforeExportDate, fileFunctions.getFolderDateLastModifiedTime(path + globalConstant.obj.backslash + patientFolderName)), -1)) {
+    //check folder exist and update time correct
+    if (fileFunctions.isExists(path, patientFolderName)) {
       Log.Checkpoint("Export patient data successfully!")
     } else {
       Log.Error("Export patient data fail!")

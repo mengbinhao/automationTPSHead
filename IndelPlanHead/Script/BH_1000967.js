@@ -7,37 +7,39 @@ const findinlist = require("find_in_list")
 const common = require("common")
 
 function testcase() {
-  const IndelPlan = Project.Variables.IndelPlan
+  const indelPlan = Project.Variables.IndelPlan
+  const pv = Project.Variables.ProjectVariable
+   
   launch.launch()
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
-  user.gotoUserListWindow(IndelPlan)
-  user.openNewUserWindow(IndelPlan)
-  user.addUser(IndelPlan, Project.Variables.newusername, Project.Variables.newuserpassword, Project.Variables.newuserconfirmpassword, Project.Variables.newusertype)
+  user.gotoUserListWindow(indelPlan)
+  user.openNewUserWindow(indelPlan)
+  user.addUser(indelPlan, pv, Project.Variables.new_username, Project.Variables.new_user_password, Project.Variables.new_user_confirmpassword, Project.Variables.new_usertype)
 
-  const userList = IndelPlan.user_management.UserList
-  const rowIdx = findinlist.isItemInListReturnIndex(Project.Variables.newusername, globalConstant.obj.userNameColumn, userList)
+  const userList = indelPlan.user_management.UserList
+  const rowIdx = findinlist.isItemInListReturnIndex(Project.Variables.new_username, globalConstant.obj.userNameColumn, userList)
   userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
-  IndelPlan.user_management.pushButton_EditUser.ClickButton()
+  indelPlan.user_management.pushButton_EditUser.ClickButton()
   
-  IndelPlan.user_newusercClass.lineEdit_Password.clear()
-  IndelPlan.user_newusercClass.lineEdit_Password.Keys(Project.Variables.edituserpassword)
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.clear()
-  IndelPlan.user_newusercClass.lineEdit_PasswordConfirm.Keys(Project.Variables.edituserpassword)
-  IndelPlan.user_newusercClass.pushButton_Cancel.ClickButton()
-  user.exitUserListWindow(IndelPlan)
+  indelPlan.user_new_user.lineEdit_Password.clear()
+  indelPlan.user_new_user.lineEdit_Password.Keys(Project.Variables.edit_user_password)
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.clear()
+  indelPlan.user_new_user.lineEdit_PasswordConfirm.Keys(Project.Variables.edit_user_password)
+  indelPlan.user_new_user.pushButton_Cancel.ClickButton()
+  user.exitUserListWindow(indelPlan)
   exitwithlogic.exitWithLogic(false, false, 2)
   
-  login.login(Project.Variables.username, Project.Variables.password)
+  login.login(indelPlan, Project.Variables.username, Project.Variables.password)
 
-  if (strictEqual(common.getPatientDetailTabName(IndelPlan), globalConstant.obj.patientManagement)) {
-    Log.Checkpoint(`default focused tab is ${globalConstant.obj.patientManagement}`);
+  if (strictEqual(common.getPatientDetailTabName(indelPlan), globalConstant.obj.patientManagement)) {
+    Log.Checkpoint(`default focused tab is ${globalConstant.obj.patientManagement}`)
   } else {
     Log.Error(`default main tab should be ${globalConstant.obj.patientManagement}`)
   }
   
   /*
-  aqObject.CheckProperty(IndelPlan.patientManagement.frame.groupBox_3.label_UserName, "text", cmpEqual, `User Name: ${Project.Variables.username}`)
+  aqObject.CheckProperty(indelPlan.patientManagement.frame.groupBox_3.label_UserName, "text", cmpEqual, `User Name: ${Project.Variables.username}`)
   */
 
   exitwithlogic.exitWithLogic(false, false, 1)

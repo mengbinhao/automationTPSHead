@@ -84,14 +84,6 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="physicaldata" key="{68B1BE8B-AC80-4176-9166-FAC8254ADE18}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-				<testParameters />
-				<children />
-			</testItem>
-			<testItem name="systemsettings" key="{82B884FD-734A-4587-A6D3-F1439B093884}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-				<testParameters />
-				<children />
-			</testItem>
 			<testItem name="usernamagement" key="{59184077-BEDA-4B28-B563-8B2F5F2EAF3E}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
@@ -156,96 +148,100 @@
 			<testItem name="patientmanagement" key="{B003F621-E70F-4E86-844E-B7D20DEFFB78}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="关闭患者界面-点击yes" key="{3648D43C-389A-42B8-96AF-800077D6CF0A}" group="False" enabled="True" testMoniker="{B1DFAA63-E245-4CA3-8DAC-F6F38397C220}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="关闭患者界面-点击yes" key="{3648D43C-389A-42B8-96AF-800077D6CF0A}" group="False" enabled="False" testMoniker="{B1DFAA63-E245-4CA3-8DAC-F6F38397C220}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="关闭患者界面-点击No" key="{54B97672-5C99-4FC6-8ECB-9F03E7DC11BE}" group="False" enabled="True" testMoniker="{A8623E07-B00A-40FD-BC82-FA798CFCDD13}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="关闭患者界面-点击No" key="{54B97672-5C99-4FC6-8ECB-9F03E7DC11BE}" group="False" enabled="False" testMoniker="{A8623E07-B00A-40FD-BC82-FA798CFCDD13}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="关闭患者界面-点击Cancel" key="{19B66844-0E28-4C21-9B2F-73548387C525}" group="False" enabled="True" testMoniker="{F1CB48CE-B3CD-44F0-8E61-1E501CB59C96}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="关闭患者界面-点击Cancel" key="{19B66844-0E28-4C21-9B2F-73548387C525}" group="False" enabled="False" testMoniker="{F1CB48CE-B3CD-44F0-8E61-1E501CB59C96}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="检查患者管理界面" key="{0B1E3602-7F3F-4300-A0A9-7FC85E18B70B}" group="False" enabled="True" testMoniker="{0510C9E6-5889-46B4-8E0B-0A84E19620B0}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="检查患者管理界面" key="{0B1E3602-7F3F-4300-A0A9-7FC85E18B70B}" group="False" enabled="False" testMoniker="{0510C9E6-5889-46B4-8E0B-0A84E19620B0}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="选择计划状态" key="{A11567C6-5F72-4DF9-ABB4-032A15411284}" group="False" enabled="True" testMoniker="{9CB2B956-B221-49EE-A18D-CDB4B9A7CA10}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="选择计划状态" key="{A11567C6-5F72-4DF9-ABB4-032A15411284}" group="False" enabled="False" testMoniker="{9CB2B956-B221-49EE-A18D-CDB4B9A7CA10}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="选择时间段&#13;&#10;" key="{1AFF03E4-DB97-41B0-883C-3AF21383177D}" group="False" enabled="True" testMoniker="{E6FAA66B-3DCF-471B-95F8-9185C51CEBCF}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="选择时间段&#13;&#10;" key="{1AFF03E4-DB97-41B0-883C-3AF21383177D}" group="False" enabled="False" testMoniker="{E6FAA66B-3DCF-471B-95F8-9185C51CEBCF}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="筛选ID符合的患者&#13;&#10;" key="{C6377E3E-8E31-4581-9679-4247BF36748D}" group="False" enabled="True" testMoniker="{9C937985-0D17-40BB-BA41-78867FD1AAD3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="筛选ID符合的患者&#13;&#10;" key="{C6377E3E-8E31-4581-9679-4247BF36748D}" group="False" enabled="False" testMoniker="{9C937985-0D17-40BB-BA41-78867FD1AAD3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="筛选Name符合的患者" key="{76CA1F5A-7B48-4B80-8578-47C227582B43}" group="False" enabled="True" testMoniker="{7A06E28B-3BF2-4979-BA83-79D4E65270CB}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="筛选Name符合的患者" key="{76CA1F5A-7B48-4B80-8578-47C227582B43}" group="False" enabled="False" testMoniker="{7A06E28B-3BF2-4979-BA83-79D4E65270CB}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="筛选ID和Name都不符合的患者" key="{550D3829-55B0-416C-988E-FDDAECE56285}" group="False" enabled="True" testMoniker="{B30A661D-4A0D-4370-A055-FC1D5624D11A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="筛选ID和Name都不符合的患者" key="{550D3829-55B0-416C-988E-FDDAECE56285}" group="False" enabled="False" testMoniker="{B30A661D-4A0D-4370-A055-FC1D5624D11A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="筛选ID和Name都符合的患者" key="{219617E4-4A0F-42F7-AB19-321F7154D896}" group="False" enabled="True" testMoniker="{B79F0B1C-1A8E-451B-BAD0-2A205A01EFFA}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="筛选ID和Name都符合的患者" key="{219617E4-4A0F-42F7-AB19-321F7154D896}" group="False" enabled="False" testMoniker="{B79F0B1C-1A8E-451B-BAD0-2A205A01EFFA}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="新建患者" key="{9F6A5F4D-6DDA-4B4D-820A-0312BEF37D86}" group="False" enabled="True" testMoniker="{F1E14B2E-9178-4817-BBDF-11F11073D150}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="新建患者" key="{9F6A5F4D-6DDA-4B4D-820A-0312BEF37D86}" group="False" enabled="False" testMoniker="{F1E14B2E-9178-4817-BBDF-11F11073D150}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="重复创建同ID的患者" key="{A9D2418A-3181-46D8-8928-781A2C0CD537}" group="False" enabled="True" testMoniker="{3C53B742-09EE-4075-BD7C-E18EBACB6C98}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="重复创建同ID的患者" key="{A9D2418A-3181-46D8-8928-781A2C0CD537}" group="False" enabled="False" testMoniker="{3C53B742-09EE-4075-BD7C-E18EBACB6C98}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="取消创建患者" key="{3259B96C-B62F-4274-8E24-2D068E4C44D8}" group="False" enabled="True" testMoniker="{6651DFBD-8EE9-48F6-8A80-22AB0FC775B5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="取消创建患者" key="{3259B96C-B62F-4274-8E24-2D068E4C44D8}" group="False" enabled="False" testMoniker="{6651DFBD-8EE9-48F6-8A80-22AB0FC775B5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="修改患者信息" key="{1F693648-9D02-46C6-B058-03797FE00F65}" group="False" enabled="True" testMoniker="{EAF76F67-8980-4F81-B308-4CB35CE829C9}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="修改患者信息" key="{1F693648-9D02-46C6-B058-03797FE00F65}" group="False" enabled="False" testMoniker="{EAF76F67-8980-4F81-B308-4CB35CE829C9}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="删除患者" key="{EAFBF2DF-D05D-4BDE-8A09-161C894E6BCF}" group="False" enabled="True" testMoniker="{E45CCE24-2CD8-4613-880F-0C2E4787CCA2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="删除患者" key="{EAFBF2DF-D05D-4BDE-8A09-161C894E6BCF}" group="False" enabled="False" testMoniker="{E45CCE24-2CD8-4613-880F-0C2E4787CCA2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="取消删除患者" key="{716DE018-A079-40E4-954E-2C06C126AB7C}" group="False" enabled="True" testMoniker="{DF36E063-D137-4CB0-882B-B3190F96E16C}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="取消删除患者" key="{716DE018-A079-40E4-954E-2C06C126AB7C}" group="False" enabled="False" testMoniker="{DF36E063-D137-4CB0-882B-B3190F96E16C}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="加载患者" key="{69E075FF-00FF-484A-9F24-DFFDDEC3F5BD}" group="False" enabled="True" testMoniker="{3592C3BF-0D3B-41AD-8D06-05EE78D7BEF4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="加载患者" key="{69E075FF-00FF-484A-9F24-DFFDDEC3F5BD}" group="False" enabled="False" testMoniker="{3592C3BF-0D3B-41AD-8D06-05EE78D7BEF4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="导出备份功能" key="{1705E43D-5FBB-4269-B696-458118846F22}" group="False" enabled="True" testMoniker="{B8DE5A45-9A46-466F-A727-C11B409225BA}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="导出备份功能" key="{1705E43D-5FBB-4269-B696-458118846F22}" group="False" enabled="False" testMoniker="{B8DE5A45-9A46-466F-A727-C11B409225BA}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="导出路径错误" key="{BCB66C0E-364D-401F-BE4B-5EB9C536BEAC}" group="False" enabled="True" testMoniker="{C97C25B4-9C8A-4308-BBAC-D75B59DD53B1}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="导出路径错误" key="{BCB66C0E-364D-401F-BE4B-5EB9C536BEAC}" group="False" enabled="False" testMoniker="{C97C25B4-9C8A-4308-BBAC-D75B59DD53B1}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="导入备份功能" key="{EA8B4A12-6415-42EB-8FA0-AB1B885ADC9D}" group="False" enabled="True" testMoniker="{7137721E-2579-4713-B73D-631BD96727F7}testcase" count="3" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="导入备份功能" key="{EA8B4A12-6415-42EB-8FA0-AB1B885ADC9D}" group="False" enabled="False" testMoniker="{7137721E-2579-4713-B73D-631BD96727F7}testcase" count="3" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="导入重复的患者&#13;&#10;" key="{FD58960D-74AE-449E-9138-FFBCA1E441CD}" group="False" enabled="True" testMoniker="{F48B7F1B-C583-4D29-B770-E7F6C5F4A4BA}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="导入重复的患者&#13;&#10;" key="{FD58960D-74AE-449E-9138-FFBCA1E441CD}" group="False" enabled="False" testMoniker="{F48B7F1B-C583-4D29-B770-E7F6C5F4A4BA}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{4B7B88EF-52E1-4812-9E36-E0A4F58D5B46}" group="False" enabled="False" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}test" count="1" timeout="1" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem1" key="{3D3F15DE-07F4-493C-83B6-A42FC2B725EC}" group="False" enabled="True" testMoniker="{E42FD4CD-8072-4D5E-88B9-5EBCC3057632}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="ProjectTestItem4" key="{B4641E36-DB2C-4989-87A5-A2BC2E7D47A6}" group="False" enabled="True" testMoniker="{DE9E0E90-F501-402D-AFBF-958061D03605}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -532,7 +528,7 @@
 				<row val0="False" val1="XTPPopupBar" />
 			</data>
 		</setting>
-		<setting name="TextRecognizer_AcceptedWindows" type="6" rowIndex="-1" colIndex="1">
+		<setting name="TextRecognizer_AcceptedWindows" type="6" rowIndex="-1" colIndex="0">
 			<columns>
 				<column type="1" enabled="True" />
 				<column type="5" enabled="True" />
@@ -1382,13 +1378,12 @@
 			</data>
 		</setting>
 		<setting name="{C371F52C-2F81-459B-8A40-380AAA4FB590}" type="1" value="True" />
-		<setting name="{EF65967B-5D67-41D0-9E90-1E07D7ECE759}" type="6" rowIndex="1" colIndex="0">
+		<setting name="{EF65967B-5D67-41D0-9E90-1E07D7ECE759}" type="6" rowIndex="0" colIndex="0">
 			<columns>
 				<column type="5" enabled="True" />
 			</columns>
 			<data>
 				<row val0="NativeQtObject" />
-				<row val0="NativeTextObject" />
 			</data>
 		</setting>
 		<setting name="KeyPressingDelay" type="2" value="50" />

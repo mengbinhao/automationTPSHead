@@ -134,16 +134,14 @@ const getPatientDetailTabName = indelPlan => {
 const changePatientDetailTab = (indelPlan, tabName, isPlanFinish = false) => {
   if(!__checkTabExists(indelPlan.tabWidget, tabName)) {
     Log.Error(`Please input valid tabName, tabName=${tabName}`)
-    //stop testcase directly
-    Runner.Stop(true)
+    return
   }
     
   const currentTabName = getPatientDetailTabName(indelPlan)
   //return if already located target tab
   if (currentTabName === tabName) {
     Log.Error(`no need to change patient tab`)
-    //stop testcase directly
-    Runner.Stop(true)
+    return
   }
 
   //handle PlanListClass at top level
@@ -159,7 +157,7 @@ const changePatientDetailTab = (indelPlan, tabName, isPlanFinish = false) => {
   //check if switch successfully, or stop testcase directly
   if (getPatientDetailTabName(indelPlan) !== tabName) {
     Log.Error(`${Project.TestItems.Current.Name} changePatientDetailTab to ${tabName} fail`)
-    Runner.Stop(true)
+    return
   }
 }
 

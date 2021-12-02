@@ -1,5 +1,4 @@
-﻿const globalConstant = require("global_constant")
-const UI = require("UI")
+﻿const UI = require("UI")
 const projectVariable = require("project_variable")
 
 function GeneralEvents_OnStartTest(Sender) {

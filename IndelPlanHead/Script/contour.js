@@ -56,7 +56,7 @@ const addContourLib = (indelPlan, pv, contourLibName, contourLibType, libType = 
 
   if(!__checkContourTypeExists(contourLibType, indelPlan.contour_new_contourItem.ContourType)) {
     Log.Error(`Please input valid contourLibType, contourLibType=${contourLibType}`)
-    Runner.Stop(true)
+    return
   }
   
   if (strictEqual(libType, true)) {
@@ -73,7 +73,7 @@ const addContourLib = (indelPlan, pv, contourLibName, contourLibType, libType = 
 const editContourLib = (indelPlan, contourLibName, editContourLibName, editContourLibType, libType = true, isEdit = false) => {
   if(!__checkContourTypeExists(editContourLibType, indelPlan.contour_new_contourItem.ContourType)) {
     Log.Error(`Please input valid contourLibType, contourLibType,=${editContourLibType}`)
-    Runner.Stop(true)
+    return
   }
   
   let contourLibList = null

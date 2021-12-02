@@ -265,6 +265,15 @@
 		<child name="project_variable" key="{007C8768-6C7E-42EE-B56B-C996BB86D24A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="project_variable.js" />
 		</child>
+		<child name="test2" key="{DE9E0E90-F501-402D-AFBF-958061D03605}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="test2.js" />
+		</child>
+		<child name="test3" key="{A54CFD48-EEBC-481C-94BC-BDFD742713F8}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="test3.js" />
+		</child>
+		<child name="test4" key="{E42FD4CD-8072-4D5E-88B9-5EBCC3057632}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="test4.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">

@@ -9,7 +9,7 @@ const __initMap = (map) => {
   return map
 }
 
-const __calculateRunningTestItems = () =>{
+const __calculateTestCaseCount = () =>{
   let count = 0
 
   const __doCalculateRunningTestItems  = testItem => {
@@ -36,10 +36,10 @@ const init = () => {
   projectVariable.dirtyData = __initMap(new Map())
   
   //check if is last running testItem
-  projectVariable.maxRunningItem = __calculateRunningTestItems()
+  projectVariable.maxRunningItem = __calculateTestCaseCount()
   projectVariable.currentRunningItem = 0
-  projectVariable.reRunItems = []
-  projectVariable.bugItems = []
+  projectVariable.reRunCases = []
+  projectVariable.bugCases = []
   projectVariable.rerun = Project.Variables.project_rerun
   projectVariable.procesName = Project.Variables.project_process_name
   

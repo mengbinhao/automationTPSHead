@@ -197,34 +197,11 @@ const deleteAllStudy = (indelPlan, isDelete = false) => {
 
 const extractStudy = indelPlan => {
   if (indelPlan.register_importer.VisibleOnScreen) {
-    indelPlan.register_importer.tabWidget.qt_tabwidget_stackedwidget.tab.toolButton.ClickButton()
-    /*
-    if (indelPlan.import_extract_not_import_popup.Exists) {
-      Log.Warning(`Can not extractStudy due to should import first`)
-      return
-    }
-    */
+    indelPlan.register_area.toolButton.ClickButton()
     const position = coordinate.getNearMiddleCoordinate()
     LLPlayer.MouseDown(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
     LLPlayer.MouseUp(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
-    /*
-    if (indelPlan.import_extract_head_axial_popup.Exists) {
-      Log.Warning(`Can not extractStudy due to should image extract head axial popup`)
-      return      
-    }
-    */
-    
-    /*
-    if (indelPlan.import_extract_unsupported_dicom_series_popup.Exists) {
-      Log.Warning(`Can not extractStudy due to should image extract unsupported dicom series popup`)
-      return      
-    }
-    */
-    
-    if (indelPlan.register_extract_frame_error_popup.Exists) {
-      Log.Warning(`Can not extractStudy due to should image extract fail`)
-      return      
-    }
+    utilsfunctions.delay(globalConstant.obj.delayThirtySeconds)
   } else {
     Log.Warning(`Can not deleteStudy due to window is not right`) 
   }
@@ -232,8 +209,7 @@ const extractStudy = indelPlan => {
 
 const registerStudy = indelPlan => {
   if (indelPlan.register_importer.VisibleOnScreen) {
-    const tab = indelPlan.register_importer.tabWidget.qt_tabwidget_stackedwidget.tab
-    tab.pushButton.ClickButton()
+    indelPlan.register_area.pushButton.ClickButton()
     if (indelPlan.register_less_slices_popup.Exists) {
       Log.Warning(`Can not registerStudy due to image quality low`)
       return
@@ -241,7 +217,7 @@ const registerStudy = indelPlan => {
     
     if (indelPlan.register_CDeviationTableDlg.Exists) {
       indelPlan.register_CDeviationTableDlg.Close()
-      tab.ConfirmRegisterBotton.ClickButton()
+      indelPlan.register_area.ConfirmRegisterBotton.ClickButton()
       utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
   } else {

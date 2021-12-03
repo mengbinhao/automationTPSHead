@@ -268,11 +268,20 @@
 		<child name="test2" key="{DE9E0E90-F501-402D-AFBF-958061D03605}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="test2.js" />
 		</child>
-		<child name="test3" key="{A54CFD48-EEBC-481C-94BC-BDFD742713F8}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="test3.js" />
+		<child name="test_log_obj" key="{A54CFD48-EEBC-481C-94BC-BDFD742713F8}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="test_log_obj.js" />
 		</child>
-		<child name="test4" key="{E42FD4CD-8072-4D5E-88B9-5EBCC3057632}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="test4.js" />
+		<child name="OnErrorLog" key="{9543543B-42F6-46D1-A325-E5AC2545EE68}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="OnErrorLog.js" />
+		</child>
+		<child name="rerun_cases" key="{603CF732-2465-4B26-846F-1521A4F97180}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="rerun_cases.js" />
+		</child>
+		<child name="for_rerun_cases" key="{13BA3237-E492-44C0-95A1-55802530441A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="for_rerun_cases.js" />
+		</child>
+		<child name="test3" key="{B93DC1F2-317E-44B1-B62D-7423131B5462}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="test3.js" />
 		</child>
 	</children>
 	<folders>
@@ -287,6 +296,12 @@
 				<ref key="{9C2DE059-EB8E-46F4-A572-2405CC42364E}" />
 				<ref key="{B16006AF-7E14-41C5-B6A9-680AC8A1030E}" />
 				<ref key="{68E9D565-5F73-4FDB-95E5-39BB43B6D647}" />
+				<ref key="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}" />
+				<ref key="{A06C6FFB-0DF0-444B-89B0-9C687FC680E4}" />
+				<ref key="{7F9FA413-E4BC-4613-9A2E-0D5597A168C9}" />
+				<ref key="{A303ABA3-29A1-40E4-B9EA-685430CF0937}" />
+				<ref key="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}" />
+				<ref key="{55F4436C-95C1-45CB-BE81-A348CD1F3645}" />
 			</references>
 		</folder>
 		<folder caption="utils" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -298,18 +313,13 @@
 		</folder>
 		<folder caption="common" description="A logical folder that is used to organize project items and elements." moniker="">
 			<references>
-				<ref key="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}" />
-				<ref key="{55F4436C-95C1-45CB-BE81-A348CD1F3645}" />
 				<ref key="{5C4CF2F2-E246-4A14-9C22-8DEE2D196829}" />
 				<ref key="{13E2C837-03EA-46AF-9DD1-AD4FFEE55B29}" />
-				<ref key="{7F9FA413-E4BC-4613-9A2E-0D5597A168C9}" />
-				<ref key="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}" />
-				<ref key="{A303ABA3-29A1-40E4-B9EA-685430CF0937}" />
-				<ref key="{A06C6FFB-0DF0-444B-89B0-9C687FC680E4}" />
 				<ref key="{BC0605D4-1621-4808-ABD7-2EB2844EF09D}" />
 				<ref key="{9CCBDD5B-FA7F-423A-A489-857F0549A457}" />
 				<ref key="{A98C6CA5-EF77-4D9F-93B3-9E83C9935409}" />
 				<ref key="{007C8768-6C7E-42EE-B56B-C996BB86D24A}" />
+				<ref key="{603CF732-2465-4B26-846F-1521A4F97180}" />
 			</references>
 		</folder>
 		<folder caption="cases" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -395,6 +405,17 @@
 					</references>
 				</folder>
 			</folders>
+			<references>
+				<ref key="{13BA3237-E492-44C0-95A1-55802530441A}" />
+			</references>
+		</folder>
+		<folder caption="event" description="A logical folder that is used to organize project items and elements." moniker="">
+			<references>
+				<ref key="{9543543B-42F6-46D1-A325-E5AC2545EE68}" />
+				<ref key="{55619548-E3F8-424D-94D6-CEF9B7B13CC8}" />
+				<ref key="{DE604219-2EA1-4DCE-B67F-D094D0ABAF07}" />
+				<ref key="{D8482351-DFEC-477E-B2B9-F44538B87E52}" />
+			</references>
 		</folder>
 	</folders>
 </Root>

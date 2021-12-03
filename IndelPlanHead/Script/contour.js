@@ -6,6 +6,10 @@ const target_related = require("target_related")
 const patient = require("patient")
 const common = require("common")
 
+const __getType = contourLibType => {
+  return ["TARGET", "OAR", "SKIN"]
+}
+
 const __getTypeIndex = contourLibType => {
   const types = {
     'TARGET' : 0,
@@ -15,11 +19,8 @@ const __getTypeIndex = contourLibType => {
   return types[contourLibType]
 }
 
-const __checkContourTypeExists = (contourLibType, contourType) => {
-  for (let i = 0; i < contourType.wItemCount; i++) {
-    if (contourLibType === contourType.wItem(i)) return true
-  }
-  return false
+const __checkContourTypeExists = (contourLibType) => {
+  return __getType().includes(contourLibType)
 }
 
 const __setContourAttribute = (obj, contourLibType, contourLibName) => {
@@ -54,7 +55,7 @@ const addContourLib = (indelPlan, pv, contourLibName, contourLibType, libType = 
     }
   }
 
-  if(!__checkContourTypeExists(contourLibType, indelPlan.contour_new_contourItem.ContourType)) {
+  if(!__checkContourTypeExists(contourLibType)) {
     Log.Error(`Please input valid contourLibType, contourLibType=${contourLibType}`)
     return
   }
@@ -71,7 +72,7 @@ const addContourLib = (indelPlan, pv, contourLibName, contourLibType, libType = 
 }
 
 const editContourLib = (indelPlan, contourLibName, editContourLibName, editContourLibType, libType = true, isEdit = false) => {
-  if(!__checkContourTypeExists(editContourLibType, indelPlan.contour_new_contourItem.ContourType)) {
+  if(!__checkContourTypeExists(editContourLibType)) {
     Log.Error(`Please input valid contourLibType, contourLibType,=${editContourLibType}`)
     return
   }

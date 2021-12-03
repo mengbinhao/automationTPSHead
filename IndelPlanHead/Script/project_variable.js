@@ -38,9 +38,9 @@ const init = () => {
   //check if is last running testItem
   projectVariable.maxRunningItem = __calculateTestCaseCount()
   projectVariable.currentRunningItem = 0
-  projectVariable.reRunCases = []
-  projectVariable.bugCases = []
-  projectVariable.rerun = Project.Variables.project_rerun
+  projectVariable.reRunItems = [];
+  projectVariable.bugItems = [];
+  projectVariable.isRerun = Project.Variables.isRerun
   projectVariable.procesName = Project.Variables.project_process_name
   
   return projectVariable

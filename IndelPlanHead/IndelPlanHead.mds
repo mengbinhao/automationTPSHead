@@ -237,15 +237,19 @@
 			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{3D3F15DE-07F4-493C-83B6-A42FC2B725EC}" group="False" enabled="True" testMoniker="{E42FD4CD-8072-4D5E-88B9-5EBCC3057632}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-						<testParameters />
-						<children />
-					</testItem>
 					<testItem name="ProjectTestItem4" key="{B4641E36-DB2C-4989-87A5-A2BC2E7D47A6}" group="False" enabled="True" testMoniker="{DE9E0E90-F501-402D-AFBF-958061D03605}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
+					<testItem name="ProjectTestItem2" key="{CDFD7510-EAED-470C-9BAC-E20465FB05A2}" group="False" enabled="False" testMoniker="{B93DC1F2-317E-44B1-B62D-7423131B5462}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
 				</children>
+			</testItem>
+			<testItem name="for_rerun_cases" key="{412D36A3-48D8-408A-AA77-DD3F854AB707}" group="False" enabled="True" testMoniker="{13BA3237-E492-44C0-95A1-55802530441A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children />
 			</testItem>
 		</children>
 	</testItems>
@@ -342,11 +346,11 @@
 				<Variable Name="ProjectVariable" Type="{F38B9AD1-7B22-410F-95FC-6D9420FDE947}" Local="False">
 					<DefValue />
 				</Variable>
-				<Variable Name="project_rerun" Type="{88422C25-DDF4-4EA1-B7CC-95779A023F5D}" Local="False">
-					<DefValue IntValue="1" />
-				</Variable>
 				<Variable Name="project_process_name" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="49006E00640065006C0050006C0061006E0056003200" />
+				</Variable>
+				<Variable Name="isRerun" Type="{D25FDC80-E78F-4209-88B6-6FE2B0771206}" Local="False">
+					<DefValue BoolValue="False" />
 				</Variable>
 			</Items>
 		</data>

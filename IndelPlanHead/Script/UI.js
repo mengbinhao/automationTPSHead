@@ -79,6 +79,7 @@ const init = () => {
   
   //Register Study Window
   indelPlan.register_importer = mappingName.register_importer
+  indelPlan.register_area = indelPlan.register_importer.stackedWidget.page_2.groupBox_0.tabWidget.qt_tabwidget_stackedwidget.tab
   //Auto Extract Progress
   indelPlan.register_auto_extract_progress = mappingName.register_auto_extract_progress
   //Export Study

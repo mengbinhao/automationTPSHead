@@ -234,6 +234,15 @@
 					</testItem>
 				</children>
 			</testItem>
+			<testItem name="imageregister" key="{1B43A6DE-2B93-421A-A7CF-4A4975013029}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="关闭图像注册界面" key="{5746FC2D-AD89-4887-813E-42A5458DAECC}" group="False" enabled="True" testMoniker="{0AA57586-E514-4CC3-879C-69C9FEBAC962}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
 			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
@@ -350,7 +359,7 @@
 					<DefValue StrValue="49006E00640065006C0050006C0061006E0056003200" />
 				</Variable>
 				<Variable Name="isRerun" Type="{D25FDC80-E78F-4209-88B6-6FE2B0771206}" Local="False">
-					<DefValue BoolValue="False" />
+					<DefValue BoolValue="True" />
 				</Variable>
 			</Items>
 		</data>

@@ -115,6 +115,16 @@ const gotoRegisterImporter = indelPlan => {
   }
 }
 
+const closeRegisterImporter = indelPlan => {
+  if (indelPlan.register_importer.VisibleOnScreen) {
+    indelPlan.register_importer.Close()
+    utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+  } else {
+    Log.Warning(`Can not closeRegisterImporter due to window is not right`) 
+  }
+}
+
+//click Close button
 const exitImportWindow = indelPlan => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_importer.pbClose.ClickButton()
@@ -259,6 +269,7 @@ const addOneStudyActivity = (indelPlan, patientID, type = "CT") => {
 }
 
 module.exports.gotoRegisterImporter = gotoRegisterImporter
+module.exports.closeRegisterImporter = closeRegisterImporter
 module.exports.exitImportWindow = exitImportWindow
 module.exports.loadStudy = loadStudy
 module.exports.setWWAndWL = setWWAndWL

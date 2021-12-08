@@ -53,13 +53,21 @@ const init = () => {
   //PatientDataClass
   indelPlan.PatientData = patientManagementWidget.PatientData
   indelPlan.detail_fuse_more_studys_popup = mappingName.detail_fuse_more_studys_popup
+  indelPlan.detail_push_controller_not_confirmed_popup = mappingName.detail_push_controller_not_confirmed_popup
+  indelPlan.detail_push_controller_popup = mappingName.detail_push_controller_popup
+  indelPlan.detail_push_controller_complete_popup = mappingName.detail_push_controller_complete_popup
   
   
   //Study Related
   indelPlan.detail_study_delete_popup = mappingName.detail_study_delete_popup
   indelPlan.detail_study_delete_inuse_popup = mappingName.detail_study_delete_inuse_popup
 
-    
+  
+  //Contour Related   
+  indelPlan.detail_contour_details = mappingName.detail_contour_details
+  indelPlan.detail_contour_delete_popup = mappingName.detail_contour_delete_popup
+   
+
   //TreatCourse Related
   indelPlan.detail_tc_new_treatcourse = mappingName.detail_tc_new_treatcourse
   indelPlan.detail_tc_addplan_no_contours_or_studys_popup = mappingName.detail_tc_addplan_no_contours_or_studys_popup
@@ -75,6 +83,8 @@ const init = () => {
   indelPlan.detail_tc_no_plan_selected_popup = mappingName.detail_tc_no_plan_selected_popup
   indelPlan.detail_tc_copy_plan_popup = mappingName.detail_tc_copy_plan_popup
   indelPlan.detail_tc_addplan_not_ct_popup = mappingName.detail_tc_addplan_not_ct_popup  
+  indelPlan.detail_tc_go_plandesign_popup = mappingName.detail_tc_go_plandesign_popup
+  indelPlan.detail_tc_plan_info = mappingName.detail_tc_plan_info 
   
   
   //Register Study Window
@@ -182,7 +192,8 @@ const init = () => {
   
   
   //System Settings
-  indelPlan.system_settings = mappingName.system_settings 
+  indelPlan.system_settings = mappingName.system_settings
+  indelPlan.system_settings_modify_popup = mappingName.system_settings_modify_popup
   
   return indelPlan
 }

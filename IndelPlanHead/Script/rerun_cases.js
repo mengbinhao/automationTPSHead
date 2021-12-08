@@ -1,8 +1,6 @@
 ﻿const globalConstant = require("global_constant")
 
 //only support re-run one time
-//only support re-run one time
-//only support re-run one time
 const reRun = () => {
   const pv = Project.Variables.ProjectVariable
   if (strictEqual(pv.isRerun, false)) {

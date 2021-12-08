@@ -248,6 +248,21 @@ const confirmPlan = (indelPlan, userName, password, isConfirm = true) => {
   }
 }
 
+const pushToController = indelPlan => {
+  if (indelPlan.PatientData.VisibleOnScreen) {
+    indelPlan.PatientData.pushButton_PushPlan.ClickButton()
+    if (indelPlan.detail_tc_no_plan_selected_popup.Exists) return
+    if (indelPlan.detail_push_controller_not_confirmed_popup.Exists) return
+    if (indelPlan.detail_push_controller_popup.Exists) {
+      indelPlan.detail_push_controller_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+      utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+      indelPlan.detail_push_controller_complete_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    }
+  } else {
+    Log.Warning(`Can not pushToController due to window is not right`) 
+  }
+}
+
 const closeConfirmWindow = indelPlan => {
   indelPlan.plan_confirm.Close()
 }
@@ -274,4 +289,5 @@ module.exports.setDose = setDose
 module.exports.setFraction = setFraction
 module.exports.confirmPlan = confirmPlan
 module.exports.closeConfirmWindow = closeConfirmWindow
+module.exports.pushToController = pushToController
 module.exports.planDefaultConfirmActivity = planDefaultConfirmActivity

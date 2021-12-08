@@ -898,6 +898,15 @@
 																							</Property>
 																						</Properties>
 																					</Child>
+																					<Child Name="pushButton_DeleteStudy" Key="{376312D1-B174-41AA-9527-AFDF150E83C8}" ParallelWalk="True">
+																						<Image FileName="54509990" Left="977" Top="475" Right="1077" Bottom="516" />
+																						<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="pushButton_DeleteStudy" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
 																				</Children>
 																			</Child>
 																			<Child Name="groupBox_3" Key="{21CAB9D0-62D6-463B-97D9-C71365BEB8FD}" ParallelWalk="True">
@@ -907,6 +916,35 @@
 																						<Value PropertyType="0" Value="groupBox_3" Type="5" />
 																					</Property>
 																				</Properties>
+																				<Children>
+																					<Child Name="pushButton_ContourInfo" Key="{260D8A1F-0E2A-4325-ACB7-8EEEC7960676}" ParallelWalk="True">
+																						<Image FileName="54509990" Left="1689" Top="475" Right="1789" Bottom="516" />
+																						<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="pushButton_ContourInfo" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="pushButton_DeleteContour" Key="{2F49CAB1-99F9-47EB-9AA2-F4EB330226C9}" ParallelWalk="True">
+																						<Image FileName="54509990" Left="1795" Top="475" Right="1895" Bottom="516" />
+																						<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="pushButton_DeleteContour" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="treeWidget_ContourList" Key="{FFBC1060-EA1E-4635-A0DD-A142C9B19A66}" ParallelWalk="True">
+																						<Image FileName="54509990" Left="1107" Top="277" Right="1895" Bottom="469" />
+																						<TypeInfo Item0="{1A92C808-A25A-4313-89F1-548C3AFA2520}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="treeWidget_ContourList" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																				</Children>
 																			</Child>
 																			<Child Name="groupBox_5" Key="{3E1D17C3-AE15-4B09-BA3D-B82F2D2AE1F5}" ParallelWalk="True">
 																				<Image FileName="54509990" Left="276" Top="534" Right="1907" Bottom="772" />
@@ -973,6 +1011,17 @@
 																						<Value PropertyType="0" Value="groupBox_8" Type="5" />
 																					</Property>
 																				</Properties>
+																				<Children>
+																					<Child Name="treeWidget_FractionList" Key="{D562692E-C6EE-4D4D-83A8-7943D30FEEFE}" ParallelWalk="True">
+																						<Image FileName="-1417656127" Left="288" Top="806" Right="1077" Bottom="958" />
+																						<TypeInfo Item0="{1A92C808-A25A-4313-89F1-548C3AFA2520}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="treeWidget_FractionList" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																				</Children>
 																			</Child>
 																			<Child Name="groupBox_9" Key="{70C12306-DE8F-4E9F-9A98-1ECA79F971FE}" ParallelWalk="True">
 																				<Image FileName="54509990" Left="1095" Top="778" Right="1907" Bottom="970" />
@@ -981,6 +1030,17 @@
 																						<Value PropertyType="0" Value="groupBox_9" Type="5" />
 																					</Property>
 																				</Properties>
+																				<Children>
+																					<Child Name="treeWidget_FocusList" Key="{066F7057-3146-439D-A89D-2A0DF8751EC9}" ParallelWalk="True">
+																						<Image FileName="54509990" Left="1107" Top="806" Right="1895" Bottom="958" />
+																						<TypeInfo Item0="{1A92C808-A25A-4313-89F1-548C3AFA2520}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="treeWidget_FocusList" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																				</Children>
 																			</Child>
 																			<Child Name="pushButton_PushPlan" Key="{150EAC41-17BB-4F10-B3F4-68F2B71C3451}" ParallelWalk="True">
 																				<Image FileName="54509990" Left="29" Top="869" Right="270" Bottom="970" />
@@ -2641,6 +2701,15 @@
 														</Children>
 													</Child>
 												</Children>
+											</Child>
+											<Child Name="qt_tabwidget_tabbar" Key="{D48B0DB1-0046-4CEA-A837-F6F229CBC359}" ParallelWalk="True">
+												<Image FileName="1150581790" Left="19" Top="41" Right="280" Bottom="68" />
+												<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="qt_tabwidget_tabbar" Type="5" />
+													</Property>
+												</Properties>
 											</Child>
 										</Children>
 									</Child>
@@ -5795,6 +5864,15 @@
 											</Child>
 										</Children>
 									</Child>
+									<Child Name="wdMainView" Key="{03B7418B-264F-48AA-BE7C-EA933BBCED49}" ParallelWalk="True">
+										<Image FileName="-315841176" Left="418" Top="80" Right="1258" Bottom="920" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="wdMainView" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
 								</Children>
 							</Child>
 							<Child Name="register_import_QFileDialog" Key="{5DD409BF-AA49-45AC-8AA4-0C548F910637}" ParallelWalk="True">
@@ -6943,6 +7021,338 @@
 									</Child>
 								</Children>
 							</Child>
+							<Child Name="detail_push_controller_not_confirmed_popup" Key="{1FBA82E5-F0FE-4787-81D0-75B7D158FBC0}" ParallelWalk="True">
+								<Image FileName="-1818896008" Left="0" Top="0" Right="308" Bottom="135" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="430061006E0020006E006F0074002000700075007300680020007400680069007300200070006C0061006E00200074006F00200063006F006E00740072006F006C006C00650072002E000A0050006C0065006100730065002000730065006C0065006300740020006100200063006F006E006600690072006D0065006400200070006C0061006E002E00" Type="7" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{5CB866DE-60D1-4034-A064-1E40CE78ECF5}" ParallelWalk="True">
+										<Image FileName="-1818896008" Left="14" Top="86" Right="294" Bottom="121" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{556AA1E4-8DB3-411C-B530-496AD0AFC827}" ParallelWalk="True">
+												<Image FileName="-1818896008" Left="228" Top="95" Right="294" Bottom="121" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="OK" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="detail_push_controller_popup" Key="{AE09B410-6DF6-4B84-839A-9EA7FDD14E5D}" ParallelWalk="True">
+								<Image FileName="1574141300" Left="0" Top="0" Right="359" Bottom="154" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="50006C0061006E0028002A0029002000770069006C006C0020006200650020007000750073006800200074006F00200063006F006E00740072006F006C006C00650072002E000A0041006C006C002000700061007400690065006E007400200064006100740061002000770069006C006C002000620065002000750070006400610074006500200074006F002000640061007400610062006100730065002E000A00410072006500200079006F00750020007300750072006500200074006F00200063006F006E00740069006E00750065003F00" Type="7" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{64FC6BB0-0977-422D-A960-BF48232E40DF}" ParallelWalk="True">
+										<Image FileName="1574141300" Left="14" Top="105" Right="345" Bottom="140" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonYes" Key="{1693E029-8DD6-428B-BA8A-C2F2A5449137}" ParallelWalk="True">
+												<Image FileName="1574141300" Left="207" Top="114" Right="273" Bottom="140" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="&amp;Yes" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="buttonNo" Key="{1499D281-9E40-4CDF-834A-3802A69D807B}" ParallelWalk="True">
+												<Image FileName="1574141300" Left="279" Top="114" Right="345" Bottom="140" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="&amp;No" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="2" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="detail_push_controller_complete_popup" Key="{8F8FA2D4-C2E3-401C-9367-AA2030438472}" ParallelWalk="True">
+								<Image FileName="-1666094085" Left="0" Top="0" Right="192" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Upload complete." Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{2F33E562-5D85-4A19-A6E5-C1DF3597E8EC}" ParallelWalk="True">
+										<Image FileName="-1666094085" Left="14" Top="74" Right="178" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{D67CFC25-FCB9-4106-B695-7EF7DAC6C0CA}" ParallelWalk="True">
+												<Image FileName="-1666094085" Left="112" Top="83" Right="178" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="OK" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="system_settings_modify_popup" Key="{4CB4E5FB-93BE-4087-AF58-CF63ACF30060}" ParallelWalk="True">
+								<Image FileName="1899077900" Left="0" Top="0" Right="424" Bottom="154" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="5400680065002000730079007300740065006D002000730065007400740069006E0067007300200068006100730020006200650065006E0020006D006F006400690066006900650064002E000A0050006C0065006100730065002000720065007300740061007200740020007400680065002000730079007300740065006D00200074006F0020006D0061006B00650020006E00650077002000730065007400740069006E0067007300200077006F0072006B002E000A00520065007300740061007200740020006E006F0077003F00" Type="7" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{2C1F567B-5AA6-4079-9E32-2A0E5F4E1ED7}" ParallelWalk="True">
+										<Image FileName="1899077900" Left="14" Top="105" Right="410" Bottom="140" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonYes" Key="{1375AD4D-97B5-4964-99DD-10227D394464}" ParallelWalk="True">
+												<Image FileName="1899077900" Left="272" Top="114" Right="338" Bottom="140" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="&amp;Yes" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="buttonNo" Key="{05C2F4C8-89AE-4771-8255-9705BC546DA8}" ParallelWalk="True">
+												<Image FileName="1899077900" Left="344" Top="114" Right="410" Bottom="140" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="&amp;No" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="2" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="detail_contour_delete_popup" Key="{24EAE1BC-5826-4BC7-81B5-CC26B748D370}" ParallelWalk="True">
+								<Image FileName="1077595601" Left="0" Top="0" Right="300" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Are you sure to delete contour: *" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{BED98D1B-9D5B-4151-AFF0-92406E4CD024}" ParallelWalk="True">
+										<Image FileName="1077595601" Left="14" Top="74" Right="286" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonYes" Key="{F4E4C641-9D9A-4034-B74F-DE54F8478FB9}" ParallelWalk="True">
+												<Image FileName="1077595601" Left="148" Top="83" Right="214" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="&amp;Yes" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="buttonNo" Key="{83609D3A-5501-4D5A-B2F6-DD4C9A485A56}" ParallelWalk="True">
+												<Image FileName="1077595601" Left="220" Top="83" Right="286" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="&amp;No" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="2" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="detail_contour_details" Key="{A2210471-9578-4A44-BE49-8FF3077CC76B}" ParallelWalk="True">
+								<Image FileName="455893469" Left="0" Top="0" Right="315" Bottom="316" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="objectName">
+										<Value PropertyType="0" Value="EditContourClass" Type="5" />
+									</Property>
+								</Properties>
+							</Child>
+							<Child Name="detail_tc_go_plandesign_popup" Key="{0E5F5141-C60E-4D3C-A687-406F2D97CA09}" ParallelWalk="True">
+								<Image FileName="-455967381" Left="0" Top="0" Right="326" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="The plan must include skin and target." Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{75921726-B2CF-4C49-927B-C18EDF06281E}" ParallelWalk="True">
+										<Image FileName="-455967381" Left="14" Top="74" Right="312" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{33222E45-CED8-48A7-812E-C3FD8A79F79C}" ParallelWalk="True">
+												<Image FileName="-455967381" Left="246" Top="83" Right="312" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="OK" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="detail_tc_plan_info" Key="{799DED94-A34C-4B73-B108-471D894B17BF}" ParallelWalk="True">
+								<Image FileName="-1439541107" Left="0" Top="0" Right="501" Bottom="514" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="objectName">
+										<Value PropertyType="0" Value="dlgConformClass" Type="5" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="sigList" Key="{04ADF224-71B4-49CC-AB11-FC2635DB0DD5}" ParallelWalk="True">
+										<Image FileName="-1439541107" Left="19" Top="41" Right="482" Bottom="495" />
+										<TypeInfo Item0="{1A92C808-A25A-4313-89F1-548C3AFA2520}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="sigList" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+								</Children>
+							</Child>
 						</Children>
 					</Child>
 				</Children>
@@ -7071,8 +7481,13 @@
 									<Child Name="groupBox" Owner="{69655095-6BD9-4609-A668-3E603048D9C2}">
 										<Child Name="pushButton_AddStudy" Owner="{2684AECD-04D2-4668-B8E9-24DA15F2AB25}" />
 										<Child Name="treeWidget_StudyList" Owner="{7046CCF1-1DBE-41B4-8D04-561C190A6714}" />
+										<Child Name="pushButton_DeleteStudy" Owner="{376312D1-B174-41AA-9527-AFDF150E83C8}" />
 									</Child>
-									<Child Name="groupBox_3" Owner="{21CAB9D0-62D6-463B-97D9-C71365BEB8FD}" />
+									<Child Name="groupBox_3" Owner="{21CAB9D0-62D6-463B-97D9-C71365BEB8FD}">
+										<Child Name="pushButton_ContourInfo" Owner="{260D8A1F-0E2A-4325-ACB7-8EEEC7960676}" />
+										<Child Name="pushButton_DeleteContour" Owner="{2F49CAB1-99F9-47EB-9AA2-F4EB330226C9}" />
+										<Child Name="treeWidget_ContourList" Owner="{FFBC1060-EA1E-4635-A0DD-A142C9B19A66}" />
+									</Child>
 									<Child Name="groupBox_5" Owner="{3E1D17C3-AE15-4B09-BA3D-B82F2D2AE1F5}">
 										<Child Name="pushButton_AddTreatCourse" Owner="{A49C6FFE-8D2A-4336-95CD-10339059496A}" />
 										<Child Name="pushButton_AddPlan" Owner="{B3FE71D9-B9CC-46D6-8F07-67EE0B0CDE7A}" />
@@ -7081,8 +7496,12 @@
 										<Child Name="pushButton_PlanInfo" Owner="{E3F8C892-8B10-47DE-804F-3DD94F6D1440}" />
 										<Child Name="treeWidget_PlanList" Owner="{9CDAA14A-089B-4B2D-8A47-AC2985387476}" />
 									</Child>
-									<Child Name="groupBox_8" Owner="{2C406CE5-7D9A-42A1-8E18-A9A36F66DC2A}" />
-									<Child Name="groupBox_9" Owner="{70C12306-DE8F-4E9F-9A98-1ECA79F971FE}" />
+									<Child Name="groupBox_8" Owner="{2C406CE5-7D9A-42A1-8E18-A9A36F66DC2A}">
+										<Child Name="treeWidget_FractionList" Owner="{D562692E-C6EE-4D4D-83A8-7943D30FEEFE}" />
+									</Child>
+									<Child Name="groupBox_9" Owner="{70C12306-DE8F-4E9F-9A98-1ECA79F971FE}">
+										<Child Name="treeWidget_FocusList" Owner="{066F7057-3146-439D-A89D-2A0DF8751EC9}" />
+									</Child>
 									<Child Name="pushButton_PushPlan" Owner="{150EAC41-17BB-4F10-B3F4-68F2B71C3451}" />
 								</Child>
 							</Child>
@@ -7577,6 +7996,7 @@
 					<Child Name="leMovWL" Owner="{DCE4F990-1F37-4AED-AFAA-A20FCA558514}" />
 					<Child Name="leMovWW" Owner="{3A8F3FDB-3132-4DB7-B5C9-614D6888B06C}" />
 				</Child>
+				<Child Name="wdMainView" Owner="{03B7418B-264F-48AA-BE7C-EA933BBCED49}" />
 			</Child>
 			<Child Name="detail_tc_addplan_not_ct_popup" Owner="{4737BD51-B7E7-4426-948B-238B020F00C8}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{CC723004-5C7B-4BD6-B0FB-0564305A300B}">
@@ -7738,6 +8158,7 @@
 							<Child Name="pushButton_Check" Owner="{E0F66CFB-7C94-4D2C-B7ED-5A5BDE8333FE}" />
 						</Child>
 					</Child>
+					<Child Name="qt_tabwidget_tabbar" Owner="{D48B0DB1-0046-4CEA-A837-F6F229CBC359}" />
 				</Child>
 			</Child>
 			<Child Name="register_exporter" Owner="{DB6BE8E8-3582-4753-8F8A-79E90BA4E04C}">
@@ -7800,6 +8221,43 @@
 				<Child Name="pushButton_SelectAll" Owner="{46961693-D786-4D53-A07E-087F9193AA1A}" />
 				<Child Name="pushButton_SelectNone" Owner="{9E1FC421-FC04-41E4-B3CE-F00769EDAB43}" />
 				<Child Name="treeWidget_PatientList" Owner="{0884563D-C55D-4EEF-A209-033ACD804AD8}" />
+			</Child>
+			<Child Name="detail_push_controller_not_confirmed_popup" Owner="{1FBA82E5-F0FE-4787-81D0-75B7D158FBC0}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{5CB866DE-60D1-4034-A064-1E40CE78ECF5}">
+					<Child Name="buttonOk" Owner="{556AA1E4-8DB3-411C-B530-496AD0AFC827}" />
+				</Child>
+			</Child>
+			<Child Name="detail_push_controller_popup" Owner="{AE09B410-6DF6-4B84-839A-9EA7FDD14E5D}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{64FC6BB0-0977-422D-A960-BF48232E40DF}">
+					<Child Name="buttonYes" Owner="{1693E029-8DD6-428B-BA8A-C2F2A5449137}" />
+					<Child Name="buttonNo" Owner="{1499D281-9E40-4CDF-834A-3802A69D807B}" />
+				</Child>
+			</Child>
+			<Child Name="detail_push_controller_complete_popup" Owner="{8F8FA2D4-C2E3-401C-9367-AA2030438472}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{2F33E562-5D85-4A19-A6E5-C1DF3597E8EC}">
+					<Child Name="buttonOk" Owner="{D67CFC25-FCB9-4106-B695-7EF7DAC6C0CA}" />
+				</Child>
+			</Child>
+			<Child Name="system_settings_modify_popup" Owner="{4CB4E5FB-93BE-4087-AF58-CF63ACF30060}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{2C1F567B-5AA6-4079-9E32-2A0E5F4E1ED7}">
+					<Child Name="buttonYes" Owner="{1375AD4D-97B5-4964-99DD-10227D394464}" />
+					<Child Name="buttonNo" Owner="{05C2F4C8-89AE-4771-8255-9705BC546DA8}" />
+				</Child>
+			</Child>
+			<Child Name="detail_contour_delete_popup" Owner="{24EAE1BC-5826-4BC7-81B5-CC26B748D370}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{BED98D1B-9D5B-4151-AFF0-92406E4CD024}">
+					<Child Name="buttonYes" Owner="{F4E4C641-9D9A-4034-B74F-DE54F8478FB9}" />
+					<Child Name="buttonNo" Owner="{83609D3A-5501-4D5A-B2F6-DD4C9A485A56}" />
+				</Child>
+			</Child>
+			<Child Name="detail_contour_details" Owner="{A2210471-9578-4A44-BE49-8FF3077CC76B}" />
+			<Child Name="detail_tc_go_plandesign_popup" Owner="{0E5F5141-C60E-4D3C-A687-406F2D97CA09}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{75921726-B2CF-4C49-927B-C18EDF06281E}">
+					<Child Name="buttonOk" Owner="{33222E45-CED8-48A7-812E-C3FD8A79F79C}" />
+				</Child>
+			</Child>
+			<Child Name="detail_tc_plan_info" Owner="{799DED94-A34C-4B73-B108-471D894B17BF}">
+				<Child Name="sigList" Owner="{04ADF224-71B4-49CC-AB11-FC2635DB0DD5}" />
 			</Child>
 		</Child>
 	</LogicalNodes>

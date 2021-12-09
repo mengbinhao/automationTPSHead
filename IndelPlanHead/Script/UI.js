@@ -155,6 +155,8 @@ const init = () => {
   indelPlan.plan_not_used_focus_reordered_popup = mappingName.plan_not_used_focus_reordered_popup
   //Plan Confirm Window
   indelPlan.plan_confirm = mappingName.plan_confirm
+  //plan EVA
+  indelPlan.plan_eva = mappingName.plan_eva
   //Plan Sign Window
   indelPlan.plan_confirm_sign = mappingName.plan_confirm_sign  
   indelPlan.plan_confirm_wrong_user_popup = mappingName.plan_confirm_wrong_user_popup

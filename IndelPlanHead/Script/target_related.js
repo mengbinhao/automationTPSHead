@@ -5,7 +5,7 @@ const coordinate = require("coordinate")
 
 const __generateTriangleParameters = triangleCoordinate => {
   const obj = {}
-  obj.p1= {x : triangleCoordinate[0][0], y : triangleCoordinate[0][1], delay : globalConstant.obj.delayMouseZeroSecond}
+  obj.p1= {x : triangleCoordinate[0][0], y : triangleCoordinate[0][1], delay : globalConstant.obj.delayMouseOneSecond}
   obj.p2= {x : triangleCoordinate[1][0], y : triangleCoordinate[1][1], delay : globalConstant.obj.delayMouseOneSecond}
   obj.p3= {x : triangleCoordinate[2][0], y : triangleCoordinate[2][1], delay : globalConstant.obj.delayMouseOneSecond}
   return obj
@@ -14,9 +14,9 @@ const __generateTriangleParameters = triangleCoordinate => {
 const __generateRectangleParameters = rectangleCoordinate => {
   const obj = {}
   obj.p1= {startX : rectangleCoordinate[0][0], startY : rectangleCoordinate[0][1], distanceX : globalConstant.obj.delayDistanceZero, distanceY :  globalConstant.obj.delayDistanceOneHundredAndTwenty, delay : globalConstant.obj.delayMouseZeroSecond}
-  obj.p2= {startX : rectangleCoordinate[1][0], startY : rectangleCoordinate[1][1], distanceX : globalConstant.obj.delayDistanceTwoHundredAndThirty, distanceY :  globalConstant.obj.delayDistanceZero, delay : globalConstant.obj.delayMouseOneSecond}
-  obj.p3= {startX : rectangleCoordinate[2][0], startY : rectangleCoordinate[2][1], distanceX : globalConstant.obj.delayDistanceZero, distanceY :  globalConstant.obj.delayDistanceNegativeOneHundred, delay : globalConstant.obj.delayMouseOneSecond}
-  obj.p4= {startX : rectangleCoordinate[3][0], startY : rectangleCoordinate[3][1], distanceX : globalConstant.obj.delayDistanceNegativeOneHundredAndEighty, distanceY :  globalConstant.obj.delayDistanceZero, delay : globalConstant.obj.delayMouseOneSecond}
+  obj.p2= {startX : rectangleCoordinate[1][0], startY : rectangleCoordinate[1][1], distanceX : globalConstant.obj.delayDistanceTwoHundred, distanceY :  globalConstant.obj.delayDistanceZero, delay : globalConstant.obj.delayMouseZeroSecond}
+  obj.p3= {startX : rectangleCoordinate[2][0], startY : rectangleCoordinate[2][1], distanceX : globalConstant.obj.delayDistanceZero, distanceY :  globalConstant.obj.delayDistanceNegativeOneHundred, delay : globalConstant.obj.delayMouseZeroSecond}
+  obj.p4= {startX : rectangleCoordinate[3][0], startY : rectangleCoordinate[3][1], distanceX : globalConstant.obj.delayDistanceNegativeOneHundredAndEighty, distanceY :  globalConstant.obj.delayDistanceZero, delay : globalConstant.obj.delayMouseZeroSecond}
   return obj
 }
 
@@ -41,21 +41,36 @@ const addOneNearMiddlePoint = indelPlan => {
 }
 
 const drawTriangleNearMiddle = indelPlan => {
-  const data = __generateTriangleParameters(coordinate.getTriangleCoordinate())
+  const data = coordinate.getTriangleCoordinate()
+  const canvas = indelPlan.ContourGUI.canvas.C2DViewer
+  canvas.DblClick(data[0][0], data[0][1])
+  canvas.DblClick(data[0][0], data[0][1])
+  utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+  canvas.DblClick(data[1][0], data[1][1])
+  utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+  canvas.DblClick(data[2][0], data[2][1])
+  utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+  canvas.DblClick(data[0][0], data[0][1])
+  canvas.DblClick(data[0][0], data[0][1])
+  utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+  canvas.ClickR()
+  /*
   LLPlayer.MouseDown(MK_LBUTTON, data.p1.x, data.p1.y, data.p1.delay)
   LLPlayer.MouseDown(MK_LBUTTON, data.p2.x, data.p2.y, data.p2.delay)
   LLPlayer.MouseDown(MK_LBUTTON, data.p3.x, data.p3.y, data.p3.delay)
   LLPlayer.MouseDown(MK_LBUTTON, data.p1.x, data.p1.y, data.p1.delay)
   LLPlayer.MouseUp(MK_LBUTTON, data.p1.x, data.p1.y, data.p1.delay)
+  */
 }
 
 const drawRectangleNearMiddle = indelPlan => {
   if (indelPlan.ContourGUI.VisibleOnScreen) {
     const data = __generateRectangleParameters(coordinate.getRectangleCoordinate())
-    indelPlan.ContourGUI.canvas.C2DViewer.Drag(data.p1.startX, data.p1.startY, data.p1.distanceX, data.p1.distanceY, data.p1.delay)
-    indelPlan.ContourGUI.canvas.C2DViewer.Drag(data.p2.startX, data.p2.startY, data.p2.distanceX, data.p2.distanceY, data.p1.delay)
-    indelPlan.ContourGUI.canvas.C2DViewer.Drag(data.p3.startX, data.p3.startY, data.p3.distanceX, data.p3.distanceY, data.p1.delay)
-    indelPlan.ContourGUI.canvas.C2DViewer.Drag(data.p4.startX, data.p4.startY, data.p4.distanceX, data.p4.distanceY, data.p1.delay)
+    const canvas = indelPlan.ContourGUI.canvas.C2DViewer
+    canvas.Drag(data.p1.startX, data.p1.startY, data.p1.distanceX, data.p1.distanceY, data.p1.delay)
+    canvas.Drag(data.p2.startX, data.p2.startY, data.p2.distanceX, data.p2.distanceY, data.p1.delay)
+    canvas.Drag(data.p3.startX, data.p3.startY, data.p3.distanceX, data.p3.distanceY, data.p1.delay)
+    canvas.Drag(data.p4.startX, data.p4.startY, data.p4.distanceX, data.p4.distanceY, data.p1.delay)
   } else {
     Log.Warning(`Can not drawRectangleNearMiddle due to window is not right`) 
   }

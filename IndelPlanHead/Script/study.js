@@ -208,6 +208,9 @@ const deleteAllStudy = (indelPlan, isDelete = false) => {
 const extractStudy = indelPlan => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_area.toolButton.ClickButton()
+    utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+    //hide zoom view
+    indelPlan.register_area.checkBox_3.setChecked(false)
     const position = coordinate.getNearMiddleCoordinate()
     LLPlayer.MouseDown(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
     LLPlayer.MouseUp(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)

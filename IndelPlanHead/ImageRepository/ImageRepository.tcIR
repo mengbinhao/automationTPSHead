@@ -7,6 +7,12 @@
 		<child key="{4DD65D13-227F-4302-BCB6-63CD5A08CDA4}" type="Image Set" typeId="{302E54A8-7D5B-4593-9563-357C2734256B}">
 			<data path="ContourSet.tcIRIS" />
 		</child>
+		<child key="{4712A777-4A51-4ED2-8657-DE264C517E4D}" type="Image Set" typeId="{302E54A8-7D5B-4593-9563-357C2734256B}">
+			<data path="StudySet.tcIRIS" />
+		</child>
+		<child key="{CEB80594-EF90-4283-83D8-2921C8588EDE}" type="Image Set" typeId="{302E54A8-7D5B-4593-9563-357C2734256B}">
+			<data path="PlanSet.tcIRIS" />
+		</child>
 	</children>
 	<folders />
 </Root>

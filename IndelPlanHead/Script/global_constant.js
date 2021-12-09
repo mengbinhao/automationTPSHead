@@ -12,13 +12,13 @@ obj.delayOneMinute = 60000
 obj.delayMouseZeroSecond = 0
 obj.delayMouseHalfSecond = 500
 obj.delayMouseOneSecond = 1000
-obj.delayMousePositiveDelta = -10
+obj.delayMouseDelta = 10
 
 
 //distcnce
 obj.delayDistanceZero = 0
 obj.delayDistanceOneHundredAndTwenty = 120
-obj.delayDistanceTwoHundredAndThirty = 230
+obj.delayDistanceTwoHundred = 200
 obj.delayDistanceNegativeOneHundred = -100
 obj.delayDistanceNegativeOneHundredAndEighty = -180
 

@@ -3,11 +3,14 @@
 	<config nodeName="ContourSet" />
 	<testData />
 	<data>
-		<item caption="wangbangai_without_target_contour" moniker="{54A5A121-7006-401A-9617-DCAB32D9E9D2}" isComposite="False" simpleMode="True" currentImageIndex="0">
-			<image imageFileName="Data\wangbangai_no_contour.png" initialHash="4E297F86" selectionLeft="712" selectionTop="255" selectionWidth="496" selectionHeight="596" initialLeft="712" initialTop="255" initialWidth="496" initialHeight="596" pixelTolerance="2956" colorTolerance="0" deviceName="" />
+		<item caption="YANGDAZHONG_CT95_before_contour" moniker="{0095D2F1-0655-4C70-A915-E84E9E0A1E91}" isComposite="False" simpleMode="True" currentImageIndex="0">
+			<image imageFileName="Data\YANGDAZHONG_CT95_before_contour.png" initialHash="24362B16" selectionLeft="0" selectionTop="0" selectionWidth="1036" selectionHeight="861" initialLeft="0" initialTop="0" initialWidth="1036" initialHeight="861" pixelTolerance="0" colorTolerance="0" deviceName="" />
 		</item>
-		<item caption="wangbangai_with_target_contour" moniker="{7702E2CA-4886-47D3-98FC-77C037AEE590}" isComposite="False" simpleMode="True" currentImageIndex="0">
-			<image imageFileName="Data\wangbangai_with_target_contour.png" initialHash="A49C58F6" selectionLeft="711" selectionTop="251" selectionWidth="502" selectionHeight="604" initialLeft="711" initialTop="251" initialWidth="502" initialHeight="604" pixelTolerance="3032" colorTolerance="0" deviceName="" />
+		<item caption="YANGDAZHONG_CT95_after_contour_skin" moniker="{2250B2BA-5BF4-413F-A1EF-E671FCB3DB1D}" isComposite="False" simpleMode="True" currentImageIndex="0">
+			<image imageFileName="Data\YANGDAZHONG_CT95_after_contour_skin.png" initialHash="9F92567D" selectionLeft="0" selectionTop="0" selectionWidth="1036" selectionHeight="861" initialLeft="0" initialTop="0" initialWidth="1036" initialHeight="861" pixelTolerance="0" colorTolerance="0" deviceName="" />
+		</item>
+		<item caption="YANGDAZHONG_CT95_after_contour_target" moniker="{78070944-E9DB-4805-B6CF-A49A687680AD}" isComposite="False" simpleMode="True" currentImageIndex="0">
+			<image imageFileName="Data\YANGDAZHONG_CT95_after_contour_target.png" initialHash="AE99D46F" selectionLeft="0" selectionTop="0" selectionWidth="1036" selectionHeight="861" initialLeft="0" initialTop="0" initialWidth="1036" initialHeight="861" pixelTolerance="0" colorTolerance="0" deviceName="" />
 		</item>
 	</data>
 </Root>

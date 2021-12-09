@@ -14,12 +14,12 @@ const getPlanCanvasNearMiddleCoordinate = () => {
 }
 
 const getTriangleCoordinate = () => {
-  const triangle = [[w / 2 - 10, h / 2 - 160], [w / 2 - 100, h / 2 + 60], [w / 2 + 100, h / 2 + 65]]
+  const triangle = [[500, 300], [400, 550], [630, 550]]
   return triangle
 }
 
 const getRectangleCoordinate = () => {
-  const rectangle = [[450, 300], [400, 400], [600, 400], [600, 300]]
+  const rectangle = [[450, 300], [450, 400], [600, 400], [600, 300]]
   return rectangle
 }
 

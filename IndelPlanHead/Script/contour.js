@@ -36,6 +36,14 @@ const __handleContourDirtyData = (pv, contourLibName) => {
     Log.Warning(`can not __handleContourDirtyData due to contourLibName=${contourLibName}`)
   }
 }
+
+const __increaseMouseAperture = (indelPlan) => {
+  const canvas = indelPlan.ContourGUI.canvas.C2DViewer
+  canvas.Click()
+  LLPlayer.KeyDown(VK_LCONTROL, globalConstant.obj.delayMouseHalfSecond)
+  canvas.MouseWheel(globalConstant.obj.delayMouseDelta)
+  LLPlayer.KeyUp(VK_LCONTROL, globalConstant.obj.delayMouseHalfSecond)
+}
  
 const generateRandomCTVName = indelPlan => {
   const ctvNmber = utilsfunctions.getRandomInt(10000, 1000)
@@ -180,7 +188,7 @@ const loadAndContourTargetAreaByLineActivity = (indelPlan, contourLibName) => {
   indelPlan.ContourGUI.groupBox_5.pbManualSketch.ClickButton()
   target_related.drawTriangleNearMiddle(indelPlan)
   indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
-  indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMousePositiveDelta)
+  indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
   const position = coordinate.getNearMiddleCoordinate()
   LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond * 3)
   LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)
@@ -199,13 +207,14 @@ const loadAndContourTargetAreaByLineActivity = (indelPlan, contourLibName) => {
 const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
   loadContourLib(indelPlan, contourLibName)
   indelPlan.ContourGUI.groupBox_5.BrushTool.ClickButton()
+  __increaseMouseAperture(indelPlan)
   let i = 0
   while (i < 10) {
     target_related.drawRectangleNearMiddle(indelPlan)
     i++
   }
-  utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
-  indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMousePositiveDelta)
+  utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+  indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
   const position = coordinate.getNearMiddleCoordinate()
   LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
   LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)

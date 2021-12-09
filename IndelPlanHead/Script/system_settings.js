@@ -1,6 +1,6 @@
 ﻿const tabs = []
   
-const __getSystemSettingsTab = (indelPlan) => {
+const __getSystemSettingsTabs = (indelPlan) => {
   const tabWidget = indelPlan.system_settings.tabWidget
   for (let i = 0; i < tabWidget.wTabCount; i++) {
     tabs[i] = tabWidget.wTabCaption(i)
@@ -25,14 +25,14 @@ const closeSystemSettings = (indelPlan) => {
 }
 
 const changeSystemSettingsTab = (indelPlan, tabName) => {
-  if (!__getSystemSettingsTab(indelPlan).includes(tabName)) {
+  if (!__getSystemSettingsTabs(indelPlan).includes(tabName)) {
     Log.Warning(`Can not changeSystemSettingsTab due to tabName = ${tabName}`) 
     return
   }
   if (indelPlan.system_settings.VisibleOnScreen) {
     indelPlan.system_settings.tabWidget.setCurrentIndex(tabs.findIndex(item => item === tabName))
   } else {
-    Log.Warning(`Can not openSystemSettings due to window is not right`) 
+    Log.Warning(`Can not changeSystemSettingsTab due to window is not right`) 
   }
 }
 

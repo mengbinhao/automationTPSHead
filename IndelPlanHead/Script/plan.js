@@ -4,6 +4,8 @@ const findinlist = require("find_in_list")
 const common = require("common")
 const targetRelated = require("target_related")
 
+const tabs = []
+
 //unified approach
 const __closePlanList = indelPlan => {
   if (indelPlan.plan_PlanList.Exists) {
@@ -37,6 +39,26 @@ const __getNextCopyPlanName = (parentTC, copiedPlanName) => {
     }
   }
   return `${copiedPlanName}_C${maxNumber + 1}`
+}
+
+const __getTargetRegionTabs = (indelPlan) => {
+  const tabWidget = indelPlan.PlanGUI.widget.m_targetTabWidget
+  for (let i = 0; i < tabWidget.wTabCount; i++) {
+    tabs[i] = tabWidget.wTabCaption(i)
+  }
+  return tabs
+}
+
+const changeTargetRegionTabs = (indelPlan, targetRegionName) => {
+  if (!__getTargetRegionTabs(indelPlan).includes(targetRegionName)) {
+    Log.Warning(`Can not changeTargetRegionTabs due to targetRegionName = ${targetRegionName}`) 
+    return
+  }
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    indelPlan.PlanGUI.widget.m_targetTabWidget.setCurrentIndex(tabs.findIndex(item => item === targetRegionName))
+  } else {
+    Log.Warning(`Can not changeTargetRegionTabs due to window is not right`) 
+  }
 }
 
 const addTreatCourse = (indelPlan, isAdd = false) => {
@@ -280,6 +302,7 @@ const planDefaultConfirmActivity = indelPlan => {
 
 module.exports.addTreatCourse = addTreatCourse
 module.exports.deleteTreatCourse = deleteTreatCourse
+module.exports.changeTargetRegionTabs = changeTargetRegionTabs
 module.exports.addPlan = addPlan
 module.exports.deletePlan = deletePlan
 module.exports.copyPlan = copyPlan

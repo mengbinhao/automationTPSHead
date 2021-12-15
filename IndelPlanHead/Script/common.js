@@ -1,16 +1,16 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
+const utilsFunctions = require("utils_functions")
 
 const __closeRegisterImporter = indelPlan => {
   indelPlan.register_importer.pbClose.ClickButton()
   indelPlan.register_close_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
 }
 
-const __handlePatientData = (indelPlan, isUpdatePatient = true) => {
+const __handlePatientData = (indelPlan, isUpdatePatient = false) => {
   indelPlan.PatientData.groupBox_6.pushButton_Close.ClickButton()
   if (isUpdatePatient) {
     indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-    utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
   } else {
     indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
   }
@@ -148,7 +148,7 @@ const changePatientDetailTab = (indelPlan, tabName, isPlanFinish = false) => {
   if (!indelPlan.plan_PlanList.Exists) {
     indelPlan.tabWidget.ClickTab(tabName)
     //just in case
-    utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   }
   
   //handle various popup

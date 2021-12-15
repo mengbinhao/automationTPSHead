@@ -3,7 +3,7 @@ const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const user = require("user")
-const findinlist = require("find_in_list")
+const findInList = require("find_in_list")
 
 function testcase() {
   const indelPlan = Project.Variables.IndelPlan
@@ -12,7 +12,7 @@ function testcase() {
   
   user.gotoUserListWindow(indelPlan)
   const userList = indelPlan.user_management.UserList
-  const rowIdx = findinlist.isItemInListReturnIndex(Project.Variables.username, globalConstant.obj.userNameColumn, userList)
+  const rowIdx = findInList.isItemInListReturnIndex(Project.Variables.username, globalConstant.obj.userNameColumn, userList)
   userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
   indelPlan.user_management.pushButton_EditUser.ClickButton()
   

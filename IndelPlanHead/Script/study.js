@@ -1,8 +1,9 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
-const findinlist = require("find_in_list")
-const filefunctions = require("file_functions")
+const utilsFunctions = require("utils_functions")
+const findInList = require("find_in_list")
+const fileFunctions = require("file_functions")
 const coordinate = require("coordinate")
+const patient = require("patient")
 
 const __getIsDataOK = (parent, type) => {
   const cnt = parent.Items.Count
@@ -42,10 +43,10 @@ const __isDcmFilesExist = typefName => {
 }
 
 const __getIsFilesOK = (patientID, type) => {
-  const patientFolderName = filefunctions.getFullFolderNameWithPartialName(globalConstant.obj.studyDICOMFolder, patientID)
+  const patientFolderName = fileFunctions.getFullFolderNameWithPartialName(globalConstant.obj.studyDICOMFolder, patientID)
   if (!patientFolderName) return false
   const typefName = `${globalConstant.obj.studyDICOMFolder}${patientFolderName}\\${type}`
-  const isSubExists = filefunctions.isExists(typefName)
+  const isSubExists = fileFunctions.isExists(typefName)
   if (!isSubExists) return false
   return __isDcmFilesExist(typefName)
 }
@@ -53,7 +54,7 @@ const __getIsFilesOK = (patientID, type) => {
 //return rowIdx
 const __getPatientIDRowIdx = (indelPlan, patientID, type) => {
   const list = indelPlan.register_importer.treeWidget
-  const rowIdx = findinlist.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDAndModalityColumn, list)
+  const rowIdx = findInList.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDAndModalityColumn, list)
   if (strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) return globalConstant.obj.notFoundIndex
   if (!__getIsDataOK(list.wItems.Item(rowIdx), type)) return globalConstant.obj.notFoundIndex
   if (!__getIsFilesOK(patientID, type)) return globalConstant.obj.notFoundIndex
@@ -70,23 +71,28 @@ const __getSubItemIdx = (parent, type) => {
   return globalConstant.obj.notFoundIndex
 }
 
-const __deletePatient = (indelPlan, patientID, isDelete) => {
+const __deletePatient = (indelPlan, pv, patientID, isDelete) => {
   const list = indelPlan.register_importer.treeWidget
-  const rowIdx = findinlist.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDAndModalityColumn, list)
+  const rowIdx = findInList.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDAndModalityColumn, list)
   if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex))  {
     list.wItems.Item(rowIdx).Click()
     indelPlan.register_importer.pbDelete.ClickButton()
     if (!indelPlan.register_delete_not_selected_popup.Exists) {
-      isDelete ? indelPlan.register_delete_patient_popup.qt_msgbox_buttonbox.buttonYes.ClickButton() : indelPlan.register_delete_patient_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+      if (isDelete) {
+        indelPlan.register_delete_patient_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+        pv.dirtyData.set(globalConstant.obj.restoreStudy, true)
+      } else {
+        indelPlan.register_delete_patient_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+      }
     }
   } else {
     Log.Warning(`Can not __deletePatient due to patientID = ${patientID}`) 
   }
 }
 
-const __deleteOneSeries = (indelPlan, patientID, type, isDelete) => {
+const __deleteOneSeries = (indelPlan, pv, patientID, type, isDelete) => {
   const list = indelPlan.register_importer.treeWidget
-  const rowIdx = findinlist.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDAndModalityColumn, list)
+  const rowIdx = findInList.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDAndModalityColumn, list)
   if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex))  {
     const parent = list.wItems.Item(rowIdx)
     parent.Expand()
@@ -95,7 +101,12 @@ const __deleteOneSeries = (indelPlan, patientID, type, isDelete) => {
       parent.Items.Item(subIdx).Click()
       indelPlan.register_importer.pbDelete.ClickButton()
       if (!indelPlan.register_delete_not_selected_popup.Exists) {
-        isDelete ? indelPlan.register_delete_series_popup.qt_msgbox_buttonbox.buttonYes.ClickButton() : indelPlan.register_delete_series_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+        if (isDelete) {
+          indelPlan.register_delete_series_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+          pv.dirtyData.set(globalConstant.obj.restoreStudy, true)
+        } else {
+          indelPlan.register_delete_series_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+        }
       }
     } else {
       Log.Warning(`Can not __deleteOneSeries due to patientID = ${patientID} and type = ${type}`) 
@@ -109,7 +120,7 @@ const __deleteOneSeries = (indelPlan, patientID, type, isDelete) => {
 const gotoRegisterImporter = indelPlan => {
   if (indelPlan.PatientData.VisibleOnScreen) {
     indelPlan.PatientData.groupBox.pushButton_AddStudy.ClickButton()
-    utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   } else {
     Log.Warning(`Can not gotoRegisterImporter due to window is not right`) 
   }
@@ -118,7 +129,7 @@ const gotoRegisterImporter = indelPlan => {
 const closeRegisterImporter = indelPlan => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_importer.Close()
-    utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   } else {
     Log.Warning(`Can not closeRegisterImporter due to window is not right`) 
   }
@@ -136,10 +147,11 @@ const exitImportWindow = indelPlan => {
   }
 }
 
+//form PatientData to ContourGUI
 const contourExistingStudy = (indelPlan, studyName) => {
   if (indelPlan.PatientData.VisibleOnScreen) {
     const list = indelPlan.PatientData.groupBox.treeWidget_StudyList
-    const rowIdx = findinlist.isItemExistInMoreListReturnIndex(studyName, globalConstant.obj.studyName, list)
+    const rowIdx = findInList.isItemExistInMoreListReturnIndex(studyName, globalConstant.obj.studyName, list)
     if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
       list.wItems.Item(rowIdx).Click()
       indelPlan.PatientData.groupBox_6.pushButton_Contour.ClickButton()
@@ -163,13 +175,16 @@ const loadStudy = (indelPlan, patientID, type = "CT") => {
     parent.Expand()
     const subIdx = __getSubItemIdx(parent, type)
     if (strictEqual(subIdx, globalConstant.obj.notFoundIndex)) {
-      Log.Warning(`Can not loadStudy due to wrong patient data`) 
+      Log.Warning(`Can not loadStudy due to wrong patient`) 
       return
     }
     indelPlan.register_importer.treeWidget.wItems.Item(rowIdx).Items.Item(subIdx).Click()
     indelPlan.register_importer.pbDeleteAll_3.ClickButton()
     if (indelPlan.register_overwrite_data_popup.Exists) {
       indelPlan.register_overwrite_data_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+    }
+    while (indelPlan.register_area.checkBox.Enabled) {
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
   } else {
     Log.Warning(`Can not loadStudy due to window is not right`) 
@@ -188,9 +203,9 @@ const setWWAndWL = (indelPlan, type = "CT",  W = "2785", L = "430") => {
   }
 }
 
-const deleteStudy = (indelPlan, patientID, type = "", isDelete = false) => {
+const deleteStudy = (indelPlan, pv, patientID, type = "", isDelete = false) => {
   if (indelPlan.register_importer.VisibleOnScreen) {
-    !type ? __deletePatient(indelPlan, patientID, isDelete) : __deleteOneSeries(indel, patientID, type, isDelete)
+    !type ? __deletePatient(indelPlan, pv, patientID, isDelete) : __deleteOneSeries(indelPlan, pv, patientID, type, isDelete)
   } else {
     Log.Warning(`Can not deleteStudy due to window is not right`) 
   }
@@ -199,22 +214,78 @@ const deleteStudy = (indelPlan, patientID, type = "", isDelete = false) => {
 const deleteAllStudy = (indelPlan, isDelete = false) => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_importer.pbDeleteAll.ClickButton()
-    isDelete ? indelPlan.register_delete_all_popup.qt_msgbox_buttonbox.buttonYes.ClickButton(): indelPlan.register_delete_all_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+    if (isDelete) {
+      indelPlan.register_delete_all_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+      pv.dirtyData.set(globalConstant.obj.restoreStudy, true)
+    } else {
+      indelPlan.register_delete_all_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+    }
   } else {
     Log.Warning(`Can not deleteStudy due to window is not right`) 
+  }
+}
+
+const exportStudy = (indelPlan, patientID, path, isCancel = false) => {
+  if (indelPlan.register_importer.VisibleOnScreen) {
+    //should exist in register_importer list first
+    let idx = findInList.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDAndModalityColumn, indelPlan.register_importer.treeWidget)
+    if (strictEqual(idx, globalConstant.obj.notFoundIndex)) {
+      Log.Warning(`Can not exportStudy due to no target patientID`)
+      return
+    } else {
+      indelPlan.register_importer.pbExport.ClickButton()
+      const dlg = indelPlan.register_exporter
+      //use coordinate to choice target node
+      idx = findInList.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDColumn, dlg.treeWidget_PatientList)
+      if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
+        dlg.pushButton_SelectNone.ClickButton()
+        const [desX, desY] = coordinate.getStudyExportNodeCorrdinate(idx)
+        LLPlayer.MouseMove(desX, desY, globalConstant.obj.delayMouseHalfSecond)
+        LLPlayer.MouseDown(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
+        LLPlayer.MouseUp(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
+        dlg.lineEdit_Path.Keys(path)
+        !isCancel ? dlg.pushButton_Ok.ClickButton() : dlg.pushButton_Cancel.ClickButton()
+        utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+        indelPlan.register_export_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+      } else {
+        Log.Error("can not find target export study!")
+        dlg.pushButton_Cancel.ClickButton()
+      }
+    }
+  } else {
+    Log.Warning(`Can not exportStudy due to window is not right`) 
+  }
+}
+
+const importStudy = (indelPlan, patientID, path, isCancel = false) => {
+  if (indelPlan.register_importer.VisibleOnScreen) {
+    indelPlan.register_importer.pbImport.ClickButton()
+    const dlg = indelPlan.register_import_QFileDialog
+    dlg.fileNameEdit.Keys(path)
+    if (!isCancel) {
+      dlg.buttonBox.buttonChoose.ClickButton()
+      while (indelPlan.main_save_progress.VisibleOnScreen) {
+        utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+      }
+      //if (!indelPlan.register_import_error_popup.Exists) pv.dirtyData.get(globalConstant.obj.addStudy).push(patientID)
+    } else {
+      dlg.buttonBox.buttonCancel.ClickButton()
+    }
+  } else {
+    Log.Warning(`Can not importStudy due to window is not right`) 
   }
 }
 
 const extractStudy = indelPlan => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_area.toolButton.ClickButton()
-    utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     //hide zoom view
     indelPlan.register_area.checkBox_3.setChecked(false)
     const position = coordinate.getNearMiddleCoordinate()
     LLPlayer.MouseDown(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
     LLPlayer.MouseUp(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
-    utilsfunctions.delay(globalConstant.obj.delayThirtySeconds)
+    utilsFunctions.delay(globalConstant.obj.delayThirtySeconds)
   } else {
     Log.Warning(`Can not deleteStudy due to window is not right`) 
   }
@@ -231,7 +302,7 @@ const registerStudy = indelPlan => {
     if (indelPlan.register_CDeviationTableDlg.Exists) {
       indelPlan.register_CDeviationTableDlg.Close()
       indelPlan.register_area.ConfirmRegisterBotton.ClickButton()
-      utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
   } else {
     Log.Warning(`Can not deleteStudy due to window is not right`) 
@@ -243,7 +314,7 @@ const saveStudy = (indelPlan, isSave = false) => {
     indelPlan.register_importer.pbSaveStudy.ClickButton()
     if (indelPlan.register_save_collision_detection_popup.Exists) {
       indelPlan.register_save_collision_detection_popup.qt_msgbox_buttonbox.buttonIgnore.ClickButton()
-      utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
     
     if (indelPlan.register_save_ct_voxels_popup.Exists) indelPlan.register_save_ct_voxels_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
@@ -271,15 +342,26 @@ const addOneStudyActivity = (indelPlan, patientID, type = "CT") => {
   exitImportWindow(indelPlan)
 }
 
+const restoreStudy = (indelPlan) => {
+  patient.loadPatient(indelPlan, Project.Variables.new_patientID)
+  gotoRegisterImporter(indelPlan)
+  importStudy(indelPlan, "", globalConstant.obj.studyDICOMFolder, false)
+  exitImportWindow(indelPlan)
+  patient.fromPatientDetailToMain(indelPlan)
+}
+
 module.exports.gotoRegisterImporter = gotoRegisterImporter
 module.exports.closeRegisterImporter = closeRegisterImporter
 module.exports.exitImportWindow = exitImportWindow
 module.exports.loadStudy = loadStudy
 module.exports.setWWAndWL = setWWAndWL
-module.exports.deleteAllStudy = deleteAllStudy
 module.exports.deleteStudy = deleteStudy
+module.exports.deleteAllStudy = deleteAllStudy
+module.exports.exportStudy = exportStudy
+module.exports.importStudy = importStudy
 module.exports.extractStudy = extractStudy
 module.exports.registerStudy = registerStudy
 module.exports.saveStudy = saveStudy
 module.exports.contourExistingStudy = contourExistingStudy
 module.exports.addOneStudyActivity = addOneStudyActivity
+module.exports.restoreStudy = restoreStudy

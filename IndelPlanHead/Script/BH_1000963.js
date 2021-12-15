@@ -3,7 +3,7 @@ const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const user = require("user")
-const findinlist = require("find_in_list")
+const findInList = require("find_in_list")
 
 function testcase() {
   const indelPlan = Project.Variables.IndelPlan
@@ -15,7 +15,7 @@ function testcase() {
   user.openNewUserWindow(indelPlan)
   user.addUser(indelPlan, pv, Project.Variables.new_username, Project.Variables.new_user_password, Project.Variables.new_user_confirmpassword, Project.Variables.new_usertype)
 
-  const isUserExisting = findinlist.isItemExitInList(Project.Variables.new_username, globalConstant.obj.userNameColumn, indelPlan.user_management.UserList)
+  const isUserExisting = findInList.isItemExitInList(Project.Variables.new_username, globalConstant.obj.userNameColumn, indelPlan.user_management.UserList)
   if (isUserExisting) {
     Log.Checkpoint("Add user successfully!")
   } else {

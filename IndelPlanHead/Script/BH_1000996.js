@@ -3,7 +3,7 @@ const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
-const findinlist = require("find_in_list")
+const findInList = require("find_in_list")
 
 const __compareDateAndTime = (loginTime, loginTimeOneMinuteAfter, createTime) => {
   if (strictEqual(createTime, loginTime) || strictEqual(createTime, loginTimeOneMinuteAfter)) return true
@@ -24,9 +24,9 @@ function testcase() {
   patient.addPatientActivity(indelPlan, pv, Project.Variables.new_patientID, Project.Variables.new_patient_name, Project.Variables.new_patient_gender, Project.Variables.new_patient_height, Project.Variables.new_patient_weight, Project.Variables.new_patient_age, Project.Variables.new_patient_address, Project.Variables.new_patient_phone, Project.Variables.new_patient_note)
   
   const list = indelPlan.patientManagement.treeWidget_PatientList
-  const idx = findinlist.isItemExistInMoreListReturnIndex(Project.Variables.new_patientID, globalConstant.obj.patientIDColumn, list)
+  const idx = findInList.isItemExistInMoreListReturnIndex(Project.Variables.new_patientID, globalConstant.obj.patientIDColumn, list)
   if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
-    const vals = findinlist.getOneRowValueForMoreListFromRowIndex(idx, list)
+    const vals = findInList.getOneRowValueForMoreListFromRowIndex(idx, list)
     aqConvert.DateTimeToFormatStr(aqDateTime.Now(), "%H:%M")
     const createTime = aqString.SubString(vals.pop(), 11, 5)
     if (!strictEqual(ret, vals.join('')) || !__compareDateAndTime(loginTime, loginTimeOneMinuteAfter, createTime)) {

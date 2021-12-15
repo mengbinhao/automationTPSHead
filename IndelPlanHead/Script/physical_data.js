@@ -1,6 +1,6 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
-const findinlist = require("find_in_list")
+const utilsFunctions = require("utils_functions")
+const findInList = require("find_in_list")
 const patient = require("patient")
 const fileFunctions = require("file_functions")
 
@@ -94,7 +94,7 @@ const editMachine = (indelPlan, machineName, tab = 0, propName, propValue, editP
     machine_new_machine_detail = indelPlan.machine_new_machine_detail,
     tabWidget = machine_new_machine_detail.tabWidget
         
-  const idx =  findinlist.isItemInListReturnIndex(machineName, globalConstant.obj.machineConfigNameColumn, configList)
+  const idx =  findInList.isItemInListReturnIndex(machineName, globalConstant.obj.machineConfigNameColumn, configList)
 
   if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
     configList.ClickCell(idx, globalConstant.obj.machineConfigNameColumn)
@@ -108,7 +108,7 @@ const editMachine = (indelPlan, machineName, tab = 0, propName, propValue, editP
 
     if (__isTabRangeExists(tab, tabWidget.wTabCount)) {
       tabWidget.setCurrentIndex(tab)
-      if (utilsfunctions.findChild(__getMacineTabObj(tabWidget, tab), propName, propValue)) {
+      if (utilsFunctions.findChild(__getMacineTabObj(tabWidget, tab), propName, propValue)) {
         //todo,according to object type to update its value
         //todo,according to object type to update its value
         tabWidget.qt_tabwidget_stackedwidget.tab.lineEdit_MachineName.SetText(editPropVal)
@@ -139,7 +139,7 @@ const deleteMachine = (indelPlan, pv, machineName, isCancel = false) => {
     //machine_new_machine_detail = indelPlan.machine_new_machine_detail,
     //tabWidget = machine_new_machine_detail.tabWidget
 
-  const rowIdx =  findinlist.isItemInListReturnIndex(machineName, globalConstant.obj.machineConfigNameColumn, configList)
+  const rowIdx =  findInList.isItemInListReturnIndex(machineName, globalConstant.obj.machineConfigNameColumn, configList)
 
   if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
     configList.ClickCell(rowIdx, globalConstant.obj.machineConfigNameColumn)
@@ -177,7 +177,7 @@ const importMachine = (indelPlan, exportFolder, exportName) => {
   indelPlan.machine_new_machine_detail.pushButton.ClickButton()
   
   //if data is big, need to wait a bit longer
-  utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     
   //todo. handle if input wrong path
   //todo. handle if input wrong path
@@ -191,7 +191,7 @@ const importMachine = (indelPlan, exportFolder, exportName) => {
 const exportMachine = (indelPlan, machineName, exportFolder, exportName) => {
   const configList = indelPlan.machine_management.ConfigList
         
-  const idx =  findinlist.isItemInListReturnIndex(machineName, globalConstant.obj.machineConfigNameColumn, configList)
+  const idx =  findInList.isItemInListReturnIndex(machineName, globalConstant.obj.machineConfigNameColumn, configList)
 
   if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
     configList.ClickCell(idx, globalConstant.obj.machineConfigNameColumn)
@@ -211,7 +211,7 @@ const setCurrentMachine = (indelPlan, machineName) => {
   const machine_management = indelPlan.machine_management,
       configList = machine_management.ConfigList,
       machineConfigNameColumn = globalConstant.obj.machineConfigNameColumn
-  const idx =  findinlist.isItemInListReturnIndex(machineName, machineConfigNameColumn, configList)
+  const idx =  findInList.isItemInListReturnIndex(machineName, machineConfigNameColumn, configList)
 
   if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
     configList.ClickCell(idx, machineConfigNameColumn)
@@ -225,8 +225,8 @@ const setCurrentMachine = (indelPlan, machineName) => {
 }
 
 /*
-const getCurrentMachineNameFromPatientDetail = (indelPlan, patientId) => {
-  patient.loadPatient(indelPlan, patientId)
+const getCurrentMachineNameFromPatientDetail = (indelPlan, patientID) => {
+  patient.loadPatient(indelPlan, patientID)
   if (indelPlan.PatientData.Exists) {
     const ret = indelPlan.PatientData.groupBox_10.label_PhydataName.QtText
     return utilsfunction.strReplace(ret, 'Name: ', globalConstant.obj.emptyString)
@@ -260,12 +260,12 @@ const deleteMachineForDirtyData = (indelPlan, deleteMachines) => {
   const configList = indelPlan.machine_management.ConfigList
   let dm = deleteMachines.pop()
   while (dm) {
-    const rowIdx =  findinlist.isItemInListReturnIndex(dm, globalConstant.obj.machineConfigNameColumn, configList)
+    const rowIdx =  findInList.isItemInListReturnIndex(dm, globalConstant.obj.machineConfigNameColumn, configList)
     if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
       configList.ClickCell(rowIdx, globalConstant.obj.machineConfigNameColumn)
       indelPlan.machine_management.delete_btn.ClickButton()
       indelPlan.machine_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-      utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     } else {
       Log.Warning(`Can not find machine with machineName=${dm} when deleteMachineForDirtyData`)
     }

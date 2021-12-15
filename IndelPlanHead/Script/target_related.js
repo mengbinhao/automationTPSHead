@@ -1,5 +1,5 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
+const utilsFunctions = require("utils_functions")
 const coordinate = require("coordinate")
 
 
@@ -34,7 +34,7 @@ const addOneNearMiddlePoint = indelPlan => {
     do {
        __addPoint(position)
     } while (!gamaGngle.Enabled)
-    utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
   } else {
     Log.Warning(`Can not addOneNearMiddlePointer due to window is not right`) 
   }
@@ -45,14 +45,14 @@ const drawTriangleNearMiddle = indelPlan => {
   const canvas = indelPlan.ContourGUI.canvas.C2DViewer
   canvas.DblClick(data[0][0], data[0][1])
   canvas.DblClick(data[0][0], data[0][1])
-  utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
   canvas.DblClick(data[1][0], data[1][1])
-  utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
   canvas.DblClick(data[2][0], data[2][1])
-  utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
   canvas.DblClick(data[0][0], data[0][1])
   canvas.DblClick(data[0][0], data[0][1])
-  utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
   canvas.ClickR()
   /*
   LLPlayer.MouseDown(MK_LBUTTON, data.p1.x, data.p1.y, data.p1.delay)
@@ -83,7 +83,7 @@ const addOnePlanNearMiddlePoint = indelPlan => {
     do {
        indelPlan.PlanGUI.canvas.PlanC2DViewer.DblClick(position[0], position[1])
     } while (!gamaGngle.Enabled)
-    utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
   } else {
     Log.Warning(`Can not addOneNearMiddlePointer due to window is not right`) 
   }

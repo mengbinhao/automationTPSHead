@@ -2,7 +2,7 @@
 const launchwithlogic = require("launch_with_logic")
 const login = require("login")
 const patient = require("patient")
-const utilsfunctions = require("utils_functions")
+const utilsFunctions = require("utils_functions")
 const exitwithlogic = require("exit_with_logic")
 
 function TPS_BeiHang_toudao_035() {
@@ -15,7 +15,7 @@ function TPS_BeiHang_toudao_035() {
   indelPlan.system_settings.tabWidget.setCurrentIndex(1)
   indelPlan.system_settings.tabWidget.qt_tabwidget_stackedwidget.tab_2.pushButton_Check.Click()
   
-  utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
   const list = indelPlan.system_settings.tabWidget.qt_tabwidget_stackedwidget.tab_2.groupBox_6.treeWidget_Result
   
   let checkObj = {}

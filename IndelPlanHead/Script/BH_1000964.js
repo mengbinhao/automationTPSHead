@@ -4,7 +4,6 @@ const login = require("login")
 const logout = require("logout")
 const exitwithlogic = require("exit_with_logic")
 const user = require("user")
-const findinlist = require("find_in_list")
 const utilsFunctions = require("utils_functions")
 
 function testcase() {
@@ -21,7 +20,7 @@ function testcase() {
   //login with new user
   login.login(indelPlan, Project.Variables.new_username, Project.Variables.new_user_password)
   //visitor authority
-  user.updateUserPassword(indelPlan, Project.Variables.new_user_password, Project.Variables.edit_user_password, Project.Variables.edit_user_password)
+  user.updateUserPassword(indelPlan, Project.Variables.new_user_password, Project.Variables.edit_user_password, Project.Variables.edit_user_password, true)
   exitwithlogic.exitWithLogic(false, false, 2)
   
   //relogin after changing password

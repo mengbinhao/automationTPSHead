@@ -3,7 +3,7 @@ const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const user = require("user")
-const findinlist = require("find_in_list")
+const findInList = require("find_in_list")
 const common = require("common")
 
 function testcase() {
@@ -18,7 +18,7 @@ function testcase() {
   user.addUser(indelPlan, pv, Project.Variables.new_username, Project.Variables.new_user_password, Project.Variables.new_user_confirmpassword, Project.Variables.new_usertype)
 
   const userList = indelPlan.user_management.UserList
-  const rowIdx = findinlist.isItemInListReturnIndex(Project.Variables.new_username, globalConstant.obj.userNameColumn, userList)
+  const rowIdx = findInList.isItemInListReturnIndex(Project.Variables.new_username, globalConstant.obj.userNameColumn, userList)
   userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
   indelPlan.user_management.pushButton_EditUser.ClickButton()
   

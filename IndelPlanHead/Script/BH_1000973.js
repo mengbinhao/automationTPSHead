@@ -3,7 +3,7 @@ const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const user = require("user")
-const findinlist = require("find_in_list")
+const findInList = require("find_in_list")
 
 function testcase() {
   const indelPlan = Project.Variables.IndelPlan
@@ -16,8 +16,8 @@ function testcase() {
   user.addUser(indelPlan, pv, Project.Variables.new_username, Project.Variables.new_user_password, Project.Variables.new_user_confirmpassword, Project.Variables.new_usertype)
   user.editUser(indelPlan, Project.Variables.new_username, "", "", Project.Variables.edit_usertype, false)
   const userList = indelPlan.user_management.UserList
-  const idx = findinlist.isItemInListReturnIndex(Project.Variables.new_username, globalConstant.obj.userNameColumn, userList)
-  const userType = findinlist.getFieldValueFromRow(idx, globalConstant.obj.userTypeColumn, userList)
+  const idx = findInList.isItemInListReturnIndex(Project.Variables.new_username, globalConstant.obj.userNameColumn, userList)
+  const userType = findInList.getFieldValueFromRow(idx, globalConstant.obj.userTypeColumn, userList)
   if (strictEqual(userType, Project.Variables.edit_usertype)) {
     Log.Checkpoint("Update userType Successfully!")
   } else {

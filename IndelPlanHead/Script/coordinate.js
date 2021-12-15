@@ -34,6 +34,10 @@ const getPatientImportNodeCorrdinate = (idx) => {
   return [coordX, coordY + step * idx]
 }
 
+const getStudyExportNodeCorrdinate = (idx) => {
+  const coordX = 620, coordY = 304, step = 20
+  return [coordX, coordY + step * idx]
+}
 
 
 module.exports.getPlanCanvasNearMiddleCoordinate = getPlanCanvasNearMiddleCoordinate
@@ -42,3 +46,4 @@ module.exports.getTriangleCoordinate = getTriangleCoordinate
 module.exports.getRectangleCoordinate = getRectangleCoordinate
 module.exports.getPatientExportNodeCorrdinate = getPatientExportNodeCorrdinate
 module.exports.getPatientImportNodeCorrdinate = getPatientImportNodeCorrdinate
+module.exports.getStudyExportNodeCorrdinate = getStudyExportNodeCorrdinate

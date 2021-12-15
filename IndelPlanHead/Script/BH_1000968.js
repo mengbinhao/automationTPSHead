@@ -3,7 +3,7 @@ const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const user = require("user")
-const findinlist = require("find_in_list")
+const findInList = require("find_in_list")
 
 function testcase() {
   const indelPlan = Project.Variables.IndelPlan
@@ -11,7 +11,7 @@ function testcase() {
   login.login(indelPlan, Project.Variables.username, Project.Variables.password)
   
   user.gotoUserListWindow(indelPlan)
-  const headers = findinlist.getHeaderFromList(indelPlan.user_management.UserList)
+  const headers = findInList.getHeaderFromList(indelPlan.user_management.UserList)
   const match = "User Name,User Type,Login Information,Login Time"
   if (strictEqual(headers, match)) {
     Log.Checkpoint("User List header includs ${match}")
@@ -21,7 +21,7 @@ function testcase() {
   
   /*
   let checkObj = {}
-  const prop = findinlist.getHeaderFromList(indelPlan.user_management.UserList)
+  const prop = findInList.getHeaderFromList(indelPlan.user_management.UserList)
   checkObj.header = prop
   aqObject.CheckProperty(checkObj, "header", cmpEqual, "User Name,User Type,Login Information,Login Time")
   checkObj = null

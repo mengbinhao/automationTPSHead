@@ -1,5 +1,5 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
+const utilsFunctions = require("utils_functions")
 const clearDirtyData = require("clear_dirty_data")
 const reRunCases = require("rerun_cases")
 const exportTestResult = require("export_test_result")
@@ -22,7 +22,7 @@ function GeneralEvents_OnStopTest(Sender) {
     //export result
     //exportTestResult.exportTestResult()
     //wait file generated completely
-    //utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
+    //utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
 
     //post defect
     //postJIRA.postToJIRA(null)

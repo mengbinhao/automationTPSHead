@@ -1,5 +1,5 @@
 ﻿const globalConstant = require("global_constant")
-const findinlist = require("find_in_list")
+const findInList = require("find_in_list")
 
 const USER_TYPE = ['Visitor', 'PlanningPhysicist', 'RadiationPhysicist', 'RadiationTherapist', 'ChiefDoctor', 'Technician'];
 
@@ -76,7 +76,7 @@ const addUser = (indelPlan, pv, newUserName = "", newUserPassword = "", newUserC
 
 const editUser = (indelPlan, userName, editUserPassword = "", editUserConfirmPassword = "", editUserType = "", isCancel = false) => {
   const userList = indelPlan.user_management.UserList
-  const rowIdx = findinlist.isItemInListReturnIndex(userName, globalConstant.obj.userNameColumn, userList)
+  const rowIdx = findInList.isItemInListReturnIndex(userName, globalConstant.obj.userNameColumn, userList)
   if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
     userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
     indelPlan.user_management.pushButton_EditUser.ClickButton()
@@ -95,7 +95,7 @@ const editUser = (indelPlan, userName, editUserPassword = "", editUserConfirmPas
   }
 }
 
-const updateUserPassword = (indelPlan, oldPassword = '', newPassword = '', confirmNewPassword = '', isUpdate = true) => {
+const updateUserPassword = (indelPlan, oldPassword = '', newPassword = '', confirmNewPassword = '', isUpdate = false) => {
   gotoUserListWindow(indelPlan)
   oldPassword && indelPlan.user_information.lineEdit_OldPassword.Keys(oldPassword)
   newPassword && indelPlan.user_information.lineEdit_NewPassword.Keys(newPassword)
@@ -110,7 +110,7 @@ const updateUserPassword = (indelPlan, oldPassword = '', newPassword = '', confi
 
 const deleteUser = (indelPlan, pv, userName, isCancel = false) => {
   const userList = indelPlan.user_management.UserList
-  const rowIdx = findinlist.isItemInListReturnIndex(userName, globalConstant.obj.userNameColumn, userList)
+  const rowIdx = findInList.isItemInListReturnIndex(userName, globalConstant.obj.userNameColumn, userList)
   if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
     userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
     indelPlan.user_management.pushButton_DelUser.ClickButton()
@@ -130,7 +130,7 @@ const deleteUserForDirtyData = (indelPlan, deleteUsers) => {
   const userList = indelPlan.user_management.UserList
   let du = deleteUsers.pop()
   while (du) {
-    const rowIdx = findinlist.isItemInListReturnIndex(du, globalConstant.obj.userNameColumn, userList)
+    const rowIdx = findInList.isItemInListReturnIndex(du, globalConstant.obj.userNameColumn, userList)
     if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
       userList.ClickCell(rowIdx, globalConstant.obj.userNameColumn)
       indelPlan.user_management.pushButton_DelUser.ClickButton()

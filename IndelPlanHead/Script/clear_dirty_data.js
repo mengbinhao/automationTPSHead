@@ -4,6 +4,7 @@ const login = require("login")
 const patient = require("patient")
 const user = require("user")
 const contour = require("contour")
+const study = require("study")
 const physicaldata = require("physical_data")
 const exitwithlogic = require("exit_with_logic")
 
@@ -16,12 +17,17 @@ const clearDirtyData = () => {
   const contourArr = pv.dirtyData.get(globalConstant.obj.addContourLib)
   const patientArr = pv.dirtyData.get(globalConstant.obj.addPatient)
   const userArr = pv.dirtyData.get(globalConstant.obj.addUser)
+  const restoreStudy = pv.dirtyData.get(globalConstant.obj.restoreStudy)
   const machineArr = pv.dirtyData.get(globalConstant.obj.addMachine)
   
   //delete must be suquence
   if (contourArr.length > 0) {
     Log.Message("Clear Contour test data")
     contour.deleteContourForDirtyData(indelPlan, contourArr)
+  }
+  if (restoreStudy) {
+    study.restoreStudy(indelPlan)
+    pv.dirtyData.set(globalConstant.obj.restoreStudy, false)
   }
   if (patientArr.length > 0) {
     Log.Message("Clear Patient test data")

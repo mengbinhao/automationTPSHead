@@ -6,6 +6,7 @@ const __initMap = (map) => {
   map.set(globalConstant.obj.addPatient, [])
   map.set(globalConstant.obj.addUser, [])
   map.set(globalConstant.obj.addMachine, []) 
+  map.set(globalConstant.obj.restoreStudy, false) 
   return map
 }
 

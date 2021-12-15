@@ -1,14 +1,14 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
-const findinlist = require("find_in_list")
+const utilsFunctions = require("utils_functions")
+const findInList = require("find_in_list")
 const coordinate = require("coordinate")
 
-const __handlePatientDirtyData = (pv, patientId) => {
+const __handlePatientDirtyData = (pv, patientID) => {
   const dirtydPatients = pv.dirtyData.get(globalConstant.obj.addPatient)
-  if (dirtydPatients.includes(patientId)) {
-    pv.dirtyData.set(globalConstant.obj.addPatient, dirtydPatients.filter(val => val !== patientId))
+  if (dirtydPatients.includes(patientID)) {
+    pv.dirtyData.set(globalConstant.obj.addPatient, dirtydPatients.filter(val => val !== patientID))
   } else {
-    Log.Warning(`can not __handlePatientDirtyData due to patientId=${patientId}`)
+    Log.Warning(`can not __handlePatientDirtyData due to patientID=${patientID}`)
   }
 }
 
@@ -79,18 +79,18 @@ const exitPatientWindow = indelPlan => {
 const fromPatientDetailToMain = indelPlan => {
   indelPlan.PatientData.groupBox_6.pushButton_Close.Click()
   indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-  utilsfunctions.delay(globalConstant.obj.delayTenSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
 }
 
-const loadPatient = (indelPlan, patientId) => {
+const loadPatient = (indelPlan, patientID) => {
   const patientList = indelPlan.patientManagement.treeWidget_PatientList
-  const isExist = findinlist.isItemExistInMoreList(patientId, globalConstant.obj.patientIDColumn, patientList)
+  const isExist = findInList.isItemExistInMoreList(patientID, globalConstant.obj.patientIDColumn, patientList)
  
   if (isExist) {
-    patientList.ClickItem(patientId)
+    patientList.ClickItem(patientID)
     indelPlan.patientManagement.pushButton_LoadPatient.ClickButton()
   } else {
-    Log.Warning(`Can not find patient with patientId=${patientId} when loading patient`)
+    Log.Warning(`Can not find patient with patientID=${patientID} when loading patient`)
   }
 }
 
@@ -113,50 +113,45 @@ const addPatient = (indelPlan, pv, isCancel = false, args) => {
   }
 }
 
-const editPatient = (indelPlan, isCancel = false, patientId, ...args) => {
+const editPatient = (indelPlan, isCancel = false, patientID, ...args) => {
   const patientList = indelPlan.patientManagement.treeWidget_PatientList
-  const isExist = findinlist.isItemExistInMoreList(patientId, globalConstant.obj.patientIDColumn, patientList)
+  const isExist = findInList.isItemExistInMoreList(patientID, globalConstant.obj.patientIDColumn, patientList)
     
   if (isExist) {
-    patientList.ClickItem(patientId)
+    patientList.ClickItem(patientID)
     indelPlan.patientManagement.pushButton_EditPatient.ClickButton()
     __inputEditPatientFields(indelPlan.patient_new_patient, args)
     !isCancel ? indelPlan.patient_new_patient.pushButton_2.ClickButton() : indelPlan.patient_new_patient.pushButton_4.ClickButton()
   } else {
-    Log.Warning(`Can not find patient with patientId=${patientId} when editing patient`)
+    Log.Warning(`Can not find patient with patientID=${patientID} when editing patient`)
   }
 }
 
-const deletePatient = (indelPlan, pv, isCancel = false, patientId) => {
+const deletePatient = (indelPlan, pv, patientID, isCancel = false) => {
   const patientList = indelPlan.patientManagement.treeWidget_PatientList
-  const isExist = findinlist.isItemExistInMoreList(patientId, globalConstant.obj.patientIDColumn, patientList)
+  const isExist = findInList.isItemExistInMoreList(patientID, globalConstant.obj.patientIDColumn, patientList)
   
   if (isExist) {
-    patientList.ClickItem(patientId)
+    patientList.ClickItem(patientID)
     indelPlan.patientManagement.pushButton_DeletePatient.ClickButton()
     if (!isCancel) {
       indelPlan.patient_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-      __handlePatientDirtyData(pv, patientId)
+      __handlePatientDirtyData(pv, patientID)
     } else {
       indelPlan.patient_delete_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
     }
   } else {
-    Log.Warning(`Can not find patient with patientId=${patientId} when deleting patient`)
+    Log.Warning(`Can not find patient with patientID=${patientID} when deleting patient`)
   }
 }
 
-const exportPatientData = (indelPlan, isCancel = false, patientId, path) => {
+const exportPatient = (indelPlan, patientID, path, isCancel = false) => {
   if (indelPlan.patientManagement.VisibleOnScreen) {
     indelPlan.patientManagement.groupBox_7.pushButton_Export.ClickButton()
     const dlg = indelPlan.patient_exporter
-    /*
-    dlg.pushButton_SelectAll.ClickButton()
-    dlg.lineEdit_Path.Keys(path)
-    !isCancel ? dlg.pushButton_Ok.ClickButton() : dlg.pushButton_Cancel.ClickButton()
-    */
   
     //use coordinate to choice target node
-    const idx = findinlist.isItemExistInMoreListReturnIndex(patientId, globalConstant.obj.patientIDColumn, dlg.treeWidget_PatientList)
+    const idx = findInList.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDColumn, dlg.treeWidget_PatientList)
     if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
       dlg.pushButton_SelectNone.ClickButton()
       const [desX, desY] = coordinate.getPatientExportNodeCorrdinate(idx)
@@ -170,35 +165,26 @@ const exportPatientData = (indelPlan, isCancel = false, patientId, path) => {
     }
 
   } else {
-    Log.Warning(`Can not exportPatientData due to window is not right`) 
+    Log.Warning(`Can not exportPatient due to window is not right`) 
   }
 }
 
-const importPatientData = (indelPlan, pv, isCancel = false, patientId, path) => {
+const importPatient = (indelPlan, pv, patientID, path, isCancel = false) => {
   if (indelPlan.patientManagement.VisibleOnScreen) {
     indelPlan.patientManagement.groupBox_7.pushButton_Import.ClickButton()
     const dlgip = indelPlan.patient_dlgSelectImportPath
     //resolve overlap window of history blocks choose button
     Win32API.ShowWindowAsync(dlgip.Handle, Win32API.SW_MAXIMIZE)
-    utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
     dlgip.Edit.Keys(path)
     LLPlayer.MouseMove(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, globalConstant.obj.delayMouseHalfSecond)
     LLPlayer.KeyDown(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)
     LLPlayer.KeyUp(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)
     dlgip.btn_.ClickButton()
     const dlgic = indelPlan.patient_importer
-    /*
-    dlgic.pushButton_SelectAll.ClickButton()
-    if (!isCancel) {
-      dlgic.pushButton_Ok.ClickButton()
-      if (indelPlan.patient_import_done_popup.Exists) pv.dirtyData.get(globalConstant.obj.addPatient).push(patientId)
-    } else {
-      dlgic.pushButton_Cancel.ClickButton()
-    }
-    */
 
     //use coordinate to choice target node
-    const idx = findinlist.isItemExistInMoreListReturnIndex(patientId, globalConstant.obj.patientIDColumn, dlgic.treeWidget_PatientList)
+    const idx = findInList.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDColumn, dlgic.treeWidget_PatientList)
     if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
       dlgic.pushButton_SelectNone.ClickButton()
       const [desX, desY] = coordinate.getPatientImportNodeCorrdinate(idx)
@@ -207,7 +193,7 @@ const importPatientData = (indelPlan, pv, isCancel = false, patientId, path) => 
       LLPlayer.MouseUp(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
       if (!isCancel) {
         dlgic.pushButton_Ok.ClickButton()
-        if (indelPlan.patient_import_done_popup.Exists) pv.dirtyData.get(globalConstant.obj.addPatient).push(patientId)
+        if (indelPlan.patient_import_done_popup.Exists) pv.dirtyData.get(globalConstant.obj.addPatient).push(patientID)
       } else {
         dlgic.pushButton_Cancel.ClickButton()
       }
@@ -215,7 +201,7 @@ const importPatientData = (indelPlan, pv, isCancel = false, patientId, path) => 
       Log.Error("can not find import target patient!")
     }
   } else {
-    Log.Warning(`Can not importPatientData due to window is not right`) 
+    Log.Warning(`Can not importPatient due to window is not right`) 
   }
 }
 
@@ -223,13 +209,13 @@ const deletePatientForDirtyData = (indelPlan, deletePatients) => {
   const patientList = indelPlan.patientManagement.treeWidget_PatientList
   let dp = deletePatients.pop()
   while (dp) {
-    const isExist = findinlist.isItemExistInMoreList(dp, globalConstant.obj.patientIDColumn, patientList)  
+    const isExist = findInList.isItemExistInMoreList(dp, globalConstant.obj.patientIDColumn, patientList)  
     if (isExist) {
       patientList.ClickItem(dp)
       indelPlan.patientManagement.pushButton_DeletePatient.ClickButton()
       indelPlan.patient_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     } else {
-      Log.Warning(`Can not find patient with patientId=${patientId} when deletePatientForDirtyData`)
+      Log.Warning(`Can not find patient with patientID=${dp} when deletePatientForDirtyData`)
     }
     dp = deletePatients.pop()
   }
@@ -243,6 +229,6 @@ module.exports.addPatientActivity = addPatientActivity
 module.exports.editPatient = editPatient
 module.exports.deletePatient = deletePatient
 module.exports.loadPatient = loadPatient
-module.exports.exportPatientData = exportPatientData
-module.exports.importPatientData = importPatientData
+module.exports.exportPatient = exportPatient
+module.exports.importPatient = importPatient
 module.exports.deletePatientForDirtyData = deletePatientForDirtyData

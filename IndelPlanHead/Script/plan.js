@@ -1,6 +1,6 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
-const findinlist = require("find_in_list")
+const utilsFunctions = require("utils_functions")
+const findInList = require("find_in_list")
 const common = require("common")
 const targetRelated = require("target_related")
 
@@ -80,7 +80,7 @@ const deleteTreatCourse = (indelPlan, TCName, isDelete = false) => {
   __closePlanList(indelPlan)
   if (indelPlan.PatientData.VisibleOnScreen) {
     const TCList = indelPlan.PatientData.groupBox_5.treeWidget_PlanList
-    const rowIdx = findinlist.isItemExistInMoreListReturnIndex(TCName, globalConstant.obj.nameColumn, TCList)
+    const rowIdx = findInList.isItemExistInMoreListReturnIndex(TCName, globalConstant.obj.nameColumn, TCList)
     if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
       TCList.wItems.Item(rowIdx).Click()
       indelPlan.PatientData.groupBox_5.pushButton_DeletePlan.ClickButton()
@@ -105,7 +105,7 @@ const addPlan = (indelPlan, parentTCName, isAdd = false) => {
   __closePlanList(indelPlan)
   if (indelPlan.PatientData.VisibleOnScreen) {
     const TCList = indelPlan.PatientData.groupBox_5.treeWidget_PlanList
-    const rowIdx = findinlist.isItemExistInMoreListReturnIndex(parentTCName, globalConstant.obj.nameColumn, TCList)
+    const rowIdx = findInList.isItemExistInMoreListReturnIndex(parentTCName, globalConstant.obj.nameColumn, TCList)
     if (strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
       Log.Warning(`Can not addPlan due to can not find target TC with TCName=${parentTCName}`)
       return
@@ -135,7 +135,7 @@ const deletePlan = (indelPlan, parentTCName, planName, isDelete = false) => {
   __closePlanList(indelPlan)
   if (indelPlan.PatientData.VisibleOnScreen) {
     const TCList = indelPlan.PatientData.groupBox_5.treeWidget_PlanList
-    const rowIdx = findinlist.isItemExistInMoreListReturnIndex(parentTCName, globalConstant.obj.nameColumn, TCList)
+    const rowIdx = findInList.isItemExistInMoreListReturnIndex(parentTCName, globalConstant.obj.nameColumn, TCList)
     if (strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
       Log.Warning(`Can not deletePlan due to can not find target TC with TCName=${parentTCName}`)
       return
@@ -163,7 +163,7 @@ const copyPlan = (indelPlan, parentTCName, copiedplanName, isCopy = false) => {
   __closePlanList(indelPlan)
   if (indelPlan.PatientData.VisibleOnScreen) {
     const TCList = indelPlan.PatientData.groupBox_5.treeWidget_PlanList
-    const rowIdx = findinlist.isItemExistInMoreListReturnIndex(parentTCName, globalConstant.obj.nameColumn, TCList)
+    const rowIdx = findInList.isItemExistInMoreListReturnIndex(parentTCName, globalConstant.obj.nameColumn, TCList)
     if (strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
       Log.Warning(`Can not copyPlan due to can not find target TC with TCName=${parentTCName}`)
       return
@@ -193,7 +193,7 @@ const gotoPlanDesign = (indelPlan, parentTCName, planName) => {
   __closePlanList(indelPlan)
   if (indelPlan.PatientData.VisibleOnScreen) {
     const TCList = indelPlan.PatientData.groupBox_5.treeWidget_PlanList
-    const rowIdx = findinlist.isItemExistInMoreListReturnIndex(parentTCName, globalConstant.obj.nameColumn, TCList)
+    const rowIdx = findInList.isItemExistInMoreListReturnIndex(parentTCName, globalConstant.obj.nameColumn, TCList)
     if (strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
       Log.Warning(`Can not gotoPlanDesign due to can not find target TC with TCName=${parentTCName}`)
       return
@@ -206,7 +206,7 @@ const gotoPlanDesign = (indelPlan, parentTCName, planName) => {
     }
     parentTC.Items.Item(subRowIdx).DblClick()
     //just in case
-    utilsfunctions.delay(globalConstant.obj.delayOneMinute)
+    utilsFunctions.delay(globalConstant.obj.delayOneMinute)
   } else {
     Log.Warning(`Can not gotoPlanDesign due to window is not right`) 
   }
@@ -218,7 +218,7 @@ const calculateDose = (indelPlan, type = false) => {
     const obj = indelPlan.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel.groupBox_2
     type ? obj.cbSample.setCurrentIndex(0) : obj.cbSample.setCurrentIndex(1)
     obj.pbCalDose.ClickButton()
-    utilsfunctions.delay(globalConstant.obj.delayThirtySeconds)
+    utilsFunctions.delay(globalConstant.obj.delayThirtySeconds)
   } else {
     Log.Warning(`Can not calculateDose due to window is not right`) 
   }
@@ -231,7 +231,7 @@ const setDose = (indelPlan, percentage = 50, doseValue = 1000) => {
     obj.pDose.SetText(doseValue)
     obj.pbSetPD.ClickButton()
     if (indelPlan.plan_do_fine_dose_calculate_popup.Exists) return
-    utilsfunctions.delay(globalConstant.obj.delayThirtySeconds)
+    utilsFunctions.delay(globalConstant.obj.delayThirtySeconds)
   } else {
     Log.Warning(`Can not setDose due to window is not right`) 
   }
@@ -249,7 +249,7 @@ const setFraction = (indelPlan, fraction = 1) => {
   }
 }
 
-const confirmPlan = (indelPlan, userName, password, isConfirm = true) => {
+const confirmPlan = (indelPlan, userName, password, isConfirmed = false) => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
     indelPlan.PlanGUI.widget.groupBox_2.pbConfirm.ClickButton()
     if (indelPlan.plan_do_fine_dose_calculate_popup.Exists) return
@@ -257,7 +257,7 @@ const confirmPlan = (indelPlan, userName, password, isConfirm = true) => {
     indelPlan.plan_confirm.pbConfirm.ClickButton()
     indelPlan.plan_confirm_sign.lineEdit.SetText(userName)
     indelPlan.plan_confirm_sign.lineEdit_2.SetText(password)
-    if (isConfirm) {
+    if (isConfirmed) {
       indelPlan.plan_confirm_sign.pushButton.ClickButton()
       if (indelPlan.plan_confirm_wrong_user_popup.Exists) return
       if (indelPlan.plan_confirm_wrong_password_popup.Exists) return
@@ -277,7 +277,7 @@ const pushToController = indelPlan => {
     if (indelPlan.detail_push_controller_not_confirmed_popup.Exists) return
     if (indelPlan.detail_push_controller_popup.Exists) {
       indelPlan.detail_push_controller_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-      utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
       indelPlan.detail_push_controller_complete_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
     }
   } else {

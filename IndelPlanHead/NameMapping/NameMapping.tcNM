@@ -5641,6 +5641,15 @@
 											</Property>
 										</Properties>
 									</Child>
+									<Child Name="treeWidget_PatientList" Key="{DA406756-3D94-4748-95E1-D868852AB22F}" ParallelWalk="True">
+										<Image FileName="-74813266" Left="19" Top="73" Right="775" Bottom="580" />
+										<TypeInfo Item0="{1A92C808-A25A-4313-89F1-548C3AFA2520}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="treeWidget_PatientList" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
 								</Children>
 							</Child>
 							<Child Name="register_importer" Key="{AA547BF5-4893-404B-9720-139AA0094FC7}" ParallelWalk="True">
@@ -5820,6 +5829,15 @@
 																						<Properties>
 																							<Property Name="objectName">
 																								<Value PropertyType="0" Value="checkBox_3" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="checkBox" Key="{D2B4DDCF-BCF3-45F7-8830-6ECE8EB145DE}" ParallelWalk="True">
+																						<Image FileName="1963102416" Left="1690" Top="618" Right="1861" Bottom="649" />
+																						<TypeInfo Item0="{A0339029-2ACA-4AFF-8B31-B578EA71A0F0}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="checkBox" Type="5" />
 																							</Property>
 																						</Properties>
 																					</Child>
@@ -7995,6 +8013,7 @@
 										<Child Name="ConfirmRegisterBotton" Owner="{908B36D5-CDDF-4647-9884-D3CD9476302C}" />
 										<Child Name="UnRegisterButton" Owner="{E107B088-68BB-4477-B661-D8C90935C565}" />
 										<Child Name="checkBox_3" Owner="{D3F09D70-E99C-401D-8A35-6976C6AEFC1D}" />
+										<Child Name="checkBox" Owner="{D2B4DDCF-BCF3-45F7-8830-6ECE8EB145DE}" />
 									</Child>
 								</Child>
 							</Child>
@@ -8176,6 +8195,7 @@
 				<Child Name="pushButton_Ok" Owner="{F4DC1144-4516-4BDE-9D0B-9A2B1792E376}" />
 				<Child Name="pushButton_Cancel" Owner="{A58394A8-96AE-4369-AF54-FDACBB14801B}" />
 				<Child Name="lineEdit_Path" Owner="{519BF495-A276-4831-BC61-472E60B48167}" />
+				<Child Name="treeWidget_PatientList" Owner="{DA406756-3D94-4748-95E1-D868852AB22F}" />
 			</Child>
 			<Child Name="register_auto_extract_progress" Owner="{41DED6F9-0F17-4976-8861-9C8DBAF503B3}">
 				<Child Name="Label" Owner="{754ABC65-0467-4C5E-8742-9994A0D1D46D}" />

@@ -1,6 +1,6 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
-const findinlist = require("find_in_list")
+const utilsFunctions = require("utils_functions")
+const findInList = require("find_in_list")
 const coordinate = require("coordinate")
 const target_related = require("target_related")
 const patient = require("patient")
@@ -46,7 +46,7 @@ const __increaseMouseAperture = (indelPlan) => {
 }
  
 const generateRandomCTVName = indelPlan => {
-  const ctvNmber = utilsfunctions.getRandomInt(10000, 1000)
+  const ctvNmber = utilsFunctions.getRandomInt(10000, 1000)
   return `CTV${ctvNmber}`
 }
 
@@ -91,7 +91,7 @@ const editContourLib = (indelPlan, contourLibName, editContourLibName, editConto
   } else {
     contourLibList = indelPlan.ContourGUI.groupBox_6.PlanLib
   }
-  const isExist =  findinlist.isItemExistInMoreList(contourLibName, globalConstant.obj.nameColumn, contourLibList)
+  const isExist =  findInList.isItemExistInMoreList(contourLibName, globalConstant.obj.nameColumn, contourLibList)
   
   if (isExist) {
     contourLibList.ClickItem(contourLibName)
@@ -114,7 +114,7 @@ const deleteContourLib = (indelPlan, pv, contourLibName,libType = true, isDelete
   } else {
     contourLibList = indelPlan.ContourGUI.groupBox_6.PlanLib
   }
-  const isExist =  findinlist.isItemExistInMoreList(contourLibName, globalConstant.obj.nameColumn, contourLibList)
+  const isExist =  findInList.isItemExistInMoreList(contourLibName, globalConstant.obj.nameColumn, contourLibList)
   
   if (isExist) {
     contourLibList.ClickItem(contourLibName)
@@ -139,7 +139,7 @@ const deleteContourLib = (indelPlan, pv, contourLibName,libType = true, isDelete
 
 const loadContourLib = (indelPlan, contourLibName) => {
   const contourLibList = indelPlan.ContourGUI.groupBox_4.ContourLib
-  const isExist =  findinlist.isItemExistInMoreList(contourLibName, globalConstant.obj.nameColumn, contourLibList)
+  const isExist =  findInList.isItemExistInMoreList(contourLibName, globalConstant.obj.nameColumn, contourLibList)
   
   if (isExist) {
     contourLibList.ClickItem(contourLibName)
@@ -152,7 +152,7 @@ const loadContourLib = (indelPlan, contourLibName) => {
 //maybe multi SKIN ContourLib, choose first find one
 const loadContourLibByType = (indelPlan, contourLibType) => {
   const contourLibList = indelPlan.ContourGUI.groupBox_4.ContourLib
-  const rowIdx =  findinlist.isItemExistInMoreListReturnIndex(contourLibType, globalConstant.obj.contourType, contourLibList)
+  const rowIdx =  findInList.isItemExistInMoreListReturnIndex(contourLibType, globalConstant.obj.contourType, contourLibList)
   
   if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
     contourLibList.ClickItem(rowIdx)
@@ -180,7 +180,7 @@ const loadAndContourSKINActivity = indelPlan => {
   const position = coordinate.getNearMiddleCoordinate()
   LLPlayer.MouseDown(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
   LLPlayer.MouseUp(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
-  utilsfunctions.delay(globalConstant.obj.delayThirtySeconds)
+  utilsFunctions.delay(globalConstant.obj.delayThirtySeconds)
 }
 
 const loadAndContourTargetAreaByLineActivity = (indelPlan, contourLibName) => {
@@ -213,19 +213,19 @@ const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
     target_related.drawRectangleNearMiddle(indelPlan)
     i++
   }
-  utilsfunctions.delay(globalConstant.obj.delayOneSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
   indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
   const position = coordinate.getNearMiddleCoordinate()
   LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
   LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)
   indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
   indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
-  utilsfunctions.delay(globalConstant.obj.delayFiveSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   /* need to handle exception popup
-    if (indelPlan.contour_interpolate_error_popup.Exists) {
-     indelPlan.contour_interpolate_error_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
-     Log.Error(`loadAndContourTargetAreaByLineActivity failure`)
-    }
+  if (indelPlan.contour_interpolate_error_popup.Exists) {
+    indelPlan.contour_interpolate_error_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    Log.Error(`loadAndContourTargetAreaByLineActivity failure`)
+  }
   */
 }
 

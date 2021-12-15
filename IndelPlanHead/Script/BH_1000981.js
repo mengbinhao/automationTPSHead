@@ -1,10 +1,7 @@
-﻿const globalConstant = require("global_constant")
-const launch = require("launch")
+﻿const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const user = require("user")
-const findinlist = require("find_in_list")
-const common = require("common")
 
 function testcase() {
   const indelPlan = Project.Variables.IndelPlan

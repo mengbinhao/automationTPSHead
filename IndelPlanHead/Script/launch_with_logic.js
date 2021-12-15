@@ -1,5 +1,5 @@
 ﻿const globalConstant = require("global_constant")
-const utilsfunctions = require("utils_functions")
+const utilsFunctions = require("utils_functions")
 const exitwithlogic = require("exit_with_logic")
 
 const launchWithLogic = () => {
@@ -11,7 +11,7 @@ const launchWithLogic = () => {
   } else {
     //from contour maybe popup other dialog
     exitwithlogic.exitWithLogic(false, false, 1)
-    utilsfunctions.delay(globalConstant.obj.delayTime)
+    utilsFunctions.delay(globalConstant.obj.delayTime)
     TestedApps.IndelplanV2.Run()
   }
 }

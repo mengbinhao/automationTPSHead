@@ -1,35 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Root signature="{DA6D7EF7-5B05-4735-AAF0-A85E47D47989}" version="12.0">
 	<children>
-		<child name="wangbangai_contour_no_draw" key="{CD7644B4-846A-434F-9C2B-05AE75D61FDC}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="wangbangai_contour_no_draw" ID="{CD7644B4-846A-434F-9C2B-05AE75D61FDC}" FileName="Regions\wangbangai_contour_no_draw.png" Update="False" />
+		<child name="YANGDAZHONG_CT95_after_load" key="{A6C911B8-781D-4E31-84DD-9894BA8AF21B}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_CT95_after_load" ID="{A6C911B8-781D-4E31-84DD-9894BA8AF21B}" FileName="Regions\YANGDAZHONG_CT95_after_load.png" Update="False" />
 		</child>
-		<child name="wangbangai_contour_with_skin" key="{BA40112F-80A4-4810-971E-9FB74FA615C2}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="wangbangai_contour_with_skin" ID="{BA40112F-80A4-4810-971E-9FB74FA615C2}" FileName="Regions\wangbangai_contour_with_skin.png" Update="False" />
+		<child name="YANGDAZHONG_CT95_before_extract" key="{3B4D4EEE-3BDD-4B57-A418-18062A64C879}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_CT95_before_extract" ID="{3B4D4EEE-3BDD-4B57-A418-18062A64C879}" FileName="Regions\wdMainView.png" Update="False" />
 		</child>
-		<child name="wangbangai_contour_with_target" key="{EF6BDD74-8ECA-4286-814E-DBD635D3E09D}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="wangbangai_contour_with_target" ID="{EF6BDD74-8ECA-4286-814E-DBD635D3E09D}" FileName="Regions\wangbangai_contour_with_target.png" Update="False" />
+		<child name="YANGDAZHONG_CT95_after_extract" key="{436E53D5-A937-40D1-9EAB-8BBDE20E9C31}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_CT95_after_extract" ID="{436E53D5-A937-40D1-9EAB-8BBDE20E9C31}" FileName="Regions\YANGDAZHONG_CT95_after_extract.png" Update="False" />
 		</child>
-		<child name="wangbangai_study_no_extract" key="{1A287340-8305-434F-8AE9-5181C1F75D0C}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="wangbangai_study_no_extract" ID="{1A287340-8305-434F-8AE9-5181C1F75D0C}" FileName="Regions\wangbangai_study_no_extract.png" Update="False" />
+		<child name="YANGDAZHONG_CT95_after_register" key="{9DE2424E-9C8E-4682-B2A9-243D0297398E}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_CT95_after_register" ID="{9DE2424E-9C8E-4682-B2A9-243D0297398E}" FileName="Regions\YANGDAZHONG_CT95_after_register.png" Update="False" />
 		</child>
-		<child name="wangbangai_study_extracted" key="{267DAFD2-5F0B-40DA-9073-06DD80130F24}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="wangbangai_study_extracted" ID="{267DAFD2-5F0B-40DA-9073-06DD80130F24}" FileName="Regions\wangbangai_study_extracted.png" Update="False" />
-		</child>
-		<child name="wangbangai_study_registered" key="{1736F10F-A1BD-40DB-9B57-BB94A1D078F3}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="wangbangai_study_registered" ID="{1736F10F-A1BD-40DB-9B57-BB94A1D078F3}" FileName="Regions\wangbangai_study_registered.png" Update="False" />
-		</child>
-		<child name="wangbangai_study_confirmed" key="{5A8941D7-B823-4EDB-AAFD-FF18DEE0C1F4}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="wangbangai_study_confirmed" ID="{5A8941D7-B823-4EDB-AAFD-FF18DEE0C1F4}" FileName="Regions\wangbangai_study_confirmed.png" Update="False" />
-		</child>
-		<child name="wangbangai_plan_add_one_point" key="{A39DF68A-B426-42A7-A441-A89A163B664C}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="wangbangai_plan_add_one_point" ID="{A39DF68A-B426-42A7-A441-A89A163B664C}" FileName="Regions\wangbangai_plan_add_one_point.png" Update="False" />
-		</child>
-		<child name="wangbangai_plan_calculated" key="{1BBC57C3-818D-42BA-A384-2CA8E32A2A3F}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="wangbangai_plan_calculated" ID="{1BBC57C3-818D-42BA-A384-2CA8E32A2A3F}" FileName="Regions\wangbangai_plan_calculated.png" Update="False" />
-		</child>
-		<child name="wangbangai_plan_set" key="{C1E7B7AE-2579-4C86-8D07-ACEE790CCD38}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="wangbangai_plan_set" ID="{C1E7B7AE-2579-4C86-8D07-ACEE790CCD38}" FileName="Regions\wangbangai_plan_set.png" Update="False" />
+		<child name="YANGDAZHONG_CT95_after_confirm_register" key="{328D065E-99A6-4293-A173-58AC1846724C}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_CT95_after_confirm_register" ID="{328D065E-99A6-4293-A173-58AC1846724C}" FileName="Regions\YANGDAZHONG_CT95_after_confirm_register.png" Update="False" />
 		</child>
 	</children>
 	<folders />

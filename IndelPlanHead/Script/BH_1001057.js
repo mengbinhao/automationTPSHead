@@ -8,13 +8,6 @@ const study = require("study")
 const findInList = require("find_in_list")
 const fileFunctions = require("file_functions")
 
-const __isImportStudyExist = (indelPlan) => {
-  const studyList = indelPlan.register_importer.treeWidget
-  if (studyList.wItems.Count === 0) return false
-  const isExist = findInList.isItemExistInMoreList(Project.Variables.study_image_id, globalConstant.obj.patientIDAndModalityColumn, studyList)
-  return isExist ? true : false
-}
-
 function testcase() {
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
@@ -34,19 +27,19 @@ function testcase() {
     study.gotoRegisterImporter(indelPlan)
     
     //exist then export and import
-    if (__isImportStudyExist(indelPlan)) {    
+    if (study.isStudyExist(indelPlan)) {    
       //delete target folder first
       //incase the postion action incorrect
       fileFunctions.deleteFolder(path + globalConstant.obj.backslash + patientFolderName, true)
       utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
       study.exportStudy(indelPlan, Project.Variables.study_image_id, path)
       study.deleteStudy(indelPlan, pv, Project.Variables.study_image_id, "", true)
-      study.importStudy(indelPlan, Project.Variables.study_image_id, path, false)
+      study.importStudy(indelPlan, path, false)
     } else {
-      study.importStudy(indelPlan, Project.Variables.study_image_id, path, false)
+      study.importStudy(indelPlan, path, false)
     }
 
-    if (__isImportStudyExist(indelPlan)) {
+    if (study.isStudyExist(indelPlan)) {
       Log.Checkpoint("Import study successfully!")
     } else {
       Log.Error("Import study fail!")

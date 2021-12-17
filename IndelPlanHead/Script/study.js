@@ -71,6 +71,28 @@ const __getSubItemIdx = (parent, type) => {
   return globalConstant.obj.notFoundIndex
 }
 
+//isAll means copy all back or just one patient
+/*
+const __copyDeletedStudyBack = (isAll) => {
+  let source = globalConstant.obj.studyDICOMOriginFolder
+  if (!isAll) {
+    source += `${Project.Variables.study_image_name}@${Project.Variables.study_image_id}`  
+    if(fileFunctions.copyOnePatientFolder(source, globalConstant.obj.studyDICOMFolder)) {
+      Log.Message(`Copy ${Project.Variables.study_image_name}@${Project.Variables.study_image_id} from ${globalConstant.obj.studyDICOMOriginFolder} to ${globalConstant.obj.studyDICOMFolder} successfuly!`)
+    } else {
+      Log.Error(`Copy ${Project.Variables.study_image_name}@${Project.Variables.study_image_id} from ${globalConstant.obj.studyDICOMOriginFolder} to ${globalConstant.obj.studyDICOMFolder} fail!`)
+    }
+  } else {
+    if (fileFunctions.copyAllPatientFolders(source, globalConstant.obj.studyDICOMFolder)) {
+      Log.Message(`Copy ${source} to ${globalConstant.obj.studyDICOMFolder} successfuly!`)
+    } else {
+      Log.Message(`Copy ${source} to ${globalConstant.obj.studyDICOMFolder} fail!`)
+    }
+  }
+  utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
+}
+*/
+
 const __deletePatient = (indelPlan, pv, patientID, isDelete) => {
   const list = indelPlan.register_importer.treeWidget
   const rowIdx = findInList.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDAndModalityColumn, list)
@@ -81,6 +103,7 @@ const __deletePatient = (indelPlan, pv, patientID, isDelete) => {
       if (isDelete) {
         indelPlan.register_delete_patient_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
         pv.dirtyData.set(globalConstant.obj.restoreStudy, true)
+        //__copyDeletedStudyBack(false)
       } else {
         indelPlan.register_delete_patient_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
       }
@@ -104,6 +127,7 @@ const __deleteOneSeries = (indelPlan, pv, patientID, type, isDelete) => {
         if (isDelete) {
           indelPlan.register_delete_series_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
           pv.dirtyData.set(globalConstant.obj.restoreStudy, true)
+          //__copyDeletedStudyBack(false)
         } else {
           indelPlan.register_delete_series_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
         }
@@ -163,7 +187,8 @@ const contourExistingStudy = (indelPlan, studyName) => {
   }
 }
 
-const loadStudy = (indelPlan, patientID, type = "CT") => {
+//method true means click load button, else double click image node
+const loadStudy = (indelPlan, patientID, type = "CT", method = true) => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     //check is in list and related files in Disk
     const rowIdx = __getPatientIDRowIdx(indelPlan, patientID, type)
@@ -178,11 +203,19 @@ const loadStudy = (indelPlan, patientID, type = "CT") => {
       Log.Warning(`Can not loadStudy due to wrong patient`) 
       return
     }
-    indelPlan.register_importer.treeWidget.wItems.Item(rowIdx).Items.Item(subIdx).Click()
-    indelPlan.register_importer.pbDeleteAll_3.ClickButton()
+    
+    if (method) {
+      indelPlan.register_importer.treeWidget.wItems.Item(rowIdx).Items.Item(subIdx).Click()
+      indelPlan.register_importer.pbDeleteAll_3.ClickButton()
+    } else {
+      indelPlan.register_importer.treeWidget.wItems.Item(rowIdx).Items.Item(subIdx).DblClick()
+    }
+    
     if (indelPlan.register_overwrite_data_popup.Exists) {
       indelPlan.register_overwrite_data_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     }
+    //tricky way
+    //incase study not display normally
     while (indelPlan.register_area.checkBox.Enabled) {
       utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
@@ -203,6 +236,8 @@ const setWWAndWL = (indelPlan, type = "CT",  W = "2785", L = "430") => {
   }
 }
 
+//with type means delete one series
+//delete will delete image file on local disk, so need to copy back
 const deleteStudy = (indelPlan, pv, patientID, type = "", isDelete = false) => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     !type ? __deletePatient(indelPlan, pv, patientID, isDelete) : __deleteOneSeries(indelPlan, pv, patientID, type, isDelete)
@@ -211,17 +246,18 @@ const deleteStudy = (indelPlan, pv, patientID, type = "", isDelete = false) => {
   }
 }
 
-const deleteAllStudy = (indelPlan, isDelete = false) => {
+const deleteAllStudy = (indelPlan, pv, isDelete = false) => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_importer.pbDeleteAll.ClickButton()
     if (isDelete) {
       indelPlan.register_delete_all_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
       pv.dirtyData.set(globalConstant.obj.restoreStudy, true)
+      //__copyDeletedStudyBack(true)
     } else {
       indelPlan.register_delete_all_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
     }
   } else {
-    Log.Warning(`Can not deleteStudy due to window is not right`) 
+    Log.Warning(`Can not deleteAllStudy due to window is not right`) 
   }
 }
 
@@ -257,7 +293,7 @@ const exportStudy = (indelPlan, patientID, path, isCancel = false) => {
   }
 }
 
-const importStudy = (indelPlan, patientID, path, isCancel = false) => {
+const importStudy = (indelPlan, path, isCancel = false) => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_importer.pbImport.ClickButton()
     const dlg = indelPlan.register_import_QFileDialog
@@ -267,7 +303,6 @@ const importStudy = (indelPlan, patientID, path, isCancel = false) => {
       while (indelPlan.main_save_progress.VisibleOnScreen) {
         utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
       }
-      //if (!indelPlan.register_import_error_popup.Exists) pv.dirtyData.get(globalConstant.obj.addStudy).push(patientID)
     } else {
       dlg.buttonBox.buttonCancel.ClickButton()
     }
@@ -285,9 +320,14 @@ const extractStudy = indelPlan => {
     const position = coordinate.getNearMiddleCoordinate()
     LLPlayer.MouseDown(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
     LLPlayer.MouseUp(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
-    utilsFunctions.delay(globalConstant.obj.delayThirtySeconds)
+    
+    while (indelPlan.register_auto_extract_progress.Exists) {
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+    }
+    //incase register button disabled
+    //utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   } else {
-    Log.Warning(`Can not deleteStudy due to window is not right`) 
+    Log.Warning(`Can not extractStudy due to window is not right`) 
   }
 }
 
@@ -305,7 +345,19 @@ const registerStudy = indelPlan => {
       utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
   } else {
-    Log.Warning(`Can not deleteStudy due to window is not right`) 
+    Log.Warning(`Can not registerStudy due to window is not right`) 
+  }
+}
+
+const unRegisterStudy = indelPlan => {
+  if (indelPlan.register_importer.VisibleOnScreen) {
+    if (indelPlan.register_area.UnRegisterButton.Enabled) {
+      indelPlan.register_area.UnRegisterButton.ClickButton()
+    } else {
+      Log.Warning(`Can not unRegisterStudy due to it is disabled`)
+    }
+  } else {
+    Log.Warning(`Can not unRegisterStudy due to window is not right`) 
   }
 }
 
@@ -317,18 +369,21 @@ const saveStudy = (indelPlan, isSave = false) => {
       utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
     
-    if (indelPlan.register_save_ct_voxels_popup.Exists) indelPlan.register_save_ct_voxels_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    if (indelPlan.register_save_ct_voxels_popup.Exists) {
+      indelPlan.register_save_ct_voxels_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    }
     
     if (isSave) {
       indelPlan.register_save_confirm_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-      //if (!indelPlan.import_save_out_of_size_popup.Exists) {
-        indelPlan.register_save_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
-      //}
+      while (indelPlan.register_auto_extract_progress.Exists) {
+        utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+      }
+      indelPlan.register_save_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
     } else {
        indelPlan.register_save_confirm_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
     }
   } else {
-    Log.Warning(`Can not deleteStudy due to window is not right`) 
+    Log.Warning(`Can not saveStudy due to window is not right`) 
   }
 }
 
@@ -345,9 +400,26 @@ const addOneStudyActivity = (indelPlan, patientID, type = "CT") => {
 const restoreStudy = (indelPlan) => {
   patient.loadPatient(indelPlan, Project.Variables.new_patientID)
   gotoRegisterImporter(indelPlan)
-  importStudy(indelPlan, "", globalConstant.obj.studyDICOMFolder, false)
+  //just restore all images from D:\Data_Origin
+  importStudy(indelPlan, globalConstant.obj.studyDICOMOriginFolder, false)
   exitImportWindow(indelPlan)
   patient.fromPatientDetailToMain(indelPlan)
+}
+
+//type means find CT or MR
+const isStudyExist = (indelPlan) => {
+  const studyList = indelPlan.register_importer.treeWidget
+  if (studyList.wItems.Count === 0) return false
+  const isExist = findInList.isItemExistInMoreList(Project.Variables.study_image_id, globalConstant.obj.patientIDAndModalityColumn, studyList)
+  return isExist ? true : false
+}
+
+const getSubCountFromOnePatientStudy = (indelPlan) => {
+  const studyList = indelPlan.register_importer.treeWidget
+  if (studyList.wItems.Count === 0) return globalConstant.obj.notFoundIndex  
+  const rowIdx = findInList.isItemExistInMoreListReturnIndex(Project.Variables.study_image_id, globalConstant.obj.patientIDAndModalityColumn, studyList)
+  if (!strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) return studyList.wItems.Item(rowIdx).Items.Count
+  return globalConstant.obj.notFoundIndex
 }
 
 module.exports.gotoRegisterImporter = gotoRegisterImporter
@@ -361,7 +433,11 @@ module.exports.exportStudy = exportStudy
 module.exports.importStudy = importStudy
 module.exports.extractStudy = extractStudy
 module.exports.registerStudy = registerStudy
+module.exports.unRegisterStudy = unRegisterStudy
 module.exports.saveStudy = saveStudy
 module.exports.contourExistingStudy = contourExistingStudy
 module.exports.addOneStudyActivity = addOneStudyActivity
 module.exports.restoreStudy = restoreStudy
+module.exports.isStudyExist = isStudyExist
+module.exports.isStudyExist = isStudyExist
+module.exports.getSubCountFromOnePatientStudy = getSubCountFromOnePatientStudy

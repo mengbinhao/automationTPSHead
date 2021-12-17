@@ -23,6 +23,17 @@ const deleteFolder = (path, removeNonEmpty) => {
   if (isExists(path, null)) aqFileSystem.DeleteFolder(path, removeNonEmpty)
 }
 
+const copyOnePatientFolder = (source, destination) => {
+  return aqFileSystem.CopyFolder(source, destination, false)
+}
+
+const copyAllPatientFolders = (source, destination) => {
+  const subFolders = aqFileSystem.GetFolderInfo(source).SubFolders
+  while (subFolders.HasNext()){
+    copyOnePatientFolder(subFolders.Next().Path, destination)
+  }
+}
+
 const readFile = (path, fileName) => {
   if (!isExists(path, fileName)) return null
   return aqFile.ReadWholeTextFile(path + fileName, aqFile.ctUTF8)
@@ -69,6 +80,8 @@ module.exports.createFile = createFile
 module.exports.deleteFile = deleteFile
 module.exports.createFolder = createFolder
 module.exports.deleteFolder = deleteFolder
+module.exports.copyOnePatientFolder = copyOnePatientFolder
+module.exports.copyAllPatientFolders = copyAllPatientFolders
 module.exports.readFile = readFile
 module.exports.readFileByLine = readFileByLine
 module.exports.appendTextToFile = appendTextToFile

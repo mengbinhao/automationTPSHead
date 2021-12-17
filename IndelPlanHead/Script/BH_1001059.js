@@ -20,6 +20,8 @@ function testcase() {
     patient.loadPatient(indelPlan, Project.Variables.new_patientID)
     study.gotoRegisterImporter(indelPlan)
     study.loadStudy(indelPlan, Project.Variables.study_image_id, "CT")
+
+    Regions.YANGDAZHONG_CT95_after_load.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, 0, 0)
   }
   
   exitwithlogic.exitWithLogic(false, false, 1)

@@ -76,9 +76,13 @@ const exitPatientWindow = indelPlan => {
   indelPlan.patient_new_patient.Close()
 }
 
-const fromPatientDetailToMain = indelPlan => {
+const fromPatientDetailToMain = (indelPlan, isPatientSavePopup = false) => {
   indelPlan.PatientData.groupBox_6.pushButton_Close.Click()
-  indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+  if (!isPatientSavePopup) {
+    indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
+  } else {
+    indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+  }
   utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
 }
 

@@ -32,6 +32,7 @@ obj.planDesign = 'PlanDesign'
 //file related
 obj.backslash = '\\'
 obj.studyDICOMFolder = 'D:\\Data\\'
+obj.studyDICOMOriginFolder = 'D:\\Data_Origin\\'
 obj.patientDataFolder = 'D:\\PatientData'
 obj.studyDataFolder = 'D:\\StudyData'
 obj.notExistingFolder = 'D:\\NotExistingFolder'
@@ -60,9 +61,6 @@ obj.defaultPatientGender = 'Male'
 //for magic number or string
 obj.notFoundIndex = -1
 obj.emptyString = ''
-//obj.spaceString = ' '
-//obj.userMaxLength = 30
-//obj.passMaxLength = 10
 //obj.numberAndLetter = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
 //Note: ! and ^ has special meaning while passing to Keys as parameter,so need to write at the end of wrongInput
 //obj.wrongInput = '@#$%&* ()-_=+.`,<>/?\'\"[]{}\\|~^!'
@@ -72,7 +70,6 @@ obj.emptyString = ''
 obj.addContourLib = 'contourLib'
 obj.addPatient = 'patient'
 obj.addUser = 'user'
-obj.addStudy = 'study'
 obj.restoreStudy = 'restorestudy'
 obj.addMachine = 'machine'
 //obj.addContourPlanLib = 'addContourPlanLib'

@@ -18,14 +18,14 @@ function testcase() {
     patient.loadPatient(indelPlan, Project.Variables.new_patientID)
     study.gotoRegisterImporter(indelPlan)
 
-    if (!study.isStudyExist(indelPlan)) {    
-      Log.Error(`Can not find target delete study, study_image_id = ${Project.Variables.study_image_id}`)
+    if (indelPlan.register_importer.treeWidget.wItems === 0) {    
+      Log.Error(`There is no studies for deleting`)
     } else {
-      study.deleteStudy(indelPlan, pv, Project.Variables.study_image_id, "", true)
-      if (!study.isStudyExist(indelPlan)) {
-        Log.Checkpoint(`Delete study = ${Project.Variables.study_image_id} successfully!`)
+      study.deleteAllStudy(indelPlan, pv, true)
+      if (indelPlan.register_importer.treeWidget.wItems.Count === 0) {
+        Log.Checkpoint(`Delete all study successfully!`)
       } else {
-        Log.Error(`Delete study = ${Project.Variables.study_image_id} fail!`)
+        Log.Error(`Delete all study fail!`)
       }
     }
   }

@@ -301,6 +301,21 @@
 		<child name="BH_1001060" key="{0DE1C28E-FC65-49B9-BC6A-3C62A3AB5FD9}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1001060.js" />
 		</child>
+		<child name="BH_1001067" key="{077229AD-1E68-4D5B-AEB8-3B38D419F37E}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001067.js" />
+		</child>
+		<child name="BH_1001061" key="{43C28B26-F1AD-40E5-9D0A-FDDC6974FE9E}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001061.js" />
+		</child>
+		<child name="BH_1001062" key="{DA592B24-BCE9-4BD7-8D72-31053C5714C7}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001062.js" />
+		</child>
+		<child name="BH_1001075" key="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001075.js" />
+		</child>
+		<child name="BH_1001076" key="{75411F2B-B0A0-43B5-8AD9-1C17A8464229}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001076.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -430,6 +445,11 @@
 						<ref key="{D2025F07-E318-4C25-88C5-89E63E37865A}" />
 						<ref key="{58A98C55-245B-4863-86A2-535FD64CDFC2}" />
 						<ref key="{0DE1C28E-FC65-49B9-BC6A-3C62A3AB5FD9}" />
+						<ref key="{077229AD-1E68-4D5B-AEB8-3B38D419F37E}" />
+						<ref key="{43C28B26-F1AD-40E5-9D0A-FDDC6974FE9E}" />
+						<ref key="{DA592B24-BCE9-4BD7-8D72-31053C5714C7}" />
+						<ref key="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}" />
+						<ref key="{75411F2B-B0A0-43B5-8AD9-1C17A8464229}" />
 					</references>
 				</folder>
 			</folders>

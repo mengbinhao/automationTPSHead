@@ -4,6 +4,7 @@ const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
 const study = require("study")
 
+
 function testcase() {
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
@@ -16,17 +17,16 @@ function testcase() {
     patient.addPatientActivity(indelPlan, pv, Project.Variables.new_patientID, Project.Variables.new_patient_name, Project.Variables.new_patient_gender, Project.Variables.new_patient_height, Project.Variables.new_patient_weight, Project.Variables.new_patient_age, Project.Variables.new_patient_address, Project.Variables.new_patient_phone, Project.Variables.new_patient_note)
   
     patient.loadPatient(indelPlan, Project.Variables.new_patientID)
-    study.gotoRegisterImporter(indelPlan)
+    const before = indelPlan.PatientData.groupBox.treeWidget_StudyList.wItems.Count
+    
+    study.addOneStudyActivity(indelPlan, Project.Variables.study_image_id)
+    
+    const after = indelPlan.PatientData.groupBox.treeWidget_StudyList.wItems.Count
 
-    if (!study.isStudyExist(indelPlan)) {    
-      Log.Error(`Can not find target delete study, study_image_id = ${Project.Variables.study_image_id}`)
+    if (strictEqual(before + 1, after)) {
+      Log.Checkpoint(`Add Study successfully!`)
     } else {
-      study.deleteStudy(indelPlan, pv, Project.Variables.study_image_id, "", true)
-      if (!study.isStudyExist(indelPlan)) {
-        Log.Checkpoint(`Delete study = ${Project.Variables.study_image_id} successfully!`)
-      } else {
-        Log.Error(`Delete study = ${Project.Variables.study_image_id} fail!`)
-      }
+      Log.Error(`Add Study fail!`)
     }
   }
   

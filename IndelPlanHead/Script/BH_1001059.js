@@ -21,7 +21,12 @@ function testcase() {
     study.gotoRegisterImporter(indelPlan)
     study.loadStudy(indelPlan, Project.Variables.study_image_id, "CT")
 
-    Regions.YANGDAZHONG_CT95_after_load.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, 0, 0)
+    if (!indelPlan.register_area.checkBox.Enabled) {
+      Log.Checkpoint(`load ${Project.Variables.study_image_name} image successfully!`)
+    } else {
+      Log.Error(`load ${Project.Variables.study_image_name} image fail!`)
+    }
+    //Regions.YANGDAZHONG_CT95_after_load.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, 0, 0)
   }
   
   exitwithlogic.exitWithLogic(false, false, 1)

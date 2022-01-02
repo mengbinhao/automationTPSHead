@@ -137,6 +137,11 @@ const init = () => {
   indelPlan.contour_edit_and_isopick_no_choose_popup = mappingName.contour_edit_and_isopick_no_choose_popup
   //Load、Upload、Stat
   indelPlan.contour_load_upload_stat_no_choose_popup = mappingName.contour_load_upload_stat_no_choose_popup
+  indelPlan.contour_stat_no_contour_data_popup = mappingName.contour_stat_no_contour_data_popup
+  indelPlan.contour_stat_dialog = mappingName.contour_stat_dialog
+  indelPlan.contour_copy_exceed_skin_popup = mappingName.contour_copy_exceed_skin_popup
+  indelPlan.contour_select_color = mappingName.contour_select_color
+  indelPlan.contour_iso_info = mappingName.contour_iso_info
   
   
   //Switch to Plandesign Popup PlanList Window

@@ -39,6 +39,15 @@ const getStudyExportNodeCorrdinate = (idx) => {
   return [coordX, coordY + step * idx]
 }
 
+//blue: 3, 1
+//red: 4, 2
+//green: 1, 7
+const getContourColorCorrdinate = (row = 1, column = 1) => {
+  const firstBlackColor = [716, 376], step = 28
+  if (row > 6 || column > 8) reutrn
+  return [firstBlackColor[0] + step * (column - 1), firstBlackColor[1] + (step - 3) * (row - 1)]
+}
+
 
 module.exports.getPlanCanvasNearMiddleCoordinate = getPlanCanvasNearMiddleCoordinate
 module.exports.getNearMiddleCoordinate = getNearMiddleCoordinate
@@ -47,3 +56,4 @@ module.exports.getRectangleCoordinate = getRectangleCoordinate
 module.exports.getPatientExportNodeCorrdinate = getPatientExportNodeCorrdinate
 module.exports.getPatientImportNodeCorrdinate = getPatientImportNodeCorrdinate
 module.exports.getStudyExportNodeCorrdinate = getStudyExportNodeCorrdinate
+module.exports.getContourColorCorrdinate = getContourColorCorrdinate

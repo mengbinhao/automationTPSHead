@@ -10,6 +10,10 @@ const __getType = contourLibType => {
   return ["TARGET", "OAR", "SKIN"]
 }
 
+const __getDisplayMode = displayMode => {
+  return ["WIREFRAME", "SURFACE", "POLYLINES"]
+}
+
 const __getTypeIndex = contourLibType => {
   const types = {
     'TARGET' : 0,
@@ -19,13 +23,49 @@ const __getTypeIndex = contourLibType => {
   return types[contourLibType]
 }
 
+const __getDisplayModeIndex = displayMode => {
+  const modes = {
+    'WIREFRAME' : 0,
+    'SURFACE' : 1,
+    'POLYLINES' : 2,
+  }
+  return modes[displayMode]
+}
+
 const __checkContourTypeExists = (contourLibType) => {
   return __getType().includes(contourLibType)
 }
 
-const __setContourAttribute = (obj, contourLibType, contourLibName) => {
-  obj.ContourType.setCurrentIndex(__getTypeIndex(contourLibType))
-  obj.ContourName.SetText(contourLibName)
+const __checkDisplayModeExists = (displayMode) => {
+  return __getDisplayMode().includes(displayMode)
+}
+
+const __fillColor = (indel, color) => {
+  const supportColors = ["bule", "red", "green"]
+  if (!supportColors.includes(color)) return
+  const row = 3, column = 1
+  if (color === 'red') {
+    row = 4
+    column = 2
+  } else if (color === 'green') {
+    row = 1
+    column = 7
+  }
+  const [desX, desY] = coordinate.getContourColorCorrdinate(row, column)
+  if (desX && desY) {
+    indel.contour_new_contourItem.ContourColor.ClickButton()
+    LLPlayer.MouseMove(desX, desY, globalConstant.obj.delayMouseHalfSecond)
+    LLPlayer.MouseDown(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
+    LLPlayer.MouseUp(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
+    indel.contour_select_color.DialogButtonBox.buttonOk.ClickButton()
+  }
+}
+
+const __setContourAttribute = (indel, contourLibName, contourLibType, displayMode, color) => {
+  indel.contour_new_contourItem.ContourName.SetText(contourLibName)
+  indel.contour_new_contourItem.ContourType.setCurrentIndex(__getTypeIndex(contourLibType))
+  indel.contour_new_contourItem.DisplayMode.setCurrentIndex(__getDisplayModeIndex(displayMode))
+  color && __fillColor(indel, color)
 }
 
 const __handleContourDirtyData = (pv, contourLibName) => {
@@ -51,7 +91,7 @@ const generateRandomCTVName = indelPlan => {
 }
 
 // true means ContourLib, false means PlanLib
-const addContourLib = (indelPlan, pv, contourLibName, contourLibType, libType = true, isAdd = false) => {
+const addContourLib = (indelPlan, pv, contourLibName, contourLibType, displayMode = "SURFACE", color = null, libType = true, isAdd = false) => {
   const __fulfillAdd = (isAdd, popupDialog, dirtyData, contourLibName, type) => {
     if (isAdd) {
       indelPlan.contour_new_contourItem.OperationDone.ClickButton()
@@ -68,20 +108,30 @@ const addContourLib = (indelPlan, pv, contourLibName, contourLibType, libType = 
     return
   }
   
+  if(!__checkDisplayModeExists(displayMode)) {
+    Log.Error(`Please input valid displayMode displayMode=${displayMode}`)
+    return
+  }
+  
   if (strictEqual(libType, true)) {
     indelPlan.ContourGUI.groupBox_4.AddToLib.ClickButton()
-    __setContourAttribute(indelPlan.contour_new_contourItem, contourLibType, contourLibName)
+    __setContourAttribute(indelPlan, contourLibName, contourLibType, displayMode, color)
     __fulfillAdd(isAdd, indelPlan.contour_lib_exist_popup, pv.dirtyData, contourLibName, true)
   } else {
     indelPlan.ContourGUI.groupBox_6.AddPlanContour.ClickButton()
-    __setContourAttribute(indelPlan.contour_new_contourItem, contourLibType, contourLibName)
+    __setContourAttribute(indelPlan, contourLibName, contourLibType, displayMode, color)
     __fulfillAdd(isAdd, indelPlan.contour_planlib_exist_popup, pv.dirtyData, contourLibName, false)
   }
 }
 
-const editContourLib = (indelPlan, contourLibName, editContourLibName, editContourLibType, libType = true, isEdit = false) => {
+const editContourLib = (indelPlan, contourLibName, editContourLibName, editContourLibType, editDisplayMode, editColor, libType = true, isEdit = false) => {
   if(!__checkContourTypeExists(editContourLibType)) {
-    Log.Error(`Please input valid contourLibType, contourLibType,=${editContourLibType}`)
+    Log.Error(`Please input valid contourLibType, contourLibType=${editContourLibType}`)
+    return
+  }
+  
+  if(!__checkDisplayModeExists(editDisplayMode)) {
+    Log.Error(`Please input valid displayMode displayMode=${displayMode}`)
     return
   }
   
@@ -100,7 +150,7 @@ const editContourLib = (indelPlan, contourLibName, editContourLibName, editConto
     } else {
       indelPlan.ContourGUI.groupBox_6.EditPlanLib.ClickButton()
     }
-    __setContourAttribute(indelPlan.contour_new_contourItem, editContourLibType, editContourLibName)
+    __setContourAttribute(indelPlan, editContourLibName, editContourLibType, editDisplayMode, editColor)
     isEdit ? indelPlan.contour_new_contourItem.OperationDone.ClickButton() : indelPlan.contour_new_contourItem.OperationCancel.ClickButton()
   } else {
     Log.Warning(`can not find target contourLib to update, contourLibName=${contourLibName}`)
@@ -149,7 +199,7 @@ const loadContourLib = (indelPlan, contourLibName) => {
   }
 }
 
-//maybe multi SKIN ContourLib, choose first find one
+//maybe multi SKIN ContourLib, choose the one of first found
 const loadContourLibByType = (indelPlan, contourLibType) => {
   const contourLibList = indelPlan.ContourGUI.groupBox_4.ContourLib
   const rowIdx =  findInList.isItemExistInMoreListReturnIndex(contourLibType, globalConstant.obj.contourType, contourLibList)
@@ -195,13 +245,6 @@ const loadAndContourTargetAreaByLineActivity = (indelPlan, contourLibName) => {
   indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
 
   indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
-  
-  /* need to handle exception popup
-  if (indelPlan.contour_interpolate_error_popup.Exists) {
-   indelPlan.contour_interpolate_error_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
-   Log.Error(`loadAndContourTargetAreaByLineActivity failure`)
-  }
-  */
 }
 
 const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
@@ -221,12 +264,6 @@ const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
   indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
   indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
   utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
-  /* need to handle exception popup
-  if (indelPlan.contour_interpolate_error_popup.Exists) {
-    indelPlan.contour_interpolate_error_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
-    Log.Error(`loadAndContourTargetAreaByLineActivity failure`)
-  }
-  */
 }
 
 const deleteContourForDirtyData = (indelPlan, deleteContours) => {

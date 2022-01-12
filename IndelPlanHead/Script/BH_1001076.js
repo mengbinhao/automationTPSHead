@@ -22,15 +22,15 @@ function testcase() {
     study.loadStudy(indelPlan, Project.Variables.study_image_id)
     study.setWWAndWL(indelPlan)
     study.extractStudy(indelPlan)
-    study.registerStudy(indelPlan)
-    
-    aqObject.CheckProperty(indelPlan.register_area.pushButton, "Enabled", cmpEqual, false)
-    aqObject.CheckProperty(indelPlan.register_area.ConfirmRegisterBotton, "Enabled", cmpEqual, false) 
-      
-    study.unRegisterStudy(indelPlan)
-    
-    aqObject.CheckProperty(indelPlan.register_area.pushButton, "Enabled", cmpEqual, true)
-    aqObject.CheckProperty(indelPlan.register_area.ConfirmRegisterBotton, "Enabled", cmpEqual, false)   
+    if (study.registerStudy(indelPlan)) {
+      aqObject.CheckProperty(indelPlan.register_area.pushButton, "Enabled", cmpEqual, false)
+      aqObject.CheckProperty(indelPlan.register_area.ConfirmRegisterBotton, "Enabled", cmpEqual, false) 
+      study.unRegisterStudy(indelPlan)
+      aqObject.CheckProperty(indelPlan.register_area.pushButton, "Enabled", cmpEqual, true)
+      aqObject.CheckProperty(indelPlan.register_area.ConfirmRegisterBotton, "Enabled", cmpEqual, false)   
+    } else {
+      Log.Error(`registerStudy fail while executing BH-1001076`)
+    }
   }
   
   exitwithlogic.exitWithLogic(false, false, 1)

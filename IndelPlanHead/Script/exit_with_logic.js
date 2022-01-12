@@ -6,11 +6,11 @@ const common = require("common")
 const exitWithLogic = (isPatientSavePopup = false, isCurrentPlanFinishedPopup = false, isQuitPopup = 1) => {
   const indelPlan = Project.Variables.IndelPlan    
   //goto PatientManagement first
-  common.gotoPatientManagement(indelPlan)
+  common.gotoPatientManagement(indelPlan, isPatientSavePopup)
   
   if (indelPlan.patientManagement.Visible) {
     indelPlan.main.Close()
-    if (isPatientSavePopup) {
+    if (isPatientSavePopup && indelPlan.patient_update_popup.Exists) {
       indelPlan.patient_update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     }
 

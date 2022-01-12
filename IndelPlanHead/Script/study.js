@@ -207,14 +207,16 @@ const loadStudy = (indelPlan, patientID, type = "CT", method = true) => {
     if (method) {
       indelPlan.register_importer.treeWidget.wItems.Item(rowIdx).Items.Item(subIdx).Click()
       indelPlan.register_importer.pbDeleteAll_3.ClickButton()
+
     } else {
       indelPlan.register_importer.treeWidget.wItems.Item(rowIdx).Items.Item(subIdx).DblClick()
     }
+    //just in case
+    utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
     
     if (indelPlan.register_overwrite_data_popup.Exists) {
       indelPlan.register_overwrite_data_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     }
-    //tricky way
     //incase study not display normally
     while (indelPlan.register_area.checkBox.Enabled) {
       utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
@@ -224,7 +226,7 @@ const loadStudy = (indelPlan, patientID, type = "CT", method = true) => {
   }
 }
 
-const setWWAndWL = (indelPlan, type = "CT",  W = "2785", L = "430") => {
+const setWWAndWL = (indelPlan, type = "CT",  W = "1200", L = "300") => {
   if (indelPlan.register_importer.VisibleOnScreen) { 
     indelPlan.register_importer.groupBox_5.leMovWL.clear()
     indelPlan.register_importer.groupBox_5.leMovWL.Keys(L)
@@ -335,8 +337,9 @@ const registerStudy = indelPlan => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_area.pushButton.ClickButton()
     if (indelPlan.register_less_slices_popup.Exists) {
-      Log.Warning(`Can not registerStudy due to image quality low`)
-      return
+      Log.Error(`Can not registerStudy due to image quality low`)
+      indelPlan.register_less_slices_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+      return false
     }
     
     if (indelPlan.register_CDeviationTableDlg.Exists) {
@@ -344,8 +347,10 @@ const registerStudy = indelPlan => {
       indelPlan.register_area.ConfirmRegisterBotton.ClickButton()
       utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
+    return true
   } else {
-    Log.Warning(`Can not registerStudy due to window is not right`) 
+    Log.Warning(`Can not registerStudy due to window is not right`)
+    return false
   }
 }
 
@@ -375,9 +380,6 @@ const saveStudy = (indelPlan, isSave = false) => {
     
     if (isSave) {
       indelPlan.register_save_confirm_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-      while (indelPlan.register_auto_extract_progress.Exists) {
-        utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
-      }
       indelPlan.register_save_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
     } else {
        indelPlan.register_save_confirm_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
@@ -392,9 +394,13 @@ const addOneStudyActivity = (indelPlan, patientID, type = "CT") => {
   loadStudy(indelPlan, patientID, type)
   setWWAndWL(indelPlan)
   extractStudy(indelPlan)
-  registerStudy(indelPlan)
-  saveStudy(indelPlan, true)
-  exitImportWindow(indelPlan)
+  //check if register successful
+  if (registerStudy(indelPlan)) {
+    saveStudy(indelPlan, true)
+    exitImportWindow(indelPlan)
+    return true
+  }
+  return false
 }
 
 const restoreStudy = (indelPlan) => {

@@ -77,6 +77,7 @@ const init = () => {
   indelPlan.detail_tc_addplan_no_selected_contour_popup = mappingName.detail_tc_addplan_no_selected_contour_popup
   indelPlan.detail_tc_addplan_no_selected_skin_popup = mappingName.detail_tc_addplan_no_selected_skin_popup
   indelPlan.detail_tc_addplan_no_selected_target_popup = mappingName.detail_tc_addplan_no_selected_target_popup
+  indelPlan.detail_tc_addplan_skin_discontinuous_popup = mappingName.detail_tc_addplan_skin_discontinuous_popup
   indelPlan.detail_tc_delete_tc_inuse_popup = mappingName.detail_tc_delete_tc_inuse_popup
   indelPlan.detail_tc_delete_plan_popup = mappingName.detail_tc_delete_plan_popup
   indelPlan.detail_tc_delete_tc_popup = mappingName.detail_tc_delete_tc_popup
@@ -142,7 +143,8 @@ const init = () => {
   indelPlan.contour_copy_exceed_skin_popup = mappingName.contour_copy_exceed_skin_popup
   indelPlan.contour_select_color = mappingName.contour_select_color
   indelPlan.contour_iso_info = mappingName.contour_iso_info
-  
+  indelPlan.contour_logic_dialog = mappingName.contour_logic_dialog
+  indelPlan.contour_logic_error_popup = mappingName.contour_logic_error_popup
   
   //Switch to Plandesign Popup PlanList Window
   indelPlan.plan_PlanList = mappingName.plan_PlanList

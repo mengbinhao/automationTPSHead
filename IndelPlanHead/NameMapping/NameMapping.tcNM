@@ -1214,6 +1214,24 @@
 																			</Property>
 																		</Properties>
 																	</Child>
+																	<Child Name="Copyto" Key="{B4E47030-D24A-4665-8F11-F9EC2E04BBE4}" ParallelWalk="True">
+																		<Image FileName="-837121484" Left="36" Top="674" Right="153" Bottom="718" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="Copyto" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="LogicOperationButton" Key="{55CFBBB1-067A-4B26-95D4-24B9A30FF154}" ParallelWalk="True">
+																		<Image FileName="-485927105" Left="283" Top="724" Right="400" Bottom="767" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="LogicOperationButton" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
 																</Children>
 															</Child>
 															<Child Name="canvas" Key="{BB881D13-71D7-455E-B70E-FD07B759ACF0}" ParallelWalk="True">
@@ -1247,12 +1265,186 @@
 																		<Value PropertyType="0" Value="QProgressBar" Type="5" />
 																	</Property>
 																	<Property Name="QtText">
-																		<Value PropertyType="0" Value="0%" Type="5" />
+																		<Value PropertyType="0" Value="*" Type="5" />
 																	</Property>
 																	<Property Name="Index">
 																		<Value PropertyType="0" Value="1" Type="0" />
 																	</Property>
 																</Properties>
+															</Child>
+															<Child Name="groupBox_2" Key="{2B6C6E22-6F6B-449F-B2CC-8C10007B8B3F}" ParallelWalk="True">
+																<Image FileName="641791942" Left="18" Top="789" Right="418" Bottom="1010" />
+																<TypeInfo Item0="{6D37FC1B-5E23-4374-926C-3976C07F37B7}" />
+																<Properties>
+																	<Property Name="objectName">
+																		<Value PropertyType="0" Value="groupBox_2" Type="5" />
+																	</Property>
+																</Properties>
+																<Children>
+																	<Child Name="AcceptScale" Key="{8ABA8AB9-4C32-4F5C-BDEE-34CB4F15728F}" ParallelWalk="True">
+																		<Image FileName="641791942" Left="129" Top="969" Right="212" Bottom="997" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="AcceptScale" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="AllLayersScaleFactor" Key="{98917018-E74F-4E3E-B160-2D22EBA7C8DA}" ParallelWalk="True">
+																		<Image FileName="-1808743015" Left="188" Top="839" Right="289" Bottom="861" />
+																		<TypeInfo Item0="{6FB203EB-B82C-4999-BB56-84ECD3F4073B}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="AllLayersScaleFactor" Type="5" />
+																			</Property>
+																		</Properties>
+																		<Children>
+																			<Child Name="qt_spinbox_lineedit" Key="{9F4B9FE2-6190-44A6-97F1-384362EB3EFE}" ParallelWalk="True">
+																				<Image FileName="-1808743015" Left="189" Top="840" Right="272" Bottom="860" />
+																				<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="qt_spinbox_lineedit" Type="5" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																		</Children>
+																	</Child>
+																	<Child Name="AnisoScale" Key="{A87B49AC-49F6-495D-8E99-EBD3C9AA7F28}" ParallelWalk="True">
+																		<Image FileName="-1808743015" Left="78" Top="869" Right="209" Bottom="886" />
+																		<TypeInfo Item0="{5F1141EB-FE2D-4075-9A48-FA1721674D5A}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="AnisoScale" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="Create_As" Key="{666688D0-E1FC-4161-A6AA-D7B94E016B8F}" ParallelWalk="True">
+																		<Image FileName="-1808743015" Left="218" Top="969" Right="300" Bottom="997" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="Create_As" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="ExpandAllLayers" Key="{26645758-46E4-4991-A954-272ABC0F20F4}" ParallelWalk="True">
+																		<Image FileName="-1808743015" Left="258" Top="799" Right="369" Bottom="816" />
+																		<TypeInfo Item0="{A0339029-2ACA-4AFF-8B31-B578EA71A0F0}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="ExpandAllLayers" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="Preview" Key="{4A6EB400-3745-449B-956D-3D12C5FE6F40}" ParallelWalk="True">
+																		<Image FileName="-1808743015" Left="40" Top="969" Right="123" Bottom="997" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="Preview" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="RejectScale" Key="{3D639B11-FC9C-44CC-9B35-EBD2D9B96703}" ParallelWalk="True">
+																		<Image FileName="-1808743015" Left="306" Top="969" Right="389" Bottom="997" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="RejectScale" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="UniformlyScale" Key="{C366DB95-4784-4574-957B-A6EECADAA269}" ParallelWalk="True">
+																		<Image FileName="-1808743015" Left="78" Top="819" Right="189" Bottom="836" />
+																		<TypeInfo Item0="{5F1141EB-FE2D-4075-9A48-FA1721674D5A}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="UniformlyScale" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="ScaleDown" Key="{94F5FFF4-FB2E-419A-8246-55C165FDA4EE}" ParallelWalk="True">
+																		<Image FileName="1219722313" Left="288" Top="902" Right="389" Bottom="924" />
+																		<TypeInfo Item0="{6FB203EB-B82C-4999-BB56-84ECD3F4073B}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="ScaleDown" Type="5" />
+																			</Property>
+																		</Properties>
+																		<Children>
+																			<Child Name="qt_spinbox_lineedit" Key="{A673B3B4-BDC4-4C46-A5AF-6E8E1818B65C}" ParallelWalk="True">
+																				<Image FileName="1219722313" Left="289" Top="903" Right="372" Bottom="923" />
+																				<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="qt_spinbox_lineedit" Type="5" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																		</Children>
+																	</Child>
+																	<Child Name="ScaleLeft" Key="{DA9D35AA-1F59-4614-80D6-17759BB4C908}" ParallelWalk="True">
+																		<Image FileName="1219722313" Left="133" Top="932" Right="234" Bottom="954" />
+																		<TypeInfo Item0="{6FB203EB-B82C-4999-BB56-84ECD3F4073B}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="ScaleLeft" Type="5" />
+																			</Property>
+																		</Properties>
+																		<Children>
+																			<Child Name="qt_spinbox_lineedit" Key="{CD2208BB-EEF7-4671-B2D7-1B99E4B5FE79}" ParallelWalk="True">
+																				<Image FileName="1219722313" Left="134" Top="933" Right="217" Bottom="953" />
+																				<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="qt_spinbox_lineedit" Type="5" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																		</Children>
+																	</Child>
+																	<Child Name="ScaleRight" Key="{6B135916-45A9-4BCB-BA24-D9F58642B35E}" ParallelWalk="True">
+																		<Image FileName="1219722313" Left="288" Top="932" Right="389" Bottom="954" />
+																		<TypeInfo Item0="{6FB203EB-B82C-4999-BB56-84ECD3F4073B}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="ScaleRight" Type="5" />
+																			</Property>
+																		</Properties>
+																		<Children>
+																			<Child Name="qt_spinbox_lineedit" Key="{B766B5B0-E635-4EFD-8C1B-D3EEC374BD7E}" ParallelWalk="True">
+																				<Image FileName="1219722313" Left="289" Top="933" Right="372" Bottom="953" />
+																				<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="qt_spinbox_lineedit" Type="5" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																		</Children>
+																	</Child>
+																	<Child Name="ScaleUp" Key="{E6965564-2C52-4EB7-BF35-89D9C1686666}" ParallelWalk="True">
+																		<Image FileName="1219722313" Left="134" Top="902" Right="235" Bottom="924" />
+																		<TypeInfo Item0="{6FB203EB-B82C-4999-BB56-84ECD3F4073B}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="ScaleUp" Type="5" />
+																			</Property>
+																		</Properties>
+																		<Children>
+																			<Child Name="qt_spinbox_lineedit" Key="{4CE385FF-59F1-46BF-8965-8E7EF4E4527C}" ParallelWalk="True">
+																				<Image FileName="1219722313" Left="135" Top="903" Right="218" Bottom="923" />
+																				<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="qt_spinbox_lineedit" Type="5" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																		</Children>
+																	</Child>
+																</Children>
 															</Child>
 														</Children>
 													</Child>
@@ -3932,7 +4124,7 @@
 									</Child>
 								</Children>
 							</Child>
-							<Child Name="contour_new_contourItem" Key="{71562CE3-5CD7-42EA-A039-39344F0757DE}" ParallelWalk="True">
+							<Child Name="contour_new_contourItem" Key="{71562CE3-5CD7-42EA-A039-39344F0757DE}" ParallelWalk="True" MultiVersion="True">
 								<Image FileName="869233765" Left="0" Top="0" Right="416" Bottom="187" />
 								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
 								<Properties>
@@ -4255,64 +4447,6 @@
 									</Child>
 								</Children>
 							</Child>
-							<Child Name="contour_no_skin_type_contour_exist_popup" Key="{03C19F48-718C-48D9-869A-1ECE44EAC601}" ParallelWalk="True">
-								<Image FileName="-919041649" Left="0" Top="0" Right="336" Bottom="123" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="No Skin-type Contour exits, is that OK ?" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{70181BE6-C79C-486D-9257-F432EC0CED4D}" ParallelWalk="True">
-										<Image FileName="-919041649" Left="14" Top="74" Right="322" Bottom="109" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonYes" Key="{D5EEA732-D8F0-4575-987B-EB6B2FADC9E2}" ParallelWalk="True">
-												<Image FileName="-919041649" Left="184" Top="83" Right="250" Bottom="109" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="Yes" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-											<Child Name="buttonNo" Key="{5F5520CC-1097-4EFB-8FC2-22BFD7DD86F5}" ParallelWalk="True">
-												<Image FileName="-919041649" Left="256" Top="83" Right="322" Bottom="109" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="No" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="2" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
 							<Child Name="contour_no_study_exist_popup" Key="{C77C90D5-6A7F-4B97-9A38-3E7BEE1300E6}" ParallelWalk="True">
 								<Image FileName="1668355949" Left="0" Top="0" Right="241" Bottom="135" />
 								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
@@ -4392,122 +4526,6 @@
 													</Property>
 													<Property Name="QtIndex">
 														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="contour_planlib_empty_contours_remove_popup" Key="{EF7E05EB-9DA6-47C5-BE35-CE3A7F8F156D}" ParallelWalk="True">
-								<Image FileName="855548734" Left="0" Top="0" Right="321" Bottom="123" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="Empty Contours have been removed !" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{EEEAA306-EED8-4E5D-ADF1-CF903F6C2FBB}" ParallelWalk="True">
-										<Image FileName="855548734" Left="14" Top="74" Right="307" Bottom="109" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonOk" Key="{FBF33700-9FE6-4985-9560-AEFB6535413D}" ParallelWalk="True">
-												<Image FileName="855548734" Left="241" Top="83" Right="307" Bottom="109" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="OK" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="contour_skin_not_complete_popup" Key="{47AF4E3D-A965-4BFA-9096-B2631D662915}" ParallelWalk="True">
-								<Image FileName="-282656992" Left="0" Top="0" Right="405" Bottom="123" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="Skin is not complete at Slice Index *" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{83AEB529-FBCD-4B7B-8CBD-1F3EB43ECC0F}" ParallelWalk="True">
-										<Image FileName="-282656992" Left="14" Top="74" Right="391" Bottom="109" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonYes" Key="{01DFB819-5F06-4ACC-8EB2-42F0AC3C97A2}" ParallelWalk="True">
-												<Image FileName="-282656992" Left="181" Top="83" Right="247" Bottom="109" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="Yes" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-											<Child Name="buttonNo" Key="{ADDD031C-7C27-4540-B831-611DFAF0A77E}" ParallelWalk="True">
-												<Image FileName="-282656992" Left="253" Top="83" Right="319" Bottom="109" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="No" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="2" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-											<Child Name="buttonIgnore" Key="{DC3EDAE0-B8A5-41FB-AF1E-90C8EBA2C4D0}" ParallelWalk="True">
-												<Image FileName="-282656992" Left="325" Top="83" Right="391" Bottom="109" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="Ignore" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="3" Type="0" />
 													</Property>
 												</Properties>
 											</Child>
@@ -7450,21 +7468,6 @@
 									</Child>
 								</Children>
 							</Child>
-							<Child Name="contour_stat_dialog" Key="{8A9B05A4-17F9-4CF1-9EAA-BA714CF8CC31}" ParallelWalk="True">
-								<Image FileName="758523989" Left="0" Top="0" Right="416" Bottom="278" />
-								<TypeInfo Item0="{CE137E48-1CB9-451C-802A-70FCBA7D94D4}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QTextEdit" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-							</Child>
 							<Child Name="contour_copy_exceed_skin_popup" Key="{F958CD8F-C03E-4E3A-A51A-453155EA4E8B}" ParallelWalk="True">
 								<Image FileName="-2122486317" Left="0" Top="0" Right="241" Bottom="123" />
 								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
@@ -7598,6 +7601,389 @@
 												<Value PropertyType="0" Value="CancelToSet" Type="5" />
 											</Property>
 										</Properties>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="detail_tc_addplan_skin_discontinuous_popup" Key="{4D92E12E-3432-4698-BF3A-7CB4F82EB9F3}" ParallelWalk="True">
+								<Image FileName="-1213979199" Left="0" Top="0" Right="365" Bottom="135" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="4600610069006C00200074006F002000610064006400200070006C0061006E002E000A00540068006500200043006F00750074006F00750072007300200061007200650061002000220073006B0069006E0022002000200069007300200064006900730063006F006E00740069006E0075006F0075007300200020002E00" Type="7" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="2" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{539797A1-6F40-43A0-AC33-C728882391B7}" ParallelWalk="True">
+										<Image FileName="-1213979199" Left="14" Top="86" Right="351" Bottom="121" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{A6FA9D85-E546-40D8-981B-2104541DE609}" ParallelWalk="True">
+												<Image FileName="-1213979199" Left="285" Top="95" Right="351" Bottom="121" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="OK" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="contour_stat_dialog" Key="{5874A6B0-C961-42F5-9177-424B8F1A75D1}" ParallelWalk="True">
+								<Image FileName="2120252345" Left="0" Top="0" Right="416" Bottom="278" />
+								<TypeInfo Item0="{CE137E48-1CB9-451C-802A-70FCBA7D94D4}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QTextEdit" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Stat Info" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+							</Child>
+							<Child Name="contour_skin_not_complete_popup" Key="{9A58C1EA-DCDE-46C8-9EC5-6886A4EA471F}" ParallelWalk="True">
+								<Image FileName="-1872349666" Left="0" Top="0" Right="397" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Skin is not complete at Slice Index*" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{13A8A982-4ED5-4932-B808-FF5383A5A51E}" ParallelWalk="True">
+										<Image FileName="-1872349666" Left="14" Top="74" Right="383" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonYes" Key="{3331612D-1B71-4880-8C62-60FD7BD61F64}" ParallelWalk="True">
+												<Image FileName="-1872349666" Left="173" Top="83" Right="239" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="Yes" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="buttonNo" Key="{5E08BEA1-39EC-43B6-8C9A-54D97DBA7EDB}" ParallelWalk="True">
+												<Image FileName="-1872349666" Left="245" Top="83" Right="311" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="No" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="2" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="buttonIgnore" Key="{35362B66-FB51-48C2-AA02-7CB24142D7AB}" ParallelWalk="True">
+												<Image FileName="-1872349666" Left="317" Top="83" Right="383" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="Ignore" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="3" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="contour_logic_dialog" Key="{C4AE0506-7DCD-40AA-AD10-D66BC73861C8}" ParallelWalk="True">
+								<Image FileName="1179671221" Left="0" Top="0" Right="740" Bottom="346" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="objectName">
+										<Value PropertyType="0" Value="CalculatorClass" Type="5" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="BackSpace" Key="{9DC814F8-D706-4FD7-B9E7-C7D88AE5AEED}" ParallelWalk="True">
+										<Image FileName="1179671221" Left="579" Top="61" Right="688" Bottom="86" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="BackSpace" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="Reset" Key="{142B1CF2-8391-4063-B298-3BF95B64C7DF}" ParallelWalk="True">
+										<Image FileName="1470340939" Left="579" Top="92" Right="688" Bottom="117" />
+										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="Reset" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="LogicOperator" Key="{59AAE28C-2DAF-4235-A1E5-A2C36434FC1B}" ParallelWalk="True">
+										<Image FileName="-151671176" Left="408" Top="170" Right="719" Bottom="321" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="LogicOperator" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="GenerateNew" Key="{6B2AB79A-68DD-436E-8F2E-75292463C2EA}" ParallelWalk="True">
+												<Image FileName="-151671176" Left="578" Top="260" Right="689" Bottom="301" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="GenerateNew" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="logicAnd" Key="{B8874951-77C2-4AFE-9BAE-DFDEF0F74E8E}" ParallelWalk="True">
+												<Image FileName="-151671176" Left="427" Top="260" Right="488" Bottom="301" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="logicAnd" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="logicOr" Key="{93548E96-14C3-4784-9346-F4419CFCEF18}" ParallelWalk="True">
+												<Image FileName="984971462" Left="496" Top="260" Right="557" Bottom="301" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="logicOr" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="LeftBracket" Key="{B999ABB5-127D-4675-BDD7-DB213CFEE641}" ParallelWalk="True">
+												<Image FileName="984971462" Left="428" Top="200" Right="489" Bottom="241" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="LeftBracket" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="LogicSubstract" Key="{24E55DC5-DB71-483E-9A1C-FFA6566815A9}" ParallelWalk="True">
+												<Image FileName="984971462" Left="578" Top="200" Right="689" Bottom="241" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="LogicSubstract" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="RightBracket" Key="{9799EBB9-AA76-4753-88D8-606AAB73D846}" ParallelWalk="True">
+												<Image FileName="984971462" Left="496" Top="200" Right="557" Bottom="241" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="RightBracket" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="LogicOperationgContourLib" Key="{24444C32-C007-47F0-9312-F2889AABF5E4}" ParallelWalk="True">
+										<Image FileName="984971462" Left="28" Top="160" Right="399" Bottom="331" />
+										<TypeInfo Item0="{1A92C808-A25A-4313-89F1-548C3AFA2520}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="LogicOperationgContourLib" Type="5" />
+											</Property>
+										</Properties>
+									</Child>
+									<Child Name="OperationFormula" Key="{49343228-33A6-482C-9E41-A60E951D7654}" ParallelWalk="True">
+										<Image FileName="984971462" Left="28" Top="40" Right="539" Bottom="141" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="OperationFormula" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="FormulaEditor" Key="{29704F46-3E22-4E2E-ABFF-ED4E815BF1B3}" ParallelWalk="True">
+												<Image FileName="984971462" Left="38" Top="60" Right="529" Bottom="131" />
+												<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="FormulaEditor" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="contour_logic_error_popup" Key="{59F04628-8E45-4DCA-88A7-99D8F76782B5}" ParallelWalk="True">
+								<Image FileName="778181806" Left="0" Top="0" Right="347" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Please make sure the formula is correct ! " Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{65A66542-124B-4DF0-AD3D-F3D99C33AB6C}" ParallelWalk="True">
+										<Image FileName="778181806" Left="14" Top="74" Right="333" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{9A7A125E-57BA-4F01-99F0-9544BE9F55CC}" ParallelWalk="True">
+												<Image FileName="778181806" Left="267" Top="83" Right="333" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="OK" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="contour_planlib_empty_contours_remove_popup" Key="{D82390BE-CB8B-4962-ABFF-D4221D360E64}" ParallelWalk="True">
+								<Image FileName="1733736926" Left="0" Top="0" Right="321" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Empty Contours have been removed !" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{5C1D92DD-024C-4469-B1C0-9881A8ED8ACD}" ParallelWalk="True">
+										<Image FileName="1733736926" Left="14" Top="74" Right="307" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{2C31676D-E2CF-4BE4-843E-405A22320059}" ParallelWalk="True">
+												<Image FileName="1733736926" Left="241" Top="83" Right="307" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="OK" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="contour_no_skin_type_contour_exist_popup" Key="{AAE0D56F-BA00-4BDA-B63F-9801B69186AC}" ParallelWalk="True">
+								<Image FileName="-818686659" Left="0" Top="0" Right="336" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="No Skin-type Contour exits, is that OK ?" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{7F7245C1-38F1-4762-BF22-748F6A5DB299}" ParallelWalk="True">
+										<Image FileName="-818686659" Left="14" Top="74" Right="322" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonYes" Key="{D4A84271-9CEA-4075-862A-6235E42BAF4E}" ParallelWalk="True">
+												<Image FileName="-818686659" Left="184" Top="83" Right="250" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="Yes" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
 									</Child>
 								</Children>
 							</Child>
@@ -7775,11 +8161,37 @@
 								<Child Name="pbManualSketch" Owner="{7FB21E70-3068-49E3-A81F-B67E9EDC3CBE}" />
 								<Child Name="BrushTool" Owner="{40E4721A-3CD1-4125-89DE-EB36D6386BBC}" />
 								<Child Name="Interpolate" Owner="{4A4AB6F9-D37C-4448-BBF8-97583F6605A0}" />
+								<Child Name="Copyto" Owner="{B4E47030-D24A-4665-8F11-F9EC2E04BBE4}" />
+								<Child Name="LogicOperationButton" Owner="{55CFBBB1-067A-4B26-95D4-24B9A30FF154}" />
 							</Child>
 							<Child Name="canvas" Owner="{BB881D13-71D7-455E-B70E-FD07B759ACF0}">
 								<Child Name="C2DViewer" Owner="{A695EE1C-36C7-405D-AADE-E1FF00860698}" />
 							</Child>
 							<Child Name="ProgressBar" Owner="{8889EA4A-3197-404E-991D-77112C008FCF}" />
+							<Child Name="groupBox_2" Owner="{2B6C6E22-6F6B-449F-B2CC-8C10007B8B3F}">
+								<Child Name="AcceptScale" Owner="{8ABA8AB9-4C32-4F5C-BDEE-34CB4F15728F}" />
+								<Child Name="AllLayersScaleFactor" Owner="{98917018-E74F-4E3E-B160-2D22EBA7C8DA}">
+									<Child Name="qt_spinbox_lineedit" Owner="{9F4B9FE2-6190-44A6-97F1-384362EB3EFE}" />
+								</Child>
+								<Child Name="AnisoScale" Owner="{A87B49AC-49F6-495D-8E99-EBD3C9AA7F28}" />
+								<Child Name="Create_As" Owner="{666688D0-E1FC-4161-A6AA-D7B94E016B8F}" />
+								<Child Name="ExpandAllLayers" Owner="{26645758-46E4-4991-A954-272ABC0F20F4}" />
+								<Child Name="Preview" Owner="{4A6EB400-3745-449B-956D-3D12C5FE6F40}" />
+								<Child Name="RejectScale" Owner="{3D639B11-FC9C-44CC-9B35-EBD2D9B96703}" />
+								<Child Name="UniformlyScale" Owner="{C366DB95-4784-4574-957B-A6EECADAA269}" />
+								<Child Name="ScaleDown" Owner="{94F5FFF4-FB2E-419A-8246-55C165FDA4EE}">
+									<Child Name="qt_spinbox_lineedit" Owner="{A673B3B4-BDC4-4C46-A5AF-6E8E1818B65C}" />
+								</Child>
+								<Child Name="ScaleLeft" Owner="{DA9D35AA-1F59-4614-80D6-17759BB4C908}">
+									<Child Name="qt_spinbox_lineedit" Owner="{CD2208BB-EEF7-4671-B2D7-1B99E4B5FE79}" />
+								</Child>
+								<Child Name="ScaleRight" Owner="{6B135916-45A9-4BCB-BA24-D9F58642B35E}">
+									<Child Name="qt_spinbox_lineedit" Owner="{B766B5B0-E635-4EFD-8C1B-D3EEC374BD7E}" />
+								</Child>
+								<Child Name="ScaleUp" Owner="{E6965564-2C52-4EB7-BF35-89D9C1686666}">
+									<Child Name="qt_spinbox_lineedit" Owner="{4CE385FF-59F1-46BF-8965-8E7EF4E4527C}" />
+								</Child>
+							</Child>
 						</Child>
 						<Child Name="PlanGUI" Owner="{6C305443-45B4-4FB4-9E74-39A123C78E3B}">
 							<Child Name="widget" Owner="{6C31E300-0800-4794-A5BE-9E94153BFA05}">
@@ -8015,12 +8427,6 @@
 					<Child Name="buttonOk" Owner="{D47D4F61-9CDB-4B45-8CE3-AC1EE4D70798}" />
 				</Child>
 			</Child>
-			<Child Name="contour_no_skin_type_contour_exist_popup" Owner="{03C19F48-718C-48D9-869A-1ECE44EAC601}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{70181BE6-C79C-486D-9257-F432EC0CED4D}">
-					<Child Name="buttonYes" Owner="{D5EEA732-D8F0-4575-987B-EB6B2FADC9E2}" />
-					<Child Name="buttonNo" Owner="{5F5520CC-1097-4EFB-8FC2-22BFD7DD86F5}" />
-				</Child>
-			</Child>
 			<Child Name="contour_no_study_exist_popup" Owner="{C77C90D5-6A7F-4B97-9A38-3E7BEE1300E6}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{5C1D0B67-04F3-46F9-99E7-E7D4DC5B8D25}">
 					<Child Name="buttonOk" Owner="{22BA9092-0727-4D12-BDED-757025824ED6}" />
@@ -8029,18 +8435,6 @@
 			<Child Name="contour_planlib_exist_popup" Owner="{FE822417-80A2-4665-84F9-CD947AF7F10C}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{1DD7EA48-7907-4304-9026-D3F67700E59A}">
 					<Child Name="buttonOk" Owner="{0ABA6D16-CC82-4075-B3C5-60E6CEB24700}" />
-				</Child>
-			</Child>
-			<Child Name="contour_planlib_empty_contours_remove_popup" Owner="{EF7E05EB-9DA6-47C5-BE35-CE3A7F8F156D}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{EEEAA306-EED8-4E5D-ADF1-CF903F6C2FBB}">
-					<Child Name="buttonOk" Owner="{FBF33700-9FE6-4985-9560-AEFB6535413D}" />
-				</Child>
-			</Child>
-			<Child Name="contour_skin_not_complete_popup" Owner="{47AF4E3D-A965-4BFA-9096-B2631D662915}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{83AEB529-FBCD-4B7B-8CBD-1F3EB43ECC0F}">
-					<Child Name="buttonYes" Owner="{01DFB819-5F06-4ACC-8EB2-42F0AC3C97A2}" />
-					<Child Name="buttonNo" Owner="{ADDD031C-7C27-4540-B831-611DFAF0A77E}" />
-					<Child Name="buttonIgnore" Owner="{DC3EDAE0-B8A5-41FB-AF1E-90C8EBA2C4D0}" />
 				</Child>
 			</Child>
 			<Child Name="detail_fuse_more_studys_popup" Owner="{B289A297-E9DC-49C1-9025-7A669D98BFAC}">
@@ -8518,7 +8912,6 @@
 					<Child Name="buttonOk" Owner="{7433E148-E1F0-4161-88CA-D23530343C3A}" />
 				</Child>
 			</Child>
-			<Child Name="contour_stat_dialog" Owner="{8A9B05A4-17F9-4CF1-9EAA-BA714CF8CC31}" />
 			<Child Name="contour_copy_exceed_skin_popup" Owner="{F958CD8F-C03E-4E3A-A51A-453155EA4E8B}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{223457E8-CD55-4BBC-99E6-923F40603153}">
 					<Child Name="buttonOk" Owner="{55EB3DA8-8BFC-486F-AAD4-2414C6FE34C9}" />
@@ -8533,6 +8926,50 @@
 			<Child Name="contour_iso_info" Owner="{58912AD0-5334-4503-9454-9C4C866ECD1C}">
 				<Child Name="SureToSet" Owner="{5E0A8489-6369-44A6-A162-33014A1DDC5E}" />
 				<Child Name="CancelToSet" Owner="{280C63E2-2673-4963-B3DE-BF2039BE3C64}" />
+			</Child>
+			<Child Name="detail_tc_addplan_skin_discontinuous_popup" Owner="{4D92E12E-3432-4698-BF3A-7CB4F82EB9F3}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{539797A1-6F40-43A0-AC33-C728882391B7}">
+					<Child Name="buttonOk" Owner="{A6FA9D85-E546-40D8-981B-2104541DE609}" />
+				</Child>
+			</Child>
+			<Child Name="contour_stat_dialog" Owner="{5874A6B0-C961-42F5-9177-424B8F1A75D1}" />
+			<Child Name="contour_skin_not_complete_popup" Owner="{9A58C1EA-DCDE-46C8-9EC5-6886A4EA471F}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{13A8A982-4ED5-4932-B808-FF5383A5A51E}">
+					<Child Name="buttonYes" Owner="{3331612D-1B71-4880-8C62-60FD7BD61F64}" />
+					<Child Name="buttonNo" Owner="{5E08BEA1-39EC-43B6-8C9A-54D97DBA7EDB}" />
+					<Child Name="buttonIgnore" Owner="{35362B66-FB51-48C2-AA02-7CB24142D7AB}" />
+				</Child>
+			</Child>
+			<Child Name="contour_logic_dialog" Owner="{C4AE0506-7DCD-40AA-AD10-D66BC73861C8}">
+				<Child Name="BackSpace" Owner="{9DC814F8-D706-4FD7-B9E7-C7D88AE5AEED}" />
+				<Child Name="Reset" Owner="{142B1CF2-8391-4063-B298-3BF95B64C7DF}" />
+				<Child Name="LogicOperator" Owner="{59AAE28C-2DAF-4235-A1E5-A2C36434FC1B}">
+					<Child Name="GenerateNew" Owner="{6B2AB79A-68DD-436E-8F2E-75292463C2EA}" />
+					<Child Name="logicAnd" Owner="{B8874951-77C2-4AFE-9BAE-DFDEF0F74E8E}" />
+					<Child Name="logicOr" Owner="{93548E96-14C3-4784-9346-F4419CFCEF18}" />
+					<Child Name="LeftBracket" Owner="{B999ABB5-127D-4675-BDD7-DB213CFEE641}" />
+					<Child Name="LogicSubstract" Owner="{24E55DC5-DB71-483E-9A1C-FFA6566815A9}" />
+					<Child Name="RightBracket" Owner="{9799EBB9-AA76-4753-88D8-606AAB73D846}" />
+				</Child>
+				<Child Name="LogicOperationgContourLib" Owner="{24444C32-C007-47F0-9312-F2889AABF5E4}" />
+				<Child Name="OperationFormula" Owner="{49343228-33A6-482C-9E41-A60E951D7654}">
+					<Child Name="FormulaEditor" Owner="{29704F46-3E22-4E2E-ABFF-ED4E815BF1B3}" />
+				</Child>
+			</Child>
+			<Child Name="contour_logic_error_popup" Owner="{59F04628-8E45-4DCA-88A7-99D8F76782B5}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{65A66542-124B-4DF0-AD3D-F3D99C33AB6C}">
+					<Child Name="buttonOk" Owner="{9A7A125E-57BA-4F01-99F0-9544BE9F55CC}" />
+				</Child>
+			</Child>
+			<Child Name="contour_planlib_empty_contours_remove_popup" Owner="{D82390BE-CB8B-4962-ABFF-D4221D360E64}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{5C1D92DD-024C-4469-B1C0-9881A8ED8ACD}">
+					<Child Name="buttonOk" Owner="{2C31676D-E2CF-4BE4-843E-405A22320059}" />
+				</Child>
+			</Child>
+			<Child Name="contour_no_skin_type_contour_exist_popup" Owner="{AAE0D56F-BA00-4BDA-B63F-9801B69186AC}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{7F7245C1-38F1-4762-BF22-748F6A5DB299}">
+					<Child Name="buttonYes" Owner="{D4A84271-9CEA-4075-862A-6235E42BAF4E}" />
+				</Child>
 			</Child>
 		</Child>
 	</LogicalNodes>
@@ -14057,6 +14494,364 @@
 							<ParamDesc Flags="1" />
 						</Param0>
 						<ReturnValue Param0="24" />
+					</Child>
+				</FunctionDescriptions>
+			</Data>
+		</Child>
+		<Child Hash="310372440" Key="{5F1141EB-FE2D-4075-9A48-FA1721674D5A}">
+			<Data Properties="ZZKFFFFFFFFFFFFFFFFN8L4K24ZZY">
+				<FunctionDescriptions>
+					<Child Name="_NewEnum" Doc="Returns an enumerator for the children collection." IsBasic="True" Data="ZI4L2L4SA8TDZN">
+						<ReturnValue Param0="13" />
+					</Child>
+					<Child Name="AddRef" IsBasic="True" Data="ZI4L1L4T8S13ZG1K">
+						<ReturnValue Param0="19" />
+					</Child>
+					<Child Name="Child" Doc="Returns a child object by its index." IsBasic="True" Param0="Index" Data="ZI4L1L4L1K6U9ZN">
+						<Param0>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="ChildCount" Doc="The number of child objects." IsBasic="True" Data="ZI4L2L4S58T3ZN">
+						<ReturnValue Param0="3" />
+					</Child>
+					<Child Name="Click" Doc="Simulates a left-button single click in a window or control as specified (relative position, shift keys)." IsBasic="True" Param0="ClientX" Param1="ClientY" Param2="Shift" Data="ZI4L1L4L3K38S18ZN">
+						<Param0>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="-1" Type="0" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="-1" Type="0" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="29" Type0="TShiftKey" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param2>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="ClickButton" Doc="Moves the mouse cursor to the radio button and then simulates a single click, thus selecting it." IsBasic="True" Data="ZI4L1L4S38S18ZN">
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="ClickR" Doc="Simulates a right-button single click in a window or control as specified (relative position, shift keys)." IsBasic="True" Param0="ClientX" Param1="ClientY" Param2="Shift" Data="ZI4L1L4L3K48S18ZN">
+						<Param0>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="-1" Type="0" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="-1" Type="0" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="29" Type0="TShiftKey" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param2>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Enabled" Doc="Specifies whether the object is enabled or disabled." IsBasic="True" Data="ZI4L2L4S7UBZN">
+						<ReturnValue Param0="11" />
+					</Child>
+					<Child Name="Exists" Doc="True if the object exists in the system; else, false." IsBasic="True" Data="ZI4L2L4S68TBZN">
+						<ReturnValue Param0="11" />
+					</Child>
+					<Child Name="Find" Doc="Returns an object by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Data="ZI4L1L4L4K78T9ZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="1" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="FindAll" Doc="Returns an array of objects by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Data="ZI4L1L4L4K8UCZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="1" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<ReturnValue Param0="12" />
+					</Child>
+					<Child Name="FindAllChildren" Doc="Returns an array of objects by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Data="ZI4L1L4L4KCUCZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="1" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<ReturnValue Param0="12" />
+					</Child>
+					<Child Name="FindChild" Doc="Returns an object by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Data="ZI4L1L4L4KB8T9ZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="FindChildEx" Doc="Returns an object by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Param4="Timeout" Data="ZI4L1L4L5K4U9ZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<Param4>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param4>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="FindEx" Doc="Returns an object by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Param4="Timeout" Data="ZI4L1L4L5K38T9ZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="1" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<Param4>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param4>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="FindId" Doc="Returns an object by its ID." IsBasic="True" Param0="Id" Param1="RefreshTree" Data="ZI4L1L4L2K4U9ZN">
+						<Param0>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param1>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="FullName" Doc="Returns the full name of an object.&#32;&#32;Its full name uniquely identifies an object in the system." IsBasic="True" Data="ZI4L2L4SAU8ZN">
+						<ReturnValue Param0="8" />
+					</Child>
+					<Child Name="GetIDsOfNames" IsBasic="True" Param0="riid" Param1="rgszNames" Param2="cNames" Param3="lcid" Param4="rgdispid" Data="ZI4L1L4L5K28S18ZG1K">
+						<Param0>
+							<TypeDesc Param0="26" Param1="29" Type1="GUID" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="26" Param1="26" Param2="16" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="23" />
+							<ParamDesc Flags="1" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="19" />
+							<ParamDesc Flags="1" />
+						</Param3>
+						<Param4>
+							<TypeDesc Param0="26" Param1="3" />
+							<ParamDesc Flags="2" />
+						</Param4>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="GetTypeInfo" IsBasic="True" Param0="itinfo" Param1="lcid" Param2="pptinfo" Data="ZI4L1L4L3K2T18ZG1K">
+						<Param0>
+							<TypeDesc Param0="23" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="19" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="26" Param1="26" Param2="24" />
+							<ParamDesc Flags="2" />
+						</Param2>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="GetTypeInfoCount" IsBasic="True" Param0="pctinfo" Data="ZI4L1L4L1K18S18ZG1K">
+						<Param0>
+							<TypeDesc Param0="26" Param1="23" />
+							<ParamDesc Flags="2" />
+						</Param0>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Height" Doc="The object&apos;s height in pixels." IsBasic="True" Data="ZI4L2L4S68T3ZN">
+						<ReturnValue Param0="3" />
+					</Child>
+					<Child Name="Id" Doc="Object ID. For processes, the process ID; for windows, the window handle, etc." IsBasic="True" Data="ZI4L2L4S38T3ZN">
+						<ReturnValue Param0="3" />
+					</Child>
+					<Child Name="Invoke" IsBasic="True" Param0="dispidMember" Param1="riid" Param2="lcid" Param3="wFlags" Param4="pdispparams" Param5="pvarResult" Param6="pexcepinfo" Param7="puArgErr" Data="ZI4L1L4L8K3T18ZG1K">
+						<Param0>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="26" Param1="29" Type1="GUID" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="19" />
+							<ParamDesc Flags="1" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="18" />
+							<ParamDesc Flags="1" />
+						</Param3>
+						<Param4>
+							<TypeDesc Param0="26" Param1="29" Type1="DISPPARAMS" />
+							<ParamDesc Flags="1" />
+						</Param4>
+						<Param5>
+							<TypeDesc Param0="26" Param1="12" />
+							<ParamDesc Flags="2" />
+						</Param5>
+						<Param6>
+							<TypeDesc Param0="26" Param1="29" Type1="EXCEPINFO" />
+							<ParamDesc Flags="2" />
+						</Param6>
+						<Param7>
+							<TypeDesc Param0="26" Param1="23" />
+							<ParamDesc Flags="2" />
+						</Param7>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Keys" Doc="Simulates one or several keypresses." IsBasic="True" Param0="Keys" Data="ZI4L1L4L1K8T18ZN">
+						<Param0>
+							<TypeDesc Param0="8" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="MappedName" Doc="Specifies the mapped name of the object." IsBasic="True" Data="ZI4L2L4S9U8ZN">
+						<ReturnValue Param0="8" />
+					</Child>
+					<Child Name="Name" Doc="Object name." IsBasic="True" Data="ZI4L2L4S48T8ZN">
+						<ReturnValue Param0="8" />
+					</Child>
+					<Child Name="Parent" Doc="Parent object." IsBasic="True" Data="ZI4L2L4S5U9ZN">
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="QueryInterface" IsBasic="True" Param0="riid" Param1="ppvObj" Data="ZI4L1L4L2Z018ZG1K">
+						<Param0>
+							<TypeDesc Param0="26" Param1="29" Type1="GUID" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="26" Param1="26" Param2="24" />
+							<ParamDesc Flags="2" />
+						</Param1>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Refresh" Doc="Updates the internal list of child objects." IsBasic="True" Data="ZI4L1L4S98S18ZN">
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Release" IsBasic="True" Data="ZI4L1L4S1T13ZG1K">
+						<ReturnValue Param0="19" />
+					</Child>
+					<Child Name="Validate" Doc="Generates the OnValidate event." IsBasic="True" Param0="Params" Data="ZI4L1L4L1H1G7T18Z04L">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="17" />
+						</Param0>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Visible" Doc="Specifies whether an onscreen object is visible to users." IsBasic="True" Data="ZI4L2L4S38TBZN">
+						<ReturnValue Param0="11" />
+					</Child>
+					<Child Name="WaitChild" Doc="Delays script execution until the specified child object appears in the child list or the specified time limit is reached." IsBasic="True" Param0="ChildName" Param1="WaitTime" Data="ZI4L1L4L2K88T9ZN">
+						<Param0>
+							<TypeDesc Param0="8" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param1>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="WaitProperty" Doc="Delays the script execution until the specified property equals the specified value or until the specified time limit elapses." IsBasic="True" Param0="PropertyName" Param1="PropertyValue" Param2="WaitTime" Data="ZI4L1L4L3KBUBZN">
+						<Param0>
+							<TypeDesc Param0="8" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="-1" Type="0" />
+						</Param2>
+						<ReturnValue Param0="11" />
+					</Child>
+					<Child Name="wChecked" Doc="Returns True if the radio button is selected, else False." IsBasic="True" Data="ZI4L2L4S4UBZN">
+						<ReturnValue Param0="11" />
+					</Child>
+					<Child Name="Width" Doc="The object&apos;s width in pixels." IsBasic="True" Data="ZI4L2L4S6U3ZN">
+						<ReturnValue Param0="3" />
 					</Child>
 				</FunctionDescriptions>
 			</Data>

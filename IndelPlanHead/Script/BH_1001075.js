@@ -18,7 +18,7 @@ function testcase() {
   
     patient.loadPatient(indelPlan, Project.Variables.new_patientID)
     const before = indelPlan.PatientData.groupBox.treeWidget_StudyList.wItems.Count
-    
+
     study.addOneStudyActivity(indelPlan, Project.Variables.study_image_id)
     
     const after = indelPlan.PatientData.groupBox.treeWidget_StudyList.wItems.Count
@@ -29,6 +29,5 @@ function testcase() {
       Log.Error(`Add Study fail!`)
     }
   }
-  
   exitwithlogic.exitWithLogic(false, false, 1)
 }

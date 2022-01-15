@@ -20,11 +20,10 @@ function testcase() {
   if (study.addOneStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    //only contour one layer
     contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
+    Log.Checkpoint(`Execute successfully!`)
   } else {
     Log.Error(`Execute fail due to register study!`)
   }
-//---------------------
   exitwithlogic.exitWithLogic(false, false, 1)
 }

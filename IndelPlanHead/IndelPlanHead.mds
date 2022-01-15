@@ -282,87 +282,87 @@
 			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="添加轮廓库" key="{9A93D78B-F6B1-4A68-B17B-E44F79C28243}" group="False" enabled="False" testMoniker="{FA16B7B7-2E6F-472C-B6F5-D9CE3D779CDE}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="添加轮廓库" key="{9A93D78B-F6B1-4A68-B17B-E44F79C28243}" group="False" enabled="True" testMoniker="{FA16B7B7-2E6F-472C-B6F5-D9CE3D779CDE}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="取消添加轮廓库" key="{73CE72EB-E72F-475C-B3B9-C7BF84994855}" group="False" enabled="False" testMoniker="{1590CB0C-9126-4A8A-A7A0-9A7322E5686D}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="取消添加轮廓库" key="{73CE72EB-E72F-475C-B3B9-C7BF84994855}" group="False" enabled="True" testMoniker="{1590CB0C-9126-4A8A-A7A0-9A7322E5686D}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="添加重名轮廓库" key="{76BC4A5A-C9AA-4630-A40F-AE39ACBBD667}" group="False" enabled="False" testMoniker="{3A21E2E9-7B67-4FD2-AC9E-FAAE19BD328D}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="添加重名轮廓库" key="{76BC4A5A-C9AA-4630-A40F-AE39ACBBD667}" group="False" enabled="True" testMoniker="{3A21E2E9-7B67-4FD2-AC9E-FAAE19BD328D}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="编辑轮廓库" key="{0DCE6C7D-5BF2-4468-BA7F-72DFBB3750D0}" group="False" enabled="False" testMoniker="{34FA090A-1B8E-4D86-ABF7-009D6D21E97C}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="编辑轮廓库" key="{0DCE6C7D-5BF2-4468-BA7F-72DFBB3750D0}" group="False" enabled="True" testMoniker="{34FA090A-1B8E-4D86-ABF7-009D6D21E97C}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="取消编辑轮廓库" key="{EB297B9B-F520-494B-8305-340B9B6AC74D}" group="False" enabled="False" testMoniker="{2492DB1E-4867-4913-B202-77FC3A92138C}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="取消编辑轮廓库" key="{EB297B9B-F520-494B-8305-340B9B6AC74D}" group="False" enabled="True" testMoniker="{2492DB1E-4867-4913-B202-77FC3A92138C}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="删除轮廓" key="{4A357D6E-E367-4098-B304-9B9EB92E7E49}" group="False" enabled="False" testMoniker="{D53AFE1C-ED31-4906-BF54-C280C59DA513}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="删除轮廓" key="{4A357D6E-E367-4098-B304-9B9EB92E7E49}" group="False" enabled="True" testMoniker="{D53AFE1C-ED31-4906-BF54-C280C59DA513}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="载入轮廓" key="{ABE738A7-3293-41A4-A8DF-00A100EE6C15}" group="False" enabled="False" testMoniker="{666129BC-7568-4873-AD7A-EC719C0CD669}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="载入轮廓" key="{ABE738A7-3293-41A4-A8DF-00A100EE6C15}" group="False" enabled="True" testMoniker="{666129BC-7568-4873-AD7A-EC719C0CD669}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="添加PlanLib区域轮廓" key="{AD63E519-6D30-4C6A-A52D-789D32EF467F}" group="False" enabled="False" testMoniker="{0BCBED37-0854-4E04-A98E-7A7DDF74D107}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="添加PlanLib区域轮廓" key="{AD63E519-6D30-4C6A-A52D-789D32EF467F}" group="False" enabled="True" testMoniker="{0BCBED37-0854-4E04-A98E-7A7DDF74D107}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="取消添加PlanLib区域轮廓" key="{339FBEC2-1C74-4A25-BA58-D4BC8BEF503E}" group="False" enabled="False" testMoniker="{1839AC89-1F45-4978-B9F1-2C6736665717}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="取消添加PlanLib区域轮廓" key="{339FBEC2-1C74-4A25-BA58-D4BC8BEF503E}" group="False" enabled="True" testMoniker="{1839AC89-1F45-4978-B9F1-2C6736665717}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="添加重名PlanLib区域轮廓" key="{9DE1D1CF-E200-4EA6-A4C6-C1D106F95EB5}" group="False" enabled="False" testMoniker="{222966DC-FFCA-456E-A369-12A281FDDF6B}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="添加重名PlanLib区域轮廓" key="{9DE1D1CF-E200-4EA6-A4C6-C1D106F95EB5}" group="False" enabled="True" testMoniker="{222966DC-FFCA-456E-A369-12A281FDDF6B}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="编辑PlanLib区域轮廓" key="{E6461C09-3F5E-42AA-B7F2-2B7D7655289E}" group="False" enabled="False" testMoniker="{0AE3CDFA-E5C3-4B1E-8976-B240D75988BC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="编辑PlanLib区域轮廓" key="{E6461C09-3F5E-42AA-B7F2-2B7D7655289E}" group="False" enabled="True" testMoniker="{0AE3CDFA-E5C3-4B1E-8976-B240D75988BC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="取消编辑PlanLib区域轮廓" key="{1DA89383-4D25-4815-848A-1B534C273B2E}" group="False" enabled="False" testMoniker="{21789EBF-3A54-4EC7-A265-6FA4F841DEB6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="取消编辑PlanLib区域轮廓" key="{1DA89383-4D25-4815-848A-1B534C273B2E}" group="False" enabled="True" testMoniker="{21789EBF-3A54-4EC7-A265-6FA4F841DEB6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="除PlanLib区域轮廓" key="{9D192DA0-301B-48EE-AAF6-71C1236C20A5}" group="False" enabled="False" testMoniker="{D25EB44D-71DE-4F5D-B409-471B5BDDD6C8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="除PlanLib区域轮廓" key="{9D192DA0-301B-48EE-AAF6-71C1236C20A5}" group="False" enabled="True" testMoniker="{D25EB44D-71DE-4F5D-B409-471B5BDDD6C8}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="取消删除PlanLib区域轮廓" key="{FEF19D1C-0798-4FA0-8285-DF26B0F9004E}" group="False" enabled="False" testMoniker="{B286B011-3D68-4746-ABE0-672186A34301}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="取消删除PlanLib区域轮廓" key="{FEF19D1C-0798-4FA0-8285-DF26B0F9004E}" group="False" enabled="True" testMoniker="{B286B011-3D68-4746-ABE0-672186A34301}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="上传PlanLib区域轮廓到ContourLib列表" key="{FCACC416-E0D5-4E19-BA15-4BAA13D4772A}" group="False" enabled="False" testMoniker="{D40E33FA-829D-4FFE-9CC6-B365D1AD9836}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="上传PlanLib区域轮廓到ContourLib列表" key="{FCACC416-E0D5-4E19-BA15-4BAA13D4772A}" group="False" enabled="True" testMoniker="{D40E33FA-829D-4FFE-9CC6-B365D1AD9836}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="统计PlanLib区域轮廓" key="{73384517-D5B9-45D8-956D-E1D48D363B0A}" group="False" enabled="False" testMoniker="{4B8ABD09-6486-4C74-A970-B61815EF26EB}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="统计PlanLib区域轮廓" key="{73384517-D5B9-45D8-956D-E1D48D363B0A}" group="False" enabled="True" testMoniker="{4B8ABD09-6486-4C74-A970-B61815EF26EB}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="手动用画刷工具勾画靶区轮廓" key="{F305F830-5F81-4737-9E06-CED22D49EE66}" group="False" enabled="False" testMoniker="{318F4DF4-2148-40A1-B4C5-7B9080ED59D9}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="手动用画刷工具勾画靶区轮廓" key="{F305F830-5F81-4737-9E06-CED22D49EE66}" group="False" enabled="True" testMoniker="{318F4DF4-2148-40A1-B4C5-7B9080ED59D9}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="自动提取表皮轮廓" key="{E2BDC823-3728-4594-84E6-6C20DF0D2777}" group="False" enabled="False" testMoniker="{EF3B7301-1C38-4661-85AF-640A4CAEEB63}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="自动提取表皮轮廓" key="{E2BDC823-3728-4594-84E6-6C20DF0D2777}" group="False" enabled="True" testMoniker="{EF3B7301-1C38-4661-85AF-640A4CAEEB63}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="拷贝轮廓项" key="{FE14D0D7-06C6-4867-A6AE-444271A96EF4}" group="False" enabled="False" testMoniker="{71D67347-DBAE-43AF-B7A2-031009107C08}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="拷贝轮廓项" key="{FE14D0D7-06C6-4867-A6AE-444271A96EF4}" group="False" enabled="True" testMoniker="{71D67347-DBAE-43AF-B7A2-031009107C08}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="轮廓项的逻辑运算" key="{81179E7E-4431-4D68-B3CF-B0B8E846EA3A}" group="False" enabled="False" testMoniker="{6F792553-6628-43E2-AE96-00C5195A07C3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="轮廓项的逻辑运算" key="{81179E7E-4431-4D68-B3CF-B0B8E846EA3A}" group="False" enabled="True" testMoniker="{6F792553-6628-43E2-AE96-00C5195A07C3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="轮廓外放时新增PlanLib轮廓项" key="{D4E20C7E-2816-4001-A5DD-2B7BB01CDB41}" group="False" enabled="False" testMoniker="{015438DF-0696-4147-94DC-7661BE1E9FE5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="轮廓外放时新增PlanLib轮廓项" key="{D4E20C7E-2816-4001-A5DD-2B7BB01CDB41}" group="False" enabled="True" testMoniker="{015438DF-0696-4147-94DC-7661BE1E9FE5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -371,7 +371,7 @@
 			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{0871B47E-5290-4335-B8AD-C859AA384B4D}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem1" key="{0871B47E-5290-4335-B8AD-C859AA384B4D}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="2" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

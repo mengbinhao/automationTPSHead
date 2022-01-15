@@ -20,7 +20,6 @@ function testcase() {
   if (study.addOneStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    //only contour one layer
     contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
 
     const before = indelPlan.ContourGUI.groupBox_6.PlanLib.wItems.Count

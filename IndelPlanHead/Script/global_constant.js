@@ -12,7 +12,6 @@ obj.delayOneMinute = 60000
 obj.delayMouseZeroSecond = 0
 obj.delayMouseHalfSecond = 500
 obj.delayMouseOneSecond = 1000
-obj.delayMouseDelta = 10
 
 
 //distcnce

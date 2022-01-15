@@ -6,6 +6,8 @@ const target_related = require("target_related")
 const patient = require("patient")
 const common = require("common")
 
+let mouseApertureVal = 0
+
 const __getType = contourLibType => {
   return ["TARGET", "OAR", "SKIN"]
 }
@@ -81,7 +83,8 @@ const __increaseMouseAperture = (indelPlan) => {
   const canvas = indelPlan.ContourGUI.canvas.C2DViewer
   canvas.Click()
   LLPlayer.KeyDown(VK_LCONTROL, globalConstant.obj.delayMouseHalfSecond)
-  canvas.MouseWheel(globalConstant.obj.delayMouseDelta)
+  //positive means increase, negative means reduce
+  canvas.MouseWheel(mouseApertureVal)
   LLPlayer.KeyUp(VK_LCONTROL, globalConstant.obj.delayMouseHalfSecond)
 }
  
@@ -322,37 +325,43 @@ const loadAndContourSKINActivity = indelPlan => {
   }
 }
 
+//only contour one layer
 const loadAndContourTargetAreaByLineActivity = (indelPlan, contourLibName) => {
   loadContourLib(indelPlan, contourLibName)
   indelPlan.ContourGUI.groupBox_5.pbManualSketch.ClickButton()
   target_related.drawTriangleNearMiddle(indelPlan)
   indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
-  indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
-  const position = coordinate.getNearMiddleCoordinate()
-  LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond * 3)
-  LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)
-  indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
-
-  indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
+  //positive means move to up, to zero
+  //indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
+  //const position = coordinate.getNearMiddleCoordinate()
+  //LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond * 3)
+  //LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)
+  //indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
+  //indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
 }
 
+//only contour one layer
 const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
   loadContourLib(indelPlan, contourLibName)
   indelPlan.ContourGUI.groupBox_5.BrushTool.ClickButton()
-  __increaseMouseAperture(indelPlan)
+
+  if (strictEqual(mouseApertureVal, 0)) {
+    mouseApertureVal =+ 20
+    __increaseMouseAperture(indelPlan)
+  }
+
   let i = 0
   while (i < 10) {
     target_related.drawRectangleNearMiddle(indelPlan)
     i++
   }
-  utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
-  indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
-  const position = coordinate.getNearMiddleCoordinate()
-  LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
-  LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)
-  indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
-  indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
-  utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+  //indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
+  //const position = coordinate.getNearMiddleCoordinate()
+  //LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
+  //LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)
+  //indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
+  //indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
+  //utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
 }
 
 const deleteContourForDirtyData = (indelPlan, deleteContours) => {

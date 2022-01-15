@@ -4074,10 +4074,7 @@
 										<Value PropertyType="0" Value="QMessageBox" Type="5" />
 									</Property>
 									<Property Name="QtText">
-										<Value PropertyType="0" Value="Sure to Delete *" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
+										<Value PropertyType="0" Value="Sure to Delete*" Type="5" />
 									</Property>
 								</Properties>
 								<Children>
@@ -7672,9 +7669,6 @@
 									<Property Name="QtText">
 										<Value PropertyType="0" Value="Skin is not complete at Slice Index*" Type="5" />
 									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
 								</Properties>
 								<Children>
 									<Child Name="qt_msgbox_buttonbox" Key="{13A8A982-4ED5-4932-B808-FF5383A5A51E}" ParallelWalk="True">
@@ -7970,6 +7964,49 @@
 										<Children>
 											<Child Name="buttonYes" Key="{D4A84271-9CEA-4075-862A-6235E42BAF4E}" ParallelWalk="True">
 												<Image FileName="-818686659" Left="184" Top="83" Right="250" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="Yes" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="MessageBox" Key="{CD07DEFC-5BC7-4FD6-80AA-1B96C0FD2F0F}" ParallelWalk="True">
+								<Image FileName="-2094497883" Left="0" Top="0" Right="204" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Sure to Delete tar ?" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="2" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{6F404080-68D9-42C5-BDD7-0BCC8A1650DD}" ParallelWalk="True">
+										<Image FileName="-2094497883" Left="14" Top="74" Right="190" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonYes" Key="{FADF996C-5181-4079-AA9A-BBCDACDE36F5}" ParallelWalk="True">
+												<Image FileName="-2094497883" Left="52" Top="83" Right="118" Bottom="109" />
 												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
 												<Properties>
 													<Property Name="QtClassName">
@@ -8969,6 +9006,11 @@
 			<Child Name="contour_no_skin_type_contour_exist_popup" Owner="{AAE0D56F-BA00-4BDA-B63F-9801B69186AC}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{7F7245C1-38F1-4762-BF22-748F6A5DB299}">
 					<Child Name="buttonYes" Owner="{D4A84271-9CEA-4075-862A-6235E42BAF4E}" />
+				</Child>
+			</Child>
+			<Child Name="MessageBox" Owner="{CD07DEFC-5BC7-4FD6-80AA-1B96C0FD2F0F}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{6F404080-68D9-42C5-BDD7-0BCC8A1650DD}">
+					<Child Name="buttonYes" Owner="{FADF996C-5181-4079-AA9A-BBCDACDE36F5}" />
 				</Child>
 			</Child>
 		</Child>

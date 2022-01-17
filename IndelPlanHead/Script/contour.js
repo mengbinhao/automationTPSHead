@@ -348,6 +348,7 @@ const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
   if (strictEqual(mouseApertureVal, 0)) {
     mouseApertureVal =+ 20
     __increaseMouseAperture(indelPlan)
+    mouseApertureVal =- 20
   }
 
   let i = 0

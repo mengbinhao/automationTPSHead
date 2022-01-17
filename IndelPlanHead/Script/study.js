@@ -326,8 +326,6 @@ const extractStudy = indelPlan => {
     while (indelPlan.register_auto_extract_progress.Exists) {
       utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
-    //incase register button disabled
-    //utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   } else {
     Log.Warning(`Can not extractStudy due to window is not right`) 
   }
@@ -337,7 +335,7 @@ const registerStudy = indelPlan => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_area.pushButton.ClickButton()
     if (indelPlan.register_less_slices_popup.Exists) {
-      Log.Error(`Can not registerStudy due to image quality low`)
+      Log.Warning(`Can not registerStudy due to image quality low`)
       indelPlan.register_less_slices_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
       return false
     }
@@ -380,6 +378,9 @@ const saveStudy = (indelPlan, isSave = false) => {
     
     if (isSave) {
       indelPlan.register_save_confirm_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+      while (indelPlan.register_auto_extract_progress.Exists) {
+        utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+      }
       indelPlan.register_save_done_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
     } else {
        indelPlan.register_save_confirm_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()

@@ -279,7 +279,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="添加轮廓库" key="{9A93D78B-F6B1-4A68-B17B-E44F79C28243}" group="False" enabled="True" testMoniker="{FA16B7B7-2E6F-472C-B6F5-D9CE3D779CDE}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">

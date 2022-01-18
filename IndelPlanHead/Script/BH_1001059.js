@@ -19,7 +19,7 @@ function testcase() {
   
     patient.loadPatient(indelPlan, Project.Variables.new_patientID)
     study.gotoRegisterImporter(indelPlan)
-    study.loadStudy(indelPlan, Project.Variables.study_image_id, "CT")
+    study.loadStudy(indelPlan, Project.Variables.study_image_id)
 
     if (!indelPlan.register_area.checkBox.Enabled) {
       Log.Checkpoint(`load ${Project.Variables.study_image_name} image successfully!`)

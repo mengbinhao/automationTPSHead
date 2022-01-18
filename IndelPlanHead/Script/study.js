@@ -211,9 +211,6 @@ const loadStudy = (indelPlan, patientID, type = "CT", method = true) => {
     } else {
       indelPlan.register_importer.treeWidget.wItems.Item(rowIdx).Items.Item(subIdx).DblClick()
     }
-    //just in case
-    utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
-    
     if (indelPlan.register_overwrite_data_popup.Exists) {
       indelPlan.register_overwrite_data_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     }
@@ -316,7 +313,8 @@ const importStudy = (indelPlan, path, isCancel = false) => {
 const extractStudy = indelPlan => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_area.toolButton.ClickButton()
-    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+    //wati show coordinate
+    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
     //hide zoom view
     indelPlan.register_area.checkBox_3.setChecked(false)
     const position = coordinate.getNearMiddleCoordinate()
@@ -343,7 +341,6 @@ const registerStudy = indelPlan => {
     if (indelPlan.register_CDeviationTableDlg.Exists) {
       indelPlan.register_CDeviationTableDlg.Close()
       indelPlan.register_area.ConfirmRegisterBotton.ClickButton()
-      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
     return true
   } else {
@@ -364,15 +361,15 @@ const unRegisterStudy = indelPlan => {
   }
 }
 
-const saveStudy = (indelPlan, isSave = false) => {
+//true means CT, false means MR
+const saveStudy = (indelPlan, type = true, isSave = false) => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_importer.pbSaveStudy.ClickButton()
     if (indelPlan.register_save_collision_detection_popup.Exists) {
       indelPlan.register_save_collision_detection_popup.qt_msgbox_buttonbox.buttonIgnore.ClickButton()
-      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }
     
-    if (indelPlan.register_save_ct_voxels_popup.Exists) {
+    if (type && indelPlan.register_save_ct_voxels_popup.Exists) {
       indelPlan.register_save_ct_voxels_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
     }
     
@@ -390,14 +387,14 @@ const saveStudy = (indelPlan, isSave = false) => {
   }
 }
 
-const addOneStudyActivity = (indelPlan, patientID, type = "CT") => {
+const addOneStudyActivity = (indelPlan, patientID, type = "MR") => {
   gotoRegisterImporter(indelPlan)
   loadStudy(indelPlan, patientID, type)
-  setWWAndWL(indelPlan)
+  setWWAndWL(indelPlan, type, 625, 492)
   extractStudy(indelPlan)
   //check if register successful
   if (registerStudy(indelPlan)) {
-    saveStudy(indelPlan, true)
+    saveStudy(indelPlan, false, true)
     exitImportWindow(indelPlan)
     return true
   }

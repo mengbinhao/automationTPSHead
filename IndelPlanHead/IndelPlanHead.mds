@@ -237,49 +237,49 @@
 			<testItem name="imageregister" key="{1B43A6DE-2B93-421A-A7CF-4A4975013029}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="关闭图像注册界面" key="{5746FC2D-AD89-4887-813E-42A5458DAECC}" group="False" enabled="True" testMoniker="{0AA57586-E514-4CC3-879C-69C9FEBAC962}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="关闭图像注册界面" key="{5746FC2D-AD89-4887-813E-42A5458DAECC}" group="False" enabled="False" testMoniker="{0AA57586-E514-4CC3-879C-69C9FEBAC962}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="导出图像序列" key="{297D3E03-5BF1-490E-A258-F547BD9CF51C}" group="False" enabled="True" testMoniker="{4FBBF7BE-21AF-4E21-B084-62129929BA5B}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="导出图像序列" key="{297D3E03-5BF1-490E-A258-F547BD9CF51C}" group="False" enabled="False" testMoniker="{4FBBF7BE-21AF-4E21-B084-62129929BA5B}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="导入图像序列" key="{5484589C-1A9E-4BF6-A756-6C9BF2D46A14}" group="False" enabled="True" testMoniker="{D2025F07-E318-4C25-88C5-89E63E37865A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="导入图像序列" key="{5484589C-1A9E-4BF6-A756-6C9BF2D46A14}" group="False" enabled="False" testMoniker="{D2025F07-E318-4C25-88C5-89E63E37865A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="加载患者图像序列_双击" key="{6098A9C9-2FC8-498B-8366-620AEFD56777}" group="False" enabled="True" testMoniker="{58A98C55-245B-4863-86A2-535FD64CDFC2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="加载患者图像序列_双击" key="{6098A9C9-2FC8-498B-8366-620AEFD56777}" group="False" enabled="False" testMoniker="{58A98C55-245B-4863-86A2-535FD64CDFC2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="加载患者图像序列_加载按钮" key="{0C4586A2-FCE7-4A3B-95A9-85BC957C240B}" group="False" enabled="True" testMoniker="{077229AD-1E68-4D5B-AEB8-3B38D419F37E}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="加载患者图像序列_加载按钮" key="{0C4586A2-FCE7-4A3B-95A9-85BC957C240B}" group="False" enabled="False" testMoniker="{077229AD-1E68-4D5B-AEB8-3B38D419F37E}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="删除一个患者的所有图像序列" key="{746B66EC-FA9E-4CF1-881F-500825977890}" group="False" enabled="True" testMoniker="{0DE1C28E-FC65-49B9-BC6A-3C62A3AB5FD9}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="删除一个患者的所有图像序列" key="{746B66EC-FA9E-4CF1-881F-500825977890}" group="False" enabled="False" testMoniker="{0DE1C28E-FC65-49B9-BC6A-3C62A3AB5FD9}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="删除选中的一组图像序列" key="{6C14C634-C381-4AB9-9DCF-540A83E65924}" group="False" enabled="True" testMoniker="{43C28B26-F1AD-40E5-9D0A-FDDC6974FE9E}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="删除选中的一组图像序列" key="{6C14C634-C381-4AB9-9DCF-540A83E65924}" group="False" enabled="False" testMoniker="{43C28B26-F1AD-40E5-9D0A-FDDC6974FE9E}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="删除所有患者图像序列" key="{88B75501-725D-4C6C-A37D-C82BE7D160D7}" group="False" enabled="True" testMoniker="{DA592B24-BCE9-4BD7-8D72-31053C5714C7}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="删除所有患者图像序列" key="{88B75501-725D-4C6C-A37D-C82BE7D160D7}" group="False" enabled="False" testMoniker="{DA592B24-BCE9-4BD7-8D72-31053C5714C7}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="自动注册图像序列" key="{BB46B220-E95B-4012-8D8E-381B9B3B7CE1}" group="False" enabled="True" testMoniker="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="自动注册图像序列" key="{BB46B220-E95B-4012-8D8E-381B9B3B7CE1}" group="False" enabled="False" testMoniker="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="取消注册" key="{40885F6A-26DB-4140-ACE3-313700A90360}" group="False" enabled="True" testMoniker="{75411F2B-B0A0-43B5-8AD9-1C17A8464229}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="取消注册" key="{40885F6A-26DB-4140-ACE3-313700A90360}" group="False" enabled="False" testMoniker="{75411F2B-B0A0-43B5-8AD9-1C17A8464229}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="添加轮廓库" key="{9A93D78B-F6B1-4A68-B17B-E44F79C28243}" group="False" enabled="True" testMoniker="{FA16B7B7-2E6F-472C-B6F5-D9CE3D779CDE}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">

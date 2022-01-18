@@ -29,7 +29,7 @@ function testcase() {
       aqObject.CheckProperty(indelPlan.register_area.pushButton, "Enabled", cmpEqual, true)
       aqObject.CheckProperty(indelPlan.register_area.ConfirmRegisterBotton, "Enabled", cmpEqual, false)   
     } else {
-      Log.Error(`registerStudy fail while executing BH-1001076`)
+      Log.Error(`Register Study fail while executing BH-1001076`)
     }
   }
   

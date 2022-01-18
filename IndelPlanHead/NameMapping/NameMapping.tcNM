@@ -6284,64 +6284,6 @@
 									</Child>
 								</Children>
 							</Child>
-							<Child Name="register_save_confirm_popup" Key="{62AD5E46-FC1C-4F65-BE26-B8FB8B3E86B9}" ParallelWalk="True">
-								<Image FileName="-72065416" Left="0" Top="0" Right="369" Bottom="268" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="54006800650020006E00650077002000730074007500640079002000770069006C006C002000620065002000730061007600650064002000610073002000620065006C006F0077003A000D000A005300740075006400790020004E0061006D0065003A0020005300740075006400790031000D000A004D006F00640061006C006900740079003A002000430054000D000A00500061007400690065006E007400200050006F0073006900740069006F006E003A0020004800460053000D000A0042006F006400790070006100720074003A00200048004500410044000D000A004600720061006D0065003A00200055007300650064000D000A0043006F006E006600690067004E0061006D0065003A004300680061006E006700270061006E002D00310037000D000A0050006C006500610073006500200063006F006D006600690072006D002000740068006500200061006E00610074006F006D006900630061006C0020006400610074006100200069006E0074006500670072006900740079000D000A0043006F006E00740069006E00750065003F00" Type="7" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{B7733B61-4A80-4B9B-899E-5CEC7DA558A7}" ParallelWalk="True">
-										<Image FileName="-72065416" Left="14" Top="219" Right="355" Bottom="254" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonYes" Key="{DFB783A0-241A-4717-9E35-47C290A4A6AA}" ParallelWalk="True">
-												<Image FileName="-72065416" Left="217" Top="228" Right="283" Bottom="254" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;Yes" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-											<Child Name="buttonNo" Key="{279C142D-1D09-41CC-BA59-30A9E517331E}" ParallelWalk="True">
-												<Image FileName="-72065416" Left="289" Top="228" Right="355" Bottom="254" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;No" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="2" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
 							<Child Name="register_save_done_popup" Key="{97A7A6E8-94C6-43C3-898E-687B123E373F}" ParallelWalk="True">
 								<Image FileName="-1723911321" Left="0" Top="0" Right="371" Bottom="123" />
 								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
@@ -7981,23 +7923,23 @@
 									</Child>
 								</Children>
 							</Child>
-							<Child Name="MessageBox" Key="{CD07DEFC-5BC7-4FD6-80AA-1B96C0FD2F0F}" ParallelWalk="True">
-								<Image FileName="-2094497883" Left="0" Top="0" Right="204" Bottom="123" />
+							<Child Name="register_save_confirm_popup" Key="{7C29961F-167D-4C48-95A7-9152B98EBCF8}" ParallelWalk="True">
+								<Image FileName="749509150" Left="0" Top="0" Right="369" Bottom="268" />
 								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
 								<Properties>
 									<Property Name="QtClassName">
 										<Value PropertyType="0" Value="QMessageBox" Type="5" />
 									</Property>
 									<Property Name="QtText">
-										<Value PropertyType="0" Value="Sure to Delete tar ?" Type="5" />
+										<Value PropertyType="0" Value="54006800650020006E00650077002000730074007500640079002000770069006C006C002000620065002000730061007600650064002000610073002000620065006C006F0077003A000D000A005300740075006400790020004E0061006D0065003A0020005300740075006400790031000D000A004D006F00640061006C006900740079003A0020002A00" Type="7" />
 									</Property>
 									<Property Name="Index">
-										<Value PropertyType="0" Value="2" Type="0" />
+										<Value PropertyType="0" Value="1" Type="0" />
 									</Property>
 								</Properties>
 								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{6F404080-68D9-42C5-BDD7-0BCC8A1650DD}" ParallelWalk="True">
-										<Image FileName="-2094497883" Left="14" Top="74" Right="190" Bottom="109" />
+									<Child Name="qt_msgbox_buttonbox" Key="{1D5E6BD7-BE91-45C4-A8FD-A6A38B8BDAE8}" ParallelWalk="True">
+										<Image FileName="749509150" Left="14" Top="219" Right="355" Bottom="254" />
 										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
 										<Properties>
 											<Property Name="objectName">
@@ -8005,15 +7947,15 @@
 											</Property>
 										</Properties>
 										<Children>
-											<Child Name="buttonYes" Key="{FADF996C-5181-4079-AA9A-BBCDACDE36F5}" ParallelWalk="True">
-												<Image FileName="-2094497883" Left="52" Top="83" Right="118" Bottom="109" />
+											<Child Name="buttonYes" Key="{C6A129D3-959D-4C19-A62C-B61F13030411}" ParallelWalk="True">
+												<Image FileName="749509150" Left="217" Top="228" Right="283" Bottom="254" />
 												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
 												<Properties>
 													<Property Name="QtClassName">
 														<Value PropertyType="0" Value="QPushButton" Type="5" />
 													</Property>
 													<Property Name="QtText">
-														<Value PropertyType="0" Value="Yes" Type="5" />
+														<Value PropertyType="0" Value="&amp;Yes" Type="5" />
 													</Property>
 													<Property Name="QtIndex">
 														<Value PropertyType="0" Value="1" Type="0" />
@@ -8636,12 +8578,6 @@
 					<Child Name="buttonOk" Owner="{6CF87611-ADB1-4B11-A788-CFC31CA3CEA4}" />
 				</Child>
 			</Child>
-			<Child Name="register_save_confirm_popup" Owner="{62AD5E46-FC1C-4F65-BE26-B8FB8B3E86B9}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{B7733B61-4A80-4B9B-899E-5CEC7DA558A7}">
-					<Child Name="buttonYes" Owner="{DFB783A0-241A-4717-9E35-47C290A4A6AA}" />
-					<Child Name="buttonNo" Owner="{279C142D-1D09-41CC-BA59-30A9E517331E}" />
-				</Child>
-			</Child>
 			<Child Name="register_save_done_popup" Owner="{97A7A6E8-94C6-43C3-898E-687B123E373F}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{3CF01F89-7519-40A2-9C19-DD39B8A41CFA}">
 					<Child Name="buttonOk" Owner="{34073037-94A0-4CC4-AB4E-6832A526C7AB}" />
@@ -9008,9 +8944,9 @@
 					<Child Name="buttonYes" Owner="{D4A84271-9CEA-4075-862A-6235E42BAF4E}" />
 				</Child>
 			</Child>
-			<Child Name="MessageBox" Owner="{CD07DEFC-5BC7-4FD6-80AA-1B96C0FD2F0F}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{6F404080-68D9-42C5-BDD7-0BCC8A1650DD}">
-					<Child Name="buttonYes" Owner="{FADF996C-5181-4079-AA9A-BBCDACDE36F5}" />
+			<Child Name="register_save_confirm_popup" Owner="{7C29961F-167D-4C48-95A7-9152B98EBCF8}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{1D5E6BD7-BE91-45C4-A8FD-A6A38B8BDAE8}">
+					<Child Name="buttonYes" Owner="{C6A129D3-959D-4C19-A62C-B61F13030411}" />
 				</Child>
 			</Child>
 		</Child>

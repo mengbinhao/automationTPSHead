@@ -155,6 +155,7 @@ const init = () => {
   indelPlan.plan_do_fine_dose_calculate_popup = mappingName.plan_do_fine_dose_calculate_popup
   indelPlan.plan_no_focus_detected_popup = mappingName.plan_no_focus_detected_popup
   indelPlan.plan_unfinished_popup = mappingName.plan_unfinished_popup
+  indelPlan.plan_set_wrong_popup = mappingName.plan_set_wrong_popup
   indelPlan.plan_set_prescription_dose_popup = mappingName.plan_set_prescription_dose_popup
   //Fraction
   indelPlan.plan_dlgfraction = mappingName.plan_dlgfraction

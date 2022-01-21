@@ -42,7 +42,7 @@ const __checkDisplayModeExists = (displayMode) => {
   return __getDisplayMode().includes(displayMode)
 }
 
-const __fillColor = (indel, color) => {
+const __fillColor = (indelPlan, color) => {
   const supportColors = ["bule", "red", "green"]
   if (!supportColors.includes(color)) return
   const row = 3, column = 1
@@ -55,19 +55,19 @@ const __fillColor = (indel, color) => {
   }
   const [desX, desY] = coordinate.getContourColorCorrdinate(row, column)
   if (desX && desY) {
-    indel.contour_new_contourItem.ContourColor.ClickButton()
+    indelPlan.contour_new_contourItem.ContourColor.ClickButton()
     LLPlayer.MouseMove(desX, desY, globalConstant.obj.delayMouseHalfSecond)
     LLPlayer.MouseDown(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
     LLPlayer.MouseUp(MK_LBUTTON, desX, desY, globalConstant.obj.delayMouseHalfSecond)
-    indel.contour_select_color.DialogButtonBox.buttonOk.ClickButton()
+    indelPlan.contour_select_color.DialogButtonBox.buttonOk.ClickButton()
   }
 }
 
-const __setContourAttribute = (indel, contourLibName, contourLibType, displayMode, color) => {
-  indel.contour_new_contourItem.ContourName.SetText(contourLibName)
-  indel.contour_new_contourItem.ContourType.setCurrentIndex(__getTypeIndex(contourLibType))
-  indel.contour_new_contourItem.DisplayMode.setCurrentIndex(__getDisplayModeIndex(displayMode))
-  color && __fillColor(indel, color)
+const __setContourAttribute = (indelPlan, contourLibName, contourLibType, displayMode, color) => {
+  indelPlan.contour_new_contourItem.ContourName.SetText(contourLibName)
+  indelPlan.contour_new_contourItem.ContourType.setCurrentIndex(__getTypeIndex(contourLibType))
+  indelPlan.contour_new_contourItem.DisplayMode.setCurrentIndex(__getDisplayModeIndex(displayMode))
+  color && __fillColor(indelPlan, color)
 }
 
 const __handleContourDirtyData = (pv, contourLibName) => {

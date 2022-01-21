@@ -540,6 +540,7 @@
 						<ref key="{318F4DF4-2148-40A1-B4C5-7B9080ED59D9}" />
 					</references>
 				</folder>
+				<folder caption="plandesign" description="A logical folder that is used to organize project items and elements." moniker="" />
 			</folders>
 			<references>
 				<ref key="{13BA3237-E492-44C0-95A1-55802530441A}" />

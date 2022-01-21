@@ -1,5 +1,7 @@
 ﻿const globalConstant = require("global_constant")
 const utilsFunctions = require("utils_functions")
+const findInList = require("find_in_list")
+const plan = require("plan")
 
 const __closeRegisterImporter = indelPlan => {
   indelPlan.register_importer.pbClose.ClickButton()
@@ -175,8 +177,39 @@ const gotoPatientManagement = (indelPlan, isUpdatePatient = false) => {
   if (indelPlan.PatientData.VisibleOnScreen) __handlePatientData(indelPlan, isUpdatePatient)
 }
 
+const pushToController = (indelPlan, parentTCName, planName) => {
+  if (indelPlan.PatientData.VisibleOnScreen) {
+    const TCList = indelPlan.PatientData.groupBox_5.treeWidget_PlanList
+    const rowIdx = findInList.isItemExistInMoreListReturnIndex(parentTCName, globalConstant.obj.nameColumn, TCList)  
+    if (strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
+      Log.Warning(`Can not pushToController due to can not find target TC with TCName=${parentTCName}`)
+      return
+    }
+    const parentTC = TCList.wItems.Item(rowIdx)
+    const subRowIdx = plan.getTargetPlan(parentTC, planName)
+    if (strictEqual(subRowIdx, globalConstant.obj.notFoundIndex)) {
+      Log.Warning(`Can not pushToController due to can not find target planName with planName=${planName}`)
+      return
+    }
+    parentTC.Items.Item(subRowIdx).Click()
+    indelPlan.PatientData.pushButton_PushPlan.ClickButton()
+    if (indelPlan.detail_tc_no_plan_selected_popup.Exists) return
+    if (indelPlan.detail_push_controller_not_confirmed_popup.Exists) return
+    if (indelPlan.detail_push_controller_popup.Exists) {
+      indelPlan.detail_push_controller_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+      //while (indelPlan.main_save_progress.VisibleOnScreen) {
+        utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
+      //}
+      indelPlan.detail_push_controller_complete_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
+    }
+  } else {
+    Log.Warning(`Can not pushToController due to window is not right`) 
+  }
+}
+
 module.exports.changePatientDetailTab = changePatientDetailTab
 module.exports.getPatientDetailTabIndex = getPatientDetailTabIndex
 module.exports.getPatientDetailTabName = getPatientDetailTabName
 module.exports.gotoPatientManagement = gotoPatientManagement
 module.exports.handlePopupDialog = handlePopupDialog
+module.exports.pushToController = pushToController

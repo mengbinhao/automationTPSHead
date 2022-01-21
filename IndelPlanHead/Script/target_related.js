@@ -79,11 +79,11 @@ const drawRectangleNearMiddle = indelPlan => {
 const addOnePlanNearMiddlePoint = indelPlan => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
     const position = coordinate.getPlanCanvasNearMiddleCoordinate()
-    const gamaGngle = indelPlan.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel.groupBox_2.GamaAngle
+    const gamaAngle = indelPlan.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel.groupBox_2.GamaAngle
     do {
        indelPlan.PlanGUI.canvas.PlanC2DViewer.DblClick(position[0], position[1])
-    } while (!gamaGngle.Enabled)
-    utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
+    } while (!gamaAngle.Enabled)
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   } else {
     Log.Warning(`Can not addOneNearMiddlePointer due to window is not right`) 
   }

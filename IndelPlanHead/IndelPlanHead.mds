@@ -279,7 +279,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="添加轮廓库" key="{9A93D78B-F6B1-4A68-B17B-E44F79C28243}" group="False" enabled="True" testMoniker="{FA16B7B7-2E6F-472C-B6F5-D9CE3D779CDE}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -363,6 +363,15 @@
 						<children />
 					</testItem>
 					<testItem name="轮廓外放时新增PlanLib轮廓项" key="{D4E20C7E-2816-4001-A5DD-2B7BB01CDB41}" group="False" enabled="True" testMoniker="{015438DF-0696-4147-94DC-7661BE1E9FE5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="plandesign" key="{F68500BC-D9D7-4877-AB66-8FE045DBC623}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="ProjectTestItem3" key="{789FE222-F795-4649-9A91-BEA5939181EB}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

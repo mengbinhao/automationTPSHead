@@ -18,15 +18,6 @@ const __getNextTreatCourseName = indelPlan => {
   return `TC${cnt + 1}`
 }
 
-const __getTargetPlan = (parentTC, planName) => {
-  const cnt = parentTC.Items.Count
-  if (cnt < 1) return globalConstant.obj.notFoundIndex
-  for (let i = 0; i < cnt; i++) {
-    if (strictEqual(parentTC.Items.Item(i).Text(globalConstant.obj.nameColumn), planName)) return i
-  }
-  return globalConstant.obj.notFoundIndex
-}
-
 const __getNextCopyPlanName = (parentTC, copiedPlanName) => {
   const cnt = parentTC.Items.Count
   if (cnt === 1) return `^${copiedPlanName}_C1`
@@ -47,6 +38,15 @@ const __getTargetRegionTabs = (indelPlan) => {
     tabs[i] = tabWidget.wTabCaption(i)
   }
   return tabs
+}
+
+const getTargetPlan = (parentTC, planName) => {
+  const cnt = parentTC.Items.Count
+  if (cnt < 1) return globalConstant.obj.notFoundIndex
+  for (let i = 0; i < cnt; i++) {
+    if (strictEqual(parentTC.Items.Item(i).Text(globalConstant.obj.nameColumn), planName)) return i
+  }
+  return globalConstant.obj.notFoundIndex
 }
 
 const changeTargetRegionTabs = (indelPlan, targetRegionName) => {
@@ -101,7 +101,7 @@ const deleteTreatCourse = (indelPlan, TCName, isDelete = false) => {
   }
 }
 
-const addPlan = (indelPlan, parentTCName, isAdd = false) => {
+const addPlan = (indelPlan, parentTCName = "TC1", planName = "TC1_P1", isAdd = false) => {
   __closePlanList(indelPlan)
   if (indelPlan.PatientData.VisibleOnScreen) {
     const TCList = indelPlan.PatientData.groupBox_5.treeWidget_PlanList
@@ -121,7 +121,7 @@ const addPlan = (indelPlan, parentTCName, isAdd = false) => {
     if (isAdd) {
       indelPlan.detail_tc_new_plan.pushButton_Ok.ClickButton()
       if (!indelPlan.detail_tc_addplan_no_selected_contour_popup.Exists && !indelPlan.detail_tc_addplan_no_selected_skin_popup.Exists && !indelPlan.detail_tc_addplan_no_selected_target_popup.Exists) {
-        if (indelPlan.detail_tc_addplan_not_ct_popup.Exists) common.handlePopupDialog(indel.detail_tc_addplan_not_ct_popup, 1)
+        if (indelPlan.detail_tc_addplan_not_ct_popup.Exists) common.handlePopupDialog(indelPlan.detail_tc_addplan_not_ct_popup, 1)
       }
     } else {
       indelPlan.detail_tc_new_plan.pushButton_Cancel.ClickButton()
@@ -188,8 +188,8 @@ const copyPlan = (indelPlan, parentTCName, copiedplanName, isCopy = false) => {
   }
 }
 
-//By double click
-const gotoPlanDesign = (indelPlan, parentTCName, planName) => {
+//type true means click menu or DblClick
+const gotoPlanDesign = (indelPlan, parentTCName, planName, type = true) => {
   __closePlanList(indelPlan)
   if (indelPlan.PatientData.VisibleOnScreen) {
     const TCList = indelPlan.PatientData.groupBox_5.treeWidget_PlanList
@@ -204,9 +204,14 @@ const gotoPlanDesign = (indelPlan, parentTCName, planName) => {
       Log.Warning(`Can not gotoPlanDesign due to can not find target planName with planName=${planName}`)
       return
     }
-    parentTC.Items.Item(subRowIdx).DblClick()
+    if (type) {
+      parentTC.Items.Item(subRowIdx).Click()
+      indelPlan.PatientData.groupBox_6.pushButton_PlanDesign.ClickButton()
+    } else {
+      parentTC.Items.Item(subRowIdx).DblClick()
+    }
     //just in case
-    utilsFunctions.delay(globalConstant.obj.delayOneMinute)
+    utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
   } else {
     Log.Warning(`Can not gotoPlanDesign due to window is not right`) 
   }
@@ -215,23 +220,22 @@ const gotoPlanDesign = (indelPlan, parentTCName, planName) => {
 //true gross, false fine
 const calculateDose = (indelPlan, type = false) => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
-    const obj = indelPlan.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel.groupBox_2
+    const obj = indelPlan.PlanGUI.widget.groupBox_3
     type ? obj.cbSample.setCurrentIndex(0) : obj.cbSample.setCurrentIndex(1)
     obj.pbCalDose.ClickButton()
-    utilsFunctions.delay(globalConstant.obj.delayThirtySeconds)
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   } else {
     Log.Warning(`Can not calculateDose due to window is not right`) 
   }
 }
 
-const setDose = (indelPlan, percentage = 50, doseValue = 1000) => {
+const setDose = (indelPlan, val = 50, doseValue = 1000) => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
     const obj = indelPlan.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel.groupBox
-    obj.Percentage.SetText(percentage)
+    obj.Percentage.SetText(50)
     obj.pDose.SetText(doseValue)
-    obj.pbSetPD.ClickButton()
-    if (indelPlan.plan_do_fine_dose_calculate_popup.Exists) return
-    utilsFunctions.delay(globalConstant.obj.delayThirtySeconds)
+    indelPlan.PlanGUI.widget.groupBox_3.pbSetPD.ClickButton()
+    if (indelPlan.plan_do_fine_dose_calculate_popup.Exists || indelPlan.plan_set_wrong_popup.Exists) return
   } else {
     Log.Warning(`Can not setDose due to window is not right`) 
   }
@@ -270,29 +274,18 @@ const confirmPlan = (indelPlan, userName, password, isConfirmed = false) => {
   }
 }
 
-const pushToController = indelPlan => {
-  if (indelPlan.PatientData.VisibleOnScreen) {
-    indelPlan.PatientData.pushButton_PushPlan.ClickButton()
-    if (indelPlan.detail_tc_no_plan_selected_popup.Exists) return
-    if (indelPlan.detail_push_controller_not_confirmed_popup.Exists) return
-    if (indelPlan.detail_push_controller_popup.Exists) {
-      indelPlan.detail_push_controller_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
-      indelPlan.detail_push_controller_complete_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
-    }
-  } else {
-    Log.Warning(`Can not pushToController due to window is not right`) 
-  }
-}
-
 const closeConfirmWindow = indelPlan => {
-  indelPlan.plan_confirm.Close()
+  if (indelPlan.plan_confirm.Exists) {
+    indelPlan.plan_confirm.Close()
+  } else {
+    Log.Warning(`Can not closeConfirmWindow due to window is not right`) 
+  }
 }
 
 const planDefaultConfirmActivity = indelPlan => {
   addTreatCourse(indelPlan, true)
-  addPlan(indelPlan, 'TC1', true)
-  gotoPlanDesign(indelPlan, 'TC1', 'TC1_P1')
+  addPlan(indelPlan, "TC1", "TC1_P1", true)
+  gotoPlanDesign(indelPlan, "TC1", "TC1_P1")
   targetRelated.addOnePlanNearMiddlePoint(indelPlan)
   calculateDose(indelPlan)
   setDose(indelPlan)
@@ -300,9 +293,10 @@ const planDefaultConfirmActivity = indelPlan => {
   confirmPlan(indelPlan, Project.Variables.username, Project.Variables.password, true)
 }
 
+module.exports.getTargetPlan = getTargetPlan
+module.exports.changeTargetRegionTabs = changeTargetRegionTabs
 module.exports.addTreatCourse = addTreatCourse
 module.exports.deleteTreatCourse = deleteTreatCourse
-module.exports.changeTargetRegionTabs = changeTargetRegionTabs
 module.exports.addPlan = addPlan
 module.exports.deletePlan = deletePlan
 module.exports.copyPlan = copyPlan
@@ -312,5 +306,4 @@ module.exports.setDose = setDose
 module.exports.setFraction = setFraction
 module.exports.confirmPlan = confirmPlan
 module.exports.closeConfirmWindow = closeConfirmWindow
-module.exports.pushToController = pushToController
 module.exports.planDefaultConfirmActivity = planDefaultConfirmActivity

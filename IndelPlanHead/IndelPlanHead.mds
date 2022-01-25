@@ -371,7 +371,27 @@
 			<testItem name="plandesign" key="{F68500BC-D9D7-4877-AB66-8FE045DBC623}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem3" key="{789FE222-F795-4649-9A91-BEA5939181EB}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="点击计划设计按钮进入计划设计模块" key="{7F47E932-B3CD-4736-BAE0-B6E3ABF26315}" group="False" enabled="False" testMoniker="{ED74ABAC-D4CD-4355-AB38-46DB67DB2ED0}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="双击计划进入计划设计模块" key="{33F73945-5876-453F-9D7C-DC95D1625D10}" group="False" enabled="False" testMoniker="{3E0B1A3E-93BF-4C45-9931-B9C0B123FD6B}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="添加靶点" key="{13311A88-D7AE-4DB4-9782-72A92D1715BB}" group="False" enabled="False" testMoniker="{9A714F52-5233-4CA4-B78E-3B01B3A699D6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="在靶区以外放置靶点" key="{63FFD990-8466-44B4-8069-7D56A1ECC6B0}" group="False" enabled="False" testMoniker="{BB03B30F-BCDD-4496-BC64-838B030C1DA4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="鼠标右键删除靶点" key="{69EC7A0C-E0E7-4901-B3B4-A7BF12370213}" group="False" enabled="False" testMoniker="{0B397837-865D-48BB-84DA-74AB5E574873}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="Delete按钮删除靶点" key="{A8B21727-3341-4ED1-9E2A-B96ED2A5AC39}" group="False" enabled="True" testMoniker="{14ADE538-283B-4559-BBDD-0B435E396E42}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -380,7 +400,7 @@
 			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{0871B47E-5290-4335-B8AD-C859AA384B4D}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="2" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem1" key="{0871B47E-5290-4335-B8AD-C859AA384B4D}" group="False" enabled="False" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

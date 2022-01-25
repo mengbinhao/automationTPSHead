@@ -49,13 +49,14 @@ const getTargetPlan = (parentTC, planName) => {
   return globalConstant.obj.notFoundIndex
 }
 
-const changeTargetRegionTabs = (indelPlan, targetRegionName) => {
-  if (!__getTargetRegionTabs(indelPlan).includes(targetRegionName)) {
-    Log.Warning(`Can not changeTargetRegionTabs due to targetRegionName = ${targetRegionName}`) 
+const changeTargetRegionTabs = (indelPlan, tarName) => {
+  if (indelPlan.PlanGUI.widget.m_targetTabWidget.wTabCount === 1) return
+  if (!__getTargetRegionTabs(indelPlan).includes(tarName)) {
+    Log.Warning(`Can not changeTargetRegionTabs due to tarName = ${tarName}`) 
     return
   }
   if (indelPlan.PlanGUI.VisibleOnScreen) {
-    indelPlan.PlanGUI.widget.m_targetTabWidget.setCurrentIndex(tabs.findIndex(item => item === targetRegionName))
+    indelPlan.PlanGUI.widget.m_targetTabWidget.setCurrentIndex(tabs.findIndex(item => item === tarName))
   } else {
     Log.Warning(`Can not changeTargetRegionTabs due to window is not right`) 
   }
@@ -140,7 +141,7 @@ const deletePlan = (indelPlan, parentTCName, planName, isDelete = false) => {
       Log.Warning(`Can not deletePlan due to can not find target TC with TCName=${parentTCName}`)
       return
     }
-    const subRowIdx = __getTargetPlan(TCList.wItems.Item(rowIdx), planName)
+    const subRowIdx = getTargetPlan(TCList.wItems.Item(rowIdx), planName)
     if (strictEqual(subRowIdx, globalConstant.obj.notFoundIndex)) {
       Log.Warning(`Can not deletePlan due to can not find target planName with planName=${planName}`)
       return
@@ -169,7 +170,7 @@ const copyPlan = (indelPlan, parentTCName, copiedplanName, isCopy = false) => {
       return
     }
     const parentTC = TCList.wItems.Item(rowIdx)
-    const subRowIdx = __getTargetPlan(parentTC, copiedplanName)
+    const subRowIdx = getTargetPlan(parentTC, copiedplanName)
     if (strictEqual(subRowIdx, globalConstant.obj.notFoundIndex)) {
       Log.Warning(`Can not copyPlan due to can not find target copiedplanName with planName=${copiedplanName}`)
       return
@@ -199,7 +200,7 @@ const gotoPlanDesign = (indelPlan, parentTCName, planName, type = true) => {
       return
     }
     const parentTC = TCList.wItems.Item(rowIdx)
-    const subRowIdx = __getTargetPlan(parentTC, planName)
+    const subRowIdx = getTargetPlan(parentTC, planName)
     if (strictEqual(subRowIdx, globalConstant.obj.notFoundIndex)) {
       Log.Warning(`Can not gotoPlanDesign due to can not find target planName with planName=${planName}`)
       return
@@ -231,8 +232,8 @@ const calculateDose = (indelPlan, type = false) => {
 
 const setDose = (indelPlan, val = 50, doseValue = 1000) => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
-    const obj = indelPlan.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel.groupBox
-    obj.Percentage.SetText(50)
+    const obj = indelPlan.CPlanInforPanel.groupBox
+    obj.Percentage.SetText(val)
     obj.pDose.SetText(doseValue)
     indelPlan.PlanGUI.widget.groupBox_3.pbSetPD.ClickButton()
     if (indelPlan.plan_do_fine_dose_calculate_popup.Exists || indelPlan.plan_set_wrong_popup.Exists) return
@@ -282,15 +283,70 @@ const closeConfirmWindow = indelPlan => {
   }
 }
 
+const openReport = indelPlan => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_47.ClickButton()
+  } else {
+    Log.Warning(`Can not openReport due to window is not right`) 
+  }
+}
+
+const closeReport = indelPlan => {
+  if (indelPlan.plan_report.VisibleOnScreen) {
+    indelPlan.plan_report.Close()
+  } else {
+    Log.Warning(`Can not closeReport due to window is not right`) 
+  }
+}
+
+const setupPoint = (indelPlan, tarName) => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    changeTargetRegionTabs(indelPlan, tarName)
+    targetRelated.addOnePointNearMiddle(indelPlan)
+  } else {
+    Log.Warning(`Can not setupPoint due to window is not right`) 
+  }
+}
+
+const setupOutBoundPoint = (indelPlan, tarName) => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    changeTargetRegionTabs(indelPlan, tarName)
+    targetRelated.addOneOutBoundPoint(indelPlan)
+  } else {
+    Log.Warning(`Can not setupOutBoundPoint due to window is not right`) 
+  }
+}
+
+const deletePoint = (indelPlan, tarName, type, pointIndex) => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    changeTargetRegionTabs(indelPlan, tarName)
+    targetRelated.deleteOnePointNearMiddle(indelPlan, type, pointIndex)
+  } else {
+    Log.Warning(`Can not deletePoint due to window is not right`) 
+  }
+}
+
+const updatePoint = (indelPlan, tarName, pointIndex, attrName, attrVal) => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    changeTargetRegionTabs(indelPlan, tarName)
+    //operate attr
+    //set val
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+  } else {
+    Log.Warning(`Can not updatePoint due to window is not right`) 
+  }
+}
+
 const planDefaultConfirmActivity = indelPlan => {
   addTreatCourse(indelPlan, true)
   addPlan(indelPlan, "TC1", "TC1_P1", true)
   gotoPlanDesign(indelPlan, "TC1", "TC1_P1")
-  targetRelated.addOnePlanNearMiddlePoint(indelPlan)
+  setupPoint(indelPlan, "tar")
   calculateDose(indelPlan)
   setDose(indelPlan)
   setFraction(indelPlan)
   confirmPlan(indelPlan, Project.Variables.username, Project.Variables.password, true)
+  closeConfirmWindow(indelPlan)
 }
 
 module.exports.getTargetPlan = getTargetPlan
@@ -306,4 +362,10 @@ module.exports.setDose = setDose
 module.exports.setFraction = setFraction
 module.exports.confirmPlan = confirmPlan
 module.exports.closeConfirmWindow = closeConfirmWindow
+module.exports.openReport = openReport
+module.exports.closeReport = closeReport
+module.exports.setupPoint = setupPoint
+module.exports.setupOutBoundPoint = setupOutBoundPoint
+module.exports.deletePoint = deletePoint
+module.exports.updatePoint = updatePoint
 module.exports.planDefaultConfirmActivity = planDefaultConfirmActivity

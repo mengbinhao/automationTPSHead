@@ -379,6 +379,24 @@
 		<child name="BH_1001116" key="{318F4DF4-2148-40A1-B4C5-7B9080ED59D9}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1001116.js" />
 		</child>
+		<child name="BH_1001143" key="{ED74ABAC-D4CD-4355-AB38-46DB67DB2ED0}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001143.js" />
+		</child>
+		<child name="BH_1001144" key="{3E0B1A3E-93BF-4C45-9931-B9C0B123FD6B}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001144.js" />
+		</child>
+		<child name="BH_1001145" key="{9A714F52-5233-4CA4-B78E-3B01B3A699D6}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001145.js" />
+		</child>
+		<child name="BH_1001147" key="{BB03B30F-BCDD-4496-BC64-838B030C1DA4}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001147.js" />
+		</child>
+		<child name="BH_1001149" key="{0B397837-865D-48BB-84DA-74AB5E574873}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001149.js" />
+		</child>
+		<child name="BH_1001150" key="{14ADE538-283B-4559-BBDD-0B435E396E42}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001150.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -540,7 +558,16 @@
 						<ref key="{318F4DF4-2148-40A1-B4C5-7B9080ED59D9}" />
 					</references>
 				</folder>
-				<folder caption="plandesign" description="A logical folder that is used to organize project items and elements." moniker="" />
+				<folder caption="plandesign" description="A logical folder that is used to organize project items and elements." moniker="">
+					<references>
+						<ref key="{ED74ABAC-D4CD-4355-AB38-46DB67DB2ED0}" />
+						<ref key="{3E0B1A3E-93BF-4C45-9931-B9C0B123FD6B}" />
+						<ref key="{9A714F52-5233-4CA4-B78E-3B01B3A699D6}" />
+						<ref key="{BB03B30F-BCDD-4496-BC64-838B030C1DA4}" />
+						<ref key="{0B397837-865D-48BB-84DA-74AB5E574873}" />
+						<ref key="{14ADE538-283B-4559-BBDD-0B435E396E42}" />
+					</references>
+				</folder>
 			</folders>
 			<references>
 				<ref key="{13BA3237-E492-44C0-95A1-55802530441A}" />

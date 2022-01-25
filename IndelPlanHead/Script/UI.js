@@ -152,6 +152,7 @@ const init = () => {
 
   //PlanGUI
   indelPlan.PlanGUI = indelPlan.centralWidget.stackedWidget.PlanGUI
+  indelPlan.CPlanInforPanel = indelPlan.PlanGUI.widget.m_targetTabWidget.qt_tabwidget_stackedwidget.CPlanInforPanel
   indelPlan.plan_do_fine_dose_calculate_popup = mappingName.plan_do_fine_dose_calculate_popup
   indelPlan.plan_no_focus_detected_popup = mappingName.plan_no_focus_detected_popup
   indelPlan.plan_unfinished_popup = mappingName.plan_unfinished_popup
@@ -170,6 +171,8 @@ const init = () => {
   indelPlan.plan_confirm_wrong_user_popup = mappingName.plan_confirm_wrong_user_popup
   indelPlan.plan_confirm_wrong_password_popup = mappingName.plan_confirm_wrong_password_popup
   indelPlan.plan_confirmed_popup = mappingName.plan_confirmed_popup
+  //plan report
+  indelPlan.plan_report = mappingName.plan_report
   
     
   //User Management

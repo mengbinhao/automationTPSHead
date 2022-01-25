@@ -1870,6 +1870,55 @@
 																		<Value PropertyType="0" Value="tab" Type="5" />
 																	</Property>
 																</Properties>
+																<Children>
+																	<Child Name="toolButton_SysSet" Key="{36BBCC81-26AD-4E25-9B0A-53F2676D2B4A}" ParallelWalk="True">
+																		<Image FileName="346482474" Left="20" Top="74" Right="61" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_SysSet" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_PhyData" Key="{4FE7C872-211A-4E72-BEA6-C17AD819AEA0}" ParallelWalk="True">
+																		<Image FileName="346482474" Left="60" Top="74" Right="101" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_PhyData" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_UserManagerment" Key="{996B52E2-53B3-477A-AA89-85AFDF9B6FDE}" ParallelWalk="True">
+																		<Image FileName="346482474" Left="100" Top="74" Right="141" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_UserManagerment" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																</Children>
+															</Child>
+															<Child Name="tab_3" Key="{1527EA60-990E-40F0-9B2B-DC10A6FEC411}" ParallelWalk="True">
+																<Image FileName="-758417614" Left="10" Top="67" Right="1925" Bottom="115" />
+																<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																<Properties>
+																	<Property Name="objectName">
+																		<Value PropertyType="0" Value="tab_3" Type="5" />
+																	</Property>
+																</Properties>
+																<Children>
+																	<Child Name="toolButton_47" Key="{C4EB97B9-49AD-4A9D-86C1-23CFC2D913F8}" ParallelWalk="True">
+																		<Image FileName="-758417614" Left="650" Top="74" Right="691" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_47" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																</Children>
 															</Child>
 														</Children>
 													</Child>
@@ -8182,6 +8231,18 @@
 									</Child>
 								</Children>
 							</Child>
+							<Child Name="plan_report" Key="{1E75BC3B-0B8D-49E8-B8F4-F949F40BA85C}" ParallelWalk="True">
+								<Image FileName="-1010547331" Left="0" Top="0" Right="1016" Bottom="938" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QPrintPreviewDialog" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Print Preview: document1" Type="5" />
+									</Property>
+								</Properties>
+							</Child>
 						</Children>
 					</Child>
 				</Children>
@@ -8449,7 +8510,14 @@
 							<Child Name="tab_2" Owner="{61B8C324-F467-4EDD-92DA-EBFC255EF0C1}">
 								<Child Name="toolButton_17" Owner="{A20333BB-80B2-41D4-B7D3-DCE4E61E5B9A}" />
 							</Child>
-							<Child Name="tab" Owner="{4517A6B4-5280-4037-AE72-702D4A268C44}" />
+							<Child Name="tab" Owner="{4517A6B4-5280-4037-AE72-702D4A268C44}">
+								<Child Name="toolButton_SysSet" Owner="{36BBCC81-26AD-4E25-9B0A-53F2676D2B4A}" />
+								<Child Name="toolButton_PhyData" Owner="{4FE7C872-211A-4E72-BEA6-C17AD819AEA0}" />
+								<Child Name="toolButton_UserManagerment" Owner="{996B52E2-53B3-477A-AA89-85AFDF9B6FDE}" />
+							</Child>
+							<Child Name="tab_3" Owner="{1527EA60-990E-40F0-9B2B-DC10A6FEC411}">
+								<Child Name="toolButton_47" Owner="{C4EB97B9-49AD-4A9D-86C1-23CFC2D913F8}" />
+							</Child>
 						</Child>
 					</Child>
 				</Child>
@@ -9197,6 +9265,7 @@
 					<Child Name="buttonNo" Owner="{F9F5430C-7FC5-45A6-B135-D5ECA502F05A}" />
 				</Child>
 			</Child>
+			<Child Name="plan_report" Owner="{1E75BC3B-0B8D-49E8-B8F4-F949F40BA85C}" />
 		</Child>
 	</LogicalNodes>
 	<TypeInfo StoreCodeCompletion="1">

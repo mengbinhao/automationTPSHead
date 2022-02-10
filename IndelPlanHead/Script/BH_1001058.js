@@ -20,7 +20,7 @@ function testcase() {
     const patientFolderName = `${Project.Variables.study_image_name}@${Project.Variables.study_image_id}`
   
     //delete target folder first
-    fileFunctions.deleteFolder(path + globalConstant.obj.backslash + patientFolderName, true)
+    fileFunctions.deleteFolder(path, true)
   
     patient.addPatientActivity(indelPlan, pv, Project.Variables.new_patientID, Project.Variables.new_patient_name, Project.Variables.new_patient_gender, Project.Variables.new_patient_height, Project.Variables.new_patient_weight, Project.Variables.new_patient_age, Project.Variables.new_patient_address, Project.Variables.new_patient_phone, Project.Variables.new_patient_note)
       

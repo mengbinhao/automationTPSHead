@@ -33,7 +33,7 @@ function testcase() {
     const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     plan.setupPoint(indelPlan, "tar")
     const afterAdd = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    plan.deletePoint(indelPlan, "tar")
+    plan.deletePoint(indelPlan, "tar", 1)
     const afterDelete = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
     if (strictEqual(before + 1, afterAdd) && strictEqual(before, afterDelete)) {

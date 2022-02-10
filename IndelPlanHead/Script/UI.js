@@ -28,7 +28,10 @@ const init = () => {
   //Unnormal Window
   indelPlan.login_unnormal = mappingName.login_unnormal
   indelPlan.login_nonnormal_popup = mappingName.login_nonnormal_popup
-  indelPlan.login_loggedin_popup = mappingName.login_loggedin_popup  
+  indelPlan.login_loggedin_popup = mappingName.login_loggedin_popup
+  
+  //common tool popup window
+  indelPlan.common_capture_image = mappingName.common_capture_image
   
   
   //PatientManagement
@@ -158,6 +161,8 @@ const init = () => {
   indelPlan.plan_unfinished_popup = mappingName.plan_unfinished_popup
   indelPlan.plan_set_wrong_popup = mappingName.plan_set_wrong_popup
   indelPlan.plan_set_prescription_dose_popup = mappingName.plan_set_prescription_dose_popup
+  indelPlan.plan_out_target_popup = mappingName.plan_out_target_popup
+  
   //Fraction
   indelPlan.plan_dlgfraction = mappingName.plan_dlgfraction
   indelPlan.plan_finished_popup = mappingName.plan_finished_popup

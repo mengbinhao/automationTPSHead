@@ -26,20 +26,14 @@ function testcase() {
     contour.loadAndContourSKINActivity(indelPlan)
     contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
     common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+    plan.planDefaultConfirmActivity(indelPlan)
+    common.openReport(indelPlan)
     
-    const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    plan.setupPoint(indelPlan, "tar")
-    const afterAdd = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    plan.deletePoint(indelPlan, "tar", 1, true)
-    const afterDelete = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    
-    if (strictEqual(before + 1, afterAdd) && strictEqual(before, afterDelete)) {
-      Log.Checkpoint(`deletePoint by delete button successfully!`)
+    if (indelPlan.plan_report.VisibleOnScreen) {
+      Log.Checkpoint(`openReport successfully!`)
+      common.closeReport(indelPlan)
     } else {
-      Log.Error(`deletePoint by delete button fail!`)
+      Log.Error(`openReport fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

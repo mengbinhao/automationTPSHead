@@ -27,21 +27,6 @@ const __addPoint = position => {
   LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
 }
 
-const __deletePointByPosition = position => {
-  LLPlayer.MouseDown(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
-  LLPlayer.MouseUp(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
-}
-
-const __deletePointByButton = (indelPlan, idx) => {
-  const cnt = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-  if (cnt < idx) {
-    Log.Warning(`Can not __deletePointByButton due to idx is not right, idx = ${idx}`)
-    return
-  }
-  indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Item(idx - 1).Click()
-  indelPlan.CPlanInforPanel.groupBox_2.pbDelete.ClickButton()
-}
-
 const addOnePointNearMiddle = indelPlan => {
   const position = coordinate.getNearMiddleCoordinate()
   const gamaAngle = indelPlan.CPlanInforPanel.groupBox_2.GamaAngle
@@ -55,10 +40,25 @@ const addOneOutBoundPoint = indelPlan => {
   __addPoint(coordinate.getOutBoundCoordinate())
 }
 
-//true click delete, or double right mouse
-const deleteOnePointNearMiddle = (indelPlan, type = false, idx) => {
-  type ? __deletePointByButton(indelPlan, idx) : __deletePointByPosition(coordinate.getNearMiddleCoordinate())
-  utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+const deletePointByPosition = position => {
+  LLPlayer.MouseDown(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
+  LLPlayer.MouseUp(MK_RBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
+}
+
+const deletePointByButton = (indelPlan, idx) => {
+  if (indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count < idx) {
+    Log.Warning(`Can not __deletePointByButton due to idx is not right, idx = ${idx}`)
+    return
+  }
+  indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Item(idx - 1).Click()
+  indelPlan.CPlanInforPanel.groupBox_2.pbDelete.ClickButton()
+}
+
+const movePointByPositionOutBound = (indelPlan, from, to, isKeep) => {
+  LLPlayer.MouseDown(MK_LBUTTON, from.width, from.height, globalConstant.obj.delayMouseZeroSecond)
+  LLPlayer.MouseMove(to.width, to.height, globalConstant.obj.delayMouseHalfSecond)
+  LLPlayer.MouseUp(MK_LBUTTON, to.width, to.height, globalConstant.obj.delayMouseHalfSecond)
+  isKeep ? indelPlan.plan_out_target_popup.qt_msgbox_buttonbox.buttonYes.ClickButton(): indelPlan.plan_out_target_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
 }
 
 const drawTriangleNearMiddle = indelPlan => {
@@ -100,6 +100,8 @@ const drawRectangleNearMiddle = indelPlan => {
 
 module.exports.addOnePointNearMiddle = addOnePointNearMiddle
 module.exports.addOneOutBoundPoint = addOneOutBoundPoint
-module.exports.deleteOnePointNearMiddle = deleteOnePointNearMiddle
+module.exports.deletePointByPosition = deletePointByPosition
+module.exports.deletePointByButton = deletePointByButton
+module.exports.movePointByPositionOutBound = movePointByPositionOutBound
 module.exports.drawTriangleNearMiddle = drawTriangleNearMiddle
 module.exports.drawRectangleNearMiddle = drawRectangleNearMiddle

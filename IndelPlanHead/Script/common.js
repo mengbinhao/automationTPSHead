@@ -27,7 +27,7 @@ const __checkTabExists = (tabWidget, tabName) => {
 
 //tabName is where app switch to
 //currentTabName is where app's tab located
-const __handlePopup = (indelPlan, tabName, currentTabName, isPlanFinish) => {
+const __handlePopup = (indelPlan, curTabName, toTabName, isPlanFinish) => {
   const __helper1 = () => {
     if (indelPlan.contour_planlib_empty_contours_remove_popup.Exists) {
       indelPlan.contour_planlib_empty_contours_remove_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
@@ -42,11 +42,8 @@ const __handlePopup = (indelPlan, tabName, currentTabName, isPlanFinish) => {
   
   const __helper2 = () =>{
     if (indelPlan.plan_finished_popup.Exists) {
-      if (isPlanFinish) {
-        indelPlan.plan_finished_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
-      } else {
-        indelPlan.plan_finished_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
-      }
+      const buttonbox = indelPlan.plan_finished_popup.qt_msgbox_buttonbox
+      isPlanFinish ? buttonbox.buttonYes.ClickButton() : buttonbox.buttonNo.ClickButton()
     }
   }
   //handler[currentTabName][tabName]
@@ -60,9 +57,11 @@ const __handlePopup = (indelPlan, tabName, currentTabName, isPlanFinish) => {
         }
       },
       [globalConstant.obj.planDesign]: () => {
+        /*
         if (indelPlan.plan_start_plan_module_popup.Exists) {
           indelPlan.plan_start_plan_module_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
         }
+        */
       }
     },
     [globalConstant.obj.contour]: {
@@ -89,7 +88,7 @@ const __handlePopup = (indelPlan, tabName, currentTabName, isPlanFinish) => {
       }
     }
   }
-  handler[currentTabName][tabName] ? handler[currentTabName][tabName]() : globalConstant.obj.emptyString
+  handler[curTabName] && handler[curTabName][toTabName] && handler[curTabName][toTabName]()
 }
 
 //common approach to handle popup
@@ -207,9 +206,47 @@ const pushToController = (indelPlan, parentTCName, planName) => {
   }
 }
 
+const openReport = indelPlan => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_47.ClickButton()
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+  } else {
+    Log.Warning(`Can not openReport due to window is not right`) 
+  }
+}
+
+const closeReport = indelPlan => {
+  if (indelPlan.plan_report.VisibleOnScreen) {
+    indelPlan.plan_report.Close()
+  } else {
+    Log.Warning(`Can not closeReport due to window is not right`) 
+  }
+}
+
+const captureImage = (indelPlan, imgName) => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_48.ClickButton()
+    const dlg = indelPlan.common_capture_image
+    //resolve overlap window of history blocks choose button
+    Win32API.ShowWindowAsync(dlg.Handle, Win32API.SW_MAXIMIZE)
+    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+    dlg.DUIViewWndClassName.DirectUIHWND.FloatNotifySink.ComboBox.Edit.Keys(imgName)
+    LLPlayer.MouseMove(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, globalConstant.obj.delayMouseHalfSecond)
+    LLPlayer.KeyDown(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)
+    LLPlayer.KeyUp(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)
+    dlg.btn_S.ClickButton()
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+  } else {
+    Log.Warning(`Can not captureImage due to window is not right`) 
+  }
+}
+
 module.exports.changePatientDetailTab = changePatientDetailTab
 module.exports.getPatientDetailTabIndex = getPatientDetailTabIndex
 module.exports.getPatientDetailTabName = getPatientDetailTabName
 module.exports.gotoPatientManagement = gotoPatientManagement
 module.exports.handlePopupDialog = handlePopupDialog
 module.exports.pushToController = pushToController
+module.exports.openReport = openReport
+module.exports.closeReport = closeReport
+module.exports.captureImage = captureImage

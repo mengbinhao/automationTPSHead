@@ -29,18 +29,10 @@ function testcase() {
     plan.addTreatCourse(indelPlan, true)
     plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
     plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    
-    const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     plan.setupPoint(indelPlan, "tar")
-    const afterAdd = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    plan.deletePoint(indelPlan, "tar", 1, true)
-    const afterDelete = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+    plan.movePoint(indelPlan, "tar", 1, true)
     
-    if (strictEqual(before + 1, afterAdd) && strictEqual(before, afterDelete)) {
-      Log.Checkpoint(`deletePoint by delete button successfully!`)
-    } else {
-      Log.Error(`deletePoint by delete button fail!`)
-    }
+    Log.Checkpoint(`Move Point Out Bound successfully!`)
   } else {
     Log.Error(`Execute fail due to register study!`)
   }

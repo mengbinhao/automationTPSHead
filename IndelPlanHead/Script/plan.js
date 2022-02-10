@@ -3,8 +3,94 @@ const utilsFunctions = require("utils_functions")
 const findInList = require("find_in_list")
 const common = require("common")
 const targetRelated = require("target_related")
+const coordinate = require("coordinate")
 
 const tabs = []
+
+//for X、Y、Z、W val mean times
+//for C(0,1,2,3) and A(0,1,2) val means index
+const pointHandler = {
+  'X': (method, type, val) => {
+    let ret = Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posX.wValue.toFixed(2)
+    if (strictEqual(method, 'set')) {
+      if (strictEqual(type, 'up')) {
+        Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posX.Up(val)
+      } else {
+        Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posX.Down(val)
+      }
+      ret = Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posX.wValue.toFixed(2)
+      Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posX.clear()
+      Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posX.Keys(ret)
+      Sys.Desktop.Keys("[Enter]")
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+    }
+    return +ret
+  },
+  'Y': (method, type, val) => {
+    let ret = Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posY.wValue.toFixed(2)
+    if (strictEqual(method, 'set')) {
+      if (strictEqual(type, 'up')) {
+        Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posY.Up(val)
+      } else {
+        Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posY.Down(val)
+      }
+      ret = Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posY.wValue.toFixed(2)
+      Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posY.clear()
+      Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posY.Keys(ret)
+      Sys.Desktop.Keys("[Enter]")
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+    }
+    return +ret
+  },
+  'Z': (method, type, val) => {
+    let ret = Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posZ.wValue.toFixed(2)
+    if (strictEqual(method, 'set')) {
+      if (strictEqual(type, 'up')) {
+        Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posZ.Up(val)
+      } else {
+        Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posZ.Down(val)
+      }
+      ret = Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posZ.wValue.toFixed(2)
+      Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posZ.clear()
+      Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.posZ.Keys(ret)
+      Sys.Desktop.Keys("[Enter]")
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+    }
+    return +ret
+  },
+  'W': (method, type, val) => {
+    let ret = Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.weight.wValue.toFixed(2)
+    if (strictEqual(method, 'set')) {
+      if (strictEqual(type, 'up')) {
+        Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.weight.Up(val)
+      } else {
+        Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.weight.Down(val)
+      }
+      ret = Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.weight.wValue.toFixed(2)
+      Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.weight.clear()
+      Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.weight.Keys(ret)
+      Sys.Desktop.Keys("[Enter]")
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+    }
+    return +ret
+  },
+  //val is direction, positive is away from user 
+  'C': (method, type, val) => {
+    if (strictEqual(method, 'set')) {
+      Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.colimiter.MouseWheel(val)
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+    }
+    return Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.colimiter.wText
+  },
+  //val is direction, positive is away from user
+  'A': (method, type, val) => {
+    if (strictEqual(method, 'set')) {
+      Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.GamaAngle.MouseWheel(val)
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+    }
+    return Project.Variables.IndelPlan.CPlanInforPanel.groupBox_2.GamaAngle.wText
+  }
+}
 
 //unified approach
 const __closePlanList = indelPlan => {
@@ -40,6 +126,31 @@ const __getTargetRegionTabs = (indelPlan) => {
   return tabs
 }
 
+const __changeTargetRegionTabs = (indelPlan, tarName) => {
+  if (indelPlan.PlanGUI.widget.m_targetTabWidget.wTabCount === 1) return true
+  if (!__getTargetRegionTabs(indelPlan).includes(tarName)) {
+    Log.Warning(`Can not __changeTargetRegionTabs due to tarName = ${tarName}`) 
+    return false
+  }
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    indelPlan.PlanGUI.widget.m_targetTabWidget.setCurrentIndex(tabs.findIndex(item => item === tarName))
+    return true
+  } else {
+    Log.Warning(`Can not __changeTargetRegionTabs due to window is not right`) 
+    return false
+  }
+}
+
+const __selectPoint = (indelPlan, pIdx) => {
+  if (indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count < pIdx) {
+    Log.Warning(`Can not __selectPoint due to pIdx is not right, pIdx = ${pIdx}`)
+    return false
+  }
+  indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Item(pIdx - 1).Click()
+  return true
+}
+
+
 const getTargetPlan = (parentTC, planName) => {
   const cnt = parentTC.Items.Count
   if (cnt < 1) return globalConstant.obj.notFoundIndex
@@ -47,19 +158,6 @@ const getTargetPlan = (parentTC, planName) => {
     if (strictEqual(parentTC.Items.Item(i).Text(globalConstant.obj.nameColumn), planName)) return i
   }
   return globalConstant.obj.notFoundIndex
-}
-
-const changeTargetRegionTabs = (indelPlan, tarName) => {
-  if (indelPlan.PlanGUI.widget.m_targetTabWidget.wTabCount === 1) return
-  if (!__getTargetRegionTabs(indelPlan).includes(tarName)) {
-    Log.Warning(`Can not changeTargetRegionTabs due to tarName = ${tarName}`) 
-    return
-  }
-  if (indelPlan.PlanGUI.VisibleOnScreen) {
-    indelPlan.PlanGUI.widget.m_targetTabWidget.setCurrentIndex(tabs.findIndex(item => item === tarName))
-  } else {
-    Log.Warning(`Can not changeTargetRegionTabs due to window is not right`) 
-  }
 }
 
 const addTreatCourse = (indelPlan, isAdd = false) => {
@@ -230,11 +328,18 @@ const calculateDose = (indelPlan, type = false) => {
   }
 }
 
+const showDVH = indelPlan => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    indelPlan.PlanGUI.widget.groupBox_2.pbDVH.ClickButton()
+  } else {
+    Log.Warning(`Can not showDVH due to window is not right`) 
+  }
+}
+
 const setDose = (indelPlan, val = 50, doseValue = 1000) => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
-    const obj = indelPlan.CPlanInforPanel.groupBox
-    obj.Percentage.SetText(val)
-    obj.pDose.SetText(doseValue)
+    indelPlan.CPlanInforPanel.groupBox.Percentage.SetText(val)
+    indelPlan.CPlanInforPanel.groupBox.pDose.SetText(doseValue)
     indelPlan.PlanGUI.widget.groupBox_3.pbSetPD.ClickButton()
     if (indelPlan.plan_do_fine_dose_calculate_popup.Exists || indelPlan.plan_set_wrong_popup.Exists) return
   } else {
@@ -247,8 +352,8 @@ const setFraction = (indelPlan, fraction = 1) => {
     indelPlan.PlanGUI.widget.groupBox_2.pbFraction.ClickButton()
     if (indelPlan.plan_do_fine_dose_calculate_popup.Exists) return
     if (indelPlan.plan_set_prescription_dose_popup.Exists) return
+    indelPlan.plan_dlgfraction.sbFractionCount.qt_spinbox_lineedit.clear()
     indelPlan.plan_dlgfraction.sbFractionCount.qt_spinbox_lineedit.SetText(fraction)
-    indelPlan.plan_dlgfraction.Close()
   } else {
     Log.Warning(`Can not setFraction due to window is not right`) 
   }
@@ -283,25 +388,9 @@ const closeConfirmWindow = indelPlan => {
   }
 }
 
-const openReport = indelPlan => {
-  if (indelPlan.PlanGUI.VisibleOnScreen) {
-    indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_47.ClickButton()
-  } else {
-    Log.Warning(`Can not openReport due to window is not right`) 
-  }
-}
-
-const closeReport = indelPlan => {
-  if (indelPlan.plan_report.VisibleOnScreen) {
-    indelPlan.plan_report.Close()
-  } else {
-    Log.Warning(`Can not closeReport due to window is not right`) 
-  }
-}
-
 const setupPoint = (indelPlan, tarName) => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
-    changeTargetRegionTabs(indelPlan, tarName)
+    if (!__changeTargetRegionTabs(indelPlan, tarName)) return
     targetRelated.addOnePointNearMiddle(indelPlan)
   } else {
     Log.Warning(`Can not setupPoint due to window is not right`) 
@@ -310,30 +399,46 @@ const setupPoint = (indelPlan, tarName) => {
 
 const setupOutBoundPoint = (indelPlan, tarName) => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
-    changeTargetRegionTabs(indelPlan, tarName)
+    if (!__changeTargetRegionTabs(indelPlan, tarName)) return
     targetRelated.addOneOutBoundPoint(indelPlan)
   } else {
     Log.Warning(`Can not setupOutBoundPoint due to window is not right`) 
   }
 }
 
-const deletePoint = (indelPlan, tarName, type, pointIndex) => {
+const deletePoint = (indelPlan, tarName, pIdx, type = false) => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
-    changeTargetRegionTabs(indelPlan, tarName)
-    targetRelated.deleteOnePointNearMiddle(indelPlan, type, pointIndex)
+    if (!__changeTargetRegionTabs(indelPlan, tarName)) return
+    if (!__selectPoint(indelPlan, pIdx)) return
+    if (type) {
+      targetRelated.deletePointByButton(indelPlan, pIdx)
+    } else {
+      targetRelated.deletePointByPosition(coordinate.getNearMiddleCoordinate())
+    }
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   } else {
     Log.Warning(`Can not deletePoint due to window is not right`) 
   }
 }
 
-const updatePoint = (indelPlan, tarName, pointIndex, attrName, attrVal) => {
+const movePoint = (indelPlan, tarName, pIdx, isKeep = false) => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
-    changeTargetRegionTabs(indelPlan, tarName)
-    //operate attr
-    //set val
+    if (!__changeTargetRegionTabs(indelPlan, tarName)) return
+    if (!__selectPoint(indelPlan, pIdx)) return
+    targetRelated.movePointByPositionOutBound(indelPlan, coordinate.getNearMiddleCoordinate(), coordinate.getOutBoundCoordinate(), isKeep)
     utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   } else {
-    Log.Warning(`Can not updatePoint due to window is not right`) 
+    Log.Warning(`Can not deletePoint due to window is not right`) 
+  }
+}
+
+const pointOperate = (indelPlan, tarName, pIdx, {attr, method, type, val}) => {
+  if (indelPlan.PlanGUI.VisibleOnScreen) {
+    if (!__changeTargetRegionTabs(indelPlan, tarName)) return
+    if (!__selectPoint(indelPlan, pIdx)) return
+    return pointHandler[attr] && pointHandler[attr](method, type, val)
+  } else {
+    Log.Warning(`Can not pointOperate due to window is not right`) 
   }
 }
 
@@ -342,15 +447,16 @@ const planDefaultConfirmActivity = indelPlan => {
   addPlan(indelPlan, "TC1", "TC1_P1", true)
   gotoPlanDesign(indelPlan, "TC1", "TC1_P1")
   setupPoint(indelPlan, "tar")
-  calculateDose(indelPlan)
+  calculateDose(indelPlan, true)
+  calculateDose(indelPlan, false)
   setDose(indelPlan)
-  setFraction(indelPlan)
+  setFraction(indelPlan, 3)
+  indelPlan.plan_dlgfraction.Close()
   confirmPlan(indelPlan, Project.Variables.username, Project.Variables.password, true)
   closeConfirmWindow(indelPlan)
 }
 
 module.exports.getTargetPlan = getTargetPlan
-module.exports.changeTargetRegionTabs = changeTargetRegionTabs
 module.exports.addTreatCourse = addTreatCourse
 module.exports.deleteTreatCourse = deleteTreatCourse
 module.exports.addPlan = addPlan
@@ -358,14 +464,14 @@ module.exports.deletePlan = deletePlan
 module.exports.copyPlan = copyPlan
 module.exports.gotoPlanDesign = gotoPlanDesign
 module.exports.calculateDose = calculateDose
+module.exports.showDVH = showDVH
 module.exports.setDose = setDose
 module.exports.setFraction = setFraction
 module.exports.confirmPlan = confirmPlan
 module.exports.closeConfirmWindow = closeConfirmWindow
-module.exports.openReport = openReport
-module.exports.closeReport = closeReport
 module.exports.setupPoint = setupPoint
 module.exports.setupOutBoundPoint = setupOutBoundPoint
 module.exports.deletePoint = deletePoint
-module.exports.updatePoint = updatePoint
+module.exports.movePoint = movePoint
+module.exports.pointOperate = pointOperate
 module.exports.planDefaultConfirmActivity = planDefaultConfirmActivity

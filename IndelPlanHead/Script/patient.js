@@ -182,8 +182,8 @@ const importPatient = (indelPlan, pv, patientID, path, isCancel = false) => {
     utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
     dlgip.Edit.Keys(path)
     LLPlayer.MouseMove(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, globalConstant.obj.delayMouseHalfSecond)
-    LLPlayer.KeyDown(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)
-    LLPlayer.KeyUp(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)
+    LLPlayer.MouseDown(MK_LBUTTON, Sys.Desktop.Width / 2, Sys.Desktop.Height / 2,globalConstant.obj.delayMouseZeroSecond)
+    LLPlayer.MouseUp(MK_LBUTTON, Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, globalConstant.obj.delayMouseHalfSecond)
     dlgip.btn_.ClickButton()
     const dlgic = indelPlan.patient_importer
 

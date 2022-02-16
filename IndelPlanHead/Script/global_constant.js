@@ -14,6 +14,11 @@ obj.delayMouseHalfSecond = 500
 obj.delayMouseOneSecond = 1000
 
 
+//scroll mouse
+//positive means increase, negative means reduce
+obj.mousePositiveScroll = 20
+
+
 //distcnce
 obj.delayDistanceZero = 0
 obj.delayDistanceOneHundredAndTwenty = 120
@@ -32,9 +37,9 @@ obj.planDesign = 'PlanDesign'
 obj.backslash = '\\'
 obj.studyDICOMFolder = 'D:\\Data\\'
 obj.studyDICOMOriginFolder = 'D:\\Data_Origin\\'
-obj.patientDataFolder = 'D:\\PatientData'
-obj.studyDataFolder = 'D:\\StudyData'
-obj.notExistingFolder = 'D:\\NotExistingFolder'
+obj.patientDataFolder = 'D:\\PatientData\\'
+obj.studyDataFolder = 'D:\\StudyData\\'
+obj.notExistingFolder = 'D:\\NotExistingFolder\\'
 //obj.exportFolder = 'AutoTested'
 //obj.indelPath = 'D:\\IndelPlan\\'
 //obj.systemConfigFile = 'SystemConfig.ini'

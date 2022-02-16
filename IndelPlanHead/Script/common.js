@@ -153,7 +153,7 @@ const changePatientDetailTab = (indelPlan, tabName, isPlanFinish = false) => {
   }
   
   //handle various popup
-  __handlePopup(indelPlan, tabName, currentTabName, isPlanFinish)
+  __handlePopup(indelPlan, currentTabName, tabName, isPlanFinish)
     
   //check if switch successfully, or stop testcase directly
   if (getPatientDetailTabName(indelPlan) !== tabName) {

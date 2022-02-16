@@ -6,7 +6,6 @@ const target_related = require("target_related")
 const patient = require("patient")
 const common = require("common")
 
-let mouseApertureVal = 0
 
 const __getType = contourLibType => {
   return ["TARGET", "OAR", "SKIN"]
@@ -79,12 +78,12 @@ const __handleContourDirtyData = (pv, contourLibName) => {
   }
 }
 
-const __increaseMouseAperture = (indelPlan) => {
+const __increaseMouseAperture = (indelPlan, val) => {
   const canvas = indelPlan.ContourGUI.canvas.C2DViewer
   canvas.Click()
   LLPlayer.KeyDown(VK_LCONTROL, globalConstant.obj.delayMouseHalfSecond)
   //positive means increase, negative means reduce
-  canvas.MouseWheel(mouseApertureVal)
+  canvas.MouseWheel(val)
   LLPlayer.KeyUp(VK_LCONTROL, globalConstant.obj.delayMouseHalfSecond)
 }
  
@@ -344,12 +343,7 @@ const loadAndContourTargetAreaByLineActivity = (indelPlan, contourLibName) => {
 const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
   loadContourLib(indelPlan, contourLibName)
   indelPlan.ContourGUI.groupBox_5.BrushTool.ClickButton()
-
-  if (strictEqual(mouseApertureVal, 0)) {
-    mouseApertureVal =+ 20
-    __increaseMouseAperture(indelPlan)
-    mouseApertureVal =- 20
-  }
+  __increaseMouseAperture(indelPlan, globalConstant.obj.mousePositiveScroll)
 
   let i = 0
   while (i < 10) {

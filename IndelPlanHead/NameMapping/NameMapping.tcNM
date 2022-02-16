@@ -8075,9 +8075,6 @@
 									<Property Name="QtText">
 										<Value PropertyType="0" Value="No Skin-type Contour exits, is that OK ?" Type="5" />
 									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
 								</Properties>
 								<Children>
 									<Child Name="qt_msgbox_buttonbox" Key="{7F7245C1-38F1-4762-BF22-748F6A5DB299}" ParallelWalk="True">

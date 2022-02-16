@@ -2,6 +2,10 @@
 
 //for user/machine list
 const getColumnHearders = list => {
+  if (!list.Exists) {
+    Log.Error("Can not get target list")
+    return
+  }
   const ret = []
   for (let i = 0; i < list.wColumnCount; i++) {
     ret.push(list.wColumn(i))
@@ -11,6 +15,10 @@ const getColumnHearders = list => {
 
 //for user/machine list
 const isItemExitInList = (fieldValue, columnName, list) => {
+  if (!list.Exists) {
+    Log.Error("Can not get target list")
+    return
+  }
   let rows = list.wRowCount - 1
   while (rows >= 0) {
     if (strictEqual(list.wValue(rows, columnName), fieldValue))return true
@@ -21,6 +29,10 @@ const isItemExitInList = (fieldValue, columnName, list) => {
 
 //for user/machine list
 const isItemInListReturnIndex = (fieldValue, columnName, list) => {
+  if (!list.Exists) {
+    Log.Error("Can not get target list")
+    return
+  }
   let rows = list.wRowCount - 1
   while (rows >= 0) {
     if (strictEqual(list.wValue(rows, columnName), fieldValue)) return rows
@@ -33,6 +45,10 @@ const isItemInListReturnIndex = (fieldValue, columnName, list) => {
 const getFieldValueFromRow = (row, wantField, list) => list.wValue(row, wantField) || globalConstant.obj.emptyString
 
 const getHeaderFromList = list => {
+  if (!list.Exists) {
+    Log.Error("Can not get target list")
+    return
+  }
   let ret = globalConstant.obj.emptyString
   for (let i = 0, len = list.wColumnCount; i < len; i++) {
     ret += list.wColumn(i) + ','
@@ -42,6 +58,10 @@ const getHeaderFromList = list => {
 
 //for patient/images/contour/settingcheck/machine_change_view list
 const isItemExistInMoreList = (val, columnName, list) => {
+  if (!list.Exists) {
+    Log.Error("Can not get target list")
+    return
+  }
   for (let i = 0, rows = list.wItems.count - 1; i <= rows; i++) {
     if (strictEqual(list.wItems.item(i).Text(columnName), val)) return true
   }
@@ -50,6 +70,10 @@ const isItemExistInMoreList = (val, columnName, list) => {
 
 //for patient/images/contour/settingcheck/machine_change_view list
 const isItemExistInMoreListReturnIndex = (val, columnName, list) => {
+  if (!list.Exists) {
+    Log.Error("Can not get target list")
+    return
+  }
   let rows = list.wItems.count - 1
   for (let i = 0; i <= rows; i++) {
     if (strictEqual(list.wItems.item(i).Text(columnName), val)) return i
@@ -58,6 +82,10 @@ const isItemExistInMoreListReturnIndex = (val, columnName, list) => {
 }
 
 const getOneRowValueForMoreListFromRowIndex = (idx, list) => {
+  if (!list.Exists) {
+    Log.Error("Can not get target list")
+    return
+  }
   let ret = []
   for (let i = 0; i <= 8; i++) {
     ret.push(list.wItems.Item(idx).Text(i))
@@ -70,6 +98,10 @@ const getFieldValueForMoreListFromRowAndCol = (row, col, list) => list.wItems.It
 
 //for patient/images/contour/settingcheck/machine_change_view list
 const getFieldValueForMoreListFromOtherField = (propertyValue, fromColumn, wantColumn, list) => {
+  if (!list.Exists) {
+    Log.Error("Can not get target list")
+    return
+  }
   for (let i = 0, rows = list.wItems.count - 1; i <= rows; i++) {
     if (strictEqual(list.wItems.item(i).Text(fromColumn), propertyValue)) return list.wItems.item(i).Text(wantColumn)
   }
@@ -78,6 +110,10 @@ const getFieldValueForMoreListFromOtherField = (propertyValue, fromColumn, wantC
 
 //for patient/images/contour/settingcheck list
 const getPatientReturnObject = (id, patientList) => {
+  if (!patientList.Exists) {
+    Log.Error("Can not get target list")
+    return
+  }
   const ret = {}
   for (let i = 0, rows = patientList.wItems.count - 1; i <= rows; i++) {
     const findId = patientList.wItems.item(i).Text('ID')

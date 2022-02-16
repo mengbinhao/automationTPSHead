@@ -30,7 +30,7 @@ function testcase() {
     if (study.isStudyExist(indelPlan)) {    
       //delete target folder first
       //incase the postion action incorrect
-      fileFunctions.deleteFolder(path + globalConstant.obj.backslash + patientFolderName, true)
+      fileFunctions.deleteFolder(path + patientFolderName, true)
       utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
       study.exportStudy(indelPlan, Project.Variables.study_image_id, path)
       study.deleteStudy(indelPlan, pv, Project.Variables.study_image_id, "", true)

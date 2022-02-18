@@ -120,6 +120,10 @@ const __getNextCopyPlanName = (parentTC, copiedPlanName) => {
 
 const __getTargetRegionTabs = (indelPlan) => {
   const tabWidget = indelPlan.PlanGUI.widget.m_targetTabWidget
+  if (!tabWidget.Exists) {
+    Log.Error("Can not get target list")
+    return tabs
+  }
   for (let i = 0; i < tabWidget.wTabCount; i++) {
     tabs[i] = tabWidget.wTabCaption(i)
   }
@@ -203,6 +207,11 @@ const deleteTreatCourse = (indelPlan, TCName, isDelete = false) => {
 const addPlan = (indelPlan, parentTCName = "TC1", planName = "TC1_P1", isAdd = false) => {
   __closePlanList(indelPlan)
   if (indelPlan.PatientData.VisibleOnScreen) {
+    if (indelPlan.PatientData.groupBox_3.treeWidget_ContourList.wItems.Count < 2) {
+      Log.Warning(`At least should has items in two Contour Info.`)
+      return
+    }
+  
     const TCList = indelPlan.PatientData.groupBox_5.treeWidget_PlanList
     const rowIdx = findInList.isItemExistInMoreListReturnIndex(parentTCName, globalConstant.obj.nameColumn, TCList)
     if (strictEqual(rowIdx, globalConstant.obj.notFoundIndex)) {
@@ -389,7 +398,7 @@ const closeConfirmWindow = indelPlan => {
 }
 
 const setupPoint = (indelPlan, tarName) => {
-  if (indelPlan.PlanGUI.VisibleOnScreen) {
+  if (indelPlan.PlanGUI.Exists && indelPlan.PlanGUI.VisibleOnScreen) {
     if (!__changeTargetRegionTabs(indelPlan, tarName)) return
     targetRelated.addOnePointNearMiddle(indelPlan)
   } else {
@@ -433,7 +442,7 @@ const movePoint = (indelPlan, tarName, pIdx, isKeep = false) => {
 }
 
 const pointOperate = (indelPlan, tarName, pIdx, {attr, method, type, val}) => {
-  if (indelPlan.PlanGUI.VisibleOnScreen) {
+  if (indelPlan.PlanGUI.Exists && indelPlan.PlanGUI.VisibleOnScreen) {
     if (!__changeTargetRegionTabs(indelPlan, tarName)) return
     if (!__selectPoint(indelPlan, pIdx)) return
     return pointHandler[attr] && pointHandler[attr](method, type, val)

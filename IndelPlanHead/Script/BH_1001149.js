@@ -29,17 +29,21 @@ function testcase() {
     plan.addTreatCourse(indelPlan, true)
     plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
     plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+
+    if (indelPlan.PlanGUI.VisibleOnScreen) {
+      const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+      plan.setupPoint(indelPlan, "tar")
+      const afterAdd = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+      plan.deletePoint(indelPlan, "tar", 1)
+      const afterDelete = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
-    const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    plan.setupPoint(indelPlan, "tar")
-    const afterAdd = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    plan.deletePoint(indelPlan, "tar", 1)
-    const afterDelete = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    
-    if (strictEqual(before + 1, afterAdd) && strictEqual(before, afterDelete)) {
-      Log.Checkpoint(`deletePoint by mouse successfully!`)
+      if (strictEqual(before + 1, afterAdd) && strictEqual(before, afterDelete)) {
+        Log.Checkpoint(`deletePoint by mouse successfully!`)
+      } else {
+        Log.Error(`deletePoint by mouse fail!`)
+      }
     } else {
-      Log.Error(`deletePoint by mouse fail!`)
+      Log.Error(`Execute fail due to window is not right!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

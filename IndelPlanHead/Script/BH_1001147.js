@@ -29,15 +29,19 @@ function testcase() {
     plan.addTreatCourse(indelPlan, true)
     plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
     plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+
+    if (indelPlan.PlanGUI.VisibleOnScreen) {
+      const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+      plan.setupOutBoundPoint(indelPlan, "tar")
+      const after = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
-    const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    plan.setupOutBoundPoint(indelPlan, "tar")
-    const after = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    
-    if (strictEqual(before, after)) {
-      Log.Checkpoint(`setupOutBoundPoint Should not been executed successfully!`)
+      if (strictEqual(before, after)) {
+        Log.Checkpoint(`setupOutBoundPoint Should not been executed successfully!`)
+      } else {
+        Log.Error(`setupOutBoundPoint fail!`)
+      }
     } else {
-      Log.Error(`setupOutBoundPoint fail!`)
+      Log.Error(`Execute fail due to window is not right!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

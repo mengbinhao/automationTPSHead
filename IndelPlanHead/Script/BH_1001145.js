@@ -30,14 +30,18 @@ function testcase() {
     plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
     plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
     
-    const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-    plan.setupPoint(indelPlan, "tar")
-    const after = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+    if (indelPlan.PlanGUI.VisibleOnScreen) {
+      const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+      plan.setupPoint(indelPlan, "tar")
+      const after = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
-    if (strictEqual(before + 1, after)) {
-      Log.Checkpoint(`setupPoint successfully!`)
+      if (strictEqual(before + 1, after)) {
+        Log.Checkpoint(`setupPoint successfully!`)
+      } else {
+        Log.Error(`setupPoint fail!`)
+      }
     } else {
-      Log.Error(`setupPoint fail!`)
+      Log.Error(`Execute fail due to window is not right!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

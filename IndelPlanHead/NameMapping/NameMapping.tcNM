@@ -1860,6 +1860,51 @@
 																			</Property>
 																		</Properties>
 																	</Child>
+																	<Child Name="toolButton" Key="{7374D5E3-4331-463D-AD76-2FCC02B15180}" ParallelWalk="True">
+																		<Image FileName="-625980170" Left="20" Top="74" Right="61" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_2" Key="{80B67E16-0065-4E87-964D-BEF2EFFA1BF4}" ParallelWalk="True">
+																		<Image FileName="-625980170" Left="60" Top="74" Right="101" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_2" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_3" Key="{7487C6B2-4776-45F0-87CC-6C95717B4189}" ParallelWalk="True">
+																		<Image FileName="-625980170" Left="100" Top="74" Right="141" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_3" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_4" Key="{9FF5CEEE-498E-4E94-85C9-B9E1D125E4B1}" ParallelWalk="True">
+																		<Image FileName="-625980170" Left="140" Top="74" Right="181" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_4" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_5" Key="{F3008138-66FB-4FBB-A1A4-EF08FDDD3FA5}" ParallelWalk="True">
+																		<Image FileName="-625980170" Left="180" Top="74" Right="221" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_5" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
 																</Children>
 															</Child>
 															<Child Name="tab" Key="{4517A6B4-5280-4037-AE72-702D4A268C44}" ParallelWalk="True">
@@ -1924,6 +1969,33 @@
 																		<Properties>
 																			<Property Name="objectName">
 																				<Value PropertyType="0" Value="toolButton_48" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_34" Key="{F1CF90F3-737B-4574-B96D-B3163E6B3A0E}" ParallelWalk="True">
+																		<Image FileName="-813561642" Left="140" Top="74" Right="181" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_34" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_44" Key="{CC95C5A0-8F22-452D-BBC1-A0CAAFBE5157}" ParallelWalk="True">
+																		<Image FileName="585931494" Left="530" Top="74" Right="571" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_44" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_45" Key="{87FB2DAD-51AA-432E-9F40-24B18685B589}" ParallelWalk="True">
+																		<Image FileName="585931494" Left="570" Top="74" Right="611" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_45" Type="5" />
 																			</Property>
 																		</Properties>
 																	</Child>
@@ -4910,9 +4982,6 @@
 									<Property Name="QtText">
 										<Value PropertyType="0" Value="Can not generate plans without contours or studys." Type="5" />
 									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
 								</Properties>
 								<Children>
 									<Child Name="qt_msgbox_buttonbox" Key="{13489CC6-7EE1-495C-A561-4D22CE68E631}" ParallelWalk="True">
@@ -4952,9 +5021,6 @@
 									</Property>
 									<Property Name="QtText">
 										<Value PropertyType="0" Value="4600610069006C00200074006F002000610064006400200070006C0061006E002E000A0050006C0065006100730065002000630068006F006F007300650020006100200063006F006E0074006F00750072002E00" Type="7" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
 									</Property>
 								</Properties>
 								<Children>
@@ -4996,9 +5062,6 @@
 									<Property Name="QtText">
 										<Value PropertyType="0" Value="4600610069006C00200074006F002000610064006400200070006C0061006E002E000A0050006C0065006100730065002000630068006F006F0073006500200073006B0069006E00200063006F006E0074006F00750072002E00" Type="7" />
 									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
 								</Properties>
 								<Children>
 									<Child Name="qt_msgbox_buttonbox" Key="{E9C1EEF7-AD40-43E0-A2D1-A54D152AE2B3}" ParallelWalk="True">
@@ -5038,9 +5101,6 @@
 									</Property>
 									<Property Name="QtText">
 										<Value PropertyType="0" Value="4600610069006C00200074006F002000610064006400200070006C0061006E002E000A0050006C0065006100730065002000630068006F006F0073006500200061002000740061007200670065007400200063006F006E0074006F00750072002E00" Type="7" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
 									</Property>
 								</Properties>
 								<Children>
@@ -8676,6 +8736,11 @@
 						<Child Name="qt_tabwidget_stackedwidget" Owner="{90D1CB5E-3DFF-42F9-95A8-95879AB3B391}">
 							<Child Name="tab_2" Owner="{61B8C324-F467-4EDD-92DA-EBFC255EF0C1}">
 								<Child Name="toolButton_17" Owner="{A20333BB-80B2-41D4-B7D3-DCE4E61E5B9A}" />
+								<Child Name="toolButton" Owner="{7374D5E3-4331-463D-AD76-2FCC02B15180}" />
+								<Child Name="toolButton_2" Owner="{80B67E16-0065-4E87-964D-BEF2EFFA1BF4}" />
+								<Child Name="toolButton_3" Owner="{7487C6B2-4776-45F0-87CC-6C95717B4189}" />
+								<Child Name="toolButton_4" Owner="{9FF5CEEE-498E-4E94-85C9-B9E1D125E4B1}" />
+								<Child Name="toolButton_5" Owner="{F3008138-66FB-4FBB-A1A4-EF08FDDD3FA5}" />
 							</Child>
 							<Child Name="tab" Owner="{4517A6B4-5280-4037-AE72-702D4A268C44}">
 								<Child Name="toolButton_SysSet" Owner="{36BBCC81-26AD-4E25-9B0A-53F2676D2B4A}" />
@@ -8685,6 +8750,9 @@
 							<Child Name="tab_3" Owner="{1527EA60-990E-40F0-9B2B-DC10A6FEC411}">
 								<Child Name="toolButton_47" Owner="{C4EB97B9-49AD-4A9D-86C1-23CFC2D913F8}" />
 								<Child Name="toolButton_48" Owner="{AAB6C014-8F68-4A5A-8D04-B89ADABE4117}" />
+								<Child Name="toolButton_34" Owner="{F1CF90F3-737B-4574-B96D-B3163E6B3A0E}" />
+								<Child Name="toolButton_44" Owner="{CC95C5A0-8F22-452D-BBC1-A0CAAFBE5157}" />
+								<Child Name="toolButton_45" Owner="{87FB2DAD-51AA-432E-9F40-24B18685B589}" />
 							</Child>
 						</Child>
 					</Child>

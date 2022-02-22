@@ -4,6 +4,7 @@ const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
 const study = require("study")
+const common = require("common")
 
 
 function testcase() {
@@ -20,7 +21,7 @@ function testcase() {
     patient.loadPatient(indelPlan, Project.Variables.new_patientID)
     study.gotoRegisterImporter(indelPlan)
     study.loadStudy(indelPlan, Project.Variables.study_image_id)
-    study.setWWAndWL(indelPlan)
+    common.setWWAndWL(indelPlan, 'study')
     study.extractStudy(indelPlan)
     if (study.registerStudy(indelPlan)) {
       aqObject.CheckProperty(indelPlan.register_area.pushButton, "Enabled", cmpEqual, false)

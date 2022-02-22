@@ -1446,6 +1446,33 @@
 																	</Child>
 																</Children>
 															</Child>
+															<Child Name="ColorMapRef" Key="{6DA6C1DE-8EF8-4858-A8CD-D27DFDC6F98D}" ParallelWalk="True">
+																<Image FileName="-1247589846" Left="1860" Top="314" Right="1890" Bottom="1010" />
+																<TypeInfo Item0="{6D37FC1B-5E23-4374-926C-3976C07F37B7}" />
+																<Properties>
+																	<Property Name="objectName">
+																		<Value PropertyType="0" Value="ColorMapRef" Type="5" />
+																	</Property>
+																</Properties>
+															</Child>
+															<Child Name="SetWW" Key="{1DB2CA6E-B5B0-47D5-9282-354CE20E5F68}" ParallelWalk="True">
+																<Image FileName="-821153385" Left="1860" Top="160" Right="1917" Bottom="183" />
+																<TypeInfo Item0="{E4D2D73D-BBB3-4D2F-B4F3-1D018C403910}" />
+																<Properties>
+																	<Property Name="objectName">
+																		<Value PropertyType="0" Value="SetWW" Type="5" />
+																	</Property>
+																</Properties>
+															</Child>
+															<Child Name="SetWL" Key="{897339A8-A3B5-45D9-8494-1365049DE6E9}" ParallelWalk="True">
+																<Image FileName="-821153385" Left="1860" Top="189" Right="1917" Bottom="212" />
+																<TypeInfo Item0="{E4D2D73D-BBB3-4D2F-B4F3-1D018C403910}" />
+																<Properties>
+																	<Property Name="objectName">
+																		<Value PropertyType="0" Value="SetWL" Type="5" />
+																	</Property>
+																</Properties>
+															</Child>
 														</Children>
 													</Child>
 													<Child Name="PlanGUI" Key="{6C305443-45B4-4FB4-9E74-39A123C78E3B}" ParallelWalk="True">
@@ -1808,6 +1835,77 @@
 																				<Value PropertyType="0" Value="8" Type="0" />
 																			</Property>
 																		</Properties>
+																	</Child>
+																</Children>
+															</Child>
+															<Child Name="widget_3" Key="{D8104B94-4A71-49FC-9253-3699878A542E}" ParallelWalk="True">
+																<Image FileName="1064056234" Left="1799" Top="129" Right="1919" Bottom="1012" />
+																<TypeInfo Item0="{6D37FC1B-5E23-4374-926C-3976C07F37B7}" />
+																<Properties>
+																	<Property Name="objectName">
+																		<Value PropertyType="0" Value="widget_3" Type="5" />
+																	</Property>
+																</Properties>
+																<Children>
+																	<Child Name="splitter_2" Key="{E97881BF-FFA4-4CB3-AD3C-F9ECF54BFF41}" ParallelWalk="True">
+																		<Image FileName="1064056234" Left="1808" Top="138" Right="1910" Bottom="1003" />
+																		<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="splitter_2" Type="5" />
+																			</Property>
+																		</Properties>
+																		<Children>
+																			<Child Name="widget_5" Key="{A927F018-8D19-414D-AA2E-65813EF094BA}" ParallelWalk="True">
+																				<Image FileName="1064056234" Left="1808" Top="138" Right="1919" Bottom="299" />
+																				<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="widget_5" Type="5" />
+																					</Property>
+																				</Properties>
+																				<Children>
+																					<Child Name="leWidth" Key="{35A36444-D01B-4906-A544-D2F6ADC2BF7D}" ParallelWalk="True">
+																						<Image FileName="1064056234" Left="1839" Top="238" Right="1897" Bottom="262" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="leWidth" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="leLevel" Key="{B82FE117-B216-4471-8BC2-A7AC26C79994}" ParallelWalk="True">
+																						<Image FileName="1236460623" Left="1839" Top="268" Right="1897" Bottom="292" />
+																						<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="leLevel" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																				</Children>
+																			</Child>
+																			<Child Name="widget_6" Key="{31B3DBFA-F5D5-4BCA-AD02-AE70B808B3D4}" ParallelWalk="True">
+																				<Image FileName="1149476096" Left="1808" Top="304" Right="1910" Bottom="1003" />
+																				<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="widget_6" Type="5" />
+																					</Property>
+																				</Properties>
+																				<Children>
+																					<Child Name="wgWL" Key="{15F5F468-4A96-40E0-8685-1D66B83A1F06}" ParallelWalk="True">
+																						<Image FileName="1149476096" Left="1848" Top="313" Right="1878" Bottom="994" />
+																						<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="wgWL" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																				</Children>
+																			</Child>
+																		</Children>
 																	</Child>
 																</Children>
 															</Child>
@@ -2831,427 +2929,6 @@
 									</Child>
 								</Children>
 							</Child>
-							<Child Name="system_settings" Key="{AE770B62-F31B-44C7-B192-D3EDA0626976}" ParallelWalk="True">
-								<Image FileName="1150581790" Left="0" Top="0" Right="616" Bottom="678" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="DlgOption" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="Settings" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="pushButton_Ok" Key="{74F219B7-2ACE-4375-ADB0-A1079D27BB58}" ParallelWalk="True">
-										<Image FileName="1150581790" Left="459" Top="633" Right="525" Bottom="659" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="pushButton_Ok" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-									<Child Name="pushButton_Cancel" Key="{53808C90-0384-41A1-8FB5-6D01728C423B}" ParallelWalk="True">
-										<Image FileName="1150581790" Left="531" Top="633" Right="597" Bottom="659" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="pushButton_Cancel" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-									<Child Name="tabWidget" Key="{DA6ED167-B537-45C3-BC64-11D7A5C0D5B6}" ParallelWalk="True">
-										<Image FileName="1150581790" Left="19" Top="41" Right="597" Bottom="621" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="tabWidget" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="qt_tabwidget_stackedwidget" Key="{48D57C3F-4BD8-46F1-B1E2-E7B1E832B98A}" ParallelWalk="True">
-												<Image FileName="1150581790" Left="21" Top="69" Right="593" Bottom="617" />
-												<Properties>
-													<Property Name="objectName">
-														<Value PropertyType="0" Value="qt_tabwidget_stackedwidget" Type="5" />
-													</Property>
-												</Properties>
-												<Children>
-													<Child Name="tab" Key="{D3D2CF13-8DB9-4F6F-B6B2-3548A5ECBFF2}" ParallelWalk="True">
-														<Image FileName="1150581790" Left="21" Top="69" Right="593" Bottom="617" />
-														<Properties>
-															<Property Name="objectName">
-																<Value PropertyType="0" Value="tab" Type="5" />
-															</Property>
-														</Properties>
-														<Children>
-															<Child Name="groupBox" Key="{E8A36B95-290F-4355-A7EC-4727FFD2D626}" ParallelWalk="True">
-																<Image FileName="1150581790" Left="32" Top="80" Right="582" Bottom="196" />
-																<Properties>
-																	<Property Name="objectName">
-																		<Value PropertyType="0" Value="groupBox" Type="5" />
-																	</Property>
-																</Properties>
-																<Children>
-																	<Child Name="label" Key="{C8F0FF5E-DC82-4348-A7C8-38381113882E}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="108" Right="205" Bottom="130" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_2" Key="{DF91B88E-B89F-4261-8EE8-58A4ADE3E627}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="136" Right="205" Bottom="157" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_2" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_13" Key="{91ECA72E-E2B2-4551-B93E-484642B93D5B}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="163" Right="205" Bottom="184" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_13" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_ModuleInterfaceFolder" Key="{AEB06601-1E69-474A-BC52-C38AE7766E8B}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="211" Top="108" Right="524" Bottom="130" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_ModuleInterfaceFolder" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_WorkDirFolder" Key="{F9B36B01-39B3-475B-AC36-DA5AFA345133}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="211" Top="136" Right="570" Bottom="157" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_WorkDirFolder" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_DCMPath" Key="{28D65A47-70D2-44F8-B318-6C163B50946F}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="211" Top="163" Right="524" Bottom="184" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_DCMPath" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="pushButton_ModuleInterfaceFolder" Key="{7319BFC8-4C00-4315-9CD0-8A19D3DCD161}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="530" Top="108" Right="570" Bottom="130" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="pushButton_ModuleInterfaceFolder" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																</Children>
-															</Child>
-															<Child Name="groupBox_2" Key="{DE684C4C-EA7B-41FC-9A42-B061669B8AD5}" ParallelWalk="True">
-																<Image FileName="1150581790" Left="32" Top="202" Right="582" Bottom="318" />
-																<Properties>
-																	<Property Name="objectName">
-																		<Value PropertyType="0" Value="groupBox_2" Type="5" />
-																	</Property>
-																</Properties>
-																<Children>
-																	<Child Name="label_3" Key="{F5B009C8-517F-4782-BC68-F3A79B37A899}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="230" Right="172" Bottom="252" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_3" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_5" Key="{69F6BA9A-DDCC-4C3F-8850-AF76BF52E2DA}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="258" Right="172" Bottom="279" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_5" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_14" Key="{1AE2003A-1EC6-45A8-8549-E328DAC278E5}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="285" Right="172" Bottom="306" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_14" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_ServerDataPath" Key="{AEED1868-7725-4E67-9FED-8BDE96906307}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="178" Top="230" Right="570" Bottom="252" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_ServerDataPath" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_ServerPatientPath" Key="{8C62B8DC-12DE-440B-B5A1-1FDF1953A64D}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="178" Top="258" Right="570" Bottom="279" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_ServerPatientPath" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_DCMGatePort" Key="{C5C859FE-E4A1-4167-A9B1-C77A7F9F001C}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="178" Top="285" Right="570" Bottom="306" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_DCMGatePort" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																</Children>
-															</Child>
-															<Child Name="groupBox_3" Key="{D8F82076-D5D5-433D-B718-6D528D14E0CB}" ParallelWalk="True">
-																<Image FileName="1150581790" Left="32" Top="324" Right="582" Bottom="416" />
-																<Properties>
-																	<Property Name="objectName">
-																		<Value PropertyType="0" Value="groupBox_3" Type="5" />
-																	</Property>
-																</Properties>
-																<Children>
-																	<Child Name="label_4" Key="{3638D02E-BBAD-49FD-BF84-25C317E27ACD}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="352" Right="185" Bottom="375" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_4" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_6" Key="{FAF9465A-63B5-484C-AFCC-4AC38A3AC3A8}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="381" Right="185" Bottom="404" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_6" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_12" Key="{D55E2092-892F-4F38-8803-4062E838B931}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="314" Top="381" Right="447" Bottom="404" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_12" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_SQLServerIP" Key="{AEEFBBA2-5B97-4206-918B-B474BCCAFE49}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="191" Top="352" Right="570" Bottom="375" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_SQLServerIP" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_SQLServerUser" Key="{89B42490-2619-47E3-97D7-C9350F1D57C5}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="191" Top="381" Right="308" Bottom="404" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_SQLServerUser" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_SQLServerKey" Key="{615CD5D5-2B32-49A5-A8D3-22B27E95B158}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="453" Top="381" Right="570" Bottom="404" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_SQLServerKey" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																</Children>
-															</Child>
-															<Child Name="groupBox_4" Key="{DC7BBD38-97E1-4A4C-B829-51F84E6E3D09}" ParallelWalk="True">
-																<Image FileName="1150581790" Left="32" Top="422" Right="582" Bottom="538" />
-																<Properties>
-																	<Property Name="objectName">
-																		<Value PropertyType="0" Value="groupBox_4" Type="5" />
-																	</Property>
-																</Properties>
-																<Children>
-																	<Child Name="label_8" Key="{76DF73BC-1F2C-476E-8C85-A7CF5A0E4338}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="450" Right="191" Bottom="472" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_8" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_9" Key="{BB094FBA-27BA-4D37-9FB9-286CCB3F5698}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="315" Top="450" Right="451" Bottom="472" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_9" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_11" Key="{A637B6A9-0B6F-4F8F-B841-E8AD87A94CD1}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="478" Right="191" Bottom="499" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_11" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_10" Key="{DEB99349-2E9A-4CCC-904B-236D2CE9B6F2}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="315" Top="478" Right="451" Bottom="499" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_10" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_15" Key="{B64BC7DF-E465-4658-BBF8-6E321A1AE874}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="505" Right="191" Bottom="526" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_15" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_UpperIP" Key="{CA08FE64-C10C-4F3C-8AB0-9977D28B9F86}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="197" Top="450" Right="309" Bottom="472" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_UpperIP" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_UpperDatabase" Key="{7B7296D1-00B6-4F36-AB11-3382937D12F1}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="457" Top="450" Right="570" Bottom="472" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_UpperDatabase" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_UpperUser" Key="{25BC999B-F639-4969-8CA4-07C68D14B5F7}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="197" Top="478" Right="309" Bottom="499" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_UpperUser" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_UpperKey" Key="{F5748DF7-6843-4A49-BC12-93547D66363E}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="457" Top="478" Right="570" Bottom="499" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_UpperKey" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_UpperImagePath" Key="{4DF465B9-645A-4F51-9183-853EFD3F8A09}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="197" Top="505" Right="570" Bottom="526" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_UpperImagePath" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																</Children>
-															</Child>
-															<Child Name="groupBox_5" Key="{4546A71D-1DE9-466E-B860-5B805D5D5FE1}" ParallelWalk="True">
-																<Image FileName="1150581790" Left="32" Top="544" Right="582" Bottom="607" />
-																<Properties>
-																	<Property Name="objectName">
-																		<Value PropertyType="0" Value="groupBox_5" Type="5" />
-																	</Property>
-																</Properties>
-																<Children>
-																	<Child Name="label_17" Key="{309C202E-5BEF-4380-A255-B257B69D9613}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="44" Top="572" Right="100" Bottom="595" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_17" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="label_18" Key="{4BF02C00-F48A-4FC3-B8F5-8ED935B63DF0}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="304" Top="572" Right="372" Bottom="595" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="label_18" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_IGRTIP" Key="{FC68F98A-979F-476C-B8A2-4DB7980854DE}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="106" Top="572" Right="298" Bottom="595" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_IGRTIP" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																	<Child Name="lineEdit_IGRTPort" Key="{44204ED7-63BA-43A4-96A7-85CA1CF79FDD}" ParallelWalk="True">
-																		<Image FileName="1150581790" Left="378" Top="572" Right="570" Bottom="595" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="lineEdit_IGRTPort" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																</Children>
-															</Child>
-														</Children>
-													</Child>
-													<Child Name="tab_2" Key="{C8347C86-8360-4D02-AF19-753681C936FC}" ParallelWalk="True">
-														<Image FileName="-2138559008" Left="21" Top="69" Right="593" Bottom="617" />
-														<Properties>
-															<Property Name="objectName">
-																<Value PropertyType="0" Value="tab_2" Type="5" />
-															</Property>
-														</Properties>
-														<Children>
-															<Child Name="groupBox_6" Key="{97579D07-AF20-44C8-9F26-2A260F8F890F}" ParallelWalk="True">
-																<Image FileName="-2138559008" Left="32" Top="80" Right="582" Bottom="574" />
-																<Properties>
-																	<Property Name="objectName">
-																		<Value PropertyType="0" Value="groupBox_6" Type="5" />
-																	</Property>
-																</Properties>
-																<Children>
-																	<Child Name="treeWidget_Result" Key="{AE85ACE5-0642-495B-AAAE-4C5075D73FD5}" ParallelWalk="True">
-																		<Image FileName="-2138559008" Left="44" Top="108" Right="570" Bottom="562" />
-																		<Properties>
-																			<Property Name="objectName">
-																				<Value PropertyType="0" Value="treeWidget_Result" Type="5" />
-																			</Property>
-																		</Properties>
-																	</Child>
-																</Children>
-															</Child>
-															<Child Name="pushButton_Check" Key="{E0F66CFB-7C94-4D2C-B7ED-5A5BDE8333FE}" ParallelWalk="True">
-																<Image FileName="-2138559008" Left="516" Top="580" Right="582" Bottom="606" />
-																<Properties>
-																	<Property Name="objectName">
-																		<Value PropertyType="0" Value="pushButton_Check" Type="5" />
-																	</Property>
-																</Properties>
-															</Child>
-														</Children>
-													</Child>
-												</Children>
-											</Child>
-											<Child Name="qt_tabwidget_tabbar" Key="{D48B0DB1-0046-4CEA-A837-F6F229CBC359}" ParallelWalk="True">
-												<Image FileName="1150581790" Left="19" Top="41" Right="280" Bottom="68" />
-												<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-												<Properties>
-													<Property Name="objectName">
-														<Value PropertyType="0" Value="qt_tabwidget_tabbar" Type="5" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
 							<Child Name="user_management" Key="{8BC2EC9B-4827-48E5-8A6C-D427FC62FAC2}" ParallelWalk="True">
 								<Image FileName="-1626267765" Left="0" Top="0" Right="816" Bottom="638" />
 								<Properties>
@@ -3769,541 +3446,6 @@
 												<Value PropertyType="0" Value="2" Type="0" />
 											</Property>
 										</Properties>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="machine_management" Key="{8102C42E-DD4F-4E26-B71E-B5FB2028BE72}" ParallelWalk="True">
-								<Image FileName="533701682" Left="0" Top="0" Right="816" Bottom="438" />
-								<Properties>
-									<Property Name="objectName">
-										<Value PropertyType="0" Value="QT3Class" Type="5" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="pushButton" Key="{BA64A0A1-4532-4069-B9B9-A59E9C3689C5}" ParallelWalk="True">
-										<Image FileName="533701682" Left="19" Top="393" Right="85" Bottom="419" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="pushButton" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-									<Child Name="pushButton_2" Key="{280597B7-FE4E-49CB-A120-1C1BFEEBEBC1}" ParallelWalk="True">
-										<Image FileName="533701682" Left="91" Top="393" Right="157" Bottom="419" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="pushButton_2" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-									<Child Name="pushButton_3" Key="{8CC6624E-93FF-400C-AD97-B11C02FBFDEB}" ParallelWalk="True">
-										<Image FileName="533701682" Left="163" Top="393" Right="229" Bottom="419" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="pushButton_3" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-									<Child Name="pushButton_4" Key="{625DDFF2-A869-4D24-BD22-AD4F5AEEFB53}" ParallelWalk="True">
-										<Image FileName="1238462095" Left="235" Top="393" Right="301" Bottom="419" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="pushButton_4" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-									<Child Name="pushButton_6" Key="{53999C29-106E-4970-9C81-85B6B38E5DD2}" ParallelWalk="True">
-										<Image FileName="533701682" Left="307" Top="393" Right="373" Bottom="419" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="pushButton_6" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-									<Child Name="pushButton_5" Key="{F3D6FA42-1E9A-4A3B-9BEF-71C05AA1FBDC}" ParallelWalk="True">
-										<Image FileName="533701682" Left="697" Top="393" Right="797" Bottom="419" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="pushButton_5" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-									<Child Name="ConfigList" Key="{594D7D9B-137A-45F3-A9F7-A9B2CD836F8B}" ParallelWalk="True">
-										<Image FileName="533701682" Left="19" Top="41" Right="797" Bottom="387" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="ConfigList" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="machine_new_machine" Key="{A7071AAA-CE9E-45E0-B1AE-BA6398247851}" ParallelWalk="True">
-								<Image FileName="-1433698153" Left="0" Top="0" Right="216" Bottom="140" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QInputDialog" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="Input Config Name" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="DialogButtonBox" Key="{DEE4C5BA-484C-4218-9885-E5BBFD1F5196}" ParallelWalk="True">
-										<Image FileName="-1433698153" Left="19" Top="95" Right="197" Bottom="121" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="QtClassName">
-												<Value PropertyType="0" Value="QDialogButtonBox" Type="5" />
-											</Property>
-											<Property Name="QtText">
-												<Value PropertyType="0" Value="" Type="5" />
-											</Property>
-											<Property Name="QtIndex">
-												<Value PropertyType="0" Value="1" Type="0" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonOk" Key="{737D08BD-CC33-40FD-A71C-5711606B206F}" ParallelWalk="True">
-												<Image FileName="-1433698153" Left="59" Top="95" Right="125" Bottom="121" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="OK" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-											<Child Name="buttonCancel" Key="{48342587-D070-4A7E-8E03-D69832911057}" ParallelWalk="True">
-												<Image FileName="566508013" Left="131" Top="95" Right="197" Bottom="121" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="Cancel" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="2" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-									<Child Name="LineEdit" Key="{6F405593-C54A-4E33-B3FD-66766F4280C2}" ParallelWalk="True">
-										<Image FileName="566508013" Left="19" Top="66" Right="197" Bottom="89" />
-										<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
-										<Properties>
-											<Property Name="QtClassName">
-												<Value PropertyType="0" Value="QLineEdit" Type="5" />
-											</Property>
-											<Property Name="QtText">
-												<Value PropertyType="0" Value="" Type="5" />
-											</Property>
-											<Property Name="QtIndex">
-												<Value PropertyType="0" Value="1" Type="0" />
-											</Property>
-										</Properties>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="machine_new_machine_detail" Key="{BEA3A178-ACF6-45BA-BE3A-39339625198F}" ParallelWalk="True">
-								<Image FileName="1756470363" Left="0" Top="0" Right="1016" Bottom="659" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="objectName">
-										<Value PropertyType="0" Value="QT2Class" Type="5" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="pushButton" Key="{DE44693C-9BBA-4EC1-A4CA-493FC8667C61}" ParallelWalk="True">
-										<Image FileName="1756470363" Left="859" Top="614" Right="925" Bottom="640" />
-										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="pushButton" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-									<Child Name="pushButton_2" Key="{40DFD964-D077-4107-AD41-C118EC980A55}" ParallelWalk="True">
-										<Image FileName="1756470363" Left="931" Top="614" Right="997" Bottom="640" />
-										<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="pushButton_2" Type="5" />
-											</Property>
-										</Properties>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="machine_less_TMR_popup" Key="{E16E1F08-CF47-430D-A2B2-D79EC61A8C1A}" ParallelWalk="True">
-								<Image FileName="662954018" Left="0" Top="0" Right="506" Bottom="135" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="The TMR data count is less than minimum(at least 10)! Are you sure to proceed?" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{01ADDCC9-64C7-4780-9860-83881FF8FEF0}" ParallelWalk="True">
-										<Image FileName="662954018" Left="14" Top="86" Right="492" Bottom="121" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonYes" Key="{35C448B6-3333-4C6F-8673-ACE1FBFD9222}" ParallelWalk="True">
-												<Image FileName="662954018" Left="354" Top="95" Right="420" Bottom="121" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;Yes" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-											<Child Name="buttonNo" Key="{D366190D-3FF1-4CA8-BED5-15D56EBA61C2}" ParallelWalk="True">
-												<Image FileName="662954018" Left="426" Top="95" Right="492" Bottom="121" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;No" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="2" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="machine_less_OAR_popup" Key="{1B563FF3-56A5-434E-86DB-FFE93BD3C8FF}" ParallelWalk="True">
-								<Image FileName="1929261410" Left="0" Top="0" Right="506" Bottom="135" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="The OAR data is less than minimum(at least 20)!Are you sure to proceed?" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{34BA7B3C-13C3-4289-9731-4D1015FE2D8F}" ParallelWalk="True">
-										<Image FileName="1929261410" Left="14" Top="86" Right="492" Bottom="121" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonYes" Key="{4F19ECD7-EE8F-4B6A-9FEC-996140E92C05}" ParallelWalk="True">
-												<Image FileName="1929261410" Left="354" Top="95" Right="420" Bottom="121" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;Yes" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-											<Child Name="buttonNo" Key="{8D4BBBCB-596A-4947-890F-C3ADDB68828C}" ParallelWalk="True">
-												<Image FileName="1929261410" Left="426" Top="95" Right="492" Bottom="121" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;No" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="2" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="machine_exists_popup" Key="{4C9D69A6-CAE9-457A-AB55-150655BF6F05}" ParallelWalk="True">
-								<Image FileName="-785535956" Left="0" Top="0" Right="286" Bottom="135" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="5400680069007300200063006F006E0066006900670020006E0061006D006500200061006C007200650061006400790020006500780069007300740073002E000A0050006C0065006100730065002000740072007900200061006E006F00740068006500720020006E0061006D0065002E00" Type="7" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{B2957B50-6F32-4798-AF13-ECB2F761A395}" ParallelWalk="True">
-										<Image FileName="-785535956" Left="14" Top="86" Right="272" Bottom="121" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonOk" Key="{C1C8B2EC-848B-4267-B2A3-4DFE162F35B9}" ParallelWalk="True">
-												<Image FileName="-785535956" Left="206" Top="95" Right="272" Bottom="121" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="OK" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="machine_add_confirm_data_popup" Key="{25289242-81D8-400F-A6F0-5FAA4F383C1D}" ParallelWalk="True">
-								<Image FileName="1536705590" Left="0" Top="0" Right="305" Bottom="123" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="Please confirm all the data correct!" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{16802922-3386-460A-8A0D-D3D867A0F415}" ParallelWalk="True">
-										<Image FileName="1536705590" Left="14" Top="74" Right="291" Bottom="109" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonOk" Key="{5BF4101B-7AF4-4CF8-97AB-0A3BD162DA19}" ParallelWalk="True">
-												<Image FileName="1536705590" Left="225" Top="83" Right="291" Bottom="109" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="OK" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="machine_delete_default_popup" Key="{72BA4725-C8CC-4F8F-BEB9-52A282450F5E}" ParallelWalk="True">
-								<Image FileName="998144412" Left="0" Top="0" Right="270" Bottom="135" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="4600610069006C00200074006F002000640065006C006500740065002E000A00430061006E0020006E006F0074002000640065006C006500740065002000640065006600610075006C007400200063006F006E006600690067002E00" Type="7" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{0AFA93D5-2DA5-4972-8E33-93D069FEFB8B}" ParallelWalk="True">
-										<Image FileName="998144412" Left="14" Top="86" Right="256" Bottom="121" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonOk" Key="{DCB5528F-8D6A-4E98-95F1-9675C598359C}" ParallelWalk="True">
-												<Image FileName="998144412" Left="190" Top="95" Right="256" Bottom="121" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="OK" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="machine_delete_popup" Key="{48A4024E-9BA9-4559-900C-53C0D994BDB2}" ParallelWalk="True">
-								<Image FileName="1965568768" Left="0" Top="0" Right="306" Bottom="123" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="Do you want to remove this config?" Type="5" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{EFC91312-C94E-470D-917F-DB5C90F06E93}" ParallelWalk="True">
-										<Image FileName="1965568768" Left="14" Top="74" Right="292" Bottom="109" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonYes" Key="{65D37A42-4203-4D77-BDC2-F9F72A358EF6}" ParallelWalk="True">
-												<Image FileName="1965568768" Left="154" Top="83" Right="220" Bottom="109" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;Yes" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-											<Child Name="buttonNo" Key="{0F963C9A-9D96-4658-8765-0A4006EED58A}" ParallelWalk="True">
-												<Image FileName="1965568768" Left="226" Top="83" Right="292" Bottom="109" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;No" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="2" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
-							<Child Name="machine_edit_popup" Key="{5CDE47A9-6777-47D2-A800-61B5C8DB19E8}" ParallelWalk="True">
-								<Image FileName="627087527" Left="0" Top="0" Right="472" Bottom="135" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="5400680069007300200063006F006E006600690067002000690073002000640065006600610075006C007400200063006F006E0066006900670020006F007200200068006100730020006200650065006E0020007500730065006400200062007900200073006F006D006500200070006C0061006E0073002E000A0044006F00200079006F0075002000770061006E007400200074006F002000650064006900740020006100200063006F007000790020006F00660020007400680069007300200063006F006E006600690067003F00" Type="7" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{F1F2462B-4B50-4A61-9C66-EE24765E3201}" ParallelWalk="True">
-										<Image FileName="627087527" Left="14" Top="86" Right="458" Bottom="121" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonYes" Key="{2B62A644-3D97-432A-91FC-847B3407C01A}" ParallelWalk="True">
-												<Image FileName="627087527" Left="320" Top="95" Right="386" Bottom="121" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;Yes" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-											<Child Name="buttonNo" Key="{2B27D20A-C723-4CFF-94B5-55F2989BD77E}" ParallelWalk="True">
-												<Image FileName="627087527" Left="392" Top="95" Right="458" Bottom="121" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;No" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="2" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
 									</Child>
 								</Children>
 							</Child>
@@ -7412,64 +6554,6 @@
 									</Child>
 								</Children>
 							</Child>
-							<Child Name="system_settings_modify_popup" Key="{4CB4E5FB-93BE-4087-AF58-CF63ACF30060}" ParallelWalk="True">
-								<Image FileName="1899077900" Left="0" Top="0" Right="424" Bottom="154" />
-								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
-								<Properties>
-									<Property Name="QtClassName">
-										<Value PropertyType="0" Value="QMessageBox" Type="5" />
-									</Property>
-									<Property Name="QtText">
-										<Value PropertyType="0" Value="5400680065002000730079007300740065006D002000730065007400740069006E0067007300200068006100730020006200650065006E0020006D006F006400690066006900650064002E000A0050006C0065006100730065002000720065007300740061007200740020007400680065002000730079007300740065006D00200074006F0020006D0061006B00650020006E00650077002000730065007400740069006E0067007300200077006F0072006B002E000A00520065007300740061007200740020006E006F0077003F00" Type="7" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
-									</Property>
-								</Properties>
-								<Children>
-									<Child Name="qt_msgbox_buttonbox" Key="{2C1F567B-5AA6-4079-9E32-2A0E5F4E1ED7}" ParallelWalk="True">
-										<Image FileName="1899077900" Left="14" Top="105" Right="410" Bottom="140" />
-										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
-										<Properties>
-											<Property Name="objectName">
-												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
-											</Property>
-										</Properties>
-										<Children>
-											<Child Name="buttonYes" Key="{1375AD4D-97B5-4964-99DD-10227D394464}" ParallelWalk="True">
-												<Image FileName="1899077900" Left="272" Top="114" Right="338" Bottom="140" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;Yes" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="1" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-											<Child Name="buttonNo" Key="{05C2F4C8-89AE-4771-8255-9705BC546DA8}" ParallelWalk="True">
-												<Image FileName="1899077900" Left="344" Top="114" Right="410" Bottom="140" />
-												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
-												<Properties>
-													<Property Name="QtClassName">
-														<Value PropertyType="0" Value="QPushButton" Type="5" />
-													</Property>
-													<Property Name="QtText">
-														<Value PropertyType="0" Value="&amp;No" Type="5" />
-													</Property>
-													<Property Name="QtIndex">
-														<Value PropertyType="0" Value="2" Type="0" />
-													</Property>
-												</Properties>
-											</Child>
-										</Children>
-									</Child>
-								</Children>
-							</Child>
 							<Child Name="detail_contour_delete_popup" Key="{24EAE1BC-5826-4BC7-81B5-CC26B748D370}" ParallelWalk="True">
 								<Image FileName="1077595601" Left="0" Top="0" Right="300" Bottom="123" />
 								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
@@ -8675,6 +7759,9 @@
 									<Child Name="qt_spinbox_lineedit" Owner="{4CE385FF-59F1-46BF-8965-8E7EF4E4527C}" />
 								</Child>
 							</Child>
+							<Child Name="ColorMapRef" Owner="{6DA6C1DE-8EF8-4858-A8CD-D27DFDC6F98D}" />
+							<Child Name="SetWW" Owner="{1DB2CA6E-B5B0-47D5-9282-354CE20E5F68}" />
+							<Child Name="SetWL" Owner="{897339A8-A3B5-45D9-8494-1365049DE6E9}" />
 						</Child>
 						<Child Name="PlanGUI" Owner="{6C305443-45B4-4FB4-9E74-39A123C78E3B}">
 							<Child Name="widget" Owner="{6C31E300-0800-4794-A5BE-9E94153BFA05}">
@@ -8728,6 +7815,17 @@
 							</Child>
 							<Child Name="canvas" Owner="{0C12A846-B9D6-4D35-86B6-C61E7BEB56EB}">
 								<Child Name="PlanC2DViewer" Owner="{D940EEAD-4E56-4BC1-97A2-26B531E95805}" />
+							</Child>
+							<Child Name="widget_3" Owner="{D8104B94-4A71-49FC-9253-3699878A542E}">
+								<Child Name="splitter_2" Owner="{E97881BF-FFA4-4CB3-AD3C-F9ECF54BFF41}">
+									<Child Name="widget_5" Owner="{A927F018-8D19-414D-AA2E-65813EF094BA}">
+										<Child Name="leWidth" Owner="{35A36444-D01B-4906-A544-D2F6ADC2BF7D}" />
+										<Child Name="leLevel" Owner="{B82FE117-B216-4471-8BC2-A7AC26C79994}" />
+									</Child>
+									<Child Name="widget_6" Owner="{31B3DBFA-F5D5-4BCA-AD02-AE70B808B3D4}">
+										<Child Name="wgWL" Owner="{15F5F468-4A96-40E0-8685-1D66B83A1F06}" />
+									</Child>
+								</Child>
 							</Child>
 						</Child>
 					</Child>
@@ -8847,56 +7945,6 @@
 			<Child Name="user_incorrect_confirm_password_popup" Owner="{6D059E75-B47F-41ED-9540-32EC93062BAE}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{80C7B179-1021-411C-89A8-C3D7AF00EEB0}">
 					<Child Name="buttonOk" Owner="{B7A86998-376D-4507-A477-8505EA245FD5}" />
-				</Child>
-			</Child>
-			<Child Name="machine_new_machine" Owner="{A7071AAA-CE9E-45E0-B1AE-BA6398247851}">
-				<Child Name="DialogButtonBox" Owner="{DEE4C5BA-484C-4218-9885-E5BBFD1F5196}">
-					<Child Name="buttonOk" Owner="{737D08BD-CC33-40FD-A71C-5711606B206F}" />
-					<Child Name="buttonCancel" Owner="{48342587-D070-4A7E-8E03-D69832911057}" />
-				</Child>
-				<Child Name="LineEdit" Owner="{6F405593-C54A-4E33-B3FD-66766F4280C2}" />
-			</Child>
-			<Child Name="machine_new_machine_detail" Owner="{BEA3A178-ACF6-45BA-BE3A-39339625198F}">
-				<Child Name="pushButton" Owner="{DE44693C-9BBA-4EC1-A4CA-493FC8667C61}" />
-				<Child Name="pushButton_2" Owner="{40DFD964-D077-4107-AD41-C118EC980A55}" />
-			</Child>
-			<Child Name="machine_less_TMR_popup" Owner="{E16E1F08-CF47-430D-A2B2-D79EC61A8C1A}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{01ADDCC9-64C7-4780-9860-83881FF8FEF0}">
-					<Child Name="buttonYes" Owner="{35C448B6-3333-4C6F-8673-ACE1FBFD9222}" />
-					<Child Name="buttonNo" Owner="{D366190D-3FF1-4CA8-BED5-15D56EBA61C2}" />
-				</Child>
-			</Child>
-			<Child Name="machine_less_OAR_popup" Owner="{1B563FF3-56A5-434E-86DB-FFE93BD3C8FF}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{34BA7B3C-13C3-4289-9731-4D1015FE2D8F}">
-					<Child Name="buttonYes" Owner="{4F19ECD7-EE8F-4B6A-9FEC-996140E92C05}" />
-					<Child Name="buttonNo" Owner="{8D4BBBCB-596A-4947-890F-C3ADDB68828C}" />
-				</Child>
-			</Child>
-			<Child Name="machine_exists_popup" Owner="{4C9D69A6-CAE9-457A-AB55-150655BF6F05}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{B2957B50-6F32-4798-AF13-ECB2F761A395}">
-					<Child Name="buttonOk" Owner="{C1C8B2EC-848B-4267-B2A3-4DFE162F35B9}" />
-				</Child>
-			</Child>
-			<Child Name="machine_add_confirm_data_popup" Owner="{25289242-81D8-400F-A6F0-5FAA4F383C1D}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{16802922-3386-460A-8A0D-D3D867A0F415}">
-					<Child Name="buttonOk" Owner="{5BF4101B-7AF4-4CF8-97AB-0A3BD162DA19}" />
-				</Child>
-			</Child>
-			<Child Name="machine_delete_default_popup" Owner="{72BA4725-C8CC-4F8F-BEB9-52A282450F5E}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{0AFA93D5-2DA5-4972-8E33-93D069FEFB8B}">
-					<Child Name="buttonOk" Owner="{DCB5528F-8D6A-4E98-95F1-9675C598359C}" />
-				</Child>
-			</Child>
-			<Child Name="machine_delete_popup" Owner="{48A4024E-9BA9-4559-900C-53C0D994BDB2}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{EFC91312-C94E-470D-917F-DB5C90F06E93}">
-					<Child Name="buttonYes" Owner="{65D37A42-4203-4D77-BDC2-F9F72A358EF6}" />
-					<Child Name="buttonNo" Owner="{0F963C9A-9D96-4658-8765-0A4006EED58A}" />
-				</Child>
-			</Child>
-			<Child Name="machine_edit_popup" Owner="{5CDE47A9-6777-47D2-A800-61B5C8DB19E8}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{F1F2462B-4B50-4A61-9C66-EE24765E3201}">
-					<Child Name="buttonYes" Owner="{2B62A644-3D97-432A-91FC-847B3407C01A}" />
-					<Child Name="buttonNo" Owner="{2B27D20A-C723-4CFF-94B5-55F2989BD77E}" />
 				</Child>
 			</Child>
 			<Child Name="contour_auto_sketch_popup" Owner="{66DBC6E6-921A-4772-B947-ECBA1B7FF322}">
@@ -9268,66 +8316,6 @@
 				<Child Name="pushButton_OK" Owner="{F64CEEDF-FCAE-46D3-AA8C-77C4605597E5}" />
 				<Child Name="pushButton_Cancel" Owner="{67CEAA30-90C1-4408-95F8-E8526C5375C1}" />
 			</Child>
-			<Child Name="system_settings" Owner="{AE770B62-F31B-44C7-B192-D3EDA0626976}">
-				<Child Name="pushButton_Ok" Owner="{74F219B7-2ACE-4375-ADB0-A1079D27BB58}" />
-				<Child Name="pushButton_Cancel" Owner="{53808C90-0384-41A1-8FB5-6D01728C423B}" />
-				<Child Name="tabWidget" Owner="{DA6ED167-B537-45C3-BC64-11D7A5C0D5B6}">
-					<Child Name="qt_tabwidget_stackedwidget" Owner="{48D57C3F-4BD8-46F1-B1E2-E7B1E832B98A}">
-						<Child Name="tab" Owner="{D3D2CF13-8DB9-4F6F-B6B2-3548A5ECBFF2}">
-							<Child Name="groupBox" Owner="{E8A36B95-290F-4355-A7EC-4727FFD2D626}">
-								<Child Name="label" Owner="{C8F0FF5E-DC82-4348-A7C8-38381113882E}" />
-								<Child Name="label_2" Owner="{DF91B88E-B89F-4261-8EE8-58A4ADE3E627}" />
-								<Child Name="label_13" Owner="{91ECA72E-E2B2-4551-B93E-484642B93D5B}" />
-								<Child Name="lineEdit_ModuleInterfaceFolder" Owner="{AEB06601-1E69-474A-BC52-C38AE7766E8B}" />
-								<Child Name="lineEdit_WorkDirFolder" Owner="{F9B36B01-39B3-475B-AC36-DA5AFA345133}" />
-								<Child Name="lineEdit_DCMPath" Owner="{28D65A47-70D2-44F8-B318-6C163B50946F}" />
-								<Child Name="pushButton_ModuleInterfaceFolder" Owner="{7319BFC8-4C00-4315-9CD0-8A19D3DCD161}" />
-							</Child>
-							<Child Name="groupBox_2" Owner="{DE684C4C-EA7B-41FC-9A42-B061669B8AD5}">
-								<Child Name="label_3" Owner="{F5B009C8-517F-4782-BC68-F3A79B37A899}" />
-								<Child Name="label_5" Owner="{69F6BA9A-DDCC-4C3F-8850-AF76BF52E2DA}" />
-								<Child Name="label_14" Owner="{1AE2003A-1EC6-45A8-8549-E328DAC278E5}" />
-								<Child Name="lineEdit_ServerDataPath" Owner="{AEED1868-7725-4E67-9FED-8BDE96906307}" />
-								<Child Name="lineEdit_ServerPatientPath" Owner="{8C62B8DC-12DE-440B-B5A1-1FDF1953A64D}" />
-								<Child Name="lineEdit_DCMGatePort" Owner="{C5C859FE-E4A1-4167-A9B1-C77A7F9F001C}" />
-							</Child>
-							<Child Name="groupBox_3" Owner="{D8F82076-D5D5-433D-B718-6D528D14E0CB}">
-								<Child Name="label_4" Owner="{3638D02E-BBAD-49FD-BF84-25C317E27ACD}" />
-								<Child Name="label_6" Owner="{FAF9465A-63B5-484C-AFCC-4AC38A3AC3A8}" />
-								<Child Name="label_12" Owner="{D55E2092-892F-4F38-8803-4062E838B931}" />
-								<Child Name="lineEdit_SQLServerIP" Owner="{AEEFBBA2-5B97-4206-918B-B474BCCAFE49}" />
-								<Child Name="lineEdit_SQLServerUser" Owner="{89B42490-2619-47E3-97D7-C9350F1D57C5}" />
-								<Child Name="lineEdit_SQLServerKey" Owner="{615CD5D5-2B32-49A5-A8D3-22B27E95B158}" />
-							</Child>
-							<Child Name="groupBox_4" Owner="{DC7BBD38-97E1-4A4C-B829-51F84E6E3D09}">
-								<Child Name="label_8" Owner="{76DF73BC-1F2C-476E-8C85-A7CF5A0E4338}" />
-								<Child Name="label_9" Owner="{BB094FBA-27BA-4D37-9FB9-286CCB3F5698}" />
-								<Child Name="label_11" Owner="{A637B6A9-0B6F-4F8F-B841-E8AD87A94CD1}" />
-								<Child Name="label_10" Owner="{DEB99349-2E9A-4CCC-904B-236D2CE9B6F2}" />
-								<Child Name="label_15" Owner="{B64BC7DF-E465-4658-BBF8-6E321A1AE874}" />
-								<Child Name="lineEdit_UpperIP" Owner="{CA08FE64-C10C-4F3C-8AB0-9977D28B9F86}" />
-								<Child Name="lineEdit_UpperDatabase" Owner="{7B7296D1-00B6-4F36-AB11-3382937D12F1}" />
-								<Child Name="lineEdit_UpperUser" Owner="{25BC999B-F639-4969-8CA4-07C68D14B5F7}" />
-								<Child Name="lineEdit_UpperKey" Owner="{F5748DF7-6843-4A49-BC12-93547D66363E}" />
-								<Child Name="lineEdit_UpperImagePath" Owner="{4DF465B9-645A-4F51-9183-853EFD3F8A09}" />
-							</Child>
-							<Child Name="groupBox_5" Owner="{4546A71D-1DE9-466E-B860-5B805D5D5FE1}">
-								<Child Name="label_17" Owner="{309C202E-5BEF-4380-A255-B257B69D9613}" />
-								<Child Name="label_18" Owner="{4BF02C00-F48A-4FC3-B8F5-8ED935B63DF0}" />
-								<Child Name="lineEdit_IGRTIP" Owner="{FC68F98A-979F-476C-B8A2-4DB7980854DE}" />
-								<Child Name="lineEdit_IGRTPort" Owner="{44204ED7-63BA-43A4-96A7-85CA1CF79FDD}" />
-							</Child>
-						</Child>
-						<Child Name="tab_2" Owner="{C8347C86-8360-4D02-AF19-753681C936FC}">
-							<Child Name="groupBox_6" Owner="{97579D07-AF20-44C8-9F26-2A260F8F890F}">
-								<Child Name="treeWidget_Result" Owner="{AE85ACE5-0642-495B-AAAE-4C5075D73FD5}" />
-							</Child>
-							<Child Name="pushButton_Check" Owner="{E0F66CFB-7C94-4D2C-B7ED-5A5BDE8333FE}" />
-						</Child>
-					</Child>
-					<Child Name="qt_tabwidget_tabbar" Owner="{D48B0DB1-0046-4CEA-A837-F6F229CBC359}" />
-				</Child>
-			</Child>
 			<Child Name="register_exporter" Owner="{DB6BE8E8-3582-4753-8F8A-79E90BA4E04C}">
 				<Child Name="pushButton_SelectAll" Owner="{5A536091-0235-4514-9E45-8E60C1B1D574}" />
 				<Child Name="pushButton_SelectNone" Owner="{89C6A5DB-572C-4E9A-BB08-5A159BEF6196}" />
@@ -9363,15 +8351,6 @@
 				<Child Name="pushButton_Import" Owner="{EC5A592F-5CC7-4F54-8314-2FCEBAEB5646}" />
 				<Child Name="treeWidget_PatientList" Owner="{263BD1CB-B86A-4FE0-A74F-A2BDF6B4B11A}" />
 			</Child>
-			<Child Name="machine_management" Owner="{8102C42E-DD4F-4E26-B71E-B5FB2028BE72}">
-				<Child Name="pushButton" Owner="{BA64A0A1-4532-4069-B9B9-A59E9C3689C5}" />
-				<Child Name="pushButton_2" Owner="{280597B7-FE4E-49CB-A120-1C1BFEEBEBC1}" />
-				<Child Name="pushButton_3" Owner="{8CC6624E-93FF-400C-AD97-B11C02FBFDEB}" />
-				<Child Name="pushButton_4" Owner="{625DDFF2-A869-4D24-BD22-AD4F5AEEFB53}" />
-				<Child Name="pushButton_6" Owner="{53999C29-106E-4970-9C81-85B6B38E5DD2}" />
-				<Child Name="pushButton_5" Owner="{F3D6FA42-1E9A-4A3B-9BEF-71C05AA1FBDC}" />
-				<Child Name="ConfigList" Owner="{594D7D9B-137A-45F3-A9F7-A9B2CD836F8B}" />
-			</Child>
 			<Child Name="main_save_progress" Owner="{F125188A-3EE8-4B60-9C6B-86FDC106CF49}">
 				<Child Name="Label" Owner="{3954EA70-DEA5-40FC-B4F2-C4D45C73FE77}" />
 			</Child>
@@ -9398,12 +8377,6 @@
 			<Child Name="detail_push_controller_complete_popup" Owner="{8F8FA2D4-C2E3-401C-9367-AA2030438472}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{2F33E562-5D85-4A19-A6E5-C1DF3597E8EC}">
 					<Child Name="buttonOk" Owner="{D67CFC25-FCB9-4106-B695-7EF7DAC6C0CA}" />
-				</Child>
-			</Child>
-			<Child Name="system_settings_modify_popup" Owner="{4CB4E5FB-93BE-4087-AF58-CF63ACF30060}">
-				<Child Name="qt_msgbox_buttonbox" Owner="{2C1F567B-5AA6-4079-9E32-2A0E5F4E1ED7}">
-					<Child Name="buttonYes" Owner="{1375AD4D-97B5-4964-99DD-10227D394464}" />
-					<Child Name="buttonNo" Owner="{05C2F4C8-89AE-4771-8255-9705BC546DA8}" />
 				</Child>
 			</Child>
 			<Child Name="detail_contour_delete_popup" Owner="{24EAE1BC-5826-4BC7-81B5-CC26B748D370}">
@@ -16233,6 +15206,384 @@
 					</Child>
 					<Child Name="WndCaption" Doc="Returns the window&apos;s caption." IsBasic="True" Data="ZI4L2L4SAU8ZN">
 						<ReturnValue Param0="8" />
+					</Child>
+				</FunctionDescriptions>
+			</Data>
+		</Child>
+		<Child Hash="-299268369" Key="{E4D2D73D-BBB3-4D2F-B4F3-1D018C403910}">
+			<Data Properties="ZZKFFFFFFFFFFFFFFFFN8L4K28ZZY">
+				<FunctionDescriptions>
+					<Child Name="_NewEnum" Doc="Returns an enumerator for the children collection." IsBasic="True" Data="ZI4L2L4SA8TDZN">
+						<ReturnValue Param0="13" />
+					</Child>
+					<Child Name="AddRef" IsBasic="True" Data="ZI4L1L4T8S13ZG1K">
+						<ReturnValue Param0="19" />
+					</Child>
+					<Child Name="Child" Doc="Returns a child object by its index." IsBasic="True" Param0="Index" Data="ZI4L1L4L1K6U9ZN">
+						<Param0>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="ChildCount" Doc="The number of child objects." IsBasic="True" Data="ZI4L2L4S58T3ZN">
+						<ReturnValue Param0="3" />
+					</Child>
+					<Child Name="Click" Doc="Simulates a left-button single click in a window or control as specified (relative position, shift keys)." IsBasic="True" Param0="ClientX" Param1="ClientY" Param2="Shift" Data="ZI4L1L4L3K38S18ZN">
+						<Param0>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="-1" Type="0" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="-1" Type="0" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="29" Type0="TShiftKey" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param2>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="ClickR" Doc="Simulates a right-button single click in a window or control as specified (relative position, shift keys)." IsBasic="True" Param0="ClientX" Param1="ClientY" Param2="Shift" Data="ZI4L1L4L3K48S18ZN">
+						<Param0>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="-1" Type="0" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="-1" Type="0" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="29" Type0="TShiftKey" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param2>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Enabled" Doc="Specifies whether the object is enabled or disabled." IsBasic="True" Data="ZI4L2L4S7UBZN">
+						<ReturnValue Param0="11" />
+					</Child>
+					<Child Name="Exists" Doc="True if the object exists in the system; else, false." IsBasic="True" Data="ZI4L2L4S68TBZN">
+						<ReturnValue Param0="11" />
+					</Child>
+					<Child Name="Find" Doc="Returns an object by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Data="ZI4L1L4L4K78T9ZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="1" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="FindAll" Doc="Returns an array of objects by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Data="ZI4L1L4L4K8UCZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="1" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<ReturnValue Param0="12" />
+					</Child>
+					<Child Name="FindAllChildren" Doc="Returns an array of objects by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Data="ZI4L1L4L4KCUCZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="1" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<ReturnValue Param0="12" />
+					</Child>
+					<Child Name="FindChild" Doc="Returns an object by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Data="ZI4L1L4L4KB8T9ZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="FindChildEx" Doc="Returns an object by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Param4="Timeout" Data="ZI4L1L4L5K4U9ZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<Param4>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param4>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="FindEx" Doc="Returns an object by the values of the specified properties." IsBasic="True" Param0="PropNames" Param1="PropValues" Param2="Depth" Param3="RefreshTree" Param4="Timeout" Data="ZI4L1L4L5K38T9ZN">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="1" Type="0" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param3>
+						<Param4>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param4>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="FindId" Doc="Returns an object by its ID." IsBasic="True" Param0="Id" Param1="RefreshTree" Data="ZI4L1L4L2K4U9ZN">
+						<Param0>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="11" />
+							<ParamDesc Flags="49" Value="True" Type="6" />
+						</Param1>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="FullName" Doc="Returns the full name of an object.&#32;&#32;Its full name uniquely identifies an object in the system." IsBasic="True" Data="ZI4L2L4SAU8ZN">
+						<ReturnValue Param0="8" />
+					</Child>
+					<Child Name="GetIDsOfNames" IsBasic="True" Param0="riid" Param1="rgszNames" Param2="cNames" Param3="lcid" Param4="rgdispid" Data="ZI4L1L4L5K28S18ZG1K">
+						<Param0>
+							<TypeDesc Param0="26" Param1="29" Type1="GUID" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="26" Param1="26" Param2="16" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="23" />
+							<ParamDesc Flags="1" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="19" />
+							<ParamDesc Flags="1" />
+						</Param3>
+						<Param4>
+							<TypeDesc Param0="26" Param1="3" />
+							<ParamDesc Flags="2" />
+						</Param4>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="GetTypeInfo" IsBasic="True" Param0="itinfo" Param1="lcid" Param2="pptinfo" Data="ZI4L1L4L3K2T18ZG1K">
+						<Param0>
+							<TypeDesc Param0="23" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="19" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="26" Param1="26" Param2="24" />
+							<ParamDesc Flags="2" />
+						</Param2>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="GetTypeInfoCount" IsBasic="True" Param0="pctinfo" Data="ZI4L1L4L1K18S18ZG1K">
+						<Param0>
+							<TypeDesc Param0="26" Param1="23" />
+							<ParamDesc Flags="2" />
+						</Param0>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Height" Doc="The object&apos;s height in pixels." IsBasic="True" Data="ZI4L2L4S68T3ZN">
+						<ReturnValue Param0="3" />
+					</Child>
+					<Child Name="Id" Doc="Object ID. For processes, the process ID; for windows, the window handle, etc." IsBasic="True" Data="ZI4L2L4S38T3ZN">
+						<ReturnValue Param0="3" />
+					</Child>
+					<Child Name="Invoke" IsBasic="True" Param0="dispidMember" Param1="riid" Param2="lcid" Param3="wFlags" Param4="pdispparams" Param5="pvarResult" Param6="pexcepinfo" Param7="puArgErr" Data="ZI4L1L4L8K3T18ZG1K">
+						<Param0>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="26" Param1="29" Type1="GUID" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="19" />
+							<ParamDesc Flags="1" />
+						</Param2>
+						<Param3>
+							<TypeDesc Param0="18" />
+							<ParamDesc Flags="1" />
+						</Param3>
+						<Param4>
+							<TypeDesc Param0="26" Param1="29" Type1="DISPPARAMS" />
+							<ParamDesc Flags="1" />
+						</Param4>
+						<Param5>
+							<TypeDesc Param0="26" Param1="12" />
+							<ParamDesc Flags="2" />
+						</Param5>
+						<Param6>
+							<TypeDesc Param0="26" Param1="29" Type1="EXCEPINFO" />
+							<ParamDesc Flags="2" />
+						</Param6>
+						<Param7>
+							<TypeDesc Param0="26" Param1="23" />
+							<ParamDesc Flags="2" />
+						</Param7>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Keys" Doc="Simulates one or several keypresses." IsBasic="True" Param0="Keys" Data="ZI4L1L4L1K8T18ZN">
+						<Param0>
+							<TypeDesc Param0="8" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="MappedName" Doc="Specifies the mapped name of the object." IsBasic="True" Data="ZI4L2L4S9U8ZN">
+						<ReturnValue Param0="8" />
+					</Child>
+					<Child Name="Name" Doc="Object name." IsBasic="True" Data="ZI4L2L4S48T8ZN">
+						<ReturnValue Param0="8" />
+					</Child>
+					<Child Name="Parent" Doc="Parent object." IsBasic="True" Data="ZI4L2L4S5U9ZN">
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="QueryInterface" IsBasic="True" Param0="riid" Param1="ppvObj" Data="ZI4L1L4L2Z018ZG1K">
+						<Param0>
+							<TypeDesc Param0="26" Param1="29" Type1="GUID" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="26" Param1="26" Param2="24" />
+							<ParamDesc Flags="2" />
+						</Param1>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Refresh" Doc="Updates the internal list of child objects." IsBasic="True" Data="ZI4L1L4S98S18ZN">
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Release" IsBasic="True" Data="ZI4L1L4S1T13ZG1K">
+						<ReturnValue Param0="19" />
+					</Child>
+					<Child Name="SetFocus" Doc="Sets focus to the specified Window object." IsBasic="True" Data="ZI4L1L4S38S18ZN">
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="SetText" Doc="Enters text in the text editor." IsBasic="True" Param0="Text" Data="ZI4L1L4L1K38S18ZN">
+						<Param0>
+							<TypeDesc Param0="8" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Validate" Doc="Generates the OnValidate event." IsBasic="True" Param0="Params" Data="ZI4L1L4L1H1G7T18Z04L">
+						<Param0>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="17" />
+						</Param0>
+						<ReturnValue Param0="24" />
+					</Child>
+					<Child Name="Visible" Doc="Specifies whether an onscreen object is visible to users." IsBasic="True" Data="ZI4L2L4S38TBZN">
+						<ReturnValue Param0="11" />
+					</Child>
+					<Child Name="WaitChild" Doc="Delays script execution until the specified child object appears in the child list or the specified time limit is reached." IsBasic="True" Param0="ChildName" Param1="WaitTime" Data="ZI4L1L4L2K88T9ZN">
+						<Param0>
+							<TypeDesc Param0="8" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="0" Type="0" />
+						</Param1>
+						<ReturnValue Param0="9" />
+					</Child>
+					<Child Name="WaitProperty" Doc="Delays the script execution until the specified property equals the specified value or until the specified time limit elapses." IsBasic="True" Param0="PropertyName" Param1="PropertyValue" Param2="WaitTime" Data="ZI4L1L4L3KBUBZN">
+						<Param0>
+							<TypeDesc Param0="8" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<Param1>
+							<TypeDesc Param0="12" />
+							<ParamDesc Flags="1" />
+						</Param1>
+						<Param2>
+							<TypeDesc Param0="3" />
+							<ParamDesc Flags="49" Value="-1" Type="0" />
+						</Param2>
+						<ReturnValue Param0="11" />
+					</Child>
+					<Child Name="Width" Doc="The object&apos;s width in pixels." IsBasic="True" Data="ZI4L2L4S6U3ZN">
+						<ReturnValue Param0="3" />
+					</Child>
+					<Child Name="WndCaption" Doc="Returns the window&apos;s caption." IsBasic="True" Data="ZI4L2L4SAU8ZN">
+						<ReturnValue Param0="8" />
+					</Child>
+					<Child Name="wSelection" Doc="Retrieves the selected text." IsBasic="True" Data="ZI4L2L4S5U8ZN">
+						<ReturnValue Param0="8" />
+					</Child>
+					<Child Name="wText" Doc="Contents of the edit control, as text string." IsBasic="True" Data="ZI4L2L4S4U8ZN">
+						<ReturnValue Param0="8" />
+					</Child>
+					<Child Name="wText" Doc="Contents of the edit control, as text string." IsBasic="True" Data="ZI4L4L4L1K48S18ZN">
+						<Param0>
+							<TypeDesc Param0="8" />
+							<ParamDesc Flags="1" />
+						</Param0>
+						<ReturnValue Param0="24" />
 					</Child>
 				</FunctionDescriptions>
 			</Data>

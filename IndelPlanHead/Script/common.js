@@ -241,6 +241,29 @@ const captureImage = (indelPlan, imgName) => {
   }
 }
 
+const setWWAndWL = (indelPlan, window = "study",  W = "625", L = "492") => {
+  if (window === 'study' && indelPlan.register_importer.VisibleOnScreen) {
+    indelPlan.register_importer.groupBox_5.leMovWW.clear()
+    indelPlan.register_importer.groupBox_5.leMovWW.Keys(W)
+    indelPlan.register_importer.groupBox_5.leMovWL.clear()
+    indelPlan.register_importer.groupBox_5.leMovWL.Keys(L)
+  } else if (window === 'contour' && indelPlan.ContourGUI.VisibleOnScreen) {
+    indelPlan.ContourGUI.SetWW.clear()
+    indelPlan.ContourGUI.SetWW.Keys(W)
+    indelPlan.ContourGUI.SetWL.clear()
+    indelPlan.ContourGUI.SetWL.Keys(L)
+  } else if (window === 'plan' && indelPlan.PlanGUI.VisibleOnScreen) {
+    indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.clear()
+    indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.Keys(W)
+    indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.clear()
+    indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.Keys(L)
+  } else {
+    Log.Error(`Can not setWWAndWL due to window is not right, window = ${window}`)
+    return
+  }
+  Sys.Desktop.Keys("[Enter]")
+}
+
 module.exports.changePatientDetailTab = changePatientDetailTab
 module.exports.getPatientDetailTabIndex = getPatientDetailTabIndex
 module.exports.getPatientDetailTabName = getPatientDetailTabName
@@ -250,3 +273,4 @@ module.exports.pushToController = pushToController
 module.exports.openReport = openReport
 module.exports.closeReport = closeReport
 module.exports.captureImage = captureImage
+module.exports.setWWAndWL = setWWAndWL

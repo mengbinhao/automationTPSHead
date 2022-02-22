@@ -76,9 +76,6 @@ obj.addPatient = 'patient'
 obj.addUser = 'user'
 obj.restoreStudy = 'restorestudy'
 obj.addMachine = 'machine'
-//obj.addContourPlanLib = 'addContourPlanLib'
-//obj.addTreatCourse = 'addTreatCourse'
-//obj.addPlan = 'addPlan'
 
 
 //PixelTolerance

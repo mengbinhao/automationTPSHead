@@ -4,6 +4,7 @@ const findInList = require("find_in_list")
 const fileFunctions = require("file_functions")
 const coordinate = require("coordinate")
 const patient = require("patient")
+const common = require("common")
 
 const __getIsDataOK = (parent, type) => {
   const cnt = parent.Items.Count
@@ -223,18 +224,6 @@ const loadStudy = (indelPlan, patientID, type = "CT", method = true) => {
   }
 }
 
-const setWWAndWL = (indelPlan, type = "CT",  W = "1200", L = "300") => {
-  if (indelPlan.register_importer.VisibleOnScreen) { 
-    indelPlan.register_importer.groupBox_5.leMovWL.clear()
-    indelPlan.register_importer.groupBox_5.leMovWL.Keys(L)
-    indelPlan.register_importer.groupBox_5.leMovWW.clear()
-    indelPlan.register_importer.groupBox_5.leMovWW.Keys(W)
-    Sys.Desktop.Keys("[Enter]")
-  } else {
-    Log.Warning(`Can not setWWAndWL due to window is not right`) 
-  }
-}
-
 //with type means delete one series
 //delete will delete image file on local disk, so need to copy back
 const deleteStudy = (indelPlan, pv, patientID, type = "", isDelete = false) => {
@@ -390,7 +379,7 @@ const saveStudy = (indelPlan, type = true, isSave = false) => {
 const addOneStudyActivity = (indelPlan, patientID, type = "MR") => {
   gotoRegisterImporter(indelPlan)
   loadStudy(indelPlan, patientID, type)
-  setWWAndWL(indelPlan, type, 625, 492)
+  common.setWWAndWL(indelPlan, 'study', 625, 492)
   extractStudy(indelPlan)
   //check if register successful
   if (registerStudy(indelPlan)) {
@@ -430,7 +419,6 @@ module.exports.gotoRegisterImporter = gotoRegisterImporter
 module.exports.closeRegisterImporter = closeRegisterImporter
 module.exports.exitImportWindow = exitImportWindow
 module.exports.loadStudy = loadStudy
-module.exports.setWWAndWL = setWWAndWL
 module.exports.deleteStudy = deleteStudy
 module.exports.deleteAllStudy = deleteAllStudy
 module.exports.exportStudy = exportStudy

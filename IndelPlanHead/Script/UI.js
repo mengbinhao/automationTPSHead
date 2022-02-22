@@ -192,28 +192,9 @@ const init = () => {
   //User Information window
   indelPlan.user_information = mappingName.user_information
   
-  
+
   //Physical Data
-  indelPlan.machine_management = mappingName.machine_management
-  indelPlan.machine_new_machine = mappingName.machine_new_machine
-  indelPlan.machine_new_machine_detail = mappingName.machine_new_machine_detail
-  indelPlan.machine_less_TMR_popup = mappingName.machine_less_TMR_popup
-  indelPlan.machine_less_OAR_popup = mappingName.machine_less_OAR_popup
-  indelPlan.machine_add_confirm_data_popup = mappingName.machine_add_confirm_data_popup
-  indelPlan.machine_exists_popup = mappingName.machine_exists_popup
-  indelPlan.machine_edit_popup = mappingName.machine_edit_popup
-  indelPlan.machine_delete_popup = mappingName.machine_delete_popup
-  indelPlan.machine_delete_default_popup = mappingName.machine_delete_default_popup
-  //indelPlan.machinePhyDataChangeViewerClass = mappingName.machine_PhyDataChangeViewerClass
-  //indelPlan.machineDeleteUsedPlanPopup = mappingName.machine_delete_used_plan_popup
-  //indelPlan.machineSetCurrentPopup = mappingName.machine_set_current_popup
-  //indelPlan.dlgImportConfigs = mappingName.dlgImportConfigs
-  
-  
   //System Settings
-  indelPlan.system_settings = mappingName.system_settings
-  indelPlan.system_settings_modify_popup = mappingName.system_settings_modify_popup
-  
   return indelPlan
 }
 

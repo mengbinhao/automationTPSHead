@@ -28,44 +28,11 @@
 		<child name="global_constant" key="{5C4CF2F2-E246-4A14-9C22-8DEE2D196829}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="global_constant.js" />
 		</child>
-		<child name="TPS_BeiHang_toudao_023" key="{04A96F90-A36F-4CDA-9BC0-665ECD751C7A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_023.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_024" key="{7CEDD1A8-2D51-4378-A0F4-9219E4C622C3}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_024.js" />
-		</child>
 		<child name="file_functions" key="{15741FB6-D600-4F50-A22E-D8A84630AD19}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="file_functions.js" />
 		</child>
 		<child name="test" key="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="test.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_026" key="{D8E65B95-4384-4F67-9B0C-E4BB6BA776BB}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_026.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_028" key="{DAF439F0-80AC-40D3-BFA0-6686E021B094}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_028.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_030" key="{3221D9BE-EB7E-46A4-8F93-58393AD26844}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_030.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_032" key="{E8775A44-35AB-4737-B332-98DF18645B12}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_032.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_034" key="{CFE52A97-EFF6-4AF4-861C-FED6BE437CD8}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_034.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_035" key="{F6A23162-57A8-43D8-A4AE-C6F1D11297C4}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_035.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_036" key="{ED1CEF01-86A5-4AF9-84D0-C22F088D3866}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_036.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_063" key="{8534ED78-51D8-4E94-8811-9D882FCC2236}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_063.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_064" key="{5101C04C-9842-41C8-9106-D957C6948639}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_064.js" />
 		</child>
 		<child name="physical_data" key="{4A432DBE-0A6F-4E5D-93FB-5BB59666D322}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="physical_data.js" />
@@ -90,18 +57,6 @@
 		</child>
 		<child name="BH_1000963" key="{58B75C39-CC17-4380-A18B-1A9AFDFED149}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1000963.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_065" key="{2C24D614-7D9A-4118-9ACE-84C4C850F507}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_065.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_070" key="{F76846F9-C03D-47F8-8965-B484F5AD879D}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_070.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_071" key="{71365C45-0C85-4D1E-B553-AC2B74BB4A2E}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_071.js" />
-		</child>
-		<child name="TPS_BeiHang_toudao_072" key="{435E22B0-64E5-4938-8A6F-466AABC9CEBE}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="TPS_BeiHang_toudao_072.js" />
 		</child>
 		<child name="BH_1000927" key="{EB45B816-65DB-492F-B7AD-FD1BA3CE10E8}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1000927.js" />
@@ -436,6 +391,36 @@
 		<child name="BH_1001179" key="{6F9008DF-EDEA-4110-8FD4-C3A9460C0737}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1001179.js" />
 		</child>
+		<child name="BH_1001199" key="{D4FEEEBD-1D8C-437A-9D3B-FA6488158DA4}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001199.js" />
+		</child>
+		<child name="BH_1001204" key="{2A1E5513-25B0-46F8-8128-AD6AFB79C5B0}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001204.js" />
+		</child>
+		<child name="BH_1001205" key="{BBF52CCF-0D62-4ED3-B9D9-92DCCF490926}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001205.js" />
+		</child>
+		<child name="BH_1001206" key="{340FDBCE-7197-477B-B632-66CCEA7B792B}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001206.js" />
+		</child>
+		<child name="BH_1001207" key="{F346324D-B1B2-4E49-8888-F94B43BF6805}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001207.js" />
+		</child>
+		<child name="BH_1001216" key="{91A8F0D9-13A6-49D6-8BB2-28DE8001F279}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001216.js" />
+		</child>
+		<child name="BH_1001223" key="{25249889-401A-4576-834E-BF3FB13D8655}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001223.js" />
+		</child>
+		<child name="BH_1001224" key="{E7273E81-6F35-42F4-9059-9F16420CC5C2}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001224.js" />
+		</child>
+		<child name="BH_1001230" key="{AD18038D-DEE2-4AC9-B0B8-73BB2E3B4F5A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001230.js" />
+		</child>
+		<child name="BH_1001232" key="{67594977-EF26-42E3-BE44-402D73361545}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001232.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -521,29 +506,6 @@
 						<ref key="{F48B7F1B-C583-4D29-B770-E7F6C5F4A4BA}" />
 					</references>
 				</folder>
-				<folder caption="systemsetting" description="A logical folder that is used to organize project items and elements." moniker="">
-					<references>
-						<ref key="{04A96F90-A36F-4CDA-9BC0-665ECD751C7A}" />
-						<ref key="{7CEDD1A8-2D51-4378-A0F4-9219E4C622C3}" />
-						<ref key="{D8E65B95-4384-4F67-9B0C-E4BB6BA776BB}" />
-						<ref key="{DAF439F0-80AC-40D3-BFA0-6686E021B094}" />
-						<ref key="{3221D9BE-EB7E-46A4-8F93-58393AD26844}" />
-						<ref key="{E8775A44-35AB-4737-B332-98DF18645B12}" />
-						<ref key="{CFE52A97-EFF6-4AF4-861C-FED6BE437CD8}" />
-						<ref key="{F6A23162-57A8-43D8-A4AE-C6F1D11297C4}" />
-						<ref key="{ED1CEF01-86A5-4AF9-84D0-C22F088D3866}" />
-					</references>
-				</folder>
-				<folder caption="physicaldata" description="A logical folder that is used to organize project items and elements." moniker="">
-					<references>
-						<ref key="{8534ED78-51D8-4E94-8811-9D882FCC2236}" />
-						<ref key="{5101C04C-9842-41C8-9106-D957C6948639}" />
-						<ref key="{2C24D614-7D9A-4118-9ACE-84C4C850F507}" />
-						<ref key="{F76846F9-C03D-47F8-8965-B484F5AD879D}" />
-						<ref key="{71365C45-0C85-4D1E-B553-AC2B74BB4A2E}" />
-						<ref key="{435E22B0-64E5-4938-8A6F-466AABC9CEBE}" />
-					</references>
-				</folder>
 				<folder caption="login" description="A logical folder that is used to organize project items and elements." moniker="">
 					<references>
 						<ref key="{EB45B816-65DB-492F-B7AD-FD1BA3CE10E8}" />
@@ -618,6 +580,20 @@
 						<ref key="{E4055183-7F83-404C-8CB2-EAE45826FA22}" />
 						<ref key="{F034C1E1-0574-42EE-89FA-CAEC23501250}" />
 						<ref key="{6F9008DF-EDEA-4110-8FD4-C3A9460C0737}" />
+					</references>
+				</folder>
+				<folder caption="commonmodule" description="A logical folder that is used to organize project items and elements." moniker="">
+					<references>
+						<ref key="{D4FEEEBD-1D8C-437A-9D3B-FA6488158DA4}" />
+						<ref key="{2A1E5513-25B0-46F8-8128-AD6AFB79C5B0}" />
+						<ref key="{BBF52CCF-0D62-4ED3-B9D9-92DCCF490926}" />
+						<ref key="{340FDBCE-7197-477B-B632-66CCEA7B792B}" />
+						<ref key="{F346324D-B1B2-4E49-8888-F94B43BF6805}" />
+						<ref key="{91A8F0D9-13A6-49D6-8BB2-28DE8001F279}" />
+						<ref key="{25249889-401A-4576-834E-BF3FB13D8655}" />
+						<ref key="{E7273E81-6F35-42F4-9059-9F16420CC5C2}" />
+						<ref key="{AD18038D-DEE2-4AC9-B0B8-73BB2E3B4F5A}" />
+						<ref key="{67594977-EF26-42E3-BE44-402D73361545}" />
 					</references>
 				</folder>
 			</folders>

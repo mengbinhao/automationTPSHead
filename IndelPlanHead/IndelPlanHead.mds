@@ -39,7 +39,7 @@
 	<config language="{90F89436-9452-4F95-9882-6B5210079F13}" />
 	<testItems key="{25CA201D-B9C7-4D62-9590-6D7EC6DD9347}">
 		<children>
-			<testItem name="login" key="{30A2CE01-FDCB-431F-A6CE-1805F94B0CDE}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="login" key="{30A2CE01-FDCB-431F-A6CE-1805F94B0CDE}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="输入正确的用户名与密码登录计划系统&#13;&#10;" key="{F08A1B93-DC5D-4259-B8E2-174CD9AC1807}" group="False" enabled="True" testMoniker="{9870FC79-4C69-46EA-B82E-8BD83E5C9F4A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -84,7 +84,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="usernamagement" key="{59184077-BEDA-4B28-B563-8B2F5F2EAF3E}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="usernamagement" key="{59184077-BEDA-4B28-B563-8B2F5F2EAF3E}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="新建用户" key="{723742AD-20EE-4C9C-8FED-7B87F957B72D}" group="False" enabled="True" testMoniker="{58B75C39-CC17-4380-A18B-1A9AFDFED149}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -145,7 +145,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="patientmanagement" key="{B003F621-E70F-4E86-844E-B7D20DEFFB78}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="patientmanagement" key="{B003F621-E70F-4E86-844E-B7D20DEFFB78}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="关闭患者界面-点击yes" key="{3648D43C-389A-42B8-96AF-800077D6CF0A}" group="False" enabled="True" testMoniker="{B1DFAA63-E245-4CA3-8DAC-F6F38397C220}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -234,7 +234,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="imageregister" key="{1B43A6DE-2B93-421A-A7CF-4A4975013029}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="imageregister" key="{1B43A6DE-2B93-421A-A7CF-4A4975013029}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="关闭图像注册界面" key="{5746FC2D-AD89-4887-813E-42A5458DAECC}" group="False" enabled="True" testMoniker="{0AA57586-E514-4CC3-879C-69C9FEBAC962}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -269,7 +269,7 @@
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="自动注册图像序列" key="{BB46B220-E95B-4012-8D8E-381B9B3B7CE1}" group="False" enabled="True" testMoniker="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="自动注册图像序列" key="{BB46B220-E95B-4012-8D8E-381B9B3B7CE1}" group="False" enabled="True" testMoniker="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}testcase" count="8" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -279,7 +279,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="添加轮廓库" key="{9A93D78B-F6B1-4A68-B17B-E44F79C28243}" group="False" enabled="True" testMoniker="{FA16B7B7-2E6F-472C-B6F5-D9CE3D779CDE}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -368,7 +368,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="plandesign" key="{F68500BC-D9D7-4877-AB66-8FE045DBC623}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="plandesign" key="{F68500BC-D9D7-4877-AB66-8FE045DBC623}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="点击计划设计按钮进入计划设计模块" key="{7F47E932-B3CD-4736-BAE0-B6E3ABF26315}" group="False" enabled="True" testMoniker="{ED74ABAC-D4CD-4355-AB38-46DB67DB2ED0}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -445,6 +445,51 @@
 					</testItem>
 				</children>
 			</testItem>
+			<testItem name="commonmodule" key="{C0740D49-B58B-4669-AEAC-049A496F007B}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="不选择任何病历，点击删除" key="{76DF9BDD-7B0C-42D5-B226-B7CE3C74B410}" group="False" enabled="True" testMoniker="{D4FEEEBD-1D8C-437A-9D3B-FA6488158DA4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="在轮廓勾画页面按下鼠标左键上下移动鼠标设置窗宽/窗位" key="{F23E1163-FB11-43AC-A5E0-D627F1E99F35}" group="False" enabled="True" testMoniker="{2A1E5513-25B0-46F8-8128-AD6AFB79C5B0}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="在轮廓勾画页面在W、L对应的文本框输入数值设置窗宽/窗位" key="{E37CC1E0-EC94-42F2-A2CF-84EE96D87178}" group="False" enabled="True" testMoniker="{BBF52CCF-0D62-4ED3-B9D9-92DCCF490926}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="在计划设计页面按下鼠标左键上下移动鼠标设置窗宽/窗位" key="{49AF9324-2B78-4622-BACA-284583AB1252}" group="False" enabled="True" testMoniker="{340FDBCE-7197-477B-B632-66CCEA7B792B}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="在计划设计页面在W、L对应的文本框输入数值设置窗宽/窗位" key="{00701C9C-F803-431A-8546-87AAD59EA9BD}" group="False" enabled="True" testMoniker="{F346324D-B1B2-4E49-8888-F94B43BF6805}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="退出测量工具模式" key="{34A4A192-99C5-4656-A82E-80566947C58C}" group="False" enabled="True" testMoniker="{91A8F0D9-13A6-49D6-8BB2-28DE8001F279}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="撤销" key="{36C374B9-2A69-449F-A166-0887AA5BB96F}" group="False" enabled="True" testMoniker="{25249889-401A-4576-834E-BF3FB13D8655}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="重做" key="{0F382F78-2395-4046-83C2-FC037F1C2A98}" group="False" enabled="True" testMoniker="{E7273E81-6F35-42F4-9059-9F16420CC5C2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="退出测量工具模式（轮廓勾画界面）" key="{226B55E2-4B6E-428B-A9B0-31EDE54009A7}" group="False" enabled="True" testMoniker="{AD18038D-DEE2-4AC9-B0B8-73BB2E3B4F5A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="退出度量模式（轮廓勾画界面）" key="{8E1B5FE1-5AA3-42DC-A013-155F63393C2C}" group="False" enabled="True" testMoniker="{67594977-EF26-42E3-BE44-402D73361545}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
 			<testItem name="smoke" key="{46B67900-17CA-4055-A764-F4CC43F407B1}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children />
@@ -510,12 +555,6 @@
 				</Variable>
 				<Variable Name="edit_user_password" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="340035003600" />
-				</Variable>
-				<Variable Name="new_machine_name" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="540065007300740020004E006500770020004D0061006300680069006E006500" />
-				</Variable>
-				<Variable Name="edit_machine_name" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="54006500730074002000450064006900740020004D0061006300680069006E0065002000" />
 				</Variable>
 				<Variable Name="IndelPlan" Type="{F38B9AD1-7B22-410F-95FC-6D9420FDE947}" Local="False">
 					<DefValue />

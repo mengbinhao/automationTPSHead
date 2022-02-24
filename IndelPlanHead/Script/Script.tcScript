@@ -220,9 +220,6 @@
 		<child name="project_variable" key="{007C8768-6C7E-42EE-B56B-C996BB86D24A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="project_variable.js" />
 		</child>
-		<child name="test2" key="{DE9E0E90-F501-402D-AFBF-958061D03605}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="test2.js" />
-		</child>
 		<child name="test_log_obj" key="{A54CFD48-EEBC-481C-94BC-BDFD742713F8}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="test_log_obj.js" />
 		</child>
@@ -234,9 +231,6 @@
 		</child>
 		<child name="for_rerun_cases" key="{13BA3237-E492-44C0-95A1-55802530441A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="for_rerun_cases.js" />
-		</child>
-		<child name="test3" key="{B93DC1F2-317E-44B1-B62D-7423131B5462}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="test3.js" />
 		</child>
 		<child name="BH_1001056" key="{0AA57586-E514-4CC3-879C-69C9FEBAC962}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1001056.js" />

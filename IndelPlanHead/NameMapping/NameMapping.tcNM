@@ -7556,6 +7556,267 @@
 							</Child>
 						</Children>
 					</Child>
+					<Child Name="GamaReg" Key="{BEFAD018-2BA6-4C95-BBB1-1FD9EA2A731D}" ParallelWalk="True">
+						<TypeInfo Item0="{2E05F6AC-DA28-4678-9455-320EE99FD4B6}" />
+						<Properties>
+							<Property Name="ProcessName">
+								<Value PropertyType="0" Value="GamaReg" Type="5" />
+							</Property>
+						</Properties>
+						<Children>
+							<Child Name="GamaRegClass" Key="{EF8FD837-4CD9-4432-B296-36F1AD6B41A4}" ParallelWalk="True">
+								<Image FileName="-141391928" Left="0" Top="0" Right="1936" Bottom="1056" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="objectName">
+										<Value PropertyType="0" Value="GamaRegClass" Type="5" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="centralWidget" Key="{DF33F39C-11A3-4F00-97F9-AE7144FE3928}" ParallelWalk="True">
+										<Image FileName="-141391928" Left="8" Top="61" Right="1928" Bottom="1016" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="centralWidget" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="tbEV_FS" Key="{2AD849C5-4899-443D-8314-F037E2738873}" ParallelWalk="True">
+												<Image FileName="-141391928" Left="19" Top="379" Right="338" Bottom="1005" />
+												<TypeInfo Item0="{B4361A31-6CD5-44A0-9070-1EF563B49531}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="tbEV_FS" Type="5" />
+													</Property>
+												</Properties>
+												<Children>
+													<Child Name="qt_tabwidget_stackedwidget" Key="{63D4FAC5-3735-42A6-8A21-13F4D089F809}" ParallelWalk="True">
+														<Image FileName="-141391928" Left="21" Top="407" Right="334" Bottom="1001" />
+														<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+														<Properties>
+															<Property Name="objectName">
+																<Value PropertyType="0" Value="qt_tabwidget_stackedwidget" Type="5" />
+															</Property>
+														</Properties>
+														<Children>
+															<Child Name="tab_2" Key="{42E382D6-7564-4F0C-9C2A-462D6FC2D10E}" ParallelWalk="True">
+																<Image FileName="-141391928" Left="21" Top="407" Right="334" Bottom="1001" />
+																<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																<Properties>
+																	<Property Name="objectName">
+																		<Value PropertyType="0" Value="tab_2" Type="5" />
+																	</Property>
+																</Properties>
+																<Children>
+																	<Child Name="pbStartReg" Key="{92367684-1377-424E-9D11-EE623B1EC506}" ParallelWalk="True">
+																		<Image FileName="-141391928" Left="32" Top="960" Right="176" Bottom="990" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="pbStartReg" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="pbRegSetting" Key="{8F1DC862-7E8B-44BF-AF32-24B03E8EED59}" ParallelWalk="True">
+																		<Image FileName="-141391928" Left="181" Top="961" Right="324" Bottom="989" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="pbRegSetting" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="groupBox_5" Key="{41B4DC21-7C1C-455D-98EE-852E11F35C1E}" ParallelWalk="True">
+																		<Image FileName="-141391928" Left="32" Top="823" Right="325" Bottom="954" />
+																		<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="groupBox_5" Type="5" />
+																			</Property>
+																		</Properties>
+																		<Children>
+																			<Child Name="cbRoiTar" Key="{5B0EEE18-14FC-4C02-B422-13A098203DFE}" ParallelWalk="True">
+																				<Image FileName="-141391928" Left="50" Top="909" Right="307" Bottom="932" />
+																				<TypeInfo Item0="{A0339029-2ACA-4AFF-8B31-B578EA71A0F0}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="cbRoiTar" Type="5" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																			<Child Name="cbIntial" Key="{AB4588D6-8281-44A5-982E-E4BC375549E6}" ParallelWalk="True">
+																				<Image FileName="-141391928" Left="175" Top="843" Right="307" Bottom="866" />
+																				<TypeInfo Item0="{88191A4C-0D3E-458C-B60E-63D4FFC45BAA}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="cbIntial" Type="5" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																		</Children>
+																	</Child>
+																</Children>
+															</Child>
+															<Child Name="tab_3" Key="{12AA4C20-E958-45CC-B1C8-57E60F4D3D00}" ParallelWalk="True">
+																<Image FileName="-456954054" Left="21" Top="407" Right="334" Bottom="1001" />
+																<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																<Properties>
+																	<Property Name="objectName">
+																		<Value PropertyType="0" Value="tab_3" Type="5" />
+																	</Property>
+																</Properties>
+																<Children>
+																	<Child Name="groupBox_4" Key="{61479D3A-38DA-472F-850A-D967424704B8}" ParallelWalk="True">
+																		<Image FileName="-456954054" Left="32" Top="877" Right="327" Bottom="990" />
+																		<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="groupBox_4" Type="5" />
+																			</Property>
+																		</Properties>
+																		<Children>
+																			<Child Name="pbFuse" Key="{7AD83CB3-7101-4FAB-8ED6-31B6CB1F13D8}" ParallelWalk="True">
+																				<Image FileName="-456954054" Left="201" Top="950" Right="312" Bottom="977" />
+																				<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="pbFuse" Type="5" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																		</Children>
+																	</Child>
+																</Children>
+															</Child>
+														</Children>
+													</Child>
+												</Children>
+											</Child>
+											<Child Name="StudyListWiget" Key="{29A9CDA5-E4DE-47AF-B211-365209C9D15A}" ParallelWalk="True">
+												<Image FileName="-141391928" Left="19" Top="72" Right="338" Bottom="373" />
+												<TypeInfo Item0="{B4361A31-6CD5-44A0-9070-1EF563B49531}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="StudyListWiget" Type="5" />
+													</Property>
+												</Properties>
+												<Children>
+													<Child Name="qt_tabwidget_stackedwidget" Key="{4280484B-5CD0-4932-BEA0-9099F4645990}" ParallelWalk="True">
+														<Image FileName="-141391928" Left="21" Top="100" Right="334" Bottom="369" />
+														<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+														<Properties>
+															<Property Name="objectName">
+																<Value PropertyType="0" Value="qt_tabwidget_stackedwidget" Type="5" />
+															</Property>
+														</Properties>
+														<Children>
+															<Child Name="tab" Key="{366813BF-ECA3-4842-B6ED-9252C867EDDA}" ParallelWalk="True">
+																<Image FileName="-141391928" Left="21" Top="100" Right="334" Bottom="369" />
+																<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																<Properties>
+																	<Property Name="objectName">
+																		<Value PropertyType="0" Value="tab" Type="5" />
+																	</Property>
+																</Properties>
+																<Children>
+																	<Child Name="leMovWW" Key="{785957BC-286A-4ABF-A51A-6E81ED381587}" ParallelWalk="True">
+																		<Image FileName="-141391928" Left="76" Top="339" Right="178" Bottom="358" />
+																		<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="leMovWW" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="leMovWL" Key="{119E0A96-A06E-44AB-B438-0A7BDA4F148C}" ParallelWalk="True">
+																		<Image FileName="-141391928" Left="221" Top="339" Right="323" Bottom="358" />
+																		<TypeInfo Item0="{53C289EC-C7CC-4934-AE0D-8D38042DA547}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="leMovWL" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="treeStudy" Key="{CC22D363-C1ED-4B07-8CCC-784D72149838}" ParallelWalk="True">
+																		<Image FileName="-656459873" Left="32" Top="111" Right="327" Bottom="205" />
+																		<TypeInfo Item0="{1A92C808-A25A-4313-89F1-548C3AFA2520}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="treeStudy" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																</Children>
+															</Child>
+														</Children>
+													</Child>
+												</Children>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="MessageBox" Key="{D4BEC6A0-D0B3-479A-87B6-7B121B54FAE6}" ParallelWalk="True">
+								<Image FileName="-1967685147" Left="0" Top="0" Right="274" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Sure to Save Changed Studys?" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{BFE15ED8-9EE1-4F0D-BBDF-ABD398E5660C}" ParallelWalk="True">
+										<Image FileName="-1967685147" Left="14" Top="74" Right="260" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonYes" Key="{0437CE30-DAB8-4AC7-9156-BE24C7C65D23}" ParallelWalk="True">
+												<Image FileName="-1967685147" Left="122" Top="83" Right="188" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="YES" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+											<Child Name="buttonNo" Key="{31D614D2-C08B-47FB-A640-43F769052F44}" ParallelWalk="True">
+												<Image FileName="-1967685147" Left="194" Top="83" Right="260" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="NO" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="2" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+						</Children>
+					</Child>
 				</Children>
 			</Child>
 		</Children>
@@ -8493,6 +8754,44 @@
 							</Child>
 						</Child>
 					</Child>
+				</Child>
+			</Child>
+		</Child>
+		<Child Name="GamaReg" Owner="{BEFAD018-2BA6-4C95-BBB1-1FD9EA2A731D}">
+			<Child Name="GamaRegClass" Owner="{EF8FD837-4CD9-4432-B296-36F1AD6B41A4}">
+				<Child Name="centralWidget" Owner="{DF33F39C-11A3-4F00-97F9-AE7144FE3928}">
+					<Child Name="tbEV_FS" Owner="{2AD849C5-4899-443D-8314-F037E2738873}">
+						<Child Name="qt_tabwidget_stackedwidget" Owner="{63D4FAC5-3735-42A6-8A21-13F4D089F809}">
+							<Child Name="tab_2" Owner="{42E382D6-7564-4F0C-9C2A-462D6FC2D10E}">
+								<Child Name="pbStartReg" Owner="{92367684-1377-424E-9D11-EE623B1EC506}" />
+								<Child Name="pbRegSetting" Owner="{8F1DC862-7E8B-44BF-AF32-24B03E8EED59}" />
+								<Child Name="groupBox_5" Owner="{41B4DC21-7C1C-455D-98EE-852E11F35C1E}">
+									<Child Name="cbRoiTar" Owner="{5B0EEE18-14FC-4C02-B422-13A098203DFE}" />
+									<Child Name="cbIntial" Owner="{AB4588D6-8281-44A5-982E-E4BC375549E6}" />
+								</Child>
+							</Child>
+							<Child Name="tab_3" Owner="{12AA4C20-E958-45CC-B1C8-57E60F4D3D00}">
+								<Child Name="groupBox_4" Owner="{61479D3A-38DA-472F-850A-D967424704B8}">
+									<Child Name="pbFuse" Owner="{7AD83CB3-7101-4FAB-8ED6-31B6CB1F13D8}" />
+								</Child>
+							</Child>
+						</Child>
+					</Child>
+					<Child Name="StudyListWiget" Owner="{29A9CDA5-E4DE-47AF-B211-365209C9D15A}">
+						<Child Name="qt_tabwidget_stackedwidget" Owner="{4280484B-5CD0-4932-BEA0-9099F4645990}">
+							<Child Name="tab" Owner="{366813BF-ECA3-4842-B6ED-9252C867EDDA}">
+								<Child Name="leMovWW" Owner="{785957BC-286A-4ABF-A51A-6E81ED381587}" />
+								<Child Name="leMovWL" Owner="{119E0A96-A06E-44AB-B438-0A7BDA4F148C}" />
+								<Child Name="treeStudy" Owner="{CC22D363-C1ED-4B07-8CCC-784D72149838}" />
+							</Child>
+						</Child>
+					</Child>
+				</Child>
+			</Child>
+			<Child Name="MessageBox" Owner="{D4BEC6A0-D0B3-479A-87B6-7B121B54FAE6}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{BFE15ED8-9EE1-4F0D-BBDF-ABD398E5660C}">
+					<Child Name="buttonYes" Owner="{0437CE30-DAB8-4AC7-9156-BE24C7C65D23}" />
+					<Child Name="buttonNo" Owner="{31D614D2-C08B-47FB-A640-43F769052F44}" />
 				</Child>
 			</Child>
 		</Child>

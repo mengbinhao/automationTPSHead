@@ -28,8 +28,8 @@ function testcase() {
     plan.addTreatCourse(indelPlan, true)
     plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
     plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    common.setWWAndWL(indelPlan, 'plan', 1200, 900)
-    if ('1200' === indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && '900' === indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
+    common.setWWAndWL(indelPlan, 'plan', 1200, 300)
+    if ('1200' === indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && '300' === indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
       Log.Checkpoint("Set W&L successfully in Plan window!")
     } else {
       Log.Error("BH_1001207 execute fail!")

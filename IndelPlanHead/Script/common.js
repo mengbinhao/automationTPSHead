@@ -75,7 +75,6 @@ const __handlePopup = (indelPlan, curTabName, toTabName, isPlanFinish) => {
     [globalConstant.obj.planDesign]: {
       [globalConstant.obj.patientManagement]: () => {
         if (indelPlan.plan_PlanList.Exists) {
-          //Sys.Desktop.Keys("[Esc]")
           LLPlayer.KeyDown(VK_ESCAPE, globalConstant.obj.delayMouseOneSecond)
           LLPlayer.KeyUp(VK_ESCAPE, globalConstant.obj.delayMouseOneSecond)
         //change from PlanGUI

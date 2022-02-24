@@ -379,7 +379,9 @@ const saveStudy = (indelPlan, type = true, isSave = false) => {
 const addOneStudyActivity = (indelPlan, patientID, type = "MR") => {
   gotoRegisterImporter(indelPlan)
   loadStudy(indelPlan, patientID, type)
-  common.setWWAndWL(indelPlan, 'study', 625, 492)
+  let W = 625, L = 492
+  if (type === "CT") W = 1200, L = 300
+  common.setWWAndWL(indelPlan, 'study', W, L)
   extractStudy(indelPlan)
   //check if register successful
   if (registerStudy(indelPlan)) {
@@ -399,7 +401,6 @@ const restoreStudy = (indelPlan) => {
   patient.fromPatientDetailToMain(indelPlan)
 }
 
-//type means find CT or MR
 const isStudyExist = (indelPlan) => {
   const studyList = indelPlan.register_importer.treeWidget
   if (studyList.wItems.Count === 0) return false

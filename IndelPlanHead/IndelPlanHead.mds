@@ -445,7 +445,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="commonmodule" key="{C0740D49-B58B-4669-AEAC-049A496F007B}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="commonmodule" key="{C0740D49-B58B-4669-AEAC-049A496F007B}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="不选择任何病历，点击删除" key="{76DF9BDD-7B0C-42D5-B226-B7CE3C74B410}" group="False" enabled="True" testMoniker="{D4FEEEBD-1D8C-437A-9D3B-FA6488158DA4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -497,15 +497,7 @@
 			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{0871B47E-5290-4335-B8AD-C859AA384B4D}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-						<testParameters />
-						<children />
-					</testItem>
-					<testItem name="ProjectTestItem4" key="{B4641E36-DB2C-4989-87A5-A2BC2E7D47A6}" group="False" enabled="False" testMoniker="{DE9E0E90-F501-402D-AFBF-958061D03605}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-						<testParameters />
-						<children />
-					</testItem>
-					<testItem name="ProjectTestItem2" key="{CDFD7510-EAED-470C-9BAC-E20465FB05A2}" group="False" enabled="False" testMoniker="{B93DC1F2-317E-44B1-B62D-7423131B5462}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem1" key="{0871B47E-5290-4335-B8AD-C859AA384B4D}" group="False" enabled="False" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -1673,7 +1665,7 @@
 			</data>
 		</setting>
 		<setting name="JavaFXOpenApp_DoNotRecognizeJavaFXStageAsAWTComponent" type="1" value="True" />
-		<setting name="{890C6D5A-4706-498E-A6EA-CA765851BB97}" type="6" rowIndex="1" colIndex="0">
+		<setting name="{890C6D5A-4706-498E-A6EA-CA765851BB97}" type="6" rowIndex="0" colIndex="0">
 			<columns>
 				<column type="5" enabled="True" />
 			</columns>

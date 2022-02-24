@@ -19,8 +19,8 @@ function testcase() {
 
   if (study.addOneStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
-    common.setWWAndWL(indelPlan, 'contour', 1200, 900)
-    if ('1200' === indelPlan.ContourGUI.SetWW.wText && '900' === indelPlan.ContourGUI.SetWL.wText) {
+    common.setWWAndWL(indelPlan, 'contour', 1200, 300)
+    if ('1200' === indelPlan.ContourGUI.SetWW.wText && '300' === indelPlan.ContourGUI.SetWL.wText) {
       Log.Checkpoint("Set W&L successfully in Contour window!")
     } else {
       Log.Error("BH_1001205 execute fail!")

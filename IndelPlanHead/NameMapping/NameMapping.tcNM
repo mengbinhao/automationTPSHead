@@ -7757,7 +7757,7 @@
 									</Child>
 								</Children>
 							</Child>
-							<Child Name="MessageBox" Key="{D4BEC6A0-D0B3-479A-87B6-7B121B54FAE6}" ParallelWalk="True">
+							<Child Name="exit" Key="{D4BEC6A0-D0B3-479A-87B6-7B121B54FAE6}" ParallelWalk="True">
 								<Image FileName="-1967685147" Left="0" Top="0" Right="274" Bottom="123" />
 								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
 								<Properties>
@@ -7808,6 +7808,37 @@
 													</Property>
 													<Property Name="QtIndex">
 														<Value PropertyType="0" Value="2" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="RegParaSetting" Key="{60BB35F9-B91F-4711-A889-37EB3591EA23}" ParallelWalk="True">
+								<Image FileName="1992430010" Left="0" Top="0" Right="367" Bottom="298" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="objectName">
+										<Value PropertyType="0" Value="RegParaSetting" Type="5" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="layoutWidget" Key="{783E1493-2B83-4581-8E85-EB98E44B8542}" ParallelWalk="True">
+										<Image FileName="1992430010" Left="18" Top="44" Right="339" Bottom="265" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="layoutWidget" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="pbConfirm" Key="{648C92BE-8E55-44E9-9D5E-A3EA0495A8FE}" ParallelWalk="True">
+												<Image FileName="1992430010" Left="273" Top="215" Right="339" Bottom="241" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="pbConfirm" Type="5" />
 													</Property>
 												</Properties>
 											</Child>
@@ -8788,10 +8819,15 @@
 					</Child>
 				</Child>
 			</Child>
-			<Child Name="MessageBox" Owner="{D4BEC6A0-D0B3-479A-87B6-7B121B54FAE6}">
+			<Child Name="exit" Owner="{D4BEC6A0-D0B3-479A-87B6-7B121B54FAE6}">
 				<Child Name="qt_msgbox_buttonbox" Owner="{BFE15ED8-9EE1-4F0D-BBDF-ABD398E5660C}">
 					<Child Name="buttonYes" Owner="{0437CE30-DAB8-4AC7-9156-BE24C7C65D23}" />
 					<Child Name="buttonNo" Owner="{31D614D2-C08B-47FB-A640-43F769052F44}" />
+				</Child>
+			</Child>
+			<Child Name="RegParaSetting" Owner="{60BB35F9-B91F-4711-A889-37EB3591EA23}">
+				<Child Name="layoutWidget" Owner="{783E1493-2B83-4581-8E85-EB98E44B8542}">
+					<Child Name="pbConfirm" Owner="{648C92BE-8E55-44E9-9D5E-A3EA0495A8FE}" />
 				</Child>
 			</Child>
 		</Child>

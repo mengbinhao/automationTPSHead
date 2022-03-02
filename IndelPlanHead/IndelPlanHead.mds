@@ -269,7 +269,7 @@
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="自动注册图像序列" key="{BB46B220-E95B-4012-8D8E-381B9B3B7CE1}" group="False" enabled="True" testMoniker="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}testcase" count="8" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="自动注册图像序列" key="{BB46B220-E95B-4012-8D8E-381B9B3B7CE1}" group="False" enabled="True" testMoniker="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}testcase" count="30" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -497,7 +497,7 @@
 			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{0871B47E-5290-4335-B8AD-C859AA384B4D}" group="False" enabled="False" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem1" key="{0871B47E-5290-4335-B8AD-C859AA384B4D}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

@@ -379,13 +379,15 @@ const saveStudy = (indelPlan, type = true, isSave = false) => {
 const addOneStudyActivity = (indelPlan, patientID, type = "MR") => {
   gotoRegisterImporter(indelPlan)
   loadStudy(indelPlan, patientID, type)
-  let W = 625, L = 492
-  if (type === "CT") W = 1200, L = 300
+  let W = 625, L = 492, voxels = false
+  if (type === "CT") {
+    W = 1200, L = 300, voxels = true
+  }
   common.setWWAndWL(indelPlan, 'study', W, L)
   extractStudy(indelPlan)
   //check if register successful
   if (registerStudy(indelPlan)) {
-    saveStudy(indelPlan, false, true)
+    saveStudy(indelPlan, voxels, true)
     exitImportWindow(indelPlan)
     return true
   }

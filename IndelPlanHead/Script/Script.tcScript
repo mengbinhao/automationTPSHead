@@ -415,6 +415,9 @@
 		<child name="BH_1001232" key="{67594977-EF26-42E3-BE44-402D73361545}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1001232.js" />
 		</child>
+		<child name="BH_1001075_1" key="{0F1922C6-83E4-49AA-B052-F08BE82A8A0C}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001075_1.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -526,6 +529,7 @@
 						<ref key="{DA592B24-BCE9-4BD7-8D72-31053C5714C7}" />
 						<ref key="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}" />
 						<ref key="{75411F2B-B0A0-43B5-8AD9-1C17A8464229}" />
+						<ref key="{0F1922C6-83E4-49AA-B052-F08BE82A8A0C}" />
 					</references>
 				</folder>
 				<folder caption="contoursketch" description="A logical folder that is used to organize project items and elements." moniker="">

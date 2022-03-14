@@ -490,7 +490,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="ProjectTestItem1" key="{53D4EA1B-18DC-4E39-8E56-4401F33D0DBC}" group="False" enabled="True" testMoniker="{A1FA9709-F6F8-49F3-8E3F-A649EFFD9362}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -500,10 +500,6 @@
 				</children>
 			</testItem>
 			<testItem name="for_rerun_cases" key="{412D36A3-48D8-408A-AA77-DD3F854AB707}" group="False" enabled="True" testMoniker="{13BA3237-E492-44C0-95A1-55802530441A}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-				<testParameters />
-				<children />
-			</testItem>
-			<testItem name="自动注册图像序列CT" key="{C8491508-5759-448E-9766-A1DB820E634D}" group="False" enabled="False" testMoniker="{0F1922C6-83E4-49AA-B052-F08BE82A8A0C}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children />
 			</testItem>

@@ -415,9 +415,6 @@
 		<child name="BH_1001232" key="{67594977-EF26-42E3-BE44-402D73361545}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1001232.js" />
 		</child>
-		<child name="BH_1001075_1" key="{0F1922C6-83E4-49AA-B052-F08BE82A8A0C}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="BH_1001075_1.js" />
-		</child>
 		<child name="test_fuse" key="{A1FA9709-F6F8-49F3-8E3F-A649EFFD9362}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="test_fuse.js" />
 		</child>

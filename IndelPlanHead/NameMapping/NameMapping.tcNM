@@ -7257,7 +7257,7 @@
 										<Value PropertyType="0" Value="QMessageBox" Type="5" />
 									</Property>
 									<Property Name="QtText">
-										<Value PropertyType="0" Value="54006800650020006E00650077002000730074007500640079002000770069006C006C002000620065002000730061007600650064002000610073002000620065006C006F0077003A000D000A005300740075006400790020004E0061006D0065003A0020005300740075006400790031000D000A004D006F00640061006C006900740079003A0020002A00" Type="7" />
+										<Value PropertyType="0" Value="54006800650020006E00650077002000730074007500640079002000770069006C006C002000620065002000730061007600650064002000610073002000620065006C006F0077003A000D000A005300740075006400790020004E0061006D0065003A002000530074007500640079002A00" Type="7" />
 									</Property>
 									<Property Name="Index">
 										<Value PropertyType="0" Value="1" Type="0" />
@@ -7747,11 +7747,46 @@
 																			</Property>
 																		</Properties>
 																	</Child>
+																	<Child Name="pbColormapRef" Key="{BE165813-6B88-43C6-8338-61CF2BF17B42}" ParallelWalk="True">
+																		<Image FileName="-289499280" Left="244" Top="211" Right="323" Bottom="234" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="pbColormapRef" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
 																</Children>
 															</Child>
 														</Children>
 													</Child>
 												</Children>
+											</Child>
+										</Children>
+									</Child>
+									<Child Name="statusBar" Key="{DABB7427-348A-40B5-83E2-892A6DCECAF8}" ParallelWalk="True">
+										<Image FileName="-1495961791" Left="8" Top="1016" Right="1928" Bottom="1048" />
+										<TypeInfo Item0="{6D37FC1B-5E23-4374-926C-3976C07F37B7}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="statusBar" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="ProgressBar" Key="{62E03B01-0C1B-46CB-B89B-8CF39760CDFC}" ParallelWalk="True">
+												<Image FileName="-1495961791" Left="10" Top="1019" Right="969" Bottom="1046" />
+												<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QProgressBar" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="*" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
 											</Child>
 										</Children>
 									</Child>
@@ -7839,6 +7874,92 @@
 												<Properties>
 													<Property Name="objectName">
 														<Value PropertyType="0" Value="pbConfirm" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="process_repeated_popup" Key="{A6235C9D-F80D-4170-BC19-DEA65861BE71}" ParallelWalk="True">
+								<Image FileName="1489274337" Left="0" Top="0" Right="503" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Registration cannot be repeated, The fusion has been completed!" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{6E586383-04D3-4466-B73D-93CA74537016}" ParallelWalk="True">
+										<Image FileName="1489274337" Left="14" Top="74" Right="489" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{07465863-6A9E-438D-9691-AED7F129577D}" ParallelWalk="True">
+												<Image FileName="1489274337" Left="423" Top="83" Right="489" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="OK" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
+													</Property>
+												</Properties>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
+							<Child Name="fuse_popup" Key="{C52DF5DA-5BB2-45A5-B537-342EA3433A7F}" ParallelWalk="True">
+								<Image FileName="-63283158" Left="0" Top="0" Right="195" Bottom="123" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="QtClassName">
+										<Value PropertyType="0" Value="QMessageBox" Type="5" />
+									</Property>
+									<Property Name="QtText">
+										<Value PropertyType="0" Value="Fusion is finished!" Type="5" />
+									</Property>
+									<Property Name="Index">
+										<Value PropertyType="0" Value="1" Type="0" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="qt_msgbox_buttonbox" Key="{92BDB954-DC60-49AB-AE5A-2A4FA8F33412}" ParallelWalk="True">
+										<Image FileName="-63283158" Left="14" Top="74" Right="181" Bottom="109" />
+										<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="qt_msgbox_buttonbox" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="buttonOk" Key="{FC693AE8-ADB0-424D-B3C1-2D5CE518D42F}" ParallelWalk="True">
+												<Image FileName="-63283158" Left="115" Top="83" Right="181" Bottom="109" />
+												<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+												<Properties>
+													<Property Name="QtClassName">
+														<Value PropertyType="0" Value="QPushButton" Type="5" />
+													</Property>
+													<Property Name="QtText">
+														<Value PropertyType="0" Value="OK" Type="5" />
+													</Property>
+													<Property Name="QtIndex">
+														<Value PropertyType="0" Value="1" Type="0" />
 													</Property>
 												</Properties>
 											</Child>
@@ -8814,9 +8935,13 @@
 								<Child Name="leMovWW" Owner="{785957BC-286A-4ABF-A51A-6E81ED381587}" />
 								<Child Name="leMovWL" Owner="{119E0A96-A06E-44AB-B438-0A7BDA4F148C}" />
 								<Child Name="treeStudy" Owner="{CC22D363-C1ED-4B07-8CCC-784D72149838}" />
+								<Child Name="pbColormapRef" Owner="{BE165813-6B88-43C6-8338-61CF2BF17B42}" />
 							</Child>
 						</Child>
 					</Child>
+				</Child>
+				<Child Name="statusBar" Owner="{DABB7427-348A-40B5-83E2-892A6DCECAF8}">
+					<Child Name="ProgressBar" Owner="{62E03B01-0C1B-46CB-B89B-8CF39760CDFC}" />
 				</Child>
 			</Child>
 			<Child Name="exit" Owner="{D4BEC6A0-D0B3-479A-87B6-7B121B54FAE6}">
@@ -8828,6 +8953,16 @@
 			<Child Name="RegParaSetting" Owner="{60BB35F9-B91F-4711-A889-37EB3591EA23}">
 				<Child Name="layoutWidget" Owner="{783E1493-2B83-4581-8E85-EB98E44B8542}">
 					<Child Name="pbConfirm" Owner="{648C92BE-8E55-44E9-9D5E-A3EA0495A8FE}" />
+				</Child>
+			</Child>
+			<Child Name="process_repeated_popup" Owner="{A6235C9D-F80D-4170-BC19-DEA65861BE71}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{6E586383-04D3-4466-B73D-93CA74537016}">
+					<Child Name="buttonOk" Owner="{07465863-6A9E-438D-9691-AED7F129577D}" />
+				</Child>
+			</Child>
+			<Child Name="fuse_popup" Owner="{C52DF5DA-5BB2-45A5-B537-342EA3433A7F}">
+				<Child Name="qt_msgbox_buttonbox" Owner="{92BDB954-DC60-49AB-AE5A-2A4FA8F33412}">
+					<Child Name="buttonOk" Owner="{FC693AE8-ADB0-424D-B3C1-2D5CE518D42F}" />
 				</Child>
 			</Child>
 		</Child>

@@ -376,7 +376,7 @@ const saveStudy = (indelPlan, type = true, isSave = false) => {
   }
 }
 
-const addOneStudyActivity = (indelPlan, patientID, type = "MR") => {
+const addOneRegistedStudyActivity = (indelPlan, patientID, type = "MR") => {
   gotoRegisterImporter(indelPlan)
   loadStudy(indelPlan, patientID, type)
   let W = 625, L = 492, voxels = false
@@ -392,6 +392,18 @@ const addOneStudyActivity = (indelPlan, patientID, type = "MR") => {
     return true
   }
   return false
+}
+
+const addOneStudyActivity = (indelPlan, patientID, type = "MR") => {
+  gotoRegisterImporter(indelPlan)
+  loadStudy(indelPlan, patientID, type)
+  let W = 625, L = 492, voxels = false
+  if (type === "CT") {
+    W = 1200, L = 300, voxels = true
+  }
+  common.setWWAndWL(indelPlan, 'study', W, L)
+  saveStudy(indelPlan, voxels, true)
+  exitImportWindow(indelPlan)
 }
 
 const restoreStudy = (indelPlan) => {
@@ -431,6 +443,7 @@ module.exports.registerStudy = registerStudy
 module.exports.unRegisterStudy = unRegisterStudy
 module.exports.saveStudy = saveStudy
 module.exports.contourExistingStudy = contourExistingStudy
+module.exports.addOneRegistedStudyActivity = addOneRegistedStudyActivity
 module.exports.addOneStudyActivity = addOneStudyActivity
 module.exports.restoreStudy = restoreStudy
 module.exports.isStudyExist = isStudyExist

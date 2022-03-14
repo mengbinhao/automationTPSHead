@@ -490,10 +490,10 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{0871B47E-5290-4335-B8AD-C859AA384B4D}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem1" key="{53D4EA1B-18DC-4E39-8E56-4401F33D0DBC}" group="False" enabled="True" testMoniker="{A1FA9709-F6F8-49F3-8E3F-A649EFFD9362}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

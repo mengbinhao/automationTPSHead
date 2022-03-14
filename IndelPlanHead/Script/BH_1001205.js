@@ -17,7 +17,7 @@ function testcase() {
   
   patient.loadPatient(indelPlan, Project.Variables.new_patientID)
 
-  if (study.addOneStudyActivity(indelPlan, Project.Variables.study_image_id)) {
+  if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     common.setWWAndWL(indelPlan, 'contour', 1200, 300)
     if ('1200' === indelPlan.ContourGUI.SetWW.wText && '300' === indelPlan.ContourGUI.SetWL.wText) {

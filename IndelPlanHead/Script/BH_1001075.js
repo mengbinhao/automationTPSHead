@@ -19,7 +19,7 @@ function testcase() {
     patient.loadPatient(indelPlan, Project.Variables.new_patientID)
     const before = indelPlan.PatientData.groupBox.treeWidget_StudyList.wItems.Count
 
-    study.addOneStudyActivity(indelPlan, Project.Variables.study_image_id)
+    study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)
     
     const after = indelPlan.PatientData.groupBox.treeWidget_StudyList.wItems.Count
 

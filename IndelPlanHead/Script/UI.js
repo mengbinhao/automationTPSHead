@@ -2,6 +2,7 @@
 
 const init = () => {
   const mappingName = NameMapping.Sys.IndelplanV2
+  const GamaReg = NameMapping.Sys.GamaReg
 
   //Login
   indelPlan.login = mappingName.login
@@ -195,6 +196,15 @@ const init = () => {
 
   //Physical Data
   //System Settings
+
+    
+  //fuse
+  indelPlan.fuse_GamaReg = GamaReg.GamaRegClass
+  indelPlan.fuse_exit = GamaReg.exit
+  indelPlan.fuse_setting = GamaReg.RegParaSetting
+  indelPlan.fuse_popup = GamaReg.fuse_popup
+  indelPlan.process_repeated_popup = GamaReg.process_repeated_popup
+  
   return indelPlan
 }
 

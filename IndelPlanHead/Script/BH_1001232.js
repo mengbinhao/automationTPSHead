@@ -18,7 +18,7 @@ function testcase() {
   
   patient.loadPatient(indelPlan, Project.Variables.new_patientID)
 
-  if (study.addOneStudyActivity(indelPlan, Project.Variables.study_image_id)) {
+  if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
 
     const originState = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_2.toolButton.down

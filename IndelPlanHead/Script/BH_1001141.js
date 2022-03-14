@@ -16,7 +16,7 @@ function testcase() {
   
   patient.loadPatient(indelPlan, Project.Variables.new_patientID)
 
-  if (study.addOneStudyActivity(indelPlan, Project.Variables.study_image_id)) {
+  if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
 
     contour.addContourLib(indelPlan, pv, Project.Variables.contourlib_name, Project.Variables.contourlib_type, Project.Variables.contourlib_display_mode, true, true)

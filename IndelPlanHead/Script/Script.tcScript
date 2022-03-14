@@ -31,8 +31,8 @@
 		<child name="file_functions" key="{15741FB6-D600-4F50-A22E-D8A84630AD19}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="file_functions.js" />
 		</child>
-		<child name="test" key="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
-			<data path="test.js" />
+		<child name="test_all" key="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="test_all.js" />
 		</child>
 		<child name="physical_data" key="{4A432DBE-0A6F-4E5D-93FB-5BB59666D322}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="physical_data.js" />
@@ -418,6 +418,12 @@
 		<child name="BH_1001075_1" key="{0F1922C6-83E4-49AA-B052-F08BE82A8A0C}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1001075_1.js" />
 		</child>
+		<child name="test_fuse" key="{A1FA9709-F6F8-49F3-8E3F-A649EFFD9362}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="test_fuse.js" />
+		</child>
+		<child name="fuse" key="{88D8D830-8D90-4356-9928-930766605DB1}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="fuse.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -438,6 +444,7 @@
 				<ref key="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}" />
 				<ref key="{55F4436C-95C1-45CB-BE81-A348CD1F3645}" />
 				<ref key="{A8D526FB-D457-45B5-8EEF-D1759B9ED3BE}" />
+				<ref key="{88D8D830-8D90-4356-9928-930766605DB1}" />
 			</references>
 		</folder>
 		<folder caption="utils" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -529,7 +536,6 @@
 						<ref key="{DA592B24-BCE9-4BD7-8D72-31053C5714C7}" />
 						<ref key="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}" />
 						<ref key="{75411F2B-B0A0-43B5-8AD9-1C17A8464229}" />
-						<ref key="{0F1922C6-83E4-49AA-B052-F08BE82A8A0C}" />
 					</references>
 				</folder>
 				<folder caption="contoursketch" description="A logical folder that is used to organize project items and elements." moniker="">

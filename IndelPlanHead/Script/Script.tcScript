@@ -421,6 +421,9 @@
 		<child name="fuse" key="{88D8D830-8D90-4356-9928-930766605DB1}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="fuse.js" />
 		</child>
+		<child name="test_image" key="{DCAFD09F-1991-40FA-A2BE-4ADEEB5809E7}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="test_image.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">

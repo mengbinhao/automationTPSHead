@@ -490,10 +490,18 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem1" key="{53D4EA1B-18DC-4E39-8E56-4401F33D0DBC}" group="False" enabled="True" testMoniker="{A1FA9709-F6F8-49F3-8E3F-A649EFFD9362}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem1" key="{53D4EA1B-18DC-4E39-8E56-4401F33D0DBC}" group="False" enabled="False" testMoniker="{A1FA9709-F6F8-49F3-8E3F-A649EFFD9362}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="ProjectTestItem2" key="{1489E26B-83BA-48A9-9B26-2A17344C89B1}" group="False" enabled="False" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="10" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="ProjectTestItem3" key="{B42200E0-2284-489C-BEE2-6A3B8D2BA692}" group="False" enabled="True" testMoniker="{DCAFD09F-1991-40FA-A2BE-4ADEEB5809E7}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

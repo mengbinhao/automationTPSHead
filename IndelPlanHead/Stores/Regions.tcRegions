@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Root signature="{DA6D7EF7-5B05-4735-AAF0-A85E47D47989}" version="12.0">
 	<children>
-		<child name="YANGDAZHONG_CT95_after_load" key="{A6C911B8-781D-4E31-84DD-9894BA8AF21B}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_CT95_after_load" ID="{A6C911B8-781D-4E31-84DD-9894BA8AF21B}" FileName="Regions\YANGDAZHONG_CT95_after_load.png" Update="False" />
+		<child name="YANGDAZHONG_MR78_loaded_png" key="{B20F66BA-5F27-42F4-812A-4F9F9EE0AF98}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_loaded_png" ID="{B20F66BA-5F27-42F4-812A-4F9F9EE0AF98}" FileName="Regions\YANGDAZHONG_MR78_loaded.png" Update="False" />
 		</child>
-		<child name="YANGDAZHONG_CT95_before_extract" key="{3B4D4EEE-3BDD-4B57-A418-18062A64C879}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_CT95_before_extract" ID="{3B4D4EEE-3BDD-4B57-A418-18062A64C879}" FileName="Regions\wdMainView.png" Update="False" />
+		<child name="YANGDAZHONG_MR78_skin_png" key="{F2B0403B-7C10-4850-A516-52E5EEA1D9B6}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_skin_png" ID="{F2B0403B-7C10-4850-A516-52E5EEA1D9B6}" FileName="Regions\YANGDAZHONG_MR78_skin.png" Update="False" />
 		</child>
-		<child name="YANGDAZHONG_CT95_after_extract" key="{436E53D5-A937-40D1-9EAB-8BBDE20E9C31}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_CT95_after_extract" ID="{436E53D5-A937-40D1-9EAB-8BBDE20E9C31}" FileName="Regions\YANGDAZHONG_CT95_after_extract.png" Update="False" />
+		<child name="YANGDAZHONG_MR78_target_png" key="{A7816ED4-8B80-4524-8B1D-21092EF8EACC}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_target_png" ID="{A7816ED4-8B80-4524-8B1D-21092EF8EACC}" FileName="Regions\YANGDAZHONG_MR78_target.png" Update="False" />
 		</child>
-		<child name="YANGDAZHONG_CT95_after_register" key="{9DE2424E-9C8E-4682-B2A9-243D0297398E}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_CT95_after_register" ID="{9DE2424E-9C8E-4682-B2A9-243D0297398E}" FileName="Regions\YANGDAZHONG_CT95_after_register.png" Update="False" />
+		<child name="YANGDAZHONG_MR78_point_png" key="{5F54A69D-C319-47D4-9855-EA2EB28DBC04}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_point_png" ID="{5F54A69D-C319-47D4-9855-EA2EB28DBC04}" FileName="Regions\YANGDAZHONG_MR78_point.png" Update="False" />
 		</child>
-		<child name="YANGDAZHONG_CT95_after_confirm_register" key="{328D065E-99A6-4293-A173-58AC1846724C}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
-			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_CT95_after_confirm_register" ID="{328D065E-99A6-4293-A173-58AC1846724C}" FileName="Regions\YANGDAZHONG_CT95_after_confirm_register.png" Update="False" />
+		<child name="YANGDAZHONG_MR78_without_point_png" key="{1B7AEAD8-A1F9-4066-9EF5-29C613A80C75}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_without_point_png" ID="{1B7AEAD8-A1F9-4066-9EF5-29C613A80C75}" FileName="Regions\YANGDAZHONG_MR78_without_point.png" Update="False" />
 		</child>
 	</children>
 	<folders />

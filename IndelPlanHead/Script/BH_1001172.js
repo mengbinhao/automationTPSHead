@@ -24,21 +24,24 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    plan.setupPoint(indelPlan, "tar")
-    plan.calculateDose(indelPlan, true)
-    plan.calculateDose(indelPlan, false)
-    plan.showDVH(indelPlan)
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+      plan.setupPoint(indelPlan, "tar")
+      plan.calculateDose(indelPlan, true)
+      plan.calculateDose(indelPlan, false)
+      plan.showDVH(indelPlan)
     
-    if (indelPlan.plan_eva.VisibleOnScreen) {
-      Log.Checkpoint(`Display DVH successfully!`)
-      indelPlan.plan_eva.Close()
+      if (indelPlan.plan_eva.VisibleOnScreen) {
+        Log.Checkpoint(`Display DVH successfully!`)
+        indelPlan.plan_eva.Close()
+      } else {
+        Log.Error(`Display DVH fail!`)
+      }
     } else {
-      Log.Error(`Display DVH fail!`)
+      Log.Error(`Execute fail due to contour fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

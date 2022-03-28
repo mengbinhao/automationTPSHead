@@ -208,7 +208,6 @@ const loadStudy = (indelPlan, patientID, type = "CT", method = true) => {
     if (method) {
       indelPlan.register_importer.treeWidget.wItems.Item(rowIdx).Items.Item(subIdx).Click()
       indelPlan.register_importer.pbDeleteAll_3.ClickButton()
-
     } else {
       indelPlan.register_importer.treeWidget.wItems.Item(rowIdx).Items.Item(subIdx).DblClick()
     }
@@ -216,6 +215,7 @@ const loadStudy = (indelPlan, patientID, type = "CT", method = true) => {
       indelPlan.register_overwrite_data_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
     }
     //incase study not display normally
+    //first checkbox in that area
     while (indelPlan.register_area.checkBox.Enabled) {
       utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     }

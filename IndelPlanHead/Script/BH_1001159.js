@@ -24,20 +24,23 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    plan.setupPoint(indelPlan, "tar")
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+      plan.setupPoint(indelPlan, "tar")
 
-    const beforeW = plan.pointOperate(indelPlan, "tar", 1, {attr: "W", method: 'get'})
-    const afterUpW = plan.pointOperate(indelPlan, "tar", 1, {attr: "W", method: 'set', type: 'up', val: 20})
+      const beforeW = plan.pointOperate(indelPlan, "tar", 1, {attr: "W", method: 'get'})
+      const afterUpW = plan.pointOperate(indelPlan, "tar", 1, {attr: "W", method: 'set', type: 'up', val: 20})
     
-    if (strictEqual(Number((beforeW + 2).toFixed(2)), afterUpW)) {
-      Log.Checkpoint(`up point W successfully!`)
+      if (strictEqual(Number((beforeW + 2).toFixed(2)), afterUpW)) {
+        Log.Checkpoint(`up point W successfully!`)
+      } else {
+        Log.Error(`up point W fail!`)
+      }
     } else {
-      Log.Error(`up point W fail!`)
+      Log.Error(`Execute fail due to contour fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

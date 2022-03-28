@@ -24,35 +24,38 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    plan.setupPoint(indelPlan, "tar")
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+      plan.setupPoint(indelPlan, "tar")
 
-    const beforeX = plan.pointOperate(indelPlan, "tar", 1, {attr: "X", method: 'get'})
-    const beforeY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'get'})
-    const beforeZ = plan.pointOperate(indelPlan, "tar", 1, {attr: "Z", method: 'get'})
+      const beforeX = plan.pointOperate(indelPlan, "tar", 1, {attr: "X", method: 'get'})
+      const beforeY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'get'})
+      const beforeZ = plan.pointOperate(indelPlan, "tar", 1, {attr: "Z", method: 'get'})
     
-    const afterUpX = plan.pointOperate(indelPlan, "tar", 1, {attr: "X", method: 'set', type: 'up', val: 1})
-    const afterUpY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'set', type: 'up', val: 1})
-    const afterUpZ = plan.pointOperate(indelPlan, "tar", 1, {attr: "Z", method: 'set', type: 'up', val: 1})
+      const afterUpX = plan.pointOperate(indelPlan, "tar", 1, {attr: "X", method: 'set', type: 'up', val: 1})
+      const afterUpY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'set', type: 'up', val: 1})
+      const afterUpZ = plan.pointOperate(indelPlan, "tar", 1, {attr: "Z", method: 'set', type: 'up', val: 1})
     
-    if (strictEqual(Number((beforeX + 0.1).toFixed(2)), afterUpX) && strictEqual(Number((beforeY + 0.1).toFixed(2)), afterUpY) &&   strictEqual(Number((beforeZ + 0.1).toFixed(2)), afterUpZ)) {
-      Log.Checkpoint(`up point XYZ successfully!`)
+      if (strictEqual(Number((beforeX + 0.1).toFixed(2)), afterUpX) && strictEqual(Number((beforeY + 0.1).toFixed(2)), afterUpY) &&   strictEqual(Number((beforeZ + 0.1).toFixed(2)), afterUpZ)) {
+        Log.Checkpoint(`up point XYZ successfully!`)
+      } else {
+        Log.Error(`up point XYZ fail!`)
+      }
+      
+      const afterDownX = plan.pointOperate(indelPlan, "tar", 1, {attr: "X", method: 'set', type: 'down', val: 1})
+      const afterDownY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'set', type: 'down', val: 1})
+      const afterDownZ = plan.pointOperate(indelPlan, "tar", 1, {attr: "Z", method: 'set', type: 'down', val: 1})
+    
+      if (strictEqual(beforeX, afterDownX) && strictEqual(beforeY, afterDownY) && strictEqual(beforeZ, afterDownZ)) {
+        Log.Checkpoint(`down point XYZ successfully!`)
+      } else {
+        Log.Error(`down point XYZ fail!`)
+      }
     } else {
-      Log.Error(`up point XYZ fail!`)
-    }
-    
-    const afterDownX = plan.pointOperate(indelPlan, "tar", 1, {attr: "X", method: 'set', type: 'down', val: 1})
-    const afterDownY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'set', type: 'down', val: 1})
-    const afterDownZ = plan.pointOperate(indelPlan, "tar", 1, {attr: "Z", method: 'set', type: 'down', val: 1})
-    
-    if (strictEqual(beforeX, afterDownX) && strictEqual(beforeY, afterDownY) && strictEqual(beforeZ, afterDownZ)) {
-      Log.Checkpoint(`down point XYZ successfully!`)
-    } else {
-      Log.Error(`down point XYZ fail!`)
+      Log.Error(`Execute fail due to contour fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

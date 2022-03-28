@@ -154,7 +154,6 @@ const __selectPoint = (indelPlan, pIdx) => {
   return true
 }
 
-
 const getTargetPlan = (parentTC, planName) => {
   const cnt = parentTC.Items.Count
   if (cnt < 1) return globalConstant.obj.notFoundIndex
@@ -430,7 +429,7 @@ const deletePoint = (indelPlan, tarName, pIdx, type = false) => {
   }
 }
 
-const movePoint = (indelPlan, tarName, pIdx, isKeep = false) => {
+const movePointOutBound = (indelPlan, tarName, pIdx, isKeep = false) => {
   if (indelPlan.PlanGUI.VisibleOnScreen) {
     if (!__changeTargetRegionTabs(indelPlan, tarName)) return
     if (!__selectPoint(indelPlan, pIdx)) return
@@ -465,6 +464,7 @@ const planDefaultConfirmActivity = indelPlan => {
   closeConfirmWindow(indelPlan)
 }
 
+
 module.exports.getTargetPlan = getTargetPlan
 module.exports.addTreatCourse = addTreatCourse
 module.exports.deleteTreatCourse = deleteTreatCourse
@@ -481,6 +481,6 @@ module.exports.closeConfirmWindow = closeConfirmWindow
 module.exports.setupPoint = setupPoint
 module.exports.setupOutBoundPoint = setupOutBoundPoint
 module.exports.deletePoint = deletePoint
-module.exports.movePoint = movePoint
+module.exports.movePointOutBound = movePointOutBound
 module.exports.pointOperate = pointOperate
 module.exports.planDefaultConfirmActivity = planDefaultConfirmActivity

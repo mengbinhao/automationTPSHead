@@ -24,31 +24,34 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
     
-    const originState = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.down
-    indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.ClickButton()
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
-    const originStateAfterPressed = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.down
-    LLPlayer.MouseMove(934, 562, 500)
-    LLPlayer.MouseDown(MK_RBUTTON, 934, 562, 500)
-    LLPlayer.MouseUp(MK_RBUTTON, 934, 562, 500)
-    LLPlayer.MouseMove(972, 688, 500)
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
-    LLPlayer.MouseDown(MK_LBUTTON, 972, 688, 500)
-    LLPlayer.MouseUp(MK_LBUTTON, 972, 688, 500)
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
-    const exitInteract = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.down
+      const originState = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.down
+      indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.ClickButton()
+      utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+      const originStateAfterPressed = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.down
+      LLPlayer.MouseMove(934, 562, 500)
+      LLPlayer.MouseDown(MK_RBUTTON, 934, 562, 500)
+      LLPlayer.MouseUp(MK_RBUTTON, 934, 562, 500)
+      LLPlayer.MouseMove(972, 688, 500)
+      utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+      LLPlayer.MouseDown(MK_LBUTTON, 972, 688, 500)
+      LLPlayer.MouseUp(MK_LBUTTON, 972, 688, 500)
+      utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+      const exitInteract = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.down
 
-    if (originState === exitInteract && originState === !originStateAfterPressed) {
-      Log.Checkpoint("BH_10012016 execute successfully!")
+      if (originState === exitInteract && originState === !originStateAfterPressed) {
+        Log.Checkpoint("BH_10012016 execute successfully!")
+      } else {
+        Log.Error("BH_10012016 execute fail!")
+      }
     } else {
-      Log.Error("BH_10012016 execute fail!")
-    }
+      Log.Error(`Execute fail due to contour fail!`)
+    } 
   } else {
     Log.Error(`Execute fail due to register study!`)
   }

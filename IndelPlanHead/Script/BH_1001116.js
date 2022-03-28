@@ -1,4 +1,5 @@
-﻿const launch = require("launch")
+﻿const globalConstant = require("global_constant")
+const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
@@ -21,7 +22,8 @@ function testcase() {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
     contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    Log.Checkpoint(`Execute successfully!`)
+
+    Regions.YANGDAZHONG_MR78_target_png.Check(indelPlan.ContourGUI.canvas.C2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   } else {
     Log.Error(`Execute fail due to register study!`)
   }

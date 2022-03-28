@@ -25,27 +25,30 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
     
-    if (indelPlan.PlanGUI.VisibleOnScreen) {
-      const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-      plan.setupPoint(indelPlan, "tar")
-      const after = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-      indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_44.ClickButton()
-      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
-      const afterUndo = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+      if (indelPlan.PlanGUI.VisibleOnScreen) {
+        const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+        plan.setupPoint(indelPlan, "tar")
+        const after = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+        indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_44.ClickButton()
+        utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+        const afterUndo = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
-      if (strictEqual(before, afterUndo) && strictEqual(before + 1, after)) {
-        Log.Checkpoint(`Undo successfully!`)
+        if (strictEqual(before, afterUndo) && strictEqual(before + 1, after)) {
+          Log.Checkpoint(`Undo successfully!`)
+        } else {
+          Log.Error(`Undo fail!`)
+        }
       } else {
-        Log.Error(`Undo fail!`)
+        Log.Error(`Execute fail due to window is not right!`)
       }
     } else {
-      Log.Error(`Execute fail due to window is not right!`)
+      Log.Error(`Execute fail due to contour fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

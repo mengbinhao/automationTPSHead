@@ -24,30 +24,33 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
     
-    const originW =  indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText
-    const originL =  indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText
+      const originW =  indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText
+      const originL =  indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText
     
-    //set L
-    LLPlayer.MouseDown(MK_LBUTTON, 1855, 445, 500)
-    LLPlayer.MouseMove(1855, 495, 500)
-    LLPlayer.MouseUp(MK_LBUTTON, 1855, 495, 500)
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
-    //set W
-    LLPlayer.MouseDown(MK_LBUTTON, 1855, 654, 500)
-    LLPlayer.MouseMove(1855, 704, 500)
-    LLPlayer.MouseUp(MK_LBUTTON, 1855, 704, 500)
+      //set L
+      LLPlayer.MouseDown(MK_LBUTTON, 1855, 445, 500)
+      LLPlayer.MouseMove(1855, 495, 500)
+      LLPlayer.MouseUp(MK_LBUTTON, 1855, 495, 500)
+      utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+      //set W
+      LLPlayer.MouseDown(MK_LBUTTON, 1855, 654, 500)
+      LLPlayer.MouseMove(1855, 704, 500)
+      LLPlayer.MouseUp(MK_LBUTTON, 1855, 704, 500)
 
-    if (originW !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && originL !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
-      Log.Checkpoint("Drag W&L successfully in Planwindow!")
+      if (originW !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && originL !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
+        Log.Checkpoint("Drag W&L successfully in Planwindow!")
+      } else {
+        Log.Error("BH_1001206 execute fail!")
+      }
     } else {
-      Log.Error("BH_1001206 execute fail!")
-    }
+      Log.Error(`Execute fail due to contour fail!`)
+    } 
   } else {
     Log.Error(`Execute fail due to register study!`)
   }

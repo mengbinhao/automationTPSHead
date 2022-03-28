@@ -24,16 +24,19 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.planDefaultConfirmActivity(indelPlan)
-    common.openReport(indelPlan)
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.planDefaultConfirmActivity(indelPlan)
+      common.openReport(indelPlan)
     
-    if (indelPlan.plan_report.VisibleOnScreen) {
-      Log.Checkpoint(`openReport successfully!`)
-      common.closeReport(indelPlan)
+      if (indelPlan.plan_report.VisibleOnScreen) {
+        Log.Checkpoint(`openReport successfully!`)
+        common.closeReport(indelPlan)
+      } else {
+        Log.Error(`openReport fail!`)
+      }
     } else {
-      Log.Error(`openReport fail!`)
+      Log.Error(`Execute fail due to contour fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

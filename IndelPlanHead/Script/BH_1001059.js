@@ -4,6 +4,7 @@ const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
 const study = require("study")
+const common = require("common")
 
 
 function testcase() {
@@ -19,14 +20,9 @@ function testcase() {
   
     patient.loadPatient(indelPlan, Project.Variables.new_patientID)
     study.gotoRegisterImporter(indelPlan)
-    study.loadStudy(indelPlan, Project.Variables.study_image_id)
-
-    if (!indelPlan.register_area.checkBox.Enabled) {
-      Log.Checkpoint(`load ${Project.Variables.study_image_name} image successfully!`)
-    } else {
-      Log.Error(`load ${Project.Variables.study_image_name} image fail!`)
-    }
-    //Regions.YANGDAZHONG_CT95_after_load.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, 0, 0)
+    study.loadStudy(indelPlan, Project.Variables.study_image_id, "MR", true)
+    common.setWWAndWL(indelPlan, 'study', 625, 492)
+    Regions.YANGDAZHONG_MR78_loaded_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   }
   
   exitwithlogic.exitWithLogic(false, false, 1)

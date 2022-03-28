@@ -263,6 +263,14 @@ const setWWAndWL = (indelPlan, window = "study",  W = "625", L = "492") => {
   Sys.Desktop.Keys("[Enter]")
 }
 
+const comparedPicture = (regionObj, actualPicture, pixelTolerance = globalConstant.obj.pixelTolerance, colorTolerance = globalConstant.obj.colourTolerance) => {
+  return regionObj.Check(actualPicture, false, false, pixelTolerance, colorTolerance)
+}
+
+const moveMouse = (x, y, delay) => {
+  LLPlayer.MouseMove(x, y, delay)
+}
+
 module.exports.changePatientDetailTab = changePatientDetailTab
 module.exports.getPatientDetailTabIndex = getPatientDetailTabIndex
 module.exports.getPatientDetailTabName = getPatientDetailTabName
@@ -273,3 +281,5 @@ module.exports.openReport = openReport
 module.exports.closeReport = closeReport
 module.exports.captureImage = captureImage
 module.exports.setWWAndWL = setWWAndWL
+module.exports.comparedPicture = comparedPicture
+module.exports.moveMouse = moveMouse

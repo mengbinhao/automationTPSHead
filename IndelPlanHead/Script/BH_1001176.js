@@ -24,22 +24,25 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    plan.setupPoint(indelPlan, "tar")
-    plan.calculateDose(indelPlan, true)
-    plan.calculateDose(indelPlan, false)
-    plan.setDose(indelPlan, 50, 1000)
-    plan.setFraction(indelPlan, 3)
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+      plan.setupPoint(indelPlan, "tar")
+      plan.calculateDose(indelPlan, true)
+      plan.calculateDose(indelPlan, false)
+      plan.setDose(indelPlan, 50, 1000)
+      plan.setFraction(indelPlan, 3)
     
-    if (strictEqual(indelPlan.plan_dlgfraction.tableFraction.wRowCount, 4)) {
-      Log.Checkpoint(`setFraction successfully!`)
-      indelPlan.plan_dlgfraction.Close()
+      if (strictEqual(indelPlan.plan_dlgfraction.tableFraction.wRowCount, 4)) {
+        Log.Checkpoint(`setFraction successfully!`)
+        indelPlan.plan_dlgfraction.Close()
+      } else {
+        Log.Error(`setFraction fail!`)
+      }
     } else {
-      Log.Error(`setFraction fail!`)
+      Log.Error(`Execute fail due to contour fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

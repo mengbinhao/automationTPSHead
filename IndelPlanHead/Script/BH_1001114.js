@@ -20,7 +20,7 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    //contourname
+    //contour name
     contour.statPlanLib(indelPlan, 'skin')
   }
 

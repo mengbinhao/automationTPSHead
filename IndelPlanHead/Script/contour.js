@@ -7,6 +7,8 @@ const patient = require("patient")
 const common = require("common")
 
 
+let targetPic = null
+
 const __getType = contourLibType => {
   return ["TARGET", "OAR", "SKIN"]
 }
@@ -86,10 +88,33 @@ const __increaseMouseAperture = (indelPlan, val) => {
   canvas.MouseWheel(val)
   LLPlayer.KeyUp(VK_LCONTROL, globalConstant.obj.delayMouseHalfSecond)
 }
+
+const __comparedPicture = (indelPlan) => {
+  if (strictEqual(targetPic, null)) {
+    targetPic = Utils.Picture
+    targetPic.LoadFromFile(`${Project.Path}\\Stores\\Regions\\YANGDAZHONG_MR78_target.png`)
+  }
+  const actualPic = indelPlan.ContourGUI.canvas.C2DViewer.Picture()
+  //Compare
+  const ret = targetPic.Difference(actualPic, false, globalConstant.obj.pixelTolerance, false,globalConstant.obj.colourTolerance)
+  Regions.YANGDAZHONG_MR78_target_png.Check(actualPic, false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
+  return strictEqual(ret, null)
+}
  
 const generateRandomCTVName = indelPlan => {
   const ctvNmber = utilsFunctions.getRandomInt(10000, 1000)
   return `CTV${ctvNmber}`
+}
+
+const __doContour = (indelPlan) => {
+  let i = 0
+  do {
+    target_related.drawRectangleNearMiddle(indelPlan)
+    target_related.drawRectangleNearMiddle(indelPlan)
+    target_related.drawRectangleNearMiddle(indelPlan)
+    i++
+  } while (i < 3 && !__comparedPicture(indelPlan))
+  return __comparedPicture(indelPlan)
 }
 
 // true means ContourLib, false means PlanLib
@@ -344,12 +369,16 @@ const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
   loadContourLib(indelPlan, contourLibName)
   indelPlan.ContourGUI.groupBox_5.BrushTool.ClickButton()
   __increaseMouseAperture(indelPlan, globalConstant.obj.mousePositiveScroll)
-
-  let i = 0
-  while (i < 10) {
-    target_related.drawRectangleNearMiddle(indelPlan)
-    i++
+  let j = 0, ret = false
+  while (!ret) {
+    if (++j > 3) break
+    if (j > 1) {
+      indelPlan.ContourGUI.groupBox_5.ClearContourLayers.ClickButton()
+      indelPlan.contour_delete_planlib_popup.qt_msgbox_buttonbox.buttonYes.ClickButton()
+    }
+    ret = __doContour(indelPlan)
   }
+  return j > 3 ? false : true 
   //indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
   //const position = coordinate.getNearMiddleCoordinate()
   //LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)

@@ -24,19 +24,22 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    plan.setupPoint(indelPlan, "tar")
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+      plan.setupPoint(indelPlan, "tar")
 
-    const afterUpW = plan.pointOperate(indelPlan, "tar", 1, {attr: "C", method: 'set', type: 'up', val: 1})
-    
-    if (strictEqual("Φ8", afterUpW)) {
-      Log.Checkpoint(`Change point C successfully!`)
+      const afterUpW = plan.pointOperate(indelPlan, "tar", 1, {attr: "C", method: 'set', type: 'up', val: 1})
+
+      if (strictEqual("Φ8", afterUpW) && common.comparedPicture(Regions.YANGDAZHONG_MR78_fai8_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
+        Log.Checkpoint(`Change point C successfully!`)
+      } else {
+        Log.Error(`Change point C fail!`)
+      }
     } else {
-      Log.Error(`Change point C fail!`)
+      Log.Error(`Execute fail due to contour fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

@@ -24,19 +24,22 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    plan.setupPoint(indelPlan, "tar")
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+      plan.setupPoint(indelPlan, "tar")
 
-    const afterUpW = plan.pointOperate(indelPlan, "tar", 1, {attr: "A", method: 'set', type: 'up', val: -1})
+      const afterUpW = plan.pointOperate(indelPlan, "tar", 1, {attr: "A", method: 'set', type: 'up', val: -1})
     
-    if (strictEqual("110°", afterUpW)) {
-      Log.Checkpoint(`Change point A successfully!`)
+      if (strictEqual("110°", afterUpW)) {
+        Log.Checkpoint(`Change point A successfully!`)
+      } else {
+        Log.Error(`Change point A fail!`)
+      }
     } else {
-      Log.Error(`Change point A fail!`)
+      Log.Error(`Execute fail due to contour fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

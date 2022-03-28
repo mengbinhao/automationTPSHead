@@ -24,26 +24,30 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-
-    if (indelPlan.PlanGUI.VisibleOnScreen) {
-      const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-      plan.setupPoint(indelPlan, "tar")
-      const afterAdd = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
-      plan.deletePoint(indelPlan, "tar", 1, true)
-      const afterDelete = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
-      if (strictEqual(before + 1, afterAdd) && strictEqual(before, afterDelete)) {
-        Log.Checkpoint(`deletePoint by delete button successfully!`)
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+
+      if (indelPlan.PlanGUI.VisibleOnScreen) {
+        const before = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+        plan.setupPoint(indelPlan, "tar")
+        const afterAdd = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+        plan.deletePoint(indelPlan, "tar", 1, true)
+        const afterDelete = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
+    
+        if (strictEqual(before + 1, afterAdd) && strictEqual(before, afterDelete)  && common.comparedPicture(Regions.YANGDAZHONG_MR78_without_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
+          Log.Checkpoint(`deletePoint by delete button successfully!`)
+        } else {
+          Log.Error(`deletePoint by delete button fail!`)
+        }
       } else {
-        Log.Error(`deletePoint by delete button fail!`)
+        Log.Error(`Execute fail due to window is not right!`)
       }
     } else {
-      Log.Error(`Execute fail due to window is not right!`)
+      Log.Error(`Execute fail due to contour fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

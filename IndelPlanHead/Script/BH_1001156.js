@@ -7,6 +7,7 @@ const study = require("study")
 const contour = require("contour")
 const common = require("common")
 const plan = require("plan")
+const utilsFunctions = require("utils_functions")
 
 
 function testcase() {
@@ -24,15 +25,20 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    plan.setupPoint(indelPlan, "tar")
-    plan.movePoint(indelPlan, "tar", 1, true)
-    
-    Log.Checkpoint(`Move Point Out Bound successfully!`)
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+      plan.setupPoint(indelPlan, "tar")
+      plan.movePointOutBound(indelPlan, "tar", 1, true)
+      //in case mouse position tooltip
+      common.moveMouse(220, 800, 500)
+      utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+      Regions.YANGDAZHONG_MR78_moveoutbound_point_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, 130)
+    } else {
+      Log.Error(`Execute fail due to contour fail!`)
+    }
   } else {
     Log.Error(`Execute fail due to register study!`)
   }

@@ -23,16 +23,19 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
-    contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
-    common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
-    plan.addTreatCourse(indelPlan, true)
-    plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
-    plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    common.setWWAndWL(indelPlan, 'plan', 1200, 300)
-    if ('1200' === indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && '300' === indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
-      Log.Checkpoint("Set W&L successfully in Plan window!")
+    if (contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')) {
+      common.changePatientDetailTab(indelPlan, globalConstant.obj.planDesign)
+      plan.addTreatCourse(indelPlan, true)
+      plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
+      plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
+      common.setWWAndWL(indelPlan, 'plan', 1200, 300)
+      if ('1200' === indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && '300' === indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
+        Log.Checkpoint("Set W&L successfully in Plan window!")
+      } else {
+        Log.Error("BH_1001207 execute fail!")
+      }
     } else {
-      Log.Error("BH_1001207 execute fail!")
+      Log.Error(`Execute fail due to contour fail!`)
     }
   } else {
     Log.Error(`Execute fail due to register study!`)

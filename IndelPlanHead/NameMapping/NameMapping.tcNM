@@ -1232,6 +1232,15 @@
 																			</Property>
 																		</Properties>
 																	</Child>
+																	<Child Name="ClearContourLayers" Key="{8A04036C-B9AF-46BF-950E-64D1DE633A57}" ParallelWalk="True">
+																		<Image FileName="-828740490" Left="283" Top="674" Right="400" Bottom="718" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="ClearContourLayers" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
 																</Children>
 															</Child>
 															<Child Name="canvas" Key="{BB881D13-71D7-455E-B70E-FD07B759ACF0}" ParallelWalk="True">
@@ -8143,6 +8152,7 @@
 								<Child Name="Interpolate" Owner="{4A4AB6F9-D37C-4448-BBF8-97583F6605A0}" />
 								<Child Name="Copyto" Owner="{B4E47030-D24A-4665-8F11-F9EC2E04BBE4}" />
 								<Child Name="LogicOperationButton" Owner="{55CFBBB1-067A-4B26-95D4-24B9A30FF154}" />
+								<Child Name="ClearContourLayers" Owner="{8A04036C-B9AF-46BF-950E-64D1DE633A57}" />
 							</Child>
 							<Child Name="canvas" Owner="{BB881D13-71D7-455E-B70E-FD07B759ACF0}">
 								<Child Name="C2DViewer" Owner="{A695EE1C-36C7-405D-AADE-E1FF00860698}" />

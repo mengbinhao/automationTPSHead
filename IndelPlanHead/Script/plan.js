@@ -450,6 +450,19 @@ const pointOperate = (indelPlan, tarName, pIdx, {attr, method, type, val}) => {
   }
 }
 
+//positive means reduce, negative means increase
+const zoomImage = (indelPlan, val) => {
+  if (indelPlan.PlanGUI.Exists && indelPlan.PlanGUI.VisibleOnScreen) {
+    const canvas = indelPlan.PlanGUI.canvas.PlanC2DViewer
+    canvas.Click()
+    LLPlayer.KeyDown(VK_LCONTROL, globalConstant.obj.delayMouseHalfSecond)
+    canvas.MouseWheel(val)
+    LLPlayer.KeyUp(VK_LCONTROL, globalConstant.obj.delayMouseHalfSecond)
+  } else {
+    Log.Warning(`Can not zoomIn due to window is not right`) 
+  }
+}
+
 const planDefaultConfirmActivity = indelPlan => {
   addTreatCourse(indelPlan, true)
   addPlan(indelPlan, "TC1", "TC1_P1", true)
@@ -483,4 +496,5 @@ module.exports.setupOutBoundPoint = setupOutBoundPoint
 module.exports.deletePoint = deletePoint
 module.exports.movePointOutBound = movePointOutBound
 module.exports.pointOperate = pointOperate
+module.exports.zoomImage = zoomImage
 module.exports.planDefaultConfirmActivity = planDefaultConfirmActivity

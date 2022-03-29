@@ -32,7 +32,8 @@ function testcase() {
       plan.setupPoint(indelPlan, "tar")
       plan.calculateDose(indelPlan, true)
       plan.calculateDose(indelPlan, false)
-      Log.Checkpoint(`Fine calculateDose successfully!`)
+      plan.zoomImage(indelPlan, -50)
+      Regions.YANGDAZHONG_MR78_fine_point_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, 130)
     } else {
       Log.Error(`Execute fail due to contour fail!`)
     } 

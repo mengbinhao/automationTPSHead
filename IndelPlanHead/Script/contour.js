@@ -97,7 +97,7 @@ const __comparedPicture = (indelPlan) => {
   const actualPic = indelPlan.ContourGUI.canvas.C2DViewer.Picture()
   //Compare
   const ret = targetPic.Difference(actualPic, false, globalConstant.obj.pixelTolerance, false,globalConstant.obj.colourTolerance)
-  Regions.YANGDAZHONG_MR78_target_png.Check(actualPic, false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
+  //Regions.YANGDAZHONG_MR78_target_png.Check(actualPic, false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   return strictEqual(ret, null)
 }
  

@@ -423,7 +423,7 @@
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="选择Fine进行剂量计算" key="{4400CB20-3041-4CEC-A8EF-1CF22CCE61EE}" group="False" enabled="False" testMoniker="{C12107EC-F470-46D6-837B-6A9E8034B6A5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="选择Fine进行剂量计算" key="{4400CB20-3041-4CEC-A8EF-1CF22CCE61EE}" group="False" enabled="True" testMoniker="{C12107EC-F470-46D6-837B-6A9E8034B6A5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -490,7 +490,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="ProjectTestItem2" key="{1489E26B-83BA-48A9-9B26-2A17344C89B1}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">

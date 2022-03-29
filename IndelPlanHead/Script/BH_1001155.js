@@ -35,25 +35,26 @@ function testcase() {
       const beforeY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'get'})
       const beforeZ = plan.pointOperate(indelPlan, "tar", 1, {attr: "Z", method: 'get'})
     
-      const afterUpX = plan.pointOperate(indelPlan, "tar", 1, {attr: "X", method: 'set', type: 'up', val: 1})
-      const afterUpY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'set', type: 'up', val: 1})
+      const afterUpX = plan.pointOperate(indelPlan, "tar", 1, {attr: "X", method: 'set', type: 'up', val: 50})
+      const afterUpY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'set', type: 'up', val: 50})
       const afterUpZ = plan.pointOperate(indelPlan, "tar", 1, {attr: "Z", method: 'set', type: 'up', val: 1})
     
-      if (strictEqual(Number((beforeX + 0.1).toFixed(2)), afterUpX) && strictEqual(Number((beforeY + 0.1).toFixed(2)), afterUpY) &&   strictEqual(Number((beforeZ + 0.1).toFixed(2)), afterUpZ)) {
+      if (strictEqual(Number((beforeX + 5).toFixed(2)), afterUpX) && strictEqual(Number((beforeY + 5).toFixed(2)), afterUpY) && strictEqual(Number((beforeZ + 0.1).toFixed(2)), afterUpZ) && common.comparedPicture(Regions.YANGDAZHONG_MR78_moveXY_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
         Log.Checkpoint(`up point XYZ successfully!`)
       } else {
         Log.Error(`up point XYZ fail!`)
       }
       
-      const afterDownX = plan.pointOperate(indelPlan, "tar", 1, {attr: "X", method: 'set', type: 'down', val: 1})
-      const afterDownY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'set', type: 'down', val: 1})
+      const afterDownX = plan.pointOperate(indelPlan, "tar", 1, {attr: "X", method: 'set', type: 'down', val: 50})
+      const afterDownY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'set', type: 'down', val: 50})
       const afterDownZ = plan.pointOperate(indelPlan, "tar", 1, {attr: "Z", method: 'set', type: 'down', val: 1})
     
-      if (strictEqual(beforeX, afterDownX) && strictEqual(beforeY, afterDownY) && strictEqual(beforeZ, afterDownZ)) {
+      if (strictEqual(beforeX, afterDownX) && strictEqual(beforeY, afterDownY) && strictEqual(beforeZ, afterDownZ) && common.comparedPicture(Regions.YANGDAZHONG_MR78_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
         Log.Checkpoint(`down point XYZ successfully!`)
       } else {
         Log.Error(`down point XYZ fail!`)
       }
+      
     } else {
       Log.Error(`Execute fail due to contour fail!`)
     }

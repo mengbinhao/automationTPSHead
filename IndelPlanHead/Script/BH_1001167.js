@@ -31,7 +31,8 @@ function testcase() {
       plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
       plan.setupPoint(indelPlan, "tar")
       plan.calculateDose(indelPlan, true)
-      Log.Checkpoint(`Gross calculateDose successfully!`)
+      plan.zoomImage(indelPlan, -50)
+      Regions.YANGDAZHONG_MR78_gross_point_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, 130)
     } else {
       Log.Error(`Execute fail due to contour fail!`)
     }

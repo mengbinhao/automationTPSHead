@@ -117,6 +117,25 @@ const addPatient = (indelPlan, pv, isCancel = false, args) => {
   }
 }
 
+const addPatientFromDicom = (indelPlan, pv, patientID, isCancel = false) => {
+  indelPlan.patient_new_patient.pushButton_Import.ClickButton()
+  const list = indelPlan.patient_new_patient.treeWidget_PatientList
+  const idx = findInList.isItemExistInMoreListReturnIndex(patientID, globalConstant.obj.patientIDColumnFromGate, list)
+  const pnp = indelPlan.patient_new_patient
+  if (!strictEqual(idx, globalConstant.obj.notFoundIndex)) {
+    list.wItems.Item(idx).Click()
+    if (!isCancel) {
+      pnp.pushButton_2.ClickButton()
+      if (!indelPlan.patient_exists_popup.Exists) pv.dirtyData.get(globalConstant.obj.addPatient).push(patientID)
+    } else {
+      pnp.pushButton_4.ClickButton()
+    }
+  } else {
+    Log.Warning("can not find target dicom patient data!")
+    pnp.pushButton_4.ClickButton()
+  }
+}
+
 const editPatient = (indelPlan, isCancel = false, patientID, ...args) => {
   const patientList = indelPlan.patientManagement.treeWidget_PatientList
   const isExist = findInList.isItemExistInMoreList(patientID, globalConstant.obj.patientIDColumn, patientList)
@@ -229,6 +248,7 @@ module.exports.openNewPatientWindow = openNewPatientWindow
 module.exports.exitPatientWindow = exitPatientWindow
 module.exports.fromPatientDetailToMain = fromPatientDetailToMain
 module.exports.addPatient = addPatient
+module.exports.addPatientFromDicom = addPatientFromDicom
 module.exports.addPatientActivity = addPatientActivity
 module.exports.editPatient = editPatient
 module.exports.deletePatient = deletePatient

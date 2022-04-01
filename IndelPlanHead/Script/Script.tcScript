@@ -424,6 +424,12 @@
 		<child name="test_image" key="{DCAFD09F-1991-40FA-A2BE-4ADEEB5809E7}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="test_image.js" />
 		</child>
+		<child name="BH_1001003" key="{DD3F47A7-CA43-4DE0-9B7B-DE39C0F02597}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001003.js" />
+		</child>
+		<child name="BH_1001008" key="{801EACE2-7555-4C72-A4A8-D8C5F8CA8DD7}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001008.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -508,6 +514,8 @@
 						<ref key="{C97C25B4-9C8A-4308-BBAC-D75B59DD53B1}" />
 						<ref key="{7137721E-2579-4713-B73D-631BD96727F7}" />
 						<ref key="{F48B7F1B-C583-4D29-B770-E7F6C5F4A4BA}" />
+						<ref key="{DD3F47A7-CA43-4DE0-9B7B-DE39C0F02597}" />
+						<ref key="{801EACE2-7555-4C72-A4A8-D8C5F8CA8DD7}" />
 					</references>
 				</folder>
 				<folder caption="login" description="A logical folder that is used to organize project items and elements." moniker="">

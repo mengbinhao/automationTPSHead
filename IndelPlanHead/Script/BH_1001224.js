@@ -42,7 +42,7 @@ function testcase() {
         utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
         const afterRedo = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
-        if (strictEqual(before, afterUndo) && strictEqual(before + 1, after) && strictEqual(afterRedo, after) ) {
+        if (strictEqual(before, afterUndo) && strictEqual(before + 1, after) && strictEqual(afterRedo, after) && common.comparedPicture(Regions.YANGDAZHONG_MR78_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
           Log.Checkpoint(`Redo successfully!`)
         } else {
           Log.Error(`Redo fail!`)

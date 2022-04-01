@@ -39,7 +39,7 @@ function testcase() {
         utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
         const afterUndo = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
-        if (strictEqual(before, afterUndo) && strictEqual(before + 1, after)) {
+        if (strictEqual(before, afterUndo) && strictEqual(before + 1, after) && common.comparedPicture(Regions.YANGDAZHONG_MR78_without_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
           Log.Checkpoint(`Undo successfully!`)
         } else {
           Log.Error(`Undo fail!`)

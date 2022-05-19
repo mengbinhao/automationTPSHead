@@ -430,6 +430,21 @@
 		<child name="BH_1001008" key="{801EACE2-7555-4C72-A4A8-D8C5F8CA8DD7}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1001008.js" />
 		</child>
+		<child name="BH_1000932" key="{32CBDE16-16FD-4BFE-8DCD-FF8950074A5F}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1000932.js" />
+		</child>
+		<child name="BH_1000969" key="{C44F723D-916F-433C-8802-C6D768A80DE2}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1000969.js" />
+		</child>
+		<child name="BH_1001286" key="{DEF433DD-91DE-40A4-8B1A-DA40A83EC443}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001286.js" />
+		</child>
+		<child name="BH_1001287" key="{2CD5D816-C071-482F-ADE4-138B4FDC294E}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001287.js" />
+		</child>
+		<child name="BH_1001289" key="{96E33C35-79FC-4457-A188-47F0EC1A6465}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001289.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -489,6 +504,10 @@
 						<ref key="{208FE485-ACAE-4E4E-B17E-89BA85123ACC}" />
 						<ref key="{79DF9820-6792-4ED0-BC27-D953A2C0B7C6}" />
 						<ref key="{F85ECDF2-0E49-4624-88D9-F81EC30FE343}" />
+						<ref key="{C44F723D-916F-433C-8802-C6D768A80DE2}" />
+						<ref key="{DEF433DD-91DE-40A4-8B1A-DA40A83EC443}" />
+						<ref key="{2CD5D816-C071-482F-ADE4-138B4FDC294E}" />
+						<ref key="{96E33C35-79FC-4457-A188-47F0EC1A6465}" />
 					</references>
 				</folder>
 				<folder caption="patientmanagement" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -530,6 +549,7 @@
 						<ref key="{DF69CB42-A63A-4216-BD38-85E16363DD7E}" />
 						<ref key="{693A9846-DD4B-481B-8072-A2B18E3B4A3A}" />
 						<ref key="{3E536B72-44F8-45B3-ADE1-62C8622A9CE6}" />
+						<ref key="{32CBDE16-16FD-4BFE-8DCD-FF8950074A5F}" />
 					</references>
 				</folder>
 				<folder caption="imageregister" description="A logical folder that is used to organize project items and elements." moniker="">

@@ -37,6 +37,10 @@ const openNewUserWindow = (indelPlan) => {
   indelPlan.user_management.pushButton_NewUser.ClickButton()
 }
 
+const exitNewUserWindow = (indelPlan) => {
+  indelPlan.user_new_user.pushButton_Cancel.ClickButton()
+}
+
 const exitUserListWindow = (indelPlan) => {
   indelPlan.user_management.pushButton_Exit.Click()
 }
@@ -146,6 +150,7 @@ const deleteUserForDirtyData = (indelPlan, deleteUsers) => {
 
 module.exports.gotoUserListWindow = gotoUserListWindow
 module.exports.openNewUserWindow = openNewUserWindow
+module.exports.exitNewUserWindow = exitNewUserWindow
 module.exports.exitUserListWindow = exitUserListWindow
 module.exports.addUser = addUser
 module.exports.addUserActivity = addUserActivity

@@ -80,7 +80,7 @@ const __handleContourDirtyData = (pv, contourLibName) => {
   }
 }
 
-const __increaseMouseAperture = (indelPlan, val) => {
+const increaseMouseAperture = (indelPlan, val) => {
   const canvas = indelPlan.ContourGUI.canvas.C2DViewer
   canvas.Click()
   LLPlayer.KeyDown(VK_LCONTROL, globalConstant.obj.delayMouseHalfSecond)
@@ -279,7 +279,7 @@ const logicOperate = (indelPlan, Operator) => {
   logicWindow.LogicOperator.GenerateNew.ClickButton()
 }
 
-// true means isotropically, false means unisotropically
+// type: true means isotropically, false means unisotropically
 // 1 means preview, 2 accept 3 create as 4 reject
 const contourScale = (indelPlan, isAllLayer = true, type = true, method = 1, ...args) => {
   const gb = indelPlan.ContourGUI.groupBox_2
@@ -355,20 +355,13 @@ const loadAndContourTargetAreaByLineActivity = (indelPlan, contourLibName) => {
   indelPlan.ContourGUI.groupBox_5.pbManualSketch.ClickButton()
   target_related.drawTriangleNearMiddle(indelPlan)
   indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
-  //positive means move to up, to zero
-  //indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
-  //const position = coordinate.getNearMiddleCoordinate()
-  //LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond * 3)
-  //LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)
-  //indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
-  //indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
 }
 
 //only contour one layer
 const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
   loadContourLib(indelPlan, contourLibName)
   indelPlan.ContourGUI.groupBox_5.BrushTool.ClickButton()
-  __increaseMouseAperture(indelPlan, globalConstant.obj.mousePositiveScroll)
+  increaseMouseAperture(indelPlan, globalConstant.obj.mousePositiveScroll)
   let j = 0, ret = false
   while (!ret) {
     if (++j > 3) break
@@ -379,13 +372,15 @@ const loadAndContourTargetAreaByBrushActivity = (indelPlan, contourLibName) => {
     ret = __doContour(indelPlan)
   }
   return j > 3 ? false : true 
-  //indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
-  //const position = coordinate.getNearMiddleCoordinate()
-  //LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
-  //LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseOneSecond)
-  //indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
-  //indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
-  //utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+}
+
+const doInterpolate = (indelPlan) => {
+  indelPlan.ContourGUI.canvas.C2DViewer.MouseWheel(globalConstant.obj.delayMouseDelta)
+  LLPlayer.MouseDown(MK_LBUTTON, 950, 480, globalConstant.obj.delayMouseZeroSecond)
+  LLPlayer.MouseUp(MK_LBUTTON, 950, 480, globalConstant.obj.delayMouseOneSecond)
+  indelPlan.ContourGUI.canvas.C2DViewer.ClickR()
+  indelPlan.ContourGUI.groupBox_5.Interpolate.ClickButton()
+  utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
 }
 
 const deleteContourForDirtyData = (indelPlan, deleteContours) => {
@@ -415,7 +410,9 @@ module.exports.contourScale = contourScale
 module.exports.loadContourLibByType = loadContourLibByType
 module.exports.generateRandomCTVName = generateRandomCTVName
 module.exports.gotoContourWindow = gotoContourWindow
+module.exports.increaseMouseAperture = increaseMouseAperture
 module.exports.loadAndContourSKINActivity = loadAndContourSKINActivity
 module.exports.loadAndContourTargetAreaByLineActivity = loadAndContourTargetAreaByLineActivity
 module.exports.loadAndContourTargetAreaByBrushActivity = loadAndContourTargetAreaByBrushActivity
+module.exports.doInterpolate = doInterpolate
 module.exports.deleteContourForDirtyData = deleteContourForDirtyData

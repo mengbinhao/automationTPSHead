@@ -14,6 +14,10 @@ obj.delayMouseHalfSecond = 500
 obj.delayMouseOneSecond = 1000
 
 
+//mouse MouseWheel 
+obj.delayMouseDelta = -10
+
+
 //scroll mouse
 //positive means increase, negative means reduce
 obj.mousePositiveScroll = 20

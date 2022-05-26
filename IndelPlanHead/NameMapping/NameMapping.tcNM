@@ -1241,6 +1241,51 @@
 																			</Property>
 																		</Properties>
 																	</Child>
+																	<Child Name="DeleteCurrentLayer" Key="{4F722355-9F87-4343-98E9-B423ED62E794}" ParallelWalk="True">
+																		<Image FileName="2051320872" Left="283" Top="578" Right="400" Bottom="621" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="DeleteCurrentLayer" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="DeleteLayerBefore" Key="{AE3B89BF-70B5-4CB2-91E7-DFF66AFF3B08}" ParallelWalk="True">
+																		<Image FileName="2051320872" Left="36" Top="724" Right="153" Bottom="767" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="DeleteLayerBefore" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="DeleteLayerAfter" Key="{0C34576F-D6BA-447B-AD6C-229172A71C9F}" ParallelWalk="True">
+																		<Image FileName="2051320872" Left="159" Top="724" Right="277" Bottom="767" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="DeleteLayerAfter" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="CopyPrevious" Key="{CA4F4684-ADE9-4E9A-96C1-54D5697AA676}" ParallelWalk="True">
+																		<Image FileName="-1646194569" Left="159" Top="627" Right="277" Bottom="668" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="CopyPrevious" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="CopyNext" Key="{868E1ED4-3C78-4A39-A2E0-18AC029FF60D}" ParallelWalk="True">
+																		<Image FileName="-1646194569" Left="283" Top="627" Right="400" Bottom="668" />
+																		<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="CopyNext" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
 																</Children>
 															</Child>
 															<Child Name="canvas" Key="{BB881D13-71D7-455E-B70E-FD07B759ACF0}" ParallelWalk="True">
@@ -1262,6 +1307,21 @@
 																			</Property>
 																			<Property Name="Index">
 																				<Value PropertyType="0" Value="6" Type="0" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="C2DViewer2" Key="{F6F47A70-81B3-4B3E-8479-0DEC2C8E553C}" ParallelWalk="True">
+																		<Image FileName="862803587" Left="433" Top="140" Right="1469" Bottom="1001" />
+																		<TypeInfo Item0="{6D37FC1B-5E23-4374-926C-3976C07F37B7}" />
+																		<Properties>
+																			<Property Name="QtClassName">
+																				<Value PropertyType="0" Value="C2DViewer" Type="5" />
+																			</Property>
+																			<Property Name="QtText">
+																				<Value PropertyType="0" Value="" Type="5" />
+																			</Property>
+																			<Property Name="Index">
+																				<Value PropertyType="0" Value="4" Type="0" />
 																			</Property>
 																		</Properties>
 																	</Child>
@@ -2009,6 +2069,15 @@
 																		<Properties>
 																			<Property Name="objectName">
 																				<Value PropertyType="0" Value="toolButton_5" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_14" Key="{6B02182E-125A-436D-A8C9-5DB1FF499055}" ParallelWalk="True">
+																		<Image FileName="-1380732254" Left="570" Top="74" Right="611" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_14" Type="5" />
 																			</Property>
 																		</Properties>
 																	</Child>
@@ -5379,6 +5448,15 @@
 													</Property>
 												</Properties>
 											</Child>
+											<Child Name="ColorMapTarget" Key="{7B019380-B26E-4986-B12D-5809C9264079}" ParallelWalk="True">
+												<Image FileName="2144232755" Left="1289" Top="382" Right="1896" Bottom="406" />
+												<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="ColorMapTarget" Type="5" />
+													</Property>
+												</Properties>
+											</Child>
 										</Children>
 									</Child>
 									<Child Name="wdMainView" Key="{03B7418B-264F-48AA-BE7C-EA933BBCED49}" ParallelWalk="True">
@@ -8153,9 +8231,15 @@
 								<Child Name="Copyto" Owner="{B4E47030-D24A-4665-8F11-F9EC2E04BBE4}" />
 								<Child Name="LogicOperationButton" Owner="{55CFBBB1-067A-4B26-95D4-24B9A30FF154}" />
 								<Child Name="ClearContourLayers" Owner="{8A04036C-B9AF-46BF-950E-64D1DE633A57}" />
+								<Child Name="DeleteCurrentLayer" Owner="{4F722355-9F87-4343-98E9-B423ED62E794}" />
+								<Child Name="DeleteLayerBefore" Owner="{AE3B89BF-70B5-4CB2-91E7-DFF66AFF3B08}" />
+								<Child Name="DeleteLayerAfter" Owner="{0C34576F-D6BA-447B-AD6C-229172A71C9F}" />
+								<Child Name="CopyPrevious" Owner="{CA4F4684-ADE9-4E9A-96C1-54D5697AA676}" />
+								<Child Name="CopyNext" Owner="{868E1ED4-3C78-4A39-A2E0-18AC029FF60D}" />
 							</Child>
 							<Child Name="canvas" Owner="{BB881D13-71D7-455E-B70E-FD07B759ACF0}">
 								<Child Name="C2DViewer" Owner="{A695EE1C-36C7-405D-AADE-E1FF00860698}" />
+								<Child Name="C2DViewer2" Owner="{F6F47A70-81B3-4B3E-8479-0DEC2C8E553C}" />
 							</Child>
 							<Child Name="ProgressBar" Owner="{8889EA4A-3197-404E-991D-77112C008FCF}" />
 							<Child Name="groupBox_2" Owner="{2B6C6E22-6F6B-449F-B2CC-8C10007B8B3F}">
@@ -8262,6 +8346,7 @@
 								<Child Name="toolButton_3" Owner="{7487C6B2-4776-45F0-87CC-6C95717B4189}" />
 								<Child Name="toolButton_4" Owner="{9FF5CEEE-498E-4E94-85C9-B9E1D125E4B1}" />
 								<Child Name="toolButton_5" Owner="{F3008138-66FB-4FBB-A1A4-EF08FDDD3FA5}" />
+								<Child Name="toolButton_14" Owner="{6B02182E-125A-436D-A8C9-5DB1FF499055}" />
 							</Child>
 							<Child Name="tab" Owner="{4517A6B4-5280-4037-AE72-702D4A268C44}">
 								<Child Name="toolButton_SysSet" Owner="{36BBCC81-26AD-4E25-9B0A-53F2676D2B4A}" />
@@ -8632,6 +8717,7 @@
 				<Child Name="groupBox_5" Owner="{861B1C5C-BDF8-42DA-9107-ED4CE270B32F}">
 					<Child Name="leMovWL" Owner="{DCE4F990-1F37-4AED-AFAA-A20FCA558514}" />
 					<Child Name="leMovWW" Owner="{3A8F3FDB-3132-4DB7-B5C9-614D6888B06C}" />
+					<Child Name="ColorMapTarget" Owner="{7B019380-B26E-4986-B12D-5809C9264079}" />
 				</Child>
 				<Child Name="wdMainView" Owner="{03B7418B-264F-48AA-BE7C-EA933BBCED49}" />
 			</Child>

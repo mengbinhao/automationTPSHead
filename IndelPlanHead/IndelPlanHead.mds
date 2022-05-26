@@ -297,6 +297,18 @@
 						<testParameters />
 						<children />
 					</testItem>
+					<testItem name="输入WL与WW的值来设置窗位窗宽" key="{6F032256-97FB-401C-9EFC-5BB31DA13C8E}" group="False" enabled="False" testMoniker="{FE534F9B-31F6-4860-A387-1195503D415B}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="通过滑动滑块设置序列图像窗宽窗位" key="{F1C0984D-87F7-4251-9776-AFCC835E8B0C}" group="False" enabled="False" testMoniker="{8EBFD0E5-9957-4A64-9078-BA4AC8692488}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="通过鼠标拖动来设置窗位窗宽" key="{5FE0C6E9-9339-49AF-8A9A-921E865983F1}" group="False" enabled="False" testMoniker="{8A2D0904-E8EC-47F6-80FD-2882AAD83E0C}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
 					<testItem name="自动注册图像序列" key="{BB46B220-E95B-4012-8D8E-381B9B3B7CE1}" group="False" enabled="False" testMoniker="{DB2F5F78-CF59-45C9-9388-B12EB2EA3865}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
@@ -307,7 +319,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="添加轮廓库" key="{9A93D78B-F6B1-4A68-B17B-E44F79C28243}" group="False" enabled="False" testMoniker="{FA16B7B7-2E6F-472C-B6F5-D9CE3D779CDE}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -378,7 +390,47 @@
 						<testParameters />
 						<children />
 					</testItem>
+					<testItem name="修正轮廓线" key="{665B5DC3-0229-4E2B-B080-ABBBF9880A99}" group="False" enabled="False" testMoniker="{3DE15600-72C7-4388-8304-86CBD1231FC2}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
 					<testItem name="自动提取表皮轮廓" key="{E2BDC823-3728-4594-84E6-6C20DF0D2777}" group="False" enabled="False" testMoniker="{EF3B7301-1C38-4661-85AF-640A4CAEEB63}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="删除单层轮廓线&#13;&#10;" key="{CB2E2B45-9800-4FE5-8AFF-8B3B35473641}" group="False" enabled="False" testMoniker="{DBB86ABD-BD5A-4A9E-B0A5-EE07C6DF03BF}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="清除轮廓线" key="{9CAD6A77-1721-4515-934D-0BCC53AD07BA}" group="False" enabled="False" testMoniker="{82CBA2A4-7200-459D-8F9F-277E306434A4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="向前删除轮廓线" key="{2439021B-CA18-4077-96F9-8E192A711081}" group="False" enabled="False" testMoniker="{9C975961-EA08-433B-8269-480527127AB3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="向后删除轮廓线" key="{C2B1883F-ACAE-4417-941E-B5333F1C4BC8}" group="False" enabled="False" testMoniker="{BBD9FFE5-86CB-4F9E-8954-0BD1EC2731B5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="从上层拷贝轮廓线" key="{FBD4D832-F1C3-4110-B468-5F5ECDB501EC}" group="False" enabled="False" testMoniker="{1B95B62C-081A-46A0-A73E-B5991B277E49}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="从下层拷贝轮廓线" key="{A669B6DF-9A00-45BD-85C8-AC20C7116F28}" group="False" enabled="False" testMoniker="{52B018DA-8F67-4E22-AD28-CCF483FA1741}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="轮廓线插值" key="{A9915EA5-35AF-4B33-9F92-268FF2BB2593}" group="False" enabled="False" testMoniker="{B81F0967-CC40-480A-B620-2930C08D7799}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="轮廓同性外扩" key="{FEBA42C3-BFA8-4B8C-844A-7655C4014BF9}" group="False" enabled="False" testMoniker="{1BA02BE3-9A46-420E-B9ED-C454ACDD33FB}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="轮廓项的各项异性外扩" key="{0141B298-F6AF-4B6B-8450-4942D3AB6B45}" group="False" enabled="False" testMoniker="{AE4E9C5F-0EC7-4CC5-95F7-1EB43F30022E}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -391,6 +443,10 @@
 						<children />
 					</testItem>
 					<testItem name="轮廓外放时新增PlanLib轮廓项" key="{D4E20C7E-2816-4001-A5DD-2B7BB01CDB41}" group="False" enabled="False" testMoniker="{015438DF-0696-4147-94DC-7661BE1E9FE5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="Reject功能测试" key="{B3A7B66B-1331-4B04-A485-CB62BC67F281}" group="False" enabled="True" testMoniker="{9A4C2157-5256-43B1-A2BD-DCBDC39D75D5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
@@ -518,10 +574,10 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="test" key="{700E2A7A-61EC-4591-A288-EAD1C0913739}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="ProjectTestItem2" key="{1489E26B-83BA-48A9-9B26-2A17344C89B1}" group="False" enabled="False" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="ProjectTestItem2" key="{1489E26B-83BA-48A9-9B26-2A17344C89B1}" group="False" enabled="True" testMoniker="{9A180F1D-A498-43CA-9B61-21B70D4D3AFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

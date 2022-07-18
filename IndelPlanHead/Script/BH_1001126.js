@@ -25,7 +25,7 @@ function testcase() {
     contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
     contour.doInterpolate(indelPlan)
     indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_2.toolButton_14.ClickButton()
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
 
     Regions.YANGDAZHONG_MR78_contour_interpolate_png.Check(indelPlan.ContourGUI.canvas.C2DViewer2.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   } else {

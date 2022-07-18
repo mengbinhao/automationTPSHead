@@ -303,7 +303,7 @@ const extractStudy = indelPlan => {
   if (indelPlan.register_importer.VisibleOnScreen) {
     indelPlan.register_area.toolButton.ClickButton()
     //wati show coordinate
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     //hide zoom view
     indelPlan.register_area.checkBox_3.setChecked(false)
     const position = coordinate.getNearMiddleCoordinate()

@@ -198,7 +198,7 @@ const importPatient = (indelPlan, pv, patientID, path, isCancel = false) => {
     const dlgip = indelPlan.patient_dlgSelectImportPath
     //resolve overlap window of history blocks choose button
     Win32API.ShowWindowAsync(dlgip.Handle, Win32API.SW_MAXIMIZE)
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     dlgip.Edit.Keys(path)
     LLPlayer.MouseMove(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, globalConstant.obj.delayMouseHalfSecond)
     LLPlayer.MouseDown(MK_LBUTTON, Sys.Desktop.Width / 2, Sys.Desktop.Height / 2,globalConstant.obj.delayMouseZeroSecond)

@@ -23,7 +23,7 @@ function testcase() {
     study.loadStudy(indelPlan, Project.Variables.study_image_id, "MR")
     common.moveMouse(1400, 395, 500)
     LLPlayer.MouseWheel(120 * 50, 1000)
-    Regions.YANGDAZHONG_MR78_loaded_adjust_WWWL_rotate_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
+    Regions.YANGDAZHONG_MR78_image_loaded_adjust_WWWL_rotate_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

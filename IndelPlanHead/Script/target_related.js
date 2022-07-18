@@ -66,14 +66,14 @@ const drawTriangleNearMiddle = indelPlan => {
   const canvas = indelPlan.ContourGUI.canvas.C2DViewer
   canvas.DblClick(data[0][0], data[0][1])
   canvas.DblClick(data[0][0], data[0][1])
-  utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayOneSecond)
   canvas.DblClick(data[1][0], data[1][1])
-  utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayOneSecond)
   canvas.DblClick(data[2][0], data[2][1])
-  utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayOneSecond)
   canvas.DblClick(data[0][0], data[0][1])
   canvas.DblClick(data[0][0], data[0][1])
-  utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+  utilsFunctions.delay(globalConstant.obj.delayOneSecond)
   canvas.ClickR()
   /*
   LLPlayer.MouseDown(MK_LBUTTON, data.p1.x, data.p1.y, data.p1.delay)

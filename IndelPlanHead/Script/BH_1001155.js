@@ -39,7 +39,7 @@ function testcase() {
       const afterUpY = plan.pointOperate(indelPlan, "tar", 1, {attr: "Y", method: 'set', type: 'up', val: 50})
       const afterUpZ = plan.pointOperate(indelPlan, "tar", 1, {attr: "Z", method: 'set', type: 'up', val: 1})
     
-      if (strictEqual(Number((beforeX + 5).toFixed(2)), afterUpX) && strictEqual(Number((beforeY + 5).toFixed(2)), afterUpY) && strictEqual(Number((beforeZ + 0.1).toFixed(2)), afterUpZ) && common.comparedPicture(Regions.YANGDAZHONG_MR78_moveXY_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
+      if (strictEqual(Number((beforeX + 5).toFixed(2)), afterUpX) && strictEqual(Number((beforeY + 5).toFixed(2)), afterUpY) && strictEqual(Number((beforeZ + 0.1).toFixed(2)), afterUpZ) && common.comparedPicture(Regions.YANGDAZHONG_MR78_plan_moveXY_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
         Log.Checkpoint(`up point XYZ successfully!`)
       } else {
         Log.Error(`up point XYZ fail!`)

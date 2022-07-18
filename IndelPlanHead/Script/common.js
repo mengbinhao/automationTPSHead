@@ -228,7 +228,7 @@ const captureImage = (indelPlan, imgName) => {
     const dlg = indelPlan.common_capture_image
     //resolve overlap window of history blocks choose button
     Win32API.ShowWindowAsync(dlg.Handle, Win32API.SW_MAXIMIZE)
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     dlg.DUIViewWndClassName.DirectUIHWND.FloatNotifySink.ComboBox.Edit.Keys(imgName)
     LLPlayer.MouseMove(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, globalConstant.obj.delayMouseHalfSecond)
     LLPlayer.KeyDown(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)

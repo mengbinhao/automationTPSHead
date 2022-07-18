@@ -23,16 +23,16 @@ function testcase() {
 
     const originState = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_2.toolButton_4.down
     indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_2.toolButton_4.ClickButton()
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     const originStateAfterPressed = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_2.toolButton_4.down
     LLPlayer.MouseMove(934, 562, 500)
     LLPlayer.MouseDown(MK_RBUTTON, 934, 562, 500)
     LLPlayer.MouseUp(MK_RBUTTON, 934, 562, 500)
     LLPlayer.MouseMove(972, 688, 500)
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     LLPlayer.MouseDown(MK_LBUTTON, 972, 688, 500)
     LLPlayer.MouseUp(MK_LBUTTON, 972, 688, 500)
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     const exitInteract = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_2.toolButton_4.down
 
     if (originState === exitInteract && originState === !originStateAfterPressed) {

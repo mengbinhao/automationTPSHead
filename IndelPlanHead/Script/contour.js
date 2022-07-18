@@ -92,7 +92,7 @@ const increaseMouseAperture = (indelPlan, val) => {
 const __comparedPicture = (indelPlan) => {
   if (strictEqual(targetPic, null)) {
     targetPic = Utils.Picture
-    targetPic.LoadFromFile(`${Project.Path}\\Stores\\Regions\\YANGDAZHONG_MR78_target.png`)
+    targetPic.LoadFromFile(`${Project.Path}\\Stores\\Regions\\YANGDAZHONG_MR78_contour_target_png.png`)
   }
   const actualPic = indelPlan.ContourGUI.canvas.C2DViewer.Picture()
   //Compare

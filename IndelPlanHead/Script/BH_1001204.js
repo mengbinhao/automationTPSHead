@@ -27,7 +27,7 @@ function testcase() {
     LLPlayer.MouseDown(MK_LBUTTON, 1867, 450, 500)
     LLPlayer.MouseMove(1867, 500, 500)
     LLPlayer.MouseUp(MK_LBUTTON, 1867, 500, 500)
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     //set W
     LLPlayer.MouseDown(MK_LBUTTON, 1867, 654, 500)
     LLPlayer.MouseMove(1867, 704, 500)

@@ -23,7 +23,7 @@ function testcase() {
     contour.loadAndContourSKINActivity(indelPlan)
     contour.loadAndContourTargetAreaByBrushActivity(indelPlan, 'tar')
 
-    Regions.YANGDAZHONG_MR78_target_png.Check(indelPlan.ContourGUI.canvas.C2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
+    Regions.YANGDAZHONG_MR78_contour_target_png.Check(indelPlan.ContourGUI.canvas.C2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   } else {
     Log.Error(`Execute fail due to register study!`)
   }

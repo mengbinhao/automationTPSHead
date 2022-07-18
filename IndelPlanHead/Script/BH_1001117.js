@@ -1,4 +1,5 @@
 ﻿const globalConstant = require("global_constant")
+const utilsFunctions = require("utils_functions")
 const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
@@ -21,10 +22,13 @@ function testcase() {
     contour.gotoContourWindow(indelPlan)
     contour.loadAndContourSKINActivity(indelPlan)
     indelPlan.ContourGUI.groupBox_5.BrushTool.ClickButton()
-    contour.increaseMouseAperture(indelPlan, globalConstant.obj.mousePositiveScroll)
-    indelPlan.ContourGUI.canvas.C2DViewer.Drag(400, 180, 50, -50, 500)
-    indelPlan.ContourGUI.canvas.C2DViewer.HoverMouse()
-
+    //contour.increaseMouseAperture(indelPlan, globalConstant.obj.mousePositiveScroll)
+    let i = 0
+    while (i < 20) {
+      indelPlan.ContourGUI.canvas.C2DViewer.Drag(355, 210, 30, -30, globalConstant.obj.delayMouseZeroSecond)
+      utilsFunctions.delay(globalConstant.obj.delayMouseHalfSecond)
+      i++
+    }
     Regions.YANGDAZHONG_MR78_contour_skin_adjust_png.Check(indelPlan.ContourGUI.canvas.C2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   } else {
     Log.Error(`Execute fail due to register study!`)

@@ -29,7 +29,7 @@ function testcase() {
     //erase mouse circle
     indelPlan.ContourGUI.groupBox_5.pbManualSketch.ClickButton()
     common.moveMouse(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, 500)
-    utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
+    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     common.moveMouse(220, 800, 500)
     utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
     

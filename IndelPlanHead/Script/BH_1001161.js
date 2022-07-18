@@ -33,7 +33,7 @@ function testcase() {
 
       const afterUpW = plan.pointOperate(indelPlan, "tar", 1, {attr: "C", method: 'set', type: 'up', val: 1})
 
-      if (strictEqual("Φ8", afterUpW) && common.comparedPicture(Regions.YANGDAZHONG_MR78_fai8_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
+      if (strictEqual("Φ8", afterUpW) && common.comparedPicture(Regions.YANGDAZHONG_MR78_plan_fai8_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
         Log.Checkpoint(`Change point C successfully!`)
       } else {
         Log.Error(`Change point C fail!`)

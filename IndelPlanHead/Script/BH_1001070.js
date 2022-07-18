@@ -22,7 +22,7 @@ function testcase() {
     study.gotoRegisterImporter(indelPlan)
     study.loadStudy(indelPlan, Project.Variables.study_image_id, "MR")
     indelPlan.register_importer.groupBox_5.ColorMapTarget.Drag(50, 10, 200, 0)
-    Regions.YANGDAZHONG_MR78_loaded_adjust_WWWL_drag_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
+    Regions.YANGDAZHONG_MR78_image_loaded_adjust_WWWL_drag_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

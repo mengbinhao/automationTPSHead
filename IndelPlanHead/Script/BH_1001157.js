@@ -34,8 +34,8 @@ function testcase() {
       plan.movePointOutBound(indelPlan, "tar", 1, false)
       //in case mouse position tooltip
       common.moveMouse(220, 800, 500)
-      utilsFunctions.delay(globalConstant.obj.delayOneSeconds)
-      Regions.YANGDAZHONG_MR78_moveoutbound_point_notkeep_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, 130)
+      utilsFunctions.delay(globalConstant.obj.delayOneSecond)
+         Regions.YANGDAZHONG_MR78_plan_moveoutbound_point_notkeep_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, 130)
     } else {
       Log.Error(`Execute fail due to contour fail!`)
     }

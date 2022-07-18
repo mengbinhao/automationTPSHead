@@ -1,7 +1,7 @@
 ﻿const obj = {}
 
 //common
-obj.delayOneSeconds = 1000
+obj.delayOneSecond = 1000
 obj.delayFiveSeconds = 5000
 obj.delayTenSeconds = 10000
 obj.delayThirtySeconds = 30000

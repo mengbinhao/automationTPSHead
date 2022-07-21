@@ -45,15 +45,15 @@ function testcase() {
       const exitInteract = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.down
 
       if (originState === exitInteract && originState === !originStateAfterPressed) {
-        Log.Checkpoint("BH_10012016 execute successfully!")
+        Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
       } else {
-        Log.Error("BH_10012016 execute fail!")
+        Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
       }
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     } 
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

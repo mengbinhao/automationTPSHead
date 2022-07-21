@@ -36,9 +36,9 @@ function testcase() {
     const exitInteract = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_2.toolButton_4.down
 
     if (originState === exitInteract && originState === !originStateAfterPressed) {
-      Log.Checkpoint("BH_10012030 execute successfully!")
+      Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
     } else {
-      Log.Error("BH_10012030 execute fail!")
+      Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
     }
   } else {
      Log.Error(`Add ContourLib fail due to register study!`)

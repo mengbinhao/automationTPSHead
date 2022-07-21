@@ -10,7 +10,6 @@ const plan = require("plan")
 
 
 function testcase() {
-  
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
  
@@ -36,16 +35,16 @@ function testcase() {
       plan.setFraction(indelPlan, 3)
     
       if (strictEqual(indelPlan.plan_dlgfraction.tableFraction.wRowCount, 4)) {
-        Log.Checkpoint(`setFraction successfully!`)
+        Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
         indelPlan.plan_dlgfraction.Close()
       } else {
-        Log.Error(`setFraction fail!`)
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
       }
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

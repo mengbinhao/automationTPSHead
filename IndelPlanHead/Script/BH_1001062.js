@@ -23,9 +23,9 @@ function testcase() {
     } else {
       study.deleteAllStudy(indelPlan, pv, true)
       if (indelPlan.register_importer.treeWidget.wItems.Count === 0) {
-        Log.Checkpoint(`Delete all study successfully!`)
+        Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
       } else {
-        Log.Error(`Delete all study fail!`)
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
       }
     }
   }

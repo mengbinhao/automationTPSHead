@@ -15,7 +15,7 @@ function testcase() {
       indelPlan.patient_delete_nochoice_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
       Log.Checkpoint("Delete patient should select first!")
     } else {
-      Log.Error("BH_1001199 execute fail!")
+      Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
     }
   }
   exitwithlogic.exitWithLogic(false, false, 1)

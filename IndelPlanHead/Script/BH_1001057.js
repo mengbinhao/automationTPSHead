@@ -40,9 +40,9 @@ function testcase() {
     }
 
     if (study.isStudyExist(indelPlan)) {
-      Log.Checkpoint("Import study successfully!")
+      Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
     } else {
-      Log.Error("Import study fail!")
+      Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
     }
   }
 

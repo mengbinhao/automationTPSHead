@@ -48,12 +48,12 @@ function testcase() {
     if (!indelPlan.contour_logic_error_popup.Exists) {
       const target = planList.wItems.count
       if (origin + 1=== target) {
-        Log.Checkpoint(`Logic Operate Contour successfully!`)
+        Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
       } else {
-        Log.Error(`Logic Operate Contour fail!`)
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
       }
     } else {
-      Log.Error(`Logic Operate Contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
       indelPlan.contour_logic_error_popup.qt_msgbox_buttonbox.buttonOk.ClickButton()
     }
     logicWindow.Close()

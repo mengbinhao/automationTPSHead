@@ -180,6 +180,9 @@ const init = () => {
   //plan report
   indelPlan.plan_report = mappingName.plan_report
   
+  //plan DoseLineCfg
+  indelPlan.plan_DlgdoselineClass = mappingName.plan_DlgdoselineClass
+  
     
   //User Management
   indelPlan.user_management = mappingName.user_management

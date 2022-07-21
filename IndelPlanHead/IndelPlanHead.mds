@@ -319,7 +319,7 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="contoursketch" key="{1480A6B9-7F71-4AD9-8FB9-7196C450F23B}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="添加轮廓库" key="{9A93D78B-F6B1-4A68-B17B-E44F79C28243}" group="False" enabled="True" testMoniker="{FA16B7B7-2E6F-472C-B6F5-D9CE3D779CDE}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -452,78 +452,122 @@
 					</testItem>
 				</children>
 			</testItem>
-			<testItem name="plandesign" key="{F68500BC-D9D7-4877-AB66-8FE045DBC623}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="plandesign" key="{F68500BC-D9D7-4877-AB66-8FE045DBC623}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
-					<testItem name="点击计划设计按钮进入计划设计模块" key="{7F47E932-B3CD-4736-BAE0-B6E3ABF26315}" group="False" enabled="False" testMoniker="{ED74ABAC-D4CD-4355-AB38-46DB67DB2ED0}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="点击计划设计按钮进入计划设计模块" key="{7F47E932-B3CD-4736-BAE0-B6E3ABF26315}" group="False" enabled="True" testMoniker="{ED74ABAC-D4CD-4355-AB38-46DB67DB2ED0}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="双击计划进入计划设计模块" key="{33F73945-5876-453F-9D7C-DC95D1625D10}" group="False" enabled="False" testMoniker="{3E0B1A3E-93BF-4C45-9931-B9C0B123FD6B}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="双击计划进入计划设计模块" key="{33F73945-5876-453F-9D7C-DC95D1625D10}" group="False" enabled="True" testMoniker="{3E0B1A3E-93BF-4C45-9931-B9C0B123FD6B}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="添加靶点" key="{13311A88-D7AE-4DB4-9782-72A92D1715BB}" group="False" enabled="False" testMoniker="{9A714F52-5233-4CA4-B78E-3B01B3A699D6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="添加靶点" key="{13311A88-D7AE-4DB4-9782-72A92D1715BB}" group="False" enabled="True" testMoniker="{9A714F52-5233-4CA4-B78E-3B01B3A699D6}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="在靶区以外放置靶点" key="{63FFD990-8466-44B4-8069-7D56A1ECC6B0}" group="False" enabled="False" testMoniker="{BB03B30F-BCDD-4496-BC64-838B030C1DA4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="靶点选中显示红色&#13;&#10;" key="{53D47A67-277F-43B8-9D6D-CDF9A8E91285}" group="False" enabled="True" testMoniker="{EF3F2118-91B4-45EE-BA52-4965D5F7C1B9}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="鼠标右键删除靶点" key="{69EC7A0C-E0E7-4901-B3B4-A7BF12370213}" group="False" enabled="False" testMoniker="{0B397837-865D-48BB-84DA-74AB5E574873}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="在靶区以外放置靶点" key="{63FFD990-8466-44B4-8069-7D56A1ECC6B0}" group="False" enabled="True" testMoniker="{BB03B30F-BCDD-4496-BC64-838B030C1DA4}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="Delete按钮删除靶点" key="{A8B21727-3341-4ED1-9E2A-B96ED2A5AC39}" group="False" enabled="False" testMoniker="{14ADE538-283B-4559-BBDD-0B435E396E42}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="鼠标右键删除靶点" key="{69EC7A0C-E0E7-4901-B3B4-A7BF12370213}" group="False" enabled="True" testMoniker="{0B397837-865D-48BB-84DA-74AB5E574873}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="控件交互方式移动靶点&#13;&#10;" key="{2A686B26-C103-41FC-AA9A-10663A3BEFA2}" group="False" enabled="False" testMoniker="{2195CCCB-E1ED-4768-BD8F-6489350F5B68}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="Delete按钮删除靶点" key="{A8B21727-3341-4ED1-9E2A-B96ED2A5AC39}" group="False" enabled="True" testMoniker="{14ADE538-283B-4559-BBDD-0B435E396E42}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="靶点超出靶区范围点击Yes" key="{592FEAF8-E784-4FE3-A2C5-E46B9FD53744}" group="False" enabled="False" testMoniker="{9FBDD7F0-5F18-4F76-8237-E9D47CF26689}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="选中单个靶区内的部分靶点" key="{A554AC72-9818-4B1F-84CD-2544131AAA3F}" group="False" enabled="True" testMoniker="{3D8D24E8-2008-44F0-BBAB-245850536362}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="靶点超出靶区范围点击No" key="{CE666473-283C-42A6-A229-7B6FDC97A331}" group="False" enabled="False" testMoniker="{1B1DA311-DC53-4B6C-8E4C-BFBD3F617779}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="选中单个靶点" key="{A97117BC-2B9F-40A3-8AD4-A284C4221CA6}" group="False" enabled="True" testMoniker="{4BDDD80D-B422-49ED-A5CA-AD512BCB93F3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="调整靶点权重" key="{85FD1A19-BE3B-424E-9AEA-CC00C95F5078}" group="False" enabled="False" testMoniker="{CE48C15B-32E7-4BE9-92EC-EB8B800758F3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="选中单个靶区内的所有靶点&#13;&#10;" key="{DB1A9F7B-5BC4-4F51-ACB4-BEAD1E45D7BF}" group="False" enabled="True" testMoniker="{03544286-0C02-480E-AE43-87979C338D1D}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="设置准直器类型" key="{C6FBE491-2BA1-4AC4-8E6C-8A8753F7A99F}" group="False" enabled="False" testMoniker="{CF12210D-3C9A-41DD-A4A7-4D4E77A24A10}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="控件交互方式移动靶点&#13;&#10;" key="{2A686B26-C103-41FC-AA9A-10663A3BEFA2}" group="False" enabled="True" testMoniker="{2195CCCB-E1ED-4768-BD8F-6489350F5B68}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="调整伽玛角" key="{8792B9B5-C363-4BE6-81E9-2713B411DB28}" group="False" enabled="False" testMoniker="{0C28D734-EBDD-4FFF-B5DD-8A860D4763C5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="靶点超出靶区范围点击Yes" key="{592FEAF8-E784-4FE3-A2C5-E46B9FD53744}" group="False" enabled="True" testMoniker="{9FBDD7F0-5F18-4F76-8237-E9D47CF26689}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="计量计算" key="{4199D0FE-3698-4B3B-9B52-958CD1A0F793}" group="False" enabled="False" testMoniker="{81B6920D-A6A4-4D8D-9AE7-338DF2A59C52}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="靶点超出靶区范围点击No" key="{CE666473-283C-42A6-A229-7B6FDC97A331}" group="False" enabled="True" testMoniker="{1B1DA311-DC53-4B6C-8E4C-BFBD3F617779}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="选择Fine进行剂量计算" key="{4400CB20-3041-4CEC-A8EF-1CF22CCE61EE}" group="False" enabled="False" testMoniker="{C12107EC-F470-46D6-837B-6A9E8034B6A5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="调整靶点权重" key="{85FD1A19-BE3B-424E-9AEA-CC00C95F5078}" group="False" enabled="True" testMoniker="{CE48C15B-32E7-4BE9-92EC-EB8B800758F3}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="显示DVH" key="{455BF2A3-41B7-417A-9306-A0C2E878A717}" group="False" enabled="False" testMoniker="{C98C3994-270E-4921-8B82-BE75F11D34E5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="设置准直器类型" key="{C6FBE491-2BA1-4AC4-8E6C-8A8753F7A99F}" group="False" enabled="True" testMoniker="{CF12210D-3C9A-41DD-A4A7-4D4E77A24A10}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="设定分次&#13;&#10;" key="{A888ACD0-E89B-440B-8A35-FA2925DC7605}" group="False" enabled="False" testMoniker="{E4055183-7F83-404C-8CB2-EAE45826FA22}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="调整伽玛角" key="{8792B9B5-C363-4BE6-81E9-2713B411DB28}" group="False" enabled="True" testMoniker="{0C28D734-EBDD-4FFF-B5DD-8A860D4763C5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="计划报告输出" key="{FE40F646-0390-4EFF-9282-C41BCBCDF5C4}" group="False" enabled="False" testMoniker="{F034C1E1-0574-42EE-89FA-CAEC23501250}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="撤销" key="{155FC4CD-34F3-4220-AC94-82871A8965DA}" group="False" enabled="True" testMoniker="{E6B4BB63-0058-4600-A5F4-1A8D1BC572BC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>
-					<testItem name="图像快照功能验证" key="{3183BDED-45B6-4980-9AF7-B662BE13F736}" group="False" enabled="False" testMoniker="{6F9008DF-EDEA-4110-8FD4-C3A9460C0737}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+					<testItem name="3D视图" key="{918011BE-E014-40D8-B01D-1E9EEE94D135}" group="False" enabled="True" testMoniker="{E1B52992-D2CA-4C5D-AD3A-D810CC7BDFFC}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="计量计算" key="{4199D0FE-3698-4B3B-9B52-958CD1A0F793}" group="False" enabled="True" testMoniker="{81B6920D-A6A4-4D8D-9AE7-338DF2A59C52}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="选择Fine进行剂量计算" key="{4400CB20-3041-4CEC-A8EF-1CF22CCE61EE}" group="False" enabled="True" testMoniker="{C12107EC-F470-46D6-837B-6A9E8034B6A5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="显示等剂量线" key="{1B60BD50-0B2E-4716-A709-155868AC5AE6}" group="False" enabled="True" testMoniker="{FA4E9FAA-688B-46B8-AB9D-3C9003FC1810}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="显示DVH" key="{455BF2A3-41B7-417A-9306-A0C2E878A717}" group="False" enabled="True" testMoniker="{C98C3994-270E-4921-8B82-BE75F11D34E5}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="剂量伪彩显示" key="{BE59FA6A-2220-4B7B-8B2D-5296B17B36EC}" group="False" enabled="True" testMoniker="{F9FCFFCF-505E-470E-855F-8412A982AD87}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="剖面剂量显示" key="{9C618502-C984-4179-855F-6C16F01191AD}" group="False" enabled="True" testMoniker="{02898943-BFF2-45AE-888A-53A09A88248C}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="设定处方剂量" key="{A80C07A0-2770-4304-993B-2DDD7519712A}" group="False" enabled="True" testMoniker="{E73AD4B6-5F29-4517-AE15-CCF796745A61}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="设定分次&#13;&#10;" key="{A888ACD0-E89B-440B-8A35-FA2925DC7605}" group="False" enabled="True" testMoniker="{E4055183-7F83-404C-8CB2-EAE45826FA22}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="DRR生成&#13;&#10;" key="{970BB3E0-FD49-4BFC-878B-076DE48B74DA}" group="False" enabled="True" testMoniker="{790DA207-1A3A-4E44-A16C-6F60EABD3140}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="计划报告输出" key="{FE40F646-0390-4EFF-9282-C41BCBCDF5C4}" group="False" enabled="True" testMoniker="{F034C1E1-0574-42EE-89FA-CAEC23501250}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="图像快照功能验证" key="{3183BDED-45B6-4980-9AF7-B662BE13F736}" group="False" enabled="True" testMoniker="{6F9008DF-EDEA-4110-8FD4-C3A9460C0737}testcase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children />
 					</testItem>

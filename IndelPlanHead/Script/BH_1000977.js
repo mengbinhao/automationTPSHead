@@ -19,9 +19,9 @@ function testcase() {
 
   const isExisting = findInList.isItemExitInList(Project.Variables.new_username, globalConstant.obj.userNameColumn, indelPlan.user_management.UserList)
   if (isExisting) {
-    Log.Checkpoint("Cancel Delete user Successfully!")
+    Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
   } else {
-    Log.Error("Cancel Delete user Fail!")
+    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
   }
   
   user.exitUserListWindow(indelPlan)

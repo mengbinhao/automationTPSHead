@@ -10,8 +10,7 @@ const common = require("common")
 const plan = require("plan")
 
 
-function testcase() {
-  
+function testcase() { 
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
  
@@ -42,19 +41,19 @@ function testcase() {
         utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
         const afterRedo = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
-        if (strictEqual(before, afterUndo) && strictEqual(before + 1, after) && strictEqual(afterRedo, after) && common.comparedPicture(Regions.YANGDAZHONG_MR78_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
-          Log.Checkpoint(`Redo successfully!`)
+        if (strictEqual(before, afterUndo) && strictEqual(before + 1, after) && strictEqual(afterRedo, after) && common.comparedPicture(Regions.YANGDAZHONG_MR78_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)) {
+          Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
         } else {
-          Log.Error(`Redo fail!`)
+          Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
         }
       } else {
-        Log.Error(`Execute fail due to window is not right!`)
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to window is not right!`)
       }
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

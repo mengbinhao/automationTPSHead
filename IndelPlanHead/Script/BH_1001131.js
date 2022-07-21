@@ -27,9 +27,9 @@ function testcase() {
     const after = indelPlan.ContourGUI.groupBox_6.PlanLib.wItems.Count
 
     if (strictEqual(before + 1, after)) {
-      Log.Checkpoint(`Create as Contour Scale successfully!`)
+      Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
     } else {
-      Log.Error(`Create as Contour Scale fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
     }
   } else {
     Log.Error(`Create as Contour Scale fail due to register study!`)

@@ -27,9 +27,9 @@ const __addPoint = position => {
   LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
 }
 
-const addOnePointNearMiddle = indelPlan => {
-  const position = coordinate.getNearMiddleCoordinate()
-  const gamaAngle = indelPlan.CPlanInforPanel.groupBox_2.GamaAngle
+const addOnePointNearMiddle = (indelPlan, deltaX = 0, deltaY = 0) => {
+  const position = coordinate.getNearMiddleCoordinate(deltaX, deltaY)
+  //const gamaAngle = indelPlan.CPlanInforPanel.groupBox_2.GamaAngle
   //do {
      __addPoint(position)
   //} while (!gamaAngle.Enabled)

@@ -10,7 +10,6 @@ const plan = require("plan")
 
 
 function testcase() {
-  
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
  
@@ -32,12 +31,12 @@ function testcase() {
       plan.setupPoint(indelPlan, "tar")
       plan.calculateDose(indelPlan, true)
       plan.zoomImage(indelPlan, -50)
-      Regions.YANGDAZHONG_MR78_plan_gross_point_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, 130)
+      Regions.YANGDAZHONG_MR78_plan_gross_point_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

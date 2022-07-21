@@ -46,9 +46,9 @@ function testcase() {
     indelPlan.patient_importer.pushButton_Cancel.ClickButton()
 
     if (__isImportPatientExist(indelPlan)) {
-      Log.Checkpoint("Import patient successfully!")
+      Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
     } else {
-      Log.Error("Import patient fail!")
+      Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
     }
   }
 

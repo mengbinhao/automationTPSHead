@@ -14,7 +14,6 @@ const comparedPictureWithoutPoint = (indelPlan) => {
 }
 
 function testcase() {
-  
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
  
@@ -42,19 +41,19 @@ function testcase() {
         plan.deletePoint(indelPlan, "tar", 1)
         const afterDelete = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
-        if (strictEqual(before + 1, afterAdd) && strictEqual(before, afterDelete) && common.comparedPicture(Regions.YANGDAZHONG_MR78_without_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
-          Log.Checkpoint(`deletePoint by mouse successfully!`)
+        if (strictEqual(before + 1, afterAdd) && strictEqual(before, afterDelete) && common.comparedPicture(Regions.YANGDAZHONG_MR78_without_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)) {
+          Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
         } else {
-          Log.Error(`deletePoint by mouse fail!`)
+          Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
         }
       } else {
-        Log.Error(`Execute fail due to window is not right!`)
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to window is not right!`)
       }
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

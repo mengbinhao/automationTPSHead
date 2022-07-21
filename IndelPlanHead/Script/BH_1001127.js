@@ -40,9 +40,9 @@ function testcase() {
       indelPlan.ContourGUI.groupBox_5.Copyto.ClickButton()
       const target = list.wItems.item(1).Text(globalConstant.obj.nameColumn)
       if ("Copy_From_" + origin === target) {
-        Log.Checkpoint(`Copy as Contour successfully!`)
+        Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
       } else {
-        Log.Error(`Copy as Contour fail!`)
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
       }
     }
   } else {

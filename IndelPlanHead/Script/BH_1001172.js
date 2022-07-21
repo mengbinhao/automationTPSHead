@@ -10,7 +10,6 @@ const plan = require("plan")
 
 
 function testcase() {
-  
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
  
@@ -35,16 +34,16 @@ function testcase() {
       plan.showDVH(indelPlan)
     
       if (indelPlan.plan_eva.VisibleOnScreen) {
-        Log.Checkpoint(`Display DVH successfully!`)
+        Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
         indelPlan.plan_eva.Close()
       } else {
-        Log.Error(`Display DVH fail!`)
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
       }
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

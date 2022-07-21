@@ -17,9 +17,9 @@ function testcase() {
 
   const isUserExisting = findInList.isItemExitInList(Project.Variables.new_username, globalConstant.obj.userNameColumn, indelPlan.user_management.UserList)
   if (isUserExisting) {
-    Log.Checkpoint("Add user successfully!")
+    Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
   } else {
-    Log.Error("Add user fail!")
+    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
   }
 
   user.exitUserListWindow(indelPlan)

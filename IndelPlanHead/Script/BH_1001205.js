@@ -21,9 +21,9 @@ function testcase() {
     contour.gotoContourWindow(indelPlan)
     common.setWWAndWL(indelPlan, 'contour', 1200, 300)
     if ('1200' === indelPlan.ContourGUI.SetWW.wText && '300' === indelPlan.ContourGUI.SetWL.wText) {
-      Log.Checkpoint("Set W&L successfully in Contour window!")
+      Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
     } else {
-      Log.Error("BH_1001205 execute fail!")
+      Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
     }
   } else {
      Log.Error(`Add ContourLib fail due to register study!`)

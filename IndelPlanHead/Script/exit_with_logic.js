@@ -28,7 +28,7 @@ const exitWithLogic = (isPatientSavePopup = false, isCurrentPlanFinishedPopup = 
   } else {
     if (indelPlan.login.Visible) indelPlan.login.Close()
   }
-  //have to delay for restarting normally
+  //has to delay for restarting normally
   utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
 }
 

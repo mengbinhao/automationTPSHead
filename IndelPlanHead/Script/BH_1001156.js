@@ -11,7 +11,6 @@ const utilsFunctions = require("utils_functions")
 
 
 function testcase() {
-  
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
  
@@ -35,12 +34,12 @@ function testcase() {
       //in case mouse position tooltip
       common.moveMouse(220, 800, 500)
       utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-      Regions.YANGDAZHONG_MR78_plan_moveoutbound_point_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, 130)
+      Regions.YANGDAZHONG_MR78_plan_moveoutbound_point_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

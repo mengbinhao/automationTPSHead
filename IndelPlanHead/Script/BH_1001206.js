@@ -44,15 +44,15 @@ function testcase() {
       LLPlayer.MouseUp(MK_LBUTTON, 1855, 704, 500)
 
       if (originW !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && originL !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
-        Log.Checkpoint("Drag W&L successfully in Planwindow!")
+        Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
       } else {
-        Log.Error("BH_1001206 execute fail!")
+        Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
       }
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     } 
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

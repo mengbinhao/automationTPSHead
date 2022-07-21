@@ -24,9 +24,9 @@ function testcase() {
     const after = indelPlan.PatientData.groupBox.treeWidget_StudyList.wItems.Count
 
     if (strictEqual(before + 1, after)) {
-      Log.Checkpoint(`Add Study successfully!`)
+      Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
     } else {
-      Log.Error(`Add Study fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
     }
   }
   exitwithlogic.exitWithLogic(false, false, 1)

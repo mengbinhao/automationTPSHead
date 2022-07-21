@@ -76,6 +76,39 @@
 		<child name="YANGDAZHONG_MR78_contour_skin_adjust_png" key="{4BCB462D-A9EA-4954-B50B-CBE26B9BE768}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
 			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_contour_skin_adjust_png" ID="{4BCB462D-A9EA-4954-B50B-CBE26B9BE768}" FileName="Regions\YANGDAZHONG_MR78_contour_skin_adjust.png" Update="False" />
 		</child>
+		<child name="YANGDAZHONG_MR78_plan_not_choose_point_png" key="{BD3E8E05-655A-4E88-A3B5-B6E263C0F6A0}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_not_choose_point_png" ID="{BD3E8E05-655A-4E88-A3B5-B6E263C0F6A0}" FileName="Regions\YANGDAZHONG_MR78_plan_not_choose_point.png" Update="False" />
+		</child>
+		<child name="YANGDAZHONG_MR78_plan_choose_point_png" key="{E5E6BDD5-2BF3-454F-8593-966496C8C4ED}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_choose_point_png" ID="{E5E6BDD5-2BF3-454F-8593-966496C8C4ED}" FileName="Regions\YANGDAZHONG_MR78_plan_choose_point.png" Update="False" />
+		</child>
+		<child name="YANGDAZHONG_MR78_plan_choice_range_point_png" key="{6F7808AE-6EA9-457E-AF5A-CE6807E41121}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_choice_range_point_png" ID="{6F7808AE-6EA9-457E-AF5A-CE6807E41121}" FileName="Regions\YANGDAZHONG_MR78_plan_choice_range_point.png" Update="False" />
+		</child>
+		<child name="YANGDAZHONG_MR78_plan_not_choice_one_point_png" key="{32643AD3-AF84-4681-9D29-601F50C1C13E}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_not_choice_one_point_png" ID="{32643AD3-AF84-4681-9D29-601F50C1C13E}" FileName="Regions\YANGDAZHONG_MR78_plan_not_choice_one_point.png" Update="False" />
+		</child>
+		<child name="YANGDAZHONG_MR78_plan_choice_one_point_png" key="{BB5DE660-0E1E-40E4-AA84-359EEEBD658B}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_choice_one_point_png" ID="{BB5DE660-0E1E-40E4-AA84-359EEEBD658B}" FileName="Regions\YANGDAZHONG_MR78_plan_choice_one_point.png" Update="False" />
+		</child>
+		<child name="YANGDAZHONG_MR78_plan_choice_all_point_png" key="{DC31ABCC-7777-4721-B4DB-A9187E5C1D63}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_choice_all_point_png" ID="{DC31ABCC-7777-4721-B4DB-A9187E5C1D63}" FileName="Regions\YANGDAZHONG_MR78_plan_choice_all_point.png" Update="False" />
+		</child>
+		<child name="YANGDAZHONG_MR78_plan_3d_view_png" key="{75216F80-4167-415D-85E4-34E6E17DE460}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_3d_view_png" ID="{75216F80-4167-415D-85E4-34E6E17DE460}" FileName="Regions\YANGDAZHONG_MR78_plan_3d_view.png" Update="False" />
+		</child>
+		<child name="YANGDAZHONG_MR78_plan_Dose_Line_Cfg_png" key="{FD1680A0-66F6-4B8B-AC62-3887D32BDECF}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_Dose_Line_Cfg_png" ID="{FD1680A0-66F6-4B8B-AC62-3887D32BDECF}" FileName="Regions\YANGDAZHONG_MR78_plan_Dose_Line_Cfg.png" Update="False" />
+		</child>
+		<child name="YANGDAZHONG_MR78_plan_gray_type_png" key="{B216EFE3-E68E-40EE-81E7-D88007DDE73D}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_gray_type_png" ID="{B216EFE3-E68E-40EE-81E7-D88007DDE73D}" FileName="Regions\YANGDAZHONG_MR78_plan_gray_type.png" Update="False" />
+		</child>
+		<child name="YANGDAZHONG_MR78_plan_poumian_dose_png" key="{255FA81D-B5C1-41E0-9E51-DFB6646C2C86}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_poumian_dose_png" ID="{255FA81D-B5C1-41E0-9E51-DFB6646C2C86}" FileName="Regions\YANGDAZHONG_MR78_plan_poumian_dose.png" Update="False" />
+		</child>
+		<child name="YANGDAZHONG_MR78_plan_drr_png" key="{7C0D8A8D-B799-4F72-90A1-DCA30E33D4A9}" type="Region" typeId="{1FD256C1-604C-48A1-9990-9A9329139EC4}" pluginName="Stores">
+			<data signature="{1FD256C1-604C-48A1-9990-9A9329139EC4}" version="12.0" caption="YANGDAZHONG_MR78_plan_drr_png" ID="{7C0D8A8D-B799-4F72-90A1-DCA30E33D4A9}" FileName="Regions\YANGDAZHONG_MR78_plan_drr.png" Update="False" />
+		</child>
 	</children>
 	<folders />
 </Root>

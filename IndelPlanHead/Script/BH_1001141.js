@@ -27,10 +27,10 @@ function testcase() {
       indelPlan.contour_new_contourItem.OperationCancel.ClickButton()
       Log.Checkpoint(`can not add ContourLib with same name = ${Project.Variables.contourlib_name}!`)
     } else {
-      Log.Error(`Execute fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(true, false, 1)
 }

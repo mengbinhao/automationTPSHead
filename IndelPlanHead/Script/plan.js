@@ -396,10 +396,10 @@ const closeConfirmWindow = indelPlan => {
   }
 }
 
-const setupPoint = (indelPlan, tarName) => {
+const setupPoint = (indelPlan, tarName, deltaX = 0, deltaY = 0) => {
   if (indelPlan.PlanGUI.Exists && indelPlan.PlanGUI.VisibleOnScreen) {
     if (!__changeTargetRegionTabs(indelPlan, tarName)) return
-    targetRelated.addOnePointNearMiddle(indelPlan)
+    targetRelated.addOnePointNearMiddle(indelPlan, deltaX, deltaY)
   } else {
     Log.Warning(`Can not setupPoint due to window is not right`) 
   }

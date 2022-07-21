@@ -30,12 +30,12 @@ function testcase() {
     plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", false)
     
     if (indelPlan.PatientData.VisibleOnScreen) {
-      Log.Checkpoint(`Goto PlanDesign successfully!`)
+      Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
     } else {
-      Log.Checkpoint(`Goto PlanDesign fail!`)
+      Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

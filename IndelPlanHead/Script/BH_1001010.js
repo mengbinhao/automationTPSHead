@@ -18,9 +18,9 @@ function testcase() {
   
   const cnt = indelPlan.patientManagement.treeWidget_PatientList.wItems.Count
   if (strictEqual(cnt, 0)) {
-    Log.Checkpoint("Filter empty condition successfully!")
+    Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
   } else {
-    Log.Error("Filter empty condition fail!")
+    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

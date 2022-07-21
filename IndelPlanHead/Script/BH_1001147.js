@@ -10,7 +10,6 @@ const plan = require("plan")
 
 
 function testcase() {
-  
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
  
@@ -37,18 +36,18 @@ function testcase() {
         const after = indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count
     
         if (strictEqual(before, after)) {
-          Log.Checkpoint(`setupOutBoundPoint Should not been executed successfully!`)
+          Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
         } else {
-          Log.Error(`setupOutBoundPoint fail!`)
+          Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
         }
       } else {
-        Log.Error(`Execute fail due to window is not right!`)
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to window is not right!`)
       }
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

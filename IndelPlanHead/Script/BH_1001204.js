@@ -34,9 +34,9 @@ function testcase() {
     LLPlayer.MouseUp(MK_LBUTTON, 1867, 704, 500)
 
     if (originW !== indelPlan.ContourGUI.SetWW.wText && originL !== indelPlan.ContourGUI.SetWL.wText) {
-      Log.Checkpoint("Drag W&L successfully in Contour window!")
+      Log.Checkpoint("DExecute ${Project.TestItems.Current.Name} successfully!")
     } else {
-      Log.Error("BH_1001204 execute fail!")
+      Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
     }
   } else {
      Log.Error(`Add ContourLib fail due to register study!`)

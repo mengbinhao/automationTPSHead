@@ -28,9 +28,9 @@ function testcase() {
     const isExist =  findInList.isItemExistInMoreList(Project.Variables.edit_contourlib_name, globalConstant.obj.nameColumn, indelPlan.ContourGUI.groupBox_4.ContourLib )
   
     if (isExist) {
-      Log.Checkpoint(`Edit Contourlib successfully!`)
+      Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
     } else {
-      Log.Error(`Edit Contourlib fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
     }
   } else {
     Log.Error(`Edit Contourlib fail due to register study!`)

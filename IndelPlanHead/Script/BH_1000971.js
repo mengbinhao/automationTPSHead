@@ -16,9 +16,9 @@ function testcase() {
   user.addUser(indelPlan, pv, Project.Variables.new_username, Project.Variables.new_user_password, Project.Variables.new_user_confirmpassword, Project.Variables.new_usertype, true)
   
   if (strictEqual(previousCount, indelPlan.user_management.UserList.wRowCount)) {
-    Log.Checkpoint('Cancel add new user successfully!')
+    Log.Checkpoint('Execute ${Project.TestItems.Current.Name} successfully!')
   } else {
-    Log.Error('Cancel add new user Fail!')
+    Log.Error('Execute ${Project.TestItems.Current.Name} fail!')
   }
 
   user.exitUserListWindow(indelPlan)

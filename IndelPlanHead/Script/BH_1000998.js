@@ -26,12 +26,12 @@ function testcase() {
     vals.pop()
     vals.push(indelPlan.patientManagement.groupBox_4.textEdit_Note.wText)
     if (!strictEqual(ret, vals.join(''))) {
-      Log.Error("Edit patient fail!")
+      Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
     } else {
-      Log.Checkpoint("Edit patient successfully!")
+      Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
     }
   } else {
-    Log.Error("Edit patient fail!")
+    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

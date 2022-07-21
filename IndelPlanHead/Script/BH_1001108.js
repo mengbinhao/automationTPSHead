@@ -25,9 +25,9 @@ function testcase() {
     const isExist =  findInList.isItemExistInMoreList("skin", globalConstant.obj.nameColumn, indelPlan.ContourGUI.groupBox_6.PlanLib )
   
     if (isExist) {
-      Log.Checkpoint(`Load SKIN to PlanLib successfully!`)
+      Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
     } else {
-      Log.Error(`Load SKIN to PlanLib fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
     }
   } else {
     Log.Error(`Load SKIN to PlanLib fail due to register study!`)

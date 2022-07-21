@@ -18,9 +18,9 @@ function testcase() {
 
   const currentCount = indelPlan.patientManagement.treeWidget_PatientList.wItems.Count
   if (strictEqual(previousCount, currentCount)) {
-    Log.Checkpoint("Cancel add patient successfully!")
+    Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
   } else {
-    Log.Error("Cancel add patient fail!")
+    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

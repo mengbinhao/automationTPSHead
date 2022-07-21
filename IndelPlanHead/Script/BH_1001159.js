@@ -10,7 +10,6 @@ const plan = require("plan")
 
 
 function testcase() {
-  
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
  
@@ -35,15 +34,15 @@ function testcase() {
       const afterUpW = plan.pointOperate(indelPlan, "tar", 1, {attr: "W", method: 'set', type: 'up', val: 20})
     
       if (strictEqual(Number((beforeW + 2).toFixed(2)), afterUpW)) {
-        Log.Checkpoint(`up point W successfully!`)
+        Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
       } else {
-        Log.Error(`up point W fail!`)
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
       }
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

@@ -85,6 +85,7 @@ obj.addMachine = 'machine'
 //PixelTolerance
 obj.pixelTolerance = 430
 obj.colourTolerance = 10
+obj.colourToleranceForPD = 130
 
 
 //C:\Users\TPS-Server\Documents\TestComplete 12 Projects\TPS\IndelPlanHead\

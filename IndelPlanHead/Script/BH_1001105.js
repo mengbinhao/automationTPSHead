@@ -24,12 +24,12 @@ function testcase() {
     const after = indelPlan.ContourGUI.groupBox_4.ContourLib.wItems.Count
 
     if (strictEqual(before + 1, after)) {
-      Log.Checkpoint(`Add ContourLib successfully!`)
+      Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
     } else {
-      Log.Error(`Add ContourLib fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
     }
   } else {
-     Log.Error(`Add ContourLib fail due to register study!`)
+     Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(true, false, 1)
 }

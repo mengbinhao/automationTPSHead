@@ -30,12 +30,12 @@ function testcase() {
     aqConvert.DateTimeToFormatStr(aqDateTime.Now(), "%H:%M")
     const createTime = aqString.SubString(vals.pop(), 11, 5)
     if (!strictEqual(ret, vals.join('')) || !__compareDateAndTime(loginTime, loginTimeOneMinuteAfter, createTime)) {
-      Log.Error("Add patient fail!")
+      Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
     } else {
-      Log.Checkpoint("Add patient successfully!")
+      Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
     }
   } else {
-    Log.Error("Add patient fail!")
+    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

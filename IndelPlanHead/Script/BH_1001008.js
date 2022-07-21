@@ -16,9 +16,9 @@ function testcase() {
   const after = indelPlan.patientManagement.treeWidget_PatientList.wItems.Count
   
   if (strictEqual(before + 1, after)) {
-    Log.Checkpoint("Add patient with mandarin name successfully!")
+    Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
   } else {
-    Log.Error("Add patient with mandarin name fail!")
+    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
   }
 
   exitwithlogic.exitWithLogic(false, false, 1)

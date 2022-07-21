@@ -19,9 +19,9 @@ function testcase() {
   const idx = findInList.isItemInListReturnIndex(Project.Variables.new_username, globalConstant.obj.userNameColumn, userList)
   const userType = findInList.getFieldValueFromRow(idx, globalConstant.obj.userTypeColumn, userList)
   if (strictEqual(userType, Project.Variables.edit_usertype)) {
-    Log.Checkpoint("Update userType Successfully!")
+    Log.Checkpoint("Execute ${Project.TestItems.Current.Name} Successfully!")
   } else {
-    Log.Error("Update userType Fail!")
+    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
   }
   
   user.exitUserListWindow(indelPlan)

@@ -11,7 +11,6 @@ const fileFunctions = require("file_functions")
 
 
 function testcase() {
-  
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
   const path = "D:\\Gama\\WorkDir_Treatment\\testpatient@8997668\\TreatmentCourse\\TC1"
@@ -40,15 +39,15 @@ function testcase() {
       common.captureImage(indelPlan, imgName)
 
       if (fileFunctions.isExists(path, imgName)) {
-        Log.Checkpoint("captureImage successfully!")
+        Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
       } else {
-        Log.Error("captureImage fail!")
+        Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
       }
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

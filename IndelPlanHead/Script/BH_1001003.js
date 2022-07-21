@@ -15,9 +15,9 @@ function testcase() {
   const after = indelPlan.patientManagement.treeWidget_PatientList.wItems.Count
   
   if (strictEqual(before + 1, after)) {
-    Log.Checkpoint("Add patient from dicom gate successfully!")
+    Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
   } else {
-    Log.Error("Add patient from dicom gate fail!")
+    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
   }
 
   exitwithlogic.exitWithLogic(false, false, 1)

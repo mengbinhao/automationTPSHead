@@ -2,17 +2,17 @@
 const h = Sys.Desktop.Height
 const offset = 25
 
-const getNearMiddleCoordinate = () => {
+const getNearMiddleCoordinate = (deltaX = 0, deltaY = 0) => {
   const obj = {}
-  obj.width = w / 2 - offset
-  obj.height = h / 2 - offset * 2
+  obj.width = w / 2 - offset + deltaX
+  obj.height = h / 2 - offset * 2 + deltaY
   return obj
 }
 
-const getOutBoundCoordinate = () => {
+const getOutBoundCoordinate = (deltaX = 0, deltaY = 0) => {
   const obj = {}
-  obj.width = w / 2 - offset * 8
-  obj.height = h / 2 + offset * 8
+  obj.width = w / 2 - offset * 8 + deltaX
+  obj.height = h / 2 + offset * 8 + deltaY
   return obj
 }
 

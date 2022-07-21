@@ -1774,6 +1774,15 @@
 																					</Property>
 																				</Properties>
 																			</Child>
+																			<Child Name="pbProfile" Key="{61EC22C1-0691-4D47-96AE-F0381FFDECF0}" ParallelWalk="True">
+																				<Image FileName="824119502" Left="166" Top="924" Right="277" Bottom="959" />
+																				<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																				<Properties>
+																					<Property Name="objectName">
+																						<Value PropertyType="0" Value="pbProfile" Type="5" />
+																					</Property>
+																				</Properties>
+																			</Child>
 																		</Children>
 																	</Child>
 																	<Child Name="groupBox_3" Key="{E2B8505F-A6C2-407D-BC14-71045DA928AC}" ParallelWalk="True">
@@ -1905,6 +1914,21 @@
 																			</Property>
 																		</Properties>
 																	</Child>
+																	<Child Name="PlanC3DViewer" Key="{133A6E5D-5BB4-47AA-A36D-8A7A5C6E5AE6}" ParallelWalk="True">
+																		<Image FileName="2016491573" Left="441" Top="138" Right="1444" Bottom="1003" />
+																		<TypeInfo Item0="{6D37FC1B-5E23-4374-926C-3976C07F37B7}" />
+																		<Properties>
+																			<Property Name="QtClassName">
+																				<Value PropertyType="0" Value="PlanC3DViewer" Type="5" />
+																			</Property>
+																			<Property Name="QtText">
+																				<Value PropertyType="0" Value="" Type="5" />
+																			</Property>
+																			<Property Name="Index">
+																				<Value PropertyType="0" Value="1" Type="0" />
+																			</Property>
+																		</Properties>
+																	</Child>
 																</Children>
 															</Child>
 															<Child Name="widget_3" Key="{D8104B94-4A71-49FC-9253-3699878A542E}" ParallelWalk="True">
@@ -1949,6 +1973,15 @@
 																						<Properties>
 																							<Property Name="objectName">
 																								<Value PropertyType="0" Value="leLevel" Type="5" />
+																							</Property>
+																						</Properties>
+																					</Child>
+																					<Child Name="pbColMapType" Key="{B84C37C2-5B51-4559-8B76-D7054A76DEBE}" ParallelWalk="True">
+																						<Image FileName="2056954271" Left="1818" Top="188" Right="1899" Bottom="221" />
+																						<TypeInfo Item0="{6E7E2FDB-85DE-4D93-85D9-EEA38DF5ECEF}" />
+																						<Properties>
+																							<Property Name="objectName">
+																								<Value PropertyType="0" Value="pbColMapType" Type="5" />
 																							</Property>
 																						</Properties>
 																					</Child>
@@ -2175,6 +2208,33 @@
 																			</Property>
 																		</Properties>
 																	</Child>
+																	<Child Name="toolButton_43" Key="{9E840E11-5DF0-4D68-BAAC-931BF117BACE}" ParallelWalk="True">
+																		<Image FileName="-200231722" Left="480" Top="74" Right="521" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_43" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_30" Key="{62265059-AEF2-4757-BBC4-50ACC653CAF6}" ParallelWalk="True">
+																		<Image FileName="2018801612" Left="941" Top="74" Right="982" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_30" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
+																	<Child Name="toolButton_36" Key="{26C0B498-174F-4B29-BBB2-1580A6113115}" ParallelWalk="True">
+																		<Image FileName="689412188" Left="1151" Top="74" Right="1192" Bottom="115" />
+																		<TypeInfo Item0="{30C90C9E-6AAC-47B6-AEC3-CBE31BD7E19D}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="toolButton_36" Type="5" />
+																			</Property>
+																		</Properties>
+																	</Child>
 																</Children>
 															</Child>
 														</Children>
@@ -2194,9 +2254,6 @@
 									</Property>
 									<Property Name="QtText">
 										<Value PropertyType="0" Value="410072006500200079006F00750020007300750072006500200074006F00200071007500690074003F000A005900650073003A00200051007500690074002E000A004E006F003A0020004C006F00670020006F00750074002E000A00430061006E00630065006C003A00200047006F0020006200610063006B00200074006F0020006D00610069006E002000770069006E0064006F0077002E00" Type="7" />
-									</Property>
-									<Property Name="Index">
-										<Value PropertyType="0" Value="1" Type="0" />
 									</Property>
 								</Properties>
 								<Children>
@@ -7641,6 +7698,147 @@
 									</Child>
 								</Children>
 							</Child>
+							<Child Name="plan_DlgdoselineClass" Key="{CA5363A5-BC25-4C33-933F-6B7C1C67B6BA}" ParallelWalk="True">
+								<Image FileName="-1460390476" Left="0" Top="0" Right="504" Bottom="258" />
+								<TypeInfo Item0="{4B1296F9-C4E7-4741-ABDE-694C6A31F315}" />
+								<Properties>
+									<Property Name="objectName">
+										<Value PropertyType="0" Value="DlgdoselineClass" Type="5" />
+									</Property>
+								</Properties>
+								<Children>
+									<Child Name="tabWidget" Key="{FDF474A0-621A-43D4-B838-CEB81B1A1EE2}" ParallelWalk="True">
+										<Image FileName="-1460390476" Left="18" Top="40" Right="629" Bottom="245" />
+										<TypeInfo Item0="{B4361A31-6CD5-44A0-9070-1EF563B49531}" />
+										<Properties>
+											<Property Name="objectName">
+												<Value PropertyType="0" Value="tabWidget" Type="5" />
+											</Property>
+										</Properties>
+										<Children>
+											<Child Name="qt_tabwidget_stackedwidget" Key="{744CDDE2-572C-4D42-952D-B358141DDD7C}" ParallelWalk="True">
+												<Image FileName="-1460390476" Left="20" Top="68" Right="625" Bottom="241" />
+												<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+												<Properties>
+													<Property Name="objectName">
+														<Value PropertyType="0" Value="qt_tabwidget_stackedwidget" Type="5" />
+													</Property>
+												</Properties>
+												<Children>
+													<Child Name="tab" Key="{C4259745-C574-48AC-B2F9-6CFE5BCFC94F}" ParallelWalk="True">
+														<Image FileName="-1460390476" Left="20" Top="68" Right="625" Bottom="241" />
+														<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+														<Properties>
+															<Property Name="objectName">
+																<Value PropertyType="0" Value="tab" Type="5" />
+															</Property>
+														</Properties>
+														<Children>
+															<Child Name="isoLineListRel" Key="{D12B46A5-4E3E-4FEF-A6C7-BE0BA4F3E34E}" ParallelWalk="True">
+																<Image FileName="-1460390476" Left="22" Top="68" Right="483" Bottom="248" />
+																<TypeInfo Item0="{1A92C808-A25A-4313-89F1-548C3AFA2520}" />
+																<Properties>
+																	<Property Name="objectName">
+																		<Value PropertyType="0" Value="isoLineListRel" Type="5" />
+																	</Property>
+																</Properties>
+																<Children>
+																	<Child Name="qt_scrollarea_viewport" Key="{B50AE79B-3050-4BF3-9183-259DE73079BB}" ParallelWalk="True">
+																		<Image FileName="-1460390476" Left="23" Top="91" Right="482" Bottom="247" />
+																		<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																		<Properties>
+																			<Property Name="objectName">
+																				<Value PropertyType="0" Value="qt_scrollarea_viewport" Type="5" />
+																			</Property>
+																		</Properties>
+																		<Children>
+																			<Child Name="CkBox" Key="{2829F184-6031-4FA9-ACB5-7BBBB0FB6481}" ParallelWalk="True">
+																				<Image FileName="-1460390476" Left="43" Top="91" Right="103" Bottom="117" />
+																				<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																				<Properties>
+																					<Property Name="QtClassName">
+																						<Value PropertyType="0" Value="CkBox" Type="5" />
+																					</Property>
+																					<Property Name="QtText">
+																						<Value PropertyType="0" Value="" Type="5" />
+																					</Property>
+																					<Property Name="QtIndex">
+																						<Value PropertyType="0" Value="1" Type="0" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																			<Child Name="CkBox2" Key="{78ABE40C-C69F-4AF1-918F-E3E7145CD707}" ParallelWalk="True">
+																				<Image FileName="-906409223" Left="43" Top="117" Right="103" Bottom="143" />
+																				<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																				<Properties>
+																					<Property Name="QtClassName">
+																						<Value PropertyType="0" Value="CkBox" Type="5" />
+																					</Property>
+																					<Property Name="QtText">
+																						<Value PropertyType="0" Value="" Type="5" />
+																					</Property>
+																					<Property Name="QtIndex">
+																						<Value PropertyType="0" Value="3" Type="0" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																			<Child Name="CkBox3" Key="{880CFF61-E838-4AA4-94D4-4659449E83BD}" ParallelWalk="True">
+																				<Image FileName="-906409223" Left="43" Top="143" Right="103" Bottom="169" />
+																				<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																				<Properties>
+																					<Property Name="QtClassName">
+																						<Value PropertyType="0" Value="CkBox" Type="5" />
+																					</Property>
+																					<Property Name="QtText">
+																						<Value PropertyType="0" Value="" Type="5" />
+																					</Property>
+																					<Property Name="QtIndex">
+																						<Value PropertyType="0" Value="5" Type="0" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																			<Child Name="CkBox4" Key="{5F121BD3-86D5-4458-9BB8-4A5106810CA0}" ParallelWalk="True">
+																				<Image FileName="-906409223" Left="43" Top="169" Right="103" Bottom="195" />
+																				<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																				<Properties>
+																					<Property Name="QtClassName">
+																						<Value PropertyType="0" Value="CkBox" Type="5" />
+																					</Property>
+																					<Property Name="QtText">
+																						<Value PropertyType="0" Value="" Type="5" />
+																					</Property>
+																					<Property Name="QtIndex">
+																						<Value PropertyType="0" Value="7" Type="0" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																			<Child Name="CkBox5" Key="{6B988E09-6077-4CFC-8094-E92DBA765113}" ParallelWalk="True">
+																				<Image FileName="-906409223" Left="43" Top="195" Right="103" Bottom="221" />
+																				<TypeInfo Item0="{4869B090-13D5-4196-8E0F-1E916E188859}" />
+																				<Properties>
+																					<Property Name="QtClassName">
+																						<Value PropertyType="0" Value="CkBox" Type="5" />
+																					</Property>
+																					<Property Name="QtText">
+																						<Value PropertyType="0" Value="" Type="5" />
+																					</Property>
+																					<Property Name="QtIndex">
+																						<Value PropertyType="0" Value="9" Type="0" />
+																					</Property>
+																				</Properties>
+																			</Child>
+																		</Children>
+																	</Child>
+																</Children>
+															</Child>
+														</Children>
+													</Child>
+												</Children>
+											</Child>
+										</Children>
+									</Child>
+								</Children>
+							</Child>
 						</Children>
 					</Child>
 					<Child Name="GamaReg" Key="{BEFAD018-2BA6-4C95-BBB1-1FD9EA2A731D}" ParallelWalk="True">
@@ -8304,6 +8502,7 @@
 									<Child Name="pbFraction" Owner="{68A061D3-1929-4A57-ADED-0E780FF76E9D}" />
 									<Child Name="pbConfirm" Owner="{327E5D68-C644-4E34-96E2-A3239417A57F}" />
 									<Child Name="pbDVH" Owner="{19E4325B-B818-49CA-839A-CA0524F2F5A2}" />
+									<Child Name="pbProfile" Owner="{61EC22C1-0691-4D47-96AE-F0381FFDECF0}" />
 								</Child>
 								<Child Name="groupBox_3" Owner="{E2B8505F-A6C2-407D-BC14-71045DA928AC}">
 									<Child Name="pbCheck" Owner="{C24A2F6A-6A85-49FF-9347-19E88DC8E8AE}" />
@@ -8322,12 +8521,14 @@
 							</Child>
 							<Child Name="canvas" Owner="{0C12A846-B9D6-4D35-86B6-C61E7BEB56EB}">
 								<Child Name="PlanC2DViewer" Owner="{D940EEAD-4E56-4BC1-97A2-26B531E95805}" />
+								<Child Name="PlanC3DViewer" Owner="{133A6E5D-5BB4-47AA-A36D-8A7A5C6E5AE6}" />
 							</Child>
 							<Child Name="widget_3" Owner="{D8104B94-4A71-49FC-9253-3699878A542E}">
 								<Child Name="splitter_2" Owner="{E97881BF-FFA4-4CB3-AD3C-F9ECF54BFF41}">
 									<Child Name="widget_5" Owner="{A927F018-8D19-414D-AA2E-65813EF094BA}">
 										<Child Name="leWidth" Owner="{35A36444-D01B-4906-A544-D2F6ADC2BF7D}" />
 										<Child Name="leLevel" Owner="{B82FE117-B216-4471-8BC2-A7AC26C79994}" />
+										<Child Name="pbColMapType" Owner="{B84C37C2-5B51-4559-8B76-D7054A76DEBE}" />
 									</Child>
 									<Child Name="widget_6" Owner="{31B3DBFA-F5D5-4BCA-AD02-AE70B808B3D4}">
 										<Child Name="wgWL" Owner="{15F5F468-4A96-40E0-8685-1D66B83A1F06}" />
@@ -8359,6 +8560,9 @@
 								<Child Name="toolButton_34" Owner="{F1CF90F3-737B-4574-B96D-B3163E6B3A0E}" />
 								<Child Name="toolButton_44" Owner="{CC95C5A0-8F22-452D-BBC1-A0CAAFBE5157}" />
 								<Child Name="toolButton_45" Owner="{87FB2DAD-51AA-432E-9F40-24B18685B589}" />
+								<Child Name="toolButton_43" Owner="{9E840E11-5DF0-4D68-BAAC-931BF117BACE}" />
+								<Child Name="toolButton_30" Owner="{62265059-AEF2-4757-BBC4-50ACC653CAF6}" />
+								<Child Name="toolButton_36" Owner="{26C0B498-174F-4B29-BBB2-1580A6113115}" />
 							</Child>
 						</Child>
 					</Child>
@@ -8999,6 +9203,23 @@
 						<Child Name="FloatNotifySink" Owner="{D732DB8C-CB82-4CB6-8225-2621392829F6}">
 							<Child Name="ComboBox" Owner="{16591382-D094-43F8-AE92-DFDE8BF8B159}">
 								<Child Name="Edit" Owner="{405A090D-4520-44C0-8238-C8CC5E4C36F0}" />
+							</Child>
+						</Child>
+					</Child>
+				</Child>
+			</Child>
+			<Child Name="plan_DlgdoselineClass" Owner="{CA5363A5-BC25-4C33-933F-6B7C1C67B6BA}">
+				<Child Name="tabWidget" Owner="{FDF474A0-621A-43D4-B838-CEB81B1A1EE2}">
+					<Child Name="qt_tabwidget_stackedwidget" Owner="{744CDDE2-572C-4D42-952D-B358141DDD7C}">
+						<Child Name="tab" Owner="{C4259745-C574-48AC-B2F9-6CFE5BCFC94F}">
+							<Child Name="isoLineListRel" Owner="{D12B46A5-4E3E-4FEF-A6C7-BE0BA4F3E34E}">
+								<Child Name="qt_scrollarea_viewport" Owner="{B50AE79B-3050-4BF3-9183-259DE73079BB}">
+									<Child Name="CkBox" Owner="{2829F184-6031-4FA9-ACB5-7BBBB0FB6481}" />
+									<Child Name="CkBox2" Owner="{78ABE40C-C69F-4AF1-918F-E3E7145CD707}" />
+									<Child Name="CkBox3" Owner="{880CFF61-E838-4AA4-94D4-4659449E83BD}" />
+									<Child Name="CkBox4" Owner="{5F121BD3-86D5-4458-9BB8-4A5106810CA0}" />
+									<Child Name="CkBox5" Owner="{6B988E09-6077-4CFC-8094-E92DBA765113}" />
+								</Child>
 							</Child>
 						</Child>
 					</Child>

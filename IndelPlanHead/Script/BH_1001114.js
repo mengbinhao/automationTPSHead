@@ -26,9 +26,9 @@ function testcase() {
 
   if (indelPlan.contour_stat_dialog.Exists) {
     indelPlan.contour_stat_dialog.Close()
-    Log.Checkpoint(`Stat Contour successfully!`)
+    Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
   } else {
-    Log.Error(`Stat Contour fail!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

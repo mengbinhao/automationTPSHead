@@ -10,7 +10,6 @@ const plan = require("plan")
 
 
 function testcase() {
-  
   const indelPlan = Project.Variables.IndelPlan
   const pv = Project.Variables.ProjectVariable
  
@@ -33,16 +32,16 @@ function testcase() {
 
       const afterUpW = plan.pointOperate(indelPlan, "tar", 1, {attr: "C", method: 'set', type: 'up', val: 1})
 
-      if (strictEqual("Φ8", afterUpW) && common.comparedPicture(Regions.YANGDAZHONG_MR78_plan_fai8_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, 130)) {
-        Log.Checkpoint(`Change point C successfully!`)
+      if (strictEqual("Φ8", afterUpW) && common.comparedPicture(Regions.YANGDAZHONG_MR78_plan_fai8_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)) {
+        Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
       } else {
-        Log.Error(`Change point C fail!`)
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
       }
     } else {
-      Log.Error(`Execute fail due to contour fail!`)
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     }
   } else {
-    Log.Error(`Execute fail due to register study!`)
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

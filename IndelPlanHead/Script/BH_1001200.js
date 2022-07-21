@@ -4,7 +4,8 @@ const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
 const study = require("study")
-const fileFunctions = require("file_functions")
+const common = require("common")
+const utilsFunctions = require("utils_functions")
 
 
 function testcase() {
@@ -16,27 +17,22 @@ function testcase() {
   if (indelPlan.patientManagement.treeWidget_PatientList.wItems.Count !== 0) {
     Log.Error("Should no patient first")
   } else {
-    const path = globalConstant.obj.studyDataFolder
-    const patientFolderName = `${Project.Variables.study_image_name}@${Project.Variables.study_image_id}`
-  
-    //delete target folder first
-    fileFunctions.deleteFolder(path + patientFolderName, true)
-  
     patient.addPatientActivity(indelPlan, pv, Project.Variables.new_patientID, Project.Variables.new_patient_name, Project.Variables.new_patient_gender, Project.Variables.new_patient_height, Project.Variables.new_patient_weight, Project.Variables.new_patient_age, Project.Variables.new_patient_address, Project.Variables.new_patient_phone, Project.Variables.new_patient_note)
-      
-    patient.loadPatient(indelPlan, Project.Variables.new_patientID)
-
-    study.gotoRegisterImporter(indelPlan)
-    
-    study.exportStudy(indelPlan, Project.Variables.study_image_id, path)
-
-    //check folder exist and update time correct
-    if (fileFunctions.isExists(path, patientFolderName)) {
-      Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
-    } else {
-      Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
-    }
-  }
   
+    patient.loadPatient(indelPlan, Project.Variables.new_patientID)
+    study.gotoRegisterImporter(indelPlan)
+    study.loadStudy(indelPlan, Project.Variables.study_image_id, "MR", false)
+    common.setWWAndWL(indelPlan, 'study', 625, 492)
+    
+    Regions.YANGDAZHONG_MR78_image_loaded_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
+
+    //change layer
+    common.moveMouse(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, 500)
+    LLPlayer.MouseWheel(120 * 10, 1000)
+    Regions.YANGDAZHONG_MR78_common_image_rotate_up_mouse_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
+    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
+    LLPlayer.MouseWheel(-120 * 20, 1000)
+    Regions.YANGDAZHONG_MR78_common_image_rotate_down_mouse_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
+  }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

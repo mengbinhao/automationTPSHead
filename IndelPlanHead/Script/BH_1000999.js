@@ -19,9 +19,9 @@ function testcase() {
   const isExist = findInList.isItemExistInMoreList(Project.Variables.new_patientID, globalConstant.obj.patientIDColumn, list)
   
   if (!isExist) {
-    Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
+    Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
   } else {
-    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
   }
   exitwithlogic.exitWithLogic(false, false, 1)
 }

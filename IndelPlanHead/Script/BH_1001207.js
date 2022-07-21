@@ -30,9 +30,9 @@ function testcase() {
       plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
       common.setWWAndWL(indelPlan, 'plan', 1200, 300)
       if ('1200' === indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && '300' === indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
-        Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
+        Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
       } else {
-        Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
       }
     } else {
       Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)

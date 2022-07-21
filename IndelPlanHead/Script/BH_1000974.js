@@ -21,9 +21,9 @@ function testcase() {
   const idx = findInList.isItemInListReturnIndex(Project.Variables.new_username, globalConstant.obj.userNameColumn, userList)
   const userType = findInList.getFieldValueFromRow(idx, globalConstant.obj.userTypeColumn, userList)
   if (strictEqual(userType, Project.Variables.new_usertype)) {
-    Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
+    Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
   } else {
-    Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
+    Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
   }
   
   user.exitUserListWindow(indelPlan)

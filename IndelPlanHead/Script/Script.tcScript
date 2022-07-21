@@ -520,6 +520,30 @@
 		<child name="BH_1001177" key="{790DA207-1A3A-4E44-A16C-6F60EABD3140}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
 			<data path="BH_1001177.js" />
 		</child>
+		<child name="BH_1001197" key="{7A826409-AEEA-48FE-9A9F-F92E7E34E41A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001197.js" />
+		</child>
+		<child name="BH_1001200" key="{8A8ED846-3E12-4641-956D-C082AF1643B3}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001200.js" />
+		</child>
+		<child name="BH_1001201" key="{4261256A-ABF2-4BB5-AC78-2383A9DB60A4}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001201.js" />
+		</child>
+		<child name="BH_1001202" key="{5A50DE8E-3451-46FB-BF98-D9A9AF28CFCC}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001202.js" />
+		</child>
+		<child name="BH_1001203" key="{838468AA-3A6B-4EEC-8A23-5CBBB4111020}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001203.js" />
+		</child>
+		<child name="BH_1001208" key="{06837F14-04D6-442A-820D-E1DA5411C51E}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001208.js" />
+		</child>
+		<child name="BH_1001218" key="{B14068BD-0DA9-4843-974D-0A2E004D049B}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001218.js" />
+		</child>
+		<child name="BH_1001222" key="{48EB0FF6-1A1B-4E87-BBF1-EF6A25F80DF9}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="BH_1001222.js" />
+		</child>
 	</children>
 	<folders>
 		<folder caption="business" description="A logical folder that is used to organize project items and elements." moniker="">
@@ -726,6 +750,14 @@
 						<ref key="{E7273E81-6F35-42F4-9059-9F16420CC5C2}" />
 						<ref key="{AD18038D-DEE2-4AC9-B0B8-73BB2E3B4F5A}" />
 						<ref key="{67594977-EF26-42E3-BE44-402D73361545}" />
+						<ref key="{7A826409-AEEA-48FE-9A9F-F92E7E34E41A}" />
+						<ref key="{8A8ED846-3E12-4641-956D-C082AF1643B3}" />
+						<ref key="{4261256A-ABF2-4BB5-AC78-2383A9DB60A4}" />
+						<ref key="{5A50DE8E-3451-46FB-BF98-D9A9AF28CFCC}" />
+						<ref key="{838468AA-3A6B-4EEC-8A23-5CBBB4111020}" />
+						<ref key="{06837F14-04D6-442A-820D-E1DA5411C51E}" />
+						<ref key="{B14068BD-0DA9-4843-974D-0A2E004D049B}" />
+						<ref key="{48EB0FF6-1A1B-4E87-BBF1-EF6A25F80DF9}" />
 					</references>
 				</folder>
 			</folders>

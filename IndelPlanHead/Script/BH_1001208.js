@@ -1,5 +1,4 @@
 ﻿const globalConstant = require("global_constant")
-const utilsFunctions = require("utils_functions")
 const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
@@ -29,25 +28,14 @@ function testcase() {
       plan.addTreatCourse(indelPlan, true)
       plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
       plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
-    
-      const originW =  indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText
-      const originL =  indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText
-    
-      //set L
-      LLPlayer.MouseDown(MK_LBUTTON, 1855, 445, 500)
-      LLPlayer.MouseMove(1855, 495, 500)
-      LLPlayer.MouseUp(MK_LBUTTON, 1855, 495, 500)
-      utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-      //set W
-      LLPlayer.MouseDown(MK_LBUTTON, 1855, 654, 500)
-      LLPlayer.MouseMove(1855, 704, 500)
-      LLPlayer.MouseUp(MK_LBUTTON, 1855, 704, 500)
+      plan.setupPoint(indelPlan, "tar")
 
-      if (originW !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && originL !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
-        Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
-      } else {
-        Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
-      }
+      const pbmt = indelPlan.PlanGUI.widget_3.splitter_2.widget_5.pbColMapType
+      pbmt.ClickButton()
+      Regions.YANGDAZHONG_MR78_plan_gray_type_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)
+      
+      pbmt.ClickButton()
+      Regions.YANGDAZHONG_MR78_point_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)
     } else {
       Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     } 

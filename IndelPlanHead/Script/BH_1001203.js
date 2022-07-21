@@ -1,11 +1,12 @@
 ﻿const globalConstant = require("global_constant")
-const utilsFunctions = require("utils_functions")
 const launch = require("launch")
 const login = require("login")
 const exitwithlogic = require("exit_with_logic")
 const patient = require("patient")
 const study = require("study")
 const contour = require("contour")
+const common = require("common")
+const utilsFunctions = require("utils_functions")
 
 
 function testcase() {
@@ -20,26 +21,15 @@ function testcase() {
 
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
-    const originW =  indelPlan.ContourGUI.SetWW.wText
-    const originL =  indelPlan.ContourGUI.SetWL.wText
     
-    //set L
-    LLPlayer.MouseDown(MK_LBUTTON, 1867, 450, 500)
-    LLPlayer.MouseMove(1867, 500, 500)
-    LLPlayer.MouseUp(MK_LBUTTON, 1867, 500, 500)
-    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-    //set W
-    LLPlayer.MouseDown(MK_LBUTTON, 1867, 654, 500)
-    LLPlayer.MouseMove(1867, 704, 500)
-    LLPlayer.MouseUp(MK_LBUTTON, 1867, 704, 500)
-
-    if (originW !== indelPlan.ContourGUI.SetWW.wText && originL !== indelPlan.ContourGUI.SetWL.wText) {
-      Log.Checkpoint("DExecute ${Project.TestItems.Current.Name} successfully!")
-    } else {
-      Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
-    }
+    const w = Sys.Desktop.Width / 2
+    const h = Sys.Desktop.Height / 2
+    LLPlayer.MouseDown(MK_LBUTTON, w, h, globalConstant.obj.delayMouseZeroSecond)
+    LLPlayer.MouseUp(MK_LBUTTON, w, h, globalConstant.obj.delayMouseHalfSecond)
+    common.moveMouse(220, 800, 500)
+  Regions.YANGDAZHONG_MR78_common_rebuild_png.Check(indelPlan.ContourGUI.canvas.C2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   } else {
-     Log.Error(`Add ContourLib fail due to register study!`)
+     Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)
   }
   exitwithlogic.exitWithLogic(true, false, 1)
 }

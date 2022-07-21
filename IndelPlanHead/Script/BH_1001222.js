@@ -30,24 +30,31 @@ function testcase() {
       plan.addPlan(indelPlan, "TC1", "TC1_P1", true)
       plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
     
-      const originW =  indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText
-      const originL =  indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText
+      if (indelPlan.PlanGUI.VisibleOnScreen) {
+        plan.setupPoint(indelPlan, "tar")
+        indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_43.ClickButton()
+        utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     
-      //set L
-      LLPlayer.MouseDown(MK_LBUTTON, 1855, 445, 500)
-      LLPlayer.MouseMove(1855, 495, 500)
-      LLPlayer.MouseUp(MK_LBUTTON, 1855, 495, 500)
-      utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-      //set W
-      LLPlayer.MouseDown(MK_LBUTTON, 1855, 654, 500)
-      LLPlayer.MouseMove(1855, 704, 500)
-      LLPlayer.MouseUp(MK_LBUTTON, 1855, 704, 500)
-
-      if (originW !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && originL !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
-        Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
+        LLPlayer.MouseMove(934, 562, 500)
+        LLPlayer.MouseDown(MK_RBUTTON, 934, 562, 500)
+        LLPlayer.MouseUp(MK_RBUTTON, 934, 562, 500)
+        LLPlayer.MouseMove(972, 575, 500)
+        utilsFunctions.delay(globalConstant.obj.delayOneSecond)
+        LLPlayer.MouseDown(MK_LBUTTON, 972, 575, 500)
+        LLPlayer.MouseUp(MK_LBUTTON, 972, 575, 500)
+        
+        //1 卡顿这么长时间正常？
+        //2 第一次跟第二次的图像不一致？
+        utilsFunctions.delay(globalConstant.obj.delayThirtySeconds)
+      
+        if (common.comparedPicture(Regions.YANGDAZHONG_MR78_common_3d_display_png, indelPlan.PlanGUI.canvas.PlanC3DViewer.Picture(), globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)) {
+          Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
+        } else {
+          Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
+        }
       } else {
-        Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
-      }
+        Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to window is not right!`)
+      }  
     } else {
       Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to contour fail!`)
     } 

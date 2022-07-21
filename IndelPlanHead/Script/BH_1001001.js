@@ -30,9 +30,9 @@ function testcase() {
 
     //check folder exist and update time correct
     if (fileFunctions.isExists(path, patientFolderName)) {
-      Log.Checkpoint("Execute ${Project.TestItems.Current.Name} successfully!")
+      Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
     } else {
-      Log.Error("Execute ${Project.TestItems.Current.Name} fail!")
+      Log.Error(`Execute ${Project.TestItems.Current.Name} fail!`)
     }
   }
 

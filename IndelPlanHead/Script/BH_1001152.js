@@ -36,7 +36,7 @@ function testcase() {
         const obj = coordinate.getOutBoundCoordinate()
         LLPlayer.MouseDown(MK_LBUTTON, obj.width, obj.height, globalConstant.obj.delayMouseZeroSecond)
         LLPlayer.MouseUp(MK_LBUTTON, obj.width, obj.height, globalConstant.obj.delayMouseHalfSecond)
-        common.moveMouse(220, 800, 500)
+        LLCollection.move_out_of_main_image.Execute(indelPlan.PlanGUI) 
         
         if (strictEqual(indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count, 1) && common.comparedPicture(Regions.YANGDAZHONG_MR78_plan_not_choice_one_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)) {
           indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Item(0).Click()

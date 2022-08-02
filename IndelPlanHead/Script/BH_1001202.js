@@ -33,11 +33,11 @@ function testcase() {
       plan.gotoPlanDesign(indelPlan, "TC1", "TC1_P1", true)
     
       if (indelPlan.PlanGUI.VisibleOnScreen) {
-        common.moveMouse(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, 500)
-        LLPlayer.MouseWheel(120 * 10, 1000)
+        LLCollection.move_to_center.Execute(indelPlan.PlanGUI)
+        LLCollection.rotate_up_10_slices.Execute(indelPlan.PlanGUI)
   Regions.YANGDAZHONG_MR78_common_plan_rotate_down_mouse_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
     utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-    LLPlayer.MouseWheel(-120 * 20, 1000)
+    LLCollection.rotate_down_20_slices.Execute(indelPlan.PlanGUI)
     Regions.YANGDAZHONG_MR78_common_plan_rotate_up_mouse_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)    
       } else {
         Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to window is not right!`)

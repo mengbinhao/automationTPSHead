@@ -27,11 +27,11 @@ function testcase() {
     Regions.YANGDAZHONG_MR78_image_loaded_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
 
     //change layer
-    common.moveMouse(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, 500)
-    LLPlayer.MouseWheel(120 * 10, 1000)
+    LLCollection.move_to_center.Execute(indelPlan.register_importer)
+    LLCollection.rotate_up_10_slices.Execute(indelPlan.register_importer)
     Regions.YANGDAZHONG_MR78_common_image_rotate_up_mouse_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
     utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-    LLPlayer.MouseWheel(-120 * 20, 1000)
+    LLCollection.rotate_down_20_slices.Execute(indelPlan.register_importer)
     Regions.YANGDAZHONG_MR78_common_image_rotate_down_mouse_png.Check(indelPlan.register_importer.wdMainView.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   }
   exitwithlogic.exitWithLogic(false, false, 1)

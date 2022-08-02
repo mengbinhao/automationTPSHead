@@ -200,9 +200,9 @@ const importPatient = (indelPlan, pv, patientID, path, isCancel = false) => {
     Win32API.ShowWindowAsync(dlgip.Handle, Win32API.SW_MAXIMIZE)
     utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     dlgip.Edit.Keys(path)
-    LLPlayer.MouseMove(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, globalConstant.obj.delayMouseHalfSecond)
-    LLPlayer.MouseDown(MK_LBUTTON, Sys.Desktop.Width / 2, Sys.Desktop.Height / 2,globalConstant.obj.delayMouseZeroSecond)
-    LLPlayer.MouseUp(MK_LBUTTON, Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, globalConstant.obj.delayMouseHalfSecond)
+    
+    LLCollection.move_to_center.Execute()
+    LLCollection.click_left_mouse_in_center.Execute()
     dlgip.btn_.ClickButton()
     const dlgic = indelPlan.patient_importer
 

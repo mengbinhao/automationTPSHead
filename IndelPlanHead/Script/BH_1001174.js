@@ -35,7 +35,7 @@ function testcase() {
       plan.calculateDose(indelPlan, false)
       indelPlan.PlanGUI.widget.groupBox_2.pbProfile.ClickButton()
       const position = coordinate.getNearMiddleCoordinate()
-      common.moveMouse(position.width, position.height, 500)
+      common.moveMouse(position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
       utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
       utilsFunctions.delay(globalConstant.obj.delayTenSeconds)
 

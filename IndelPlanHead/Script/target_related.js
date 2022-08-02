@@ -22,7 +22,6 @@ const __generateRectangleParameters = rectangleCoordinate => {
 
 const __addPoint = position => {
   LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
-  //LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
   LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseZeroSecond)
   LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
 }
@@ -75,13 +74,6 @@ const drawTriangleNearMiddle = indelPlan => {
   canvas.DblClick(data[0][0], data[0][1])
   utilsFunctions.delay(globalConstant.obj.delayOneSecond)
   canvas.ClickR()
-  /*
-  LLPlayer.MouseDown(MK_LBUTTON, data.p1.x, data.p1.y, data.p1.delay)
-  LLPlayer.MouseDown(MK_LBUTTON, data.p2.x, data.p2.y, data.p2.delay)
-  LLPlayer.MouseDown(MK_LBUTTON, data.p3.x, data.p3.y, data.p3.delay)
-  LLPlayer.MouseDown(MK_LBUTTON, data.p1.x, data.p1.y, data.p1.delay)
-  LLPlayer.MouseUp(MK_LBUTTON, data.p1.x, data.p1.y, data.p1.delay)
-  */
 }
 
 const drawRectangleNearMiddle = indelPlan => {

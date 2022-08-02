@@ -75,8 +75,7 @@ const __handlePopup = (indelPlan, curTabName, toTabName, isPlanFinish) => {
     [globalConstant.obj.planDesign]: {
       [globalConstant.obj.patientManagement]: () => {
         if (indelPlan.plan_PlanList.Exists) {
-          LLPlayer.KeyDown(VK_ESCAPE, globalConstant.obj.delayMouseOneSecond)
-          LLPlayer.KeyUp(VK_ESCAPE, globalConstant.obj.delayMouseOneSecond)
+          LLCollection.press_esc.Execute()
         //change from PlanGUI
         } else {
           __helper2()  
@@ -230,9 +229,8 @@ const captureImage = (indelPlan, imgName) => {
     Win32API.ShowWindowAsync(dlg.Handle, Win32API.SW_MAXIMIZE)
     utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     dlg.DUIViewWndClassName.DirectUIHWND.FloatNotifySink.ComboBox.Edit.Keys(imgName)
-    LLPlayer.MouseMove(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, globalConstant.obj.delayMouseHalfSecond)
-    LLPlayer.KeyDown(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)
-    LLPlayer.KeyUp(VK_LBUTTON, globalConstant.obj.delayMouseOneSecond)
+    LLCollection.move_to_center.Execute()
+    LLCollection.click_left_mouse_in_center.Execute()
     dlg.btn_S.ClickButton()
     utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
   } else {

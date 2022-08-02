@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Root signature="{2D89293F-6B07-4679-9906-EFAE4B1A433C}" version="12.0">
-	<children />
+	<children>
+		<child name="adjust_WW_WL_on_RegisterImporter" key="{CAA018C7-C2CB-4589-B9AE-DE0C0A340E92}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="adjust_WW_WL_on_RegisterImporter.tcLLP" />
+		</child>
+		<child name="rotate_up_10_slices" key="{3EEA23F3-CB76-4F22-8AC9-617F086AE160}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="rotate_up_10_slices.tcLLP" />
+		</child>
+		<child name="rotate_down_20_slices" key="{EB8C140E-B534-44D5-A3E4-08C08B622CD2}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="rotate_down_20_slices.tcLLP" />
+		</child>
+		<child name="move_to_center" key="{94A01000-3997-405A-9843-C458AEACE6DB}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="move_to_center.tcLLP" />
+		</child>
+		<child name="move_out_of_main_image" key="{2CC6CAD4-5D13-4116-9A01-627DA4707975}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="move_out_of_main_image.tcLLP" />
+		</child>
+		<child name="click_left_mouse_in_center" key="{836B7AC4-493F-47BF-9C71-DE6478AB099B}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="click_left_mouse_in_center.tcLLP" />
+		</child>
+		<child name="press_esc" key="{E443E9B2-58D9-40C5-80AA-F506027C9654}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="press_esc.tcLLP" />
+		</child>
+		<child name="press_escape" key="{EC7D3EC2-6AA9-4876-9791-7D3D2BAB2508}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="press_escape.tcLLP" />
+		</child>
+		<child name="set_WL_on_contour" key="{BA0E77E0-FEC2-487C-B708-74477582F362}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="set_WL_on_contour.tcLLP" />
+		</child>
+		<child name="set_WW_on_contour" key="{6476306D-7605-42B8-B462-77A2A958A9BD}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="set_WW_on_contour.tcLLP" />
+		</child>
+		<child name="set_WL_on_plan" key="{B00DB8CA-7E80-44EC-99B1-E7320CF04CD0}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="set_WL_on_plan.tcLLP" />
+		</child>
+		<child name="set_WW_on_plan" key="{D24354CD-2800-4DC5-82A0-4F10B6C9E1AF}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="set_WW_on_plan.tcLLP" />
+		</child>
+		<child name="exit_measure_mode" key="{0D2675B3-69C0-4341-84C2-DC75FE2A5FB7}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="exit_measure_mode.tcLLP" />
+		</child>
+		<child name="exit_3D_mode_on_plan" key="{3E8EEADA-5C00-48FA-A4F2-F4EEAB0CCBA3}" type="Low-Level Procedure" typeId="{62402E6C-6E6D-4AA5-9AFF-5A20AD691C44}" pluginName="Low-Level Procedures Container">
+			<data path="exit_3D_mode_on_plan.tcLLP" />
+		</child>
+	</children>
 	<folders />
 </Root>

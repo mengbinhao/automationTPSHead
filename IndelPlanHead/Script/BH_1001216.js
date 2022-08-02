@@ -34,13 +34,9 @@ function testcase() {
       indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.ClickButton()
       utilsFunctions.delay(globalConstant.obj.delayOneSecond)
       const originStateAfterPressed = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.down
-      LLPlayer.MouseMove(934, 562, 500)
-      LLPlayer.MouseDown(MK_RBUTTON, 934, 562, 500)
-      LLPlayer.MouseUp(MK_RBUTTON, 934, 562, 500)
-      LLPlayer.MouseMove(972, 688, 500)
-      utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-      LLPlayer.MouseDown(MK_LBUTTON, 972, 688, 500)
-      LLPlayer.MouseUp(MK_LBUTTON, 972, 688, 500)
+      
+      LLCollection.exit_measure_mode.Execute(indelPlan.PlanGUI)
+      
       utilsFunctions.delay(globalConstant.obj.delayOneSecond)
       const exitInteract = indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_34.down
 

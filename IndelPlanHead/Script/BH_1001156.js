@@ -32,7 +32,7 @@ function testcase() {
       plan.setupPoint(indelPlan, "tar")
       plan.movePointOutBound(indelPlan, "tar", 1, true)
       //in case mouse position tooltip
-      common.moveMouse(220, 800, 500)
+      LLCollection.move_out_of_main_image.Execute(indelPlan.PlanGUI) 
       utilsFunctions.delay(globalConstant.obj.delayOneSecond)
       Regions.YANGDAZHONG_MR78_plan_moveoutbound_point_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)
     } else {

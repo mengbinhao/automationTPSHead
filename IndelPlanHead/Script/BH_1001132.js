@@ -28,9 +28,9 @@ function testcase() {
 
     //erase mouse circle
     indelPlan.ContourGUI.groupBox_5.pbManualSketch.ClickButton()
-    common.moveMouse(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, 500)
+    LLCollection.move_to_center.Execute(indelPlan.ContourGUI)
     utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-    common.moveMouse(220, 800, 500)
+    LLCollection.move_out_of_main_image.Execute(indelPlan.ContourGUI)
     utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
 
     Regions.YANGDAZHONG_MR78_contour_reject_png.Check(indelPlan.ContourGUI.canvas.C2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)

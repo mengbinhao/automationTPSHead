@@ -22,11 +22,8 @@ function testcase() {
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
     
-    const w = Sys.Desktop.Width / 2
-    const h = Sys.Desktop.Height / 2
-    LLPlayer.MouseDown(MK_LBUTTON, w, h, globalConstant.obj.delayMouseZeroSecond)
-    LLPlayer.MouseUp(MK_LBUTTON, w, h, globalConstant.obj.delayMouseHalfSecond)
-    common.moveMouse(220, 800, 500)
+    LLCollection.click_left_mouse_in_center.Execute()
+    LLCollection.move_out_of_main_image.Execute(indelPlan.ContourGUI)
   Regions.YANGDAZHONG_MR78_common_rebuild_png.Check(indelPlan.ContourGUI.canvas.C2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   } else {
      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)

@@ -36,10 +36,9 @@ function testcase() {
   indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_36.ClickButton()
   const position = coordinate.getNearMiddleCoordinate()
   LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height + 50, globalConstant.obj.delayMouseZeroSecond)
-  //LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height, globalConstant.obj.delayMouseHalfSecond)
   LLPlayer.MouseDown(MK_LBUTTON, position.width, position.height + 50, globalConstant.obj.delayMouseZeroSecond)
   LLPlayer.MouseUp(MK_LBUTTON, position.width, position.height + 50, globalConstant.obj.delayMouseHalfSecond)
-  common.moveMouse(220, 800, 500)
+  LLCollection.move_out_of_main_image.Execute(indelPlan.PlanGUI)
 
   Regions.YANGDAZHONG_MR78_plan_drr_png.Check(indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)
   exitwithlogic.exitWithLogic(false, false, 1)

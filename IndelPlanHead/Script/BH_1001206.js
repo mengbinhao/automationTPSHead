@@ -33,15 +33,11 @@ function testcase() {
       const originW =  indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText
       const originL =  indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText
     
-      //set L
-      LLPlayer.MouseDown(MK_LBUTTON, 1855, 445, 500)
-      LLPlayer.MouseMove(1855, 495, 500)
-      LLPlayer.MouseUp(MK_LBUTTON, 1855, 495, 500)
-      utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-      //set W
-      LLPlayer.MouseDown(MK_LBUTTON, 1855, 654, 500)
-      LLPlayer.MouseMove(1855, 704, 500)
-      LLPlayer.MouseUp(MK_LBUTTON, 1855, 704, 500)
+      //set WW
+      LLCollection.set_WW_on_plan.Execute(indelPlan.PlanGUI)
+      utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+      //set WL
+      LLCollection.set_WL_on_plan.Execute(indelPlan.PlanGUI)
 
       if (originW !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leWidth.wText && originL !== indelPlan.PlanGUI.widget_3.splitter_2.widget_5.leLevel.wText) {
         Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)

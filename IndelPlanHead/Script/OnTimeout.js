@@ -7,8 +7,7 @@ function GeneralEvents_OnTimeout(Sender, Params) {
 
   if (Sys.WaitProcess(pv.procesName).Exists) {
     //try exit first
-    LLPlayer.KeyDown(VK_ESCAPE, globalConstant.obj.delayMouseOneSecond)
-    LLPlayer.KeyUp(VK_ESCAPE, globalConstant.obj.delayMouseOneSecond)
+    LLCollection.press_escape.Execute()
     exitwithlogic.exitWithLogic(false, false, 1)
     if (Sys.WaitProcess(pv.procesName).Exists) {
       Sys.Process(pv.procesName).Terminate()

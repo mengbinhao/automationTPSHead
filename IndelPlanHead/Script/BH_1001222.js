@@ -35,13 +35,7 @@ function testcase() {
         indelPlan.tabWidget.qt_tabwidget_stackedwidget.tab_3.toolButton_43.ClickButton()
         utilsFunctions.delay(globalConstant.obj.delayOneSecond)
     
-        LLPlayer.MouseMove(934, 562, 500)
-        LLPlayer.MouseDown(MK_RBUTTON, 934, 562, 500)
-        LLPlayer.MouseUp(MK_RBUTTON, 934, 562, 500)
-        LLPlayer.MouseMove(972, 575, 500)
-        utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-        LLPlayer.MouseDown(MK_LBUTTON, 972, 575, 500)
-        LLPlayer.MouseUp(MK_LBUTTON, 972, 575, 500)
+        LLCollection.exit_3D_mode_on_plan.Execute(indelPlan.PlanGUI)
         
         //1 卡顿这么长时间正常？
         //2 第一次跟第二次的图像不一致？

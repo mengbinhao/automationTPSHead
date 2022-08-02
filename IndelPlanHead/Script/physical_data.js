@@ -100,7 +100,7 @@ const editMachine = (indelPlan, machineName, tab = 0, propName, propValue, editP
     configList.ClickCell(idx, globalConstant.obj.machineConfigNameColumn)
     indelPlan.machine_management.edit_btn.ClickButton()
     
-    if ( indelPlan.machine_edit_popup.Exists) {
+    if (indelPlan.machine_edit_popup.Exists) {
       indelPlan.machine_edit_popup.qt_msgbox_buttonbox.buttonNo.ClickButton()
       Log.Error(`Can not edit current machine machineName=${machineName}`)
       return

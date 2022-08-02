@@ -23,15 +23,11 @@ function testcase() {
     const originW =  indelPlan.ContourGUI.SetWW.wText
     const originL =  indelPlan.ContourGUI.SetWL.wText
     
-    //set L
-    LLPlayer.MouseDown(MK_LBUTTON, 1867, 450, 500)
-    LLPlayer.MouseMove(1867, 500, 500)
-    LLPlayer.MouseUp(MK_LBUTTON, 1867, 500, 500)
-    utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-    //set W
-    LLPlayer.MouseDown(MK_LBUTTON, 1867, 654, 500)
-    LLPlayer.MouseMove(1867, 704, 500)
-    LLPlayer.MouseUp(MK_LBUTTON, 1867, 704, 500)
+    //set WW
+    LLCollection.set_WW_on_contour.Execute(indelPlan.ContourGUI)
+    utilsFunctions.delay(globalConstant.obj.delayFiveSeconds)
+    //set WL
+    LLCollection.set_WL_on_contour.Execute(indelPlan.ContourGUI)
 
     if (originW !== indelPlan.ContourGUI.SetWW.wText && originL !== indelPlan.ContourGUI.SetWL.wText) {
       Log.Checkpoint("DExecute ${Project.TestItems.Current.Name} successfully!")

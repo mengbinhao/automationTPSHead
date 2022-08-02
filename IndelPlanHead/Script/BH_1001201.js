@@ -21,13 +21,12 @@ function testcase() {
 
   if (study.addOneRegistedStudyActivity(indelPlan, Project.Variables.study_image_id)) {
     contour.gotoContourWindow(indelPlan)
-    
-    common.moveMouse(Sys.Desktop.Width / 2, Sys.Desktop.Height / 2, 500)
-    LLPlayer.MouseWheel(120 * 10, 1000)
+    LLCollection.move_to_center.Execute(indelPlan.ContourGUI)
+    LLCollection.rotate_up_10_slices.Execute(indelPlan.ContourGUI)
 
   Regions.YANGDAZHONG_MR78_common_contour_rotate_down_mouse__png.Check(indelPlan.ContourGUI.canvas.C2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
     utilsFunctions.delay(globalConstant.obj.delayOneSecond)
-    LLPlayer.MouseWheel(-120 * 20, 1000)
+    LLCollection.rotate_down_20_slices.Execute(indelPlan.ContourGUI)
     Regions.YANGDAZHONG_MR78_common_contour_rotate_up_mouse__png.Check(indelPlan.ContourGUI.canvas.C2DViewer.Picture(), false, false, globalConstant.obj.pixelTolerance, globalConstant.obj.colourTolerance)
   } else {
      Log.Error(`Execute ${Project.TestItems.Current.Name} fail due to register study!`)

@@ -37,7 +37,7 @@ function testcase() {
         plan.setupPoint(indelPlan, "tar", -30, -30)
         plan.setupPoint(indelPlan, "tar", 30, 30)
         //All of points are seleced, so just move mouse 
-        common.moveMouse(220, 800, 500) 
+        LLCollection.move_out_of_main_image.Execute(indelPlan.PlanGUI) 
 
         if (strictEqual(indelPlan.CPlanInforPanel.focusList.wItems.Item(0).Items.Count, 4) && common.comparedPicture(Regions.YANGDAZHONG_MR78_plan_choice_all_point_png, indelPlan.PlanGUI.canvas.PlanC2DViewer.Picture(), globalConstant.obj.pixelTolerance, globalConstant.obj.colourToleranceForPD)) {
           Log.Checkpoint(`Execute ${Project.TestItems.Current.Name} successfully!`)
